@@ -8,7 +8,6 @@ public class PlayerModel {
     private static PlayerModel playerModel;
 
     public enum DamageTypes {Standard, Fire, Magic, Silver};
-    public enum Ingredients {Water, PureWater, Herb, Oil, PhoenixAsh, Snowdrop, CristalFlower}
 
     private int HealthPoints { get; set; }
     private int Phial { get; set; }
