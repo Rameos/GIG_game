@@ -21,11 +21,6 @@ public class MainMenuController : MonoBehaviour {
             //TODO
         }
 
-        if (gameObject.GetComponent<FadeSceneEffect>() == null)
-        {
-            FadeSceneEffect fadeEffect = gameObject.AddComponent <FadeSceneEffect>();
-        }
-
         Gamestatemanager.Instance.startGame(stateToStart);
 
 	}
