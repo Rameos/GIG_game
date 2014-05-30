@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986c9681fdb7f754d81bab716d36dbaa, type: 3}
+  m_Name: Decals Atlas A
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 6abf971823c3e53409bf9200d6b95975, type: 2}
+  uvChannelModification: 0
+  uvRectangles:
+  - name: 536563746f72203035
+    lowerLeftUV: {x: .835334778, y: .628068984}
+    upperRightUV: {x: .871651351, y: .753068864}
+  - name: 45786974
+    lowerLeftUV: {x: .873325825, y: .770959139}
+    upperRightUV: {x: .999000013, y: .818687618}
+  - name: 5061706572
+    lowerLeftUV: {x: .00100000005, y: .00100000005}
+    upperRightUV: {x: .2578125, y: .25}
+  - name: 4772616666697469
+    lowerLeftUV: {x: .489874035, y: .250243962}
+    upperRightUV: {x: .738103151, y: .434415311}
+  uv2Rectangles:
+  - name: 536563746f72203035
+    lowerLeftUV: {x: 0, y: 0}
+    upperRightUV: {x: 1, y: 1}
+  - name: 45786974
+    lowerLeftUV: {x: 0, y: 0}
+    upperRightUV: {x: 1, y: 1}
+  - name: 5061706572
+    lowerLeftUV: {x: 0, y: 0}
+    upperRightUV: {x: 1, y: 1}
+  - name: 4772616666697469
+    lowerLeftUV: {x: 0, y: 0}
+    upperRightUV: {x: 1, y: 1}
