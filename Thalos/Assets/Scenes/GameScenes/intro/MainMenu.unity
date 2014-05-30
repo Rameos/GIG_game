@@ -151,8 +151,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 909117161}
-  - 114: {fileID: 909117162}
   - 131: {fileID: 909117163}
+  - 114: {fileID: 909117164}
   m_Layer: 0
   m_Name: MainMenuController
   m_TagString: GameManager
@@ -173,18 +173,6 @@ Transform:
   - {fileID: 1847812525}
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!114 &909117162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 909117160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ece38ea0623d90047bc80b074484844b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateToStart: 0
 --- !u!131 &909117163
 GUITexture:
   m_ObjectHideFlags: 0
@@ -192,7 +180,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 909117160}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: ff4c7959bcf56de459b639c7cfeb673c, type: 3}
+  m_Texture: {fileID: 2800000, guid: 3fe39eef21da28f4b86fd805a8f7a1b5, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -204,6 +192,17 @@ GUITexture:
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!114 &909117164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 909117160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81cc3f85cb902e64d81390689e108d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1295639353
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,4 +409,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ffc3355e9200ec4ba0799d5198dfedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: .75
+  fadeColor: {r: 1, g: 1, b: 1, a: 1}

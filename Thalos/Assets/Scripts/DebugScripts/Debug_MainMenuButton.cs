@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Controller;
 
 [ExecuteInEditMode]
 public class Debug_MainMenuButton : MonoBehaviour {
@@ -8,7 +9,8 @@ public class Debug_MainMenuButton : MonoBehaviour {
     {
         if (GUI.Button(new Rect(20, 20, 150, 150),"StartGame"))
         {
-
+            Debug.Log("StartGame");
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<Gamestatemanager>().startGame();
         }
 
         else if (GUI.Button(new Rect(20, 180, 150, 150), "Options"))
