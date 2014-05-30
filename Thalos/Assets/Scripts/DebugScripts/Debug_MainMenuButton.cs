@@ -11,6 +11,7 @@ public class Debug_MainMenuButton : MonoBehaviour {
         {
             Debug.Log("StartGame");
             GameObject.FindGameObjectWithTag("GameManager").GetComponent<Gamestatemanager>().startGame();
+            GameObject.FindGameObjectWithTag("UISoundManager").GetComponent<UISoundManager>().playClickSound();
         }
 
         else if (GUI.Button(new Rect(20, 180, 150, 150), "Options"))
