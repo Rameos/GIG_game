@@ -35,6 +35,10 @@ namespace Controller
             startApplication(actualState);
         }
 
+        void OnLevelWasLoaded(int levelID)
+        {
+            FadeSceneEffect.FadeIn();
+        }
         /// <summary>
         /// Starts the Intro / later maybe the Savegame
         /// </summary>
@@ -51,7 +55,8 @@ namespace Controller
 
         public void loadLevel(int levelID)
         {
-            waitForFadeOutEffect(levelID);
+            Debug.Log("LOAD LEVEL!");
+            StartCoroutine(waitForFadeOutEffect(levelID));
         }
 
         /// <summary>
@@ -112,6 +117,7 @@ namespace Controller
         {
             FadeSceneEffect.FadeOut();
             yield return new WaitForSeconds(FadeSceneEffect.fadeSpeed);
+            Debug.Log("LoadLevelWith ID: " + levelID);
             Application.LoadLevel(levelID);
         }
 
