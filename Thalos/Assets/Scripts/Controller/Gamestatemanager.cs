@@ -21,7 +21,8 @@ namespace Controller
         public enum Gamestate
         {
             Mainmenu,
-            Play
+            Play,
+            Sequence
         }
         
         public Gamestate actualState { get; set; }
@@ -47,16 +48,35 @@ namespace Controller
             Debug.Log("StartGame!");
             OnCloseMainMenu();
 
-
             int DEBUG_Level = 1;
             StartCoroutine(waitForFadeOutEffect(DEBUG_Level));
            
         }
 
+        /// <summary>
+        /// End the Application
+        /// </summary>
+        public void endGame()
+        {
+            StartCoroutine(waitForFadeOutEffect(-1));
+        }
+
+        /// <summary>
+        /// Load the Level
+        /// </summary>
+        /// <param name="levelID"></param>
         public void loadLevel(int levelID)
         {
-            Debug.Log("LOAD LEVEL!");
             StartCoroutine(waitForFadeOutEffect(levelID));
+        }
+
+        /// <summary>
+        /// Load the Level
+        /// </summary>
+        /// <param name="levelName"></param>
+        public void loadLevel(string levelName)
+        {
+            StartCoroutine(waitForFadeOutEffect(levelName));
         }
 
         /// <summary>
@@ -85,6 +105,9 @@ namespace Controller
             //TODO:  init InputManager
         }
 
+        /// <summary>
+        /// init all Components of the Game
+        /// </summary>
         private void initComponents()
         {
             GameObject.DontDestroyOnLoad(this.gameObject);
@@ -101,12 +124,18 @@ namespace Controller
             }
         }
         
+        /// <summary>
+        /// OptionEvent
+        /// </summary>
         private void OnOpenMainMenu()
         {
             if (OpenMainMenuHandler != null)
                 OpenMainMenuHandler(this, EventArgs.Empty);
         }
 
+        /// <summary>
+        /// CloseMenu
+        /// </summary>
         private void OnCloseMainMenu()
         {
             if (CloseMainMenuScreenHandler != null)
@@ -118,8 +147,23 @@ namespace Controller
             FadeSceneEffect.FadeOut();
             yield return new WaitForSeconds(FadeSceneEffect.fadeSpeed);
             Debug.Log("LoadLevelWith ID: " + levelID);
-            Application.LoadLevel(levelID);
+            
+            if (levelID < 0)
+            {
+                Application.Quit();
+
+            }
+            else
+            {
+                Application.LoadLevel(levelID);
+            }
         }
 
+        IEnumerator waitForFadeOutEffect(string levelName)
+        {
+            FadeSceneEffect.FadeOut();
+            yield return new WaitForSeconds(FadeSceneEffect.fadeSpeed);
+            Application.LoadLevel(levelName);
+        }
     }
 }
