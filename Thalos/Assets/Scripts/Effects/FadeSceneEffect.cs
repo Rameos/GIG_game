@@ -4,65 +4,71 @@ using System.Collections;
 [RequireComponent(typeof (GUITexture))]
 public class FadeSceneEffect : MonoBehaviour
 {
-    public float fadeSpeed = 1.5f;          // Speed that the screen fades to and from black.
-    private bool sceneStarting = true;      // Whether or not the scene is still fading in.
+    public Color fadeColor;
+    public static float fadeSpeed = 1f;
+
+    private static bool isFadeInActive = false;
+    private static bool isFadeOutActive = true;  
+
     private float screenHeight;
     private float screenWidth;
+
+    public static void FadeOut()
+    {
+        isFadeOutActive = true;
+        isFadeInActive = false;
+    }
+
+    public static void FadeIn()
+    {
+        isFadeOutActive = false;
+        isFadeInActive = true;
+    }
+
+
+    void Awake()
+    {
+        isFadeInActive = true;
+        gameObject.guiTexture.color = fadeColor;
+    }
 
     void Update()
     {
         gameObject.guiTexture.pixelInset = new Rect(Screen.width*0.5f, 0, Screen.width, Screen.height);
-
-        // If the scene is starting...
-        if (sceneStarting)
-            // ... call the StartScene function.
-            StartScene();
-    }
-
-
-    void FadeToClear()
-    {
-        // Lerp the colour of the texture between itself and transparent.
-        guiTexture.color = Color.Lerp(guiTexture.color, Color.clear, fadeSpeed * Time.deltaTime);
-    }
-
-
-    void FadeToBlack()
-    {
-        // Lerp the colour of the texture between itself and black.
-        guiTexture.color = Color.Lerp(guiTexture.color, Color.black, fadeSpeed * Time.deltaTime);
-    }
-
-
-    void StartScene()
-    {
-        // Fade the texture to clear.
-        FadeToClear();
-
-        // If the texture is almost clear...
-        if (guiTexture.color.a <= 0.005f)
+        
+        if (isFadeInActive)
         {
-            // ... set the colour to clear and disable the GUITexture.
-            guiTexture.color = Color.clear;
-            guiTexture.enabled = false;
+            StartScene();
+        }
 
-            // The scene is no longer starting.
-            sceneStarting = false;
+        if (isFadeOutActive)
+        {
+            EndScene();
         }
     }
 
-
-    public void EndScene()
+    void StartScene()
     {
-        // Make sure the texture is enabled.
+        guiTexture.color = Color.Lerp(guiTexture.color, Color.clear, fadeSpeed * Time.deltaTime);
+    
+        if (guiTexture.color.a <= 0.005f)
+        {
+            guiTexture.color = Color.clear;
+            guiTexture.enabled = false;
+            isFadeInActive = false;
+        }
+    }
+
+    void EndScene()
+    {
+
         guiTexture.enabled = true;
+        guiTexture.color = Color.Lerp(guiTexture.color, fadeColor, fadeSpeed * Time.deltaTime);
 
-        // Start fading towards black.
-        FadeToBlack();
-
-        // If the screen is almost black...
         if (guiTexture.color.a >= 0.95f)
-            // ... reload the level.
-            Application.LoadLevel(0);
+        {
+            isFadeOutActive = false;
+        }
+
     }
 }
