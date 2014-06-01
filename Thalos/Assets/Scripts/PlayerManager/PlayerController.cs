@@ -20,9 +20,8 @@ public class PlayerController {
     }
 
 
-    public PlayerController()
+    private PlayerController()
     {
-        // TODO: fancy init Stuff
         playerModel = PlayerModel.Instance();
     }
 
