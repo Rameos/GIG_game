@@ -18,6 +18,24 @@ ModelImporter:
     100024: Plane_007
     100026: Plane_008
     100028: Plane_009
+    100030: Cube
+    100032: Cube_001
+    100034: Cube_002
+    100036: Cube_003
+    100038: Hero_Boots
+    100040: Hero_Boots_Details_01
+    100042: Hero_Boots_Details_02
+    100044: Hero_BottomBody
+    100046: Hero_Coeat
+    100048: Hero_Head
+    100050: Hero_Head_Detail_01
+    100052: Hero_Head_Eyes
+    100054: Hero_HealthBar
+    100056: Hero_HealthBar_Detail_01
+    100058: Hero_HealthBar_Detail_02
+    100060: Hero_Right_Arm
+    100062: Hero_UpperBody
+    100064: Hero_UpperBody_001
     400000: Bust_Basemesh_by_ChrRambow
     400002: Bust_Basemesh_by_ChrRambow_001
     400004: Bust_Basemesh_by_ChrRambow_002
@@ -33,6 +51,24 @@ ModelImporter:
     400024: Plane_007
     400026: Plane_008
     400028: Plane_009
+    400030: Cube
+    400032: Cube_001
+    400034: Cube_002
+    400036: Cube_003
+    400038: Hero_Boots
+    400040: Hero_Boots_Details_01
+    400042: Hero_Boots_Details_02
+    400044: Hero_BottomBody
+    400046: Hero_Coeat
+    400048: Hero_Head
+    400050: Hero_Head_Detail_01
+    400052: Hero_Head_Eyes
+    400054: Hero_HealthBar
+    400056: Hero_HealthBar_Detail_01
+    400058: Hero_HealthBar_Detail_02
+    400060: Hero_Right_Arm
+    400062: Hero_UpperBody
+    400064: Hero_UpperBody_001
     2300000: Bust_Basemesh_by_ChrRambow
     2300002: Bust_Basemesh_by_ChrRambow_001
     2300004: Bust_Basemesh_by_ChrRambow_002
@@ -47,6 +83,24 @@ ModelImporter:
     2300022: Plane_007
     2300024: Plane_008
     2300026: Plane_009
+    2300028: Cube
+    2300030: Cube_001
+    2300032: Cube_002
+    2300034: Cube_003
+    2300036: Hero_Boots
+    2300038: Hero_Boots_Details_01
+    2300040: Hero_Boots_Details_02
+    2300042: Hero_BottomBody
+    2300044: Hero_Coeat
+    2300046: Hero_Head
+    2300048: Hero_Head_Detail_01
+    2300050: Hero_Head_Eyes
+    2300052: Hero_HealthBar
+    2300054: Hero_HealthBar_Detail_01
+    2300056: Hero_HealthBar_Detail_02
+    2300058: Hero_Right_Arm
+    2300060: Hero_UpperBody
+    2300062: Hero_UpperBody_001
     3300000: Bust_Basemesh_by_ChrRambow
     3300002: Bust_Basemesh_by_ChrRambow_001
     3300004: Bust_Basemesh_by_ChrRambow_002
@@ -61,6 +115,24 @@ ModelImporter:
     3300022: Plane_007
     3300024: Plane_008
     3300026: Plane_009
+    3300028: Cube
+    3300030: Cube_001
+    3300032: Cube_002
+    3300034: Cube_003
+    3300036: Hero_Boots
+    3300038: Hero_Boots_Details_01
+    3300040: Hero_Boots_Details_02
+    3300042: Hero_BottomBody
+    3300044: Hero_Coeat
+    3300046: Hero_Head
+    3300048: Hero_Head_Detail_01
+    3300050: Hero_Head_Eyes
+    3300052: Hero_HealthBar
+    3300054: Hero_HealthBar_Detail_01
+    3300056: Hero_HealthBar_Detail_02
+    3300058: Hero_Right_Arm
+    3300060: Hero_UpperBody
+    3300062: Hero_UpperBody_001
     4300000: Plane_009
     4300002: Plane_008
     4300004: Plane_007
@@ -75,6 +147,24 @@ ModelImporter:
     4300022: Bust_Basemesh_by_ChrRambow_002
     4300024: Bust_Basemesh_by_ChrRambow_001
     4300026: Bust_Basemesh_by_ChrRambow
+    4300028: Cube_003
+    4300030: Cube_002
+    4300032: Cube_001
+    4300034: Cube
+    4300036: Hero_UpperBody_001
+    4300038: Hero_Right_Arm
+    4300040: Hero_Coeat
+    4300042: Hero_HealthBar_Detail_02
+    4300044: Hero_HealthBar_Detail_01
+    4300046: Hero_HealthBar
+    4300048: Hero_UpperBody
+    4300050: Hero_Boots
+    4300052: Hero_Boots_Details_02
+    4300054: Hero_Boots_Details_01
+    4300056: Hero_BottomBody
+    4300058: Hero_Head
+    4300060: Hero_Head_Eyes
+    4300062: Hero_Head_Detail_01
     7400000: Default Take
     9500000: //RootNode
   materials:
