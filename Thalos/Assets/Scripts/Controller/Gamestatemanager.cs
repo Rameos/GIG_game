@@ -9,14 +9,17 @@ namespace Controller
     public delegate void OpenPlayScreen(object s, EventArgs e);
     public delegate void ClosePlayScreen(object s, EventArgs e);
     public delegate void CloseMainMenu(object s, EventArgs e);
-
+    public delegate void PlayerIsDead();
+    public delegate void PlayerGetsDamage(int damagepoints);
     public class Gamestatemanager:MonoBehaviour
     {
-        private static Gamestatemanager instance;
         public event OpenMainMenu OpenMainMenuHandler;
         public event OpenPlayScreen OpenPlayScreenHandler;
         public event ClosePlayScreen ClosePlayScreenHandler;
         public event CloseMainMenu CloseMainMenuScreenHandler;
+        
+        public static event PlayerIsDead PlayerIsDeadHandler;
+        public static event PlayerGetsDamage PlayerGetsDamageHandler; 
 
         public enum Gamestate
         {
@@ -122,6 +125,7 @@ namespace Controller
             {
                 //TODO
             }
+            
         }
         
         /// <summary>
@@ -140,6 +144,22 @@ namespace Controller
         {
             if (CloseMainMenuScreenHandler != null)
                 CloseMainMenuScreenHandler(this, EventArgs.Empty);
+        }
+
+        public static void OnPlayerIsDead()
+        {
+            if (PlayerIsDeadHandler != null)
+            {
+                PlayerIsDeadHandler();
+            }
+        }
+
+        public static void OnPlayerGetsDamage(int damage)
+        {
+            if (PlayerGetsDamageHandler != null)
+            {
+                PlayerGetsDamageHandler(damage);
+            }
         }
 
         IEnumerator waitForFadeOutEffect(int levelID)
