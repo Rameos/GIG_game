@@ -11,7 +11,6 @@ namespace Backend
     public enum DamageTypes {Standard, Fire, Magic, Silver};
 
         private static PlayerModel playerModel;
-        public enum DamageTypes { Standard, Fire, Magic, Silver };
 
         public int HealthPoints { get; set; }
         public int MaxHealthPoints { get; set; }
