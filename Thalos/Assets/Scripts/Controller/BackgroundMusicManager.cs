@@ -38,7 +38,12 @@ public class BackgroundMusicManager : MonoBehaviour {
         Gamestatemanager.CloseMainMenuScreenHandler += MuteAllMusic;
 
         InitChannelList();
+        CheckGameState();
 
+    }
+
+    private void CheckGameState()
+    {
         Gamestatemanager.Gamestate state = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Gamestatemanager>().actualState;
 
         switch (state)
