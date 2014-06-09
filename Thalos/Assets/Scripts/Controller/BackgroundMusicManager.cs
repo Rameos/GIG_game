@@ -6,30 +6,24 @@ using Backend;
 
 public class BackgroundMusicManager : MonoBehaviour {
 
+    public int trackCount;
+    private bool isMuted = false;
 
-    public AudioSource deadMusicSlot;
-    public AudioSource normalMusicSlot;
-    public AudioSource battleMusicSlot;
-    public AudioSource mainMenuMusicSlot;
-
-    private List<AudioSource> channelList;
-
+    public AudioClip deadMusicTrack;
+    public AudioClip mainMenuMusicTrack;
+    public AudioClip epicBattleTracks;
     public AudioClip[] normalMusicTracks;
     public AudioClip[] battleMusicTracks;
 
+    private List<AudioSource> channelList;
+
     private float maxVolume = 100f;
-    private float volumeSteps = 0.1f;
-
-
-    private bool isDeadMusicPlaying;
-    private bool isMainMenuPlaying;
-    private bool isBattleMusicPlaying;
-    private bool isNormalMusicPlaying; 
-
-
+    private float volumeSteps = 0.01f;
+    private int mainChannel = Constants.NORMALMUSIC_CHANNEL;
+    
     void Awake()
     {
-        InitChannelList();
+        
         //SetStopAllMusic();
         //SetMusicVolume(0);
         //SetMuteMusic(true);
@@ -38,20 +32,69 @@ public class BackgroundMusicManager : MonoBehaviour {
     void Start()
     {
         Gamestatemanager.PlayerIsDeadHandler += FadeDeteatedMusicIn;
+        Gamestatemanager.OpenPlayScreenHandler += FadeNormalMusicIn;
+        Gamestatemanager.OpenPlayScreenHandler += UnMuteAllTracks;
+        Gamestatemanager.OpenMainMenuHandler += FadeMainMenuSoundTrack;
+        Gamestatemanager.CloseMainMenuScreenHandler += MuteAllMusic;
 
+        InitChannelList();
+
+        Gamestatemanager.Gamestate state = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Gamestatemanager>().actualState;
+
+        switch (state)
+        {
+            case Gamestatemanager.Gamestate.Mainmenu:
+                mainChannel = Constants.MAINMENUMUSIC_CHANNEL;
+                break;
+
+            case Gamestatemanager.Gamestate.Play:
+                mainChannel = Constants.NORMALMUSIC_CHANNEL;
+                break;
+        }
     }
 
     private void InitChannelList()
     {
+        Debug.Log("InitChannelList");
         channelList = new List<AudioSource>();
-        channelList.Add(deadMusicSlot);
-        channelList.Add(normalMusicSlot);
-        channelList.Add(battleMusicSlot);
-        channelList.Add(mainMenuMusicSlot);
-        
+
+        for (int i = 0; i < trackCount; i++)
+        {
+            AudioSource src = this.gameObject.AddComponent<AudioSource>(); 
+
+
+            switch (i)
+            {
+                case Constants.MAINMENUMUSIC_CHANNEL:
+                    src.clip = mainMenuMusicTrack;
+                    break;
+
+                case Constants.NORMALMUSIC_CHANNEL:
+                    if (normalMusicTracks != null)
+                    {
+                        src.clip = normalMusicTracks[0];
+                    }
+                    break;
+
+                case Constants.BATTLEMUSIC_CHANNEL:
+                    if (battleMusicTracks != null)
+                    {
+                        src.clip = battleMusicTracks[0];
+                    }
+                    break;
+
+                case Constants.DEADMUSIC_CHANNEL:
+                    src.clip = deadMusicTrack;
+                    break;
+
+            }
+
+
+            channelList.Add(src);
+        }
     }
 
-    private void SetMusicVolume(int volume)
+    private void SetGlobalMusicVolume(int volume)
     {
         foreach (AudioSource src in channelList)
         {
@@ -59,15 +102,7 @@ public class BackgroundMusicManager : MonoBehaviour {
         }
     }
 
-    private void SetMuteMusic(bool isMuted)
-    {
-        foreach (AudioSource src in channelList)
-        {
-            src.mute = isMuted;
-        }
-    }
-
-    private void SetStopAllMusic()
+    private void StopAllMusic()
     {
         foreach (AudioSource src in channelList)
         {
@@ -77,31 +112,76 @@ public class BackgroundMusicManager : MonoBehaviour {
     
     private void FadeMainMenuSoundTrack()
     {
-
+        mainChannel = Constants.MAINMENUMUSIC_CHANNEL;
     }
 
     private void FadeDeteatedMusicIn()
     {
-        Debug.Log("StartDeadMusic");
-
-        if (!deadMusicSlot.isPlaying)
-        {
-            deadMusicSlot.Play();
-        }
+        mainChannel = Constants.DEADMUSIC_CHANNEL;
     }
 
     private void FadeBattleMusicIn()
     {
-
+        mainChannel = Constants.BATTLEMUSIC_CHANNEL;
     }
 
     private void FadeNormalMusicIn()
     {
-        
+        mainChannel = Constants.NORMALMUSIC_CHANNEL;
     }
 
+    private void MuteAllMusic()
+    {
+        this.isMuted = true;
+    }
+
+    private void UnMuteAllTracks()
+    {
+        this.isMuted = false;
+    }
     void Update()
     {
+        if (!isMuted)
+        {
+            if (!channelList[mainChannel].isPlaying)
+            {
+                channelList[mainChannel].Play();
+            }
+
+            if (channelList[mainChannel].volume < maxVolume)
+            {
+                channelList[mainChannel].volume += volumeSteps;
+            }
+
+            for (int i = 0; i < channelList.Count; i++)
+            {
+                if (i != mainChannel)
+                {
+                    if (channelList[i].volume > 0.01f && channelList[i].isPlaying)
+                    {
+                        channelList[i].volume -= volumeSteps;
+                    }
+                    else
+                    {
+                        channelList[i].Stop();
+                    }
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < channelList.Count; i++)
+            {
+                    if (channelList[i].volume > 0.01f && channelList[i].isPlaying)
+                    {
+                        channelList[i].volume -= volumeSteps;
+                    }
+                    else
+                    {
+                        channelList[i].Stop();
+                    }
+            }
+        }
 
     }
 }

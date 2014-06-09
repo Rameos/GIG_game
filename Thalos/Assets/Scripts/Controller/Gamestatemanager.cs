@@ -5,18 +5,21 @@ using System;
 
 namespace Controller
 {
-    public delegate void OpenMainMenu(object s, EventArgs e);
-    public delegate void OpenPlayScreen(object s, EventArgs e);
-    public delegate void ClosePlayScreen(object s, EventArgs e);
-    public delegate void CloseMainMenu(object s, EventArgs e);
+    public delegate void OpenMainMenu();
+    public delegate void CloseMainMenu();
+
+    public delegate void OpenPlayScreen();
+    public delegate void ClosePlayScreen();
+
     public delegate void PlayerIsDead();
     public delegate void PlayerGetsDamage(int damagepoints);
+    
     public class Gamestatemanager:MonoBehaviour
     {
-        public event OpenMainMenu OpenMainMenuHandler;
-        public event OpenPlayScreen OpenPlayScreenHandler;
-        public event ClosePlayScreen ClosePlayScreenHandler;
-        public event CloseMainMenu CloseMainMenuScreenHandler;
+        public static event OpenMainMenu OpenMainMenuHandler;
+        public static event OpenPlayScreen OpenPlayScreenHandler;
+        public static event ClosePlayScreen ClosePlayScreenHandler;
+        public static event CloseMainMenu CloseMainMenuScreenHandler;
         
         public static event PlayerIsDead PlayerIsDeadHandler;
         public static event PlayerGetsDamage PlayerGetsDamageHandler; 
@@ -42,7 +45,23 @@ namespace Controller
         void OnLevelWasLoaded(int levelID)
         {
             FadeSceneEffect.FadeIn();
+
+            if (levelID >= Constants.ID_FIRSTLEVEL)
+            {
+                OnCloseMainMenu();
+                OnOpenPlayView();
+            }
+            else if (levelID == Constants.ID_INTRO)
+            {
+                OnCloseMainMenu();
+            }
+            else if (levelID == Constants.ID_MAINMENU)
+            {
+                OnOpenMainMenu();
+                OnClodePlayView();
+            }
         }
+        
         /// <summary>
         /// Starts the Intro / later maybe the Savegame
         /// </summary>
@@ -131,23 +150,44 @@ namespace Controller
         /// <summary>
         /// OptionEvent
         /// </summary>
-        private void OnOpenMainMenu()
+        public static void OnOpenMainMenu()
         {
+            Debug.Log("OpenMainMenu");
             if (OpenMainMenuHandler != null)
-                OpenMainMenuHandler(this, EventArgs.Empty);
+                OpenMainMenuHandler();
         }
 
         /// <summary>
         /// CloseMenu
         /// </summary>
-        private void OnCloseMainMenu()
+        public static void OnCloseMainMenu()
         {
             if (CloseMainMenuScreenHandler != null)
-                CloseMainMenuScreenHandler(this, EventArgs.Empty);
+            {
+                CloseMainMenuScreenHandler();
+            }
+        }
+
+        public static void OnOpenPlayView()
+        {
+            if (OpenPlayScreenHandler != null)
+            {
+                OpenPlayScreenHandler();
+            }
+        }
+
+        public static void OnClodePlayView()
+        {
+            if (ClosePlayScreenHandler != null)
+            {
+                ClosePlayScreenHandler();
+            }
         }
 
         public static void OnPlayerIsDead()
         {
+
+            Debug.Log("OpenPlayer");
             if (PlayerIsDeadHandler != null)
             {
                 PlayerIsDeadHandler();
