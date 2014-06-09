@@ -36,6 +36,8 @@ ModelImporter:
     100060: Hero_Right_Arm
     100062: Hero_UpperBody
     100064: Hero_UpperBody_001
+    100066: Hero_Coeat_003
+    100068: Hero_UpperBody_002
     400000: Bust_Basemesh_by_ChrRambow
     400002: Bust_Basemesh_by_ChrRambow_001
     400004: Bust_Basemesh_by_ChrRambow_002
@@ -69,6 +71,8 @@ ModelImporter:
     400060: Hero_Right_Arm
     400062: Hero_UpperBody
     400064: Hero_UpperBody_001
+    400066: Hero_Coeat_003
+    400068: Hero_UpperBody_002
     2300000: Bust_Basemesh_by_ChrRambow
     2300002: Bust_Basemesh_by_ChrRambow_001
     2300004: Bust_Basemesh_by_ChrRambow_002
@@ -101,6 +105,8 @@ ModelImporter:
     2300058: Hero_Right_Arm
     2300060: Hero_UpperBody
     2300062: Hero_UpperBody_001
+    2300064: Hero_Coeat_003
+    2300066: Hero_UpperBody_002
     3300000: Bust_Basemesh_by_ChrRambow
     3300002: Bust_Basemesh_by_ChrRambow_001
     3300004: Bust_Basemesh_by_ChrRambow_002
@@ -133,6 +139,8 @@ ModelImporter:
     3300058: Hero_Right_Arm
     3300060: Hero_UpperBody
     3300062: Hero_UpperBody_001
+    3300064: Hero_Coeat_003
+    3300066: Hero_UpperBody_002
     4300000: Plane_009
     4300002: Plane_008
     4300004: Plane_007
@@ -165,6 +173,7 @@ ModelImporter:
     4300058: Hero_Head
     4300060: Hero_Head_Eyes
     4300062: Hero_Head_Detail_01
+    4300064: Hero_UpperBody_002
     7400000: Default Take
     9500000: //RootNode
   materials:
