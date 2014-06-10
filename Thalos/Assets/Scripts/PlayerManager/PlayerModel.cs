@@ -9,13 +9,13 @@ public class PlayerModel {
 
     public enum DamageTypes {Standard, Fire, Magic, Silver};
 
-    private int HealthPoints { get; set; }
-    private int MaxHealthPoints { get; set; }
-    private int Phial { get; set; }
-    private int Damage { get; set; }
-    private int Gold { get; set; }
-    private int Armour { get; set; }
-    private DamageTypes DamageType { get; set; }
+    public int HealthPoints { get; set; }
+    public int MaxHealthPoints { get; set; }
+    public int Phial { get; set; }
+    public int Damage { get; set; }
+    public int Gold { get; set; }
+    public int Armour { get; set; }
+    public DamageTypes DamageType { get; set; }
     
 
     public static PlayerModel Instance()
@@ -40,55 +40,6 @@ public class PlayerModel {
         
 
 
-    }
-
-    public bool Dead()
-    {
-        if(this.HealthPoints > 0)
-        {
-            return false;
-        }
-        return true;
-    }
-
-    public int TakeDamage(int Damage)
-    {
-        this.HealthPoints -= (Damage - this.Armour);
-        return this.HealthPoints;
-    
-    }
-
-    public int AddMaxHealthPoints(int HeartPiece)
-    {
-        this.MaxHealthPoints += HeartPiece;
-        return this.MaxHealthPoints;
-    }
-    
-    public int Heal(int HealPotion)
-    {
-        if(this.HealthPoints + HealPotion >= this.MaxHealthPoints)
-        {
-            this.HealthPoints = this.MaxHealthPoints;
-        }  
-        else
-        {
-            this.HealthPoints += HealPotion;
-        }      
-        return this.HealthPoints;
-    }
-
-    public int AddArmour(int PieceOfArmour)
-    {
-        this.Armour += PieceOfArmour;
-        return this.Armour;
-    }
-    
-    public int AddGold(int GoldCoins)
-    {
-        this.Gold += GoldCoins;
-        return this.Gold;
-    }
-    
-        
+    }       
 
 }

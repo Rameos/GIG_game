@@ -4,9 +4,9 @@ using System.Collections;
 public class Ingredient
 {
 
-    private string Name { get; set; } 
+    public string Name { get; set; } 
     // Verweis auf Bild der Pflanze??:
-    private string Object { get; set; }
+    public string Object { get; set; }
     
     public Ingredient(string Name, string Object){
         this.Name = Name;
