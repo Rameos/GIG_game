@@ -15,6 +15,9 @@ namespace Controller
     public delegate void PlayerIsDead();
     public delegate void PlayerGetsDamage(int damagepoints);
     
+    public delegate void OpenInGameMenu();
+    public delegate void CloseInGameMenu();
+
     public class Gamestatemanager:MonoBehaviour
     {
         public static event OpenMainMenu OpenMainMenuHandler;
