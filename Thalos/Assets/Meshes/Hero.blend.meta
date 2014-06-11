@@ -15,6 +15,8 @@ ModelImporter:
     100018: Hero_UpperBody_001
     100020: Hero_UpperBody_002
     100022: Hero_UpperBody_003
+    100024: Hero
+    100026: Plane
     400000: //RootNode
     400002: Hero_Boots_Details_02
     400004: Hero_Coeat_003
@@ -27,6 +29,8 @@ ModelImporter:
     400018: Hero_UpperBody_001
     400020: Hero_UpperBody_002
     400022: Hero_UpperBody_003
+    400024: Hero
+    400026: Plane
     2300000: Hero_Boots_Details_02
     2300002: Hero_Coeat_003
     2300004: Hero_Head
@@ -38,6 +42,7 @@ ModelImporter:
     2300016: Hero_UpperBody_001
     2300018: Hero_UpperBody_002
     2300020: Hero_UpperBody_003
+    2300022: Plane
     3300000: Hero_Boots_Details_02
     3300002: Hero_Coeat_003
     3300004: Hero_Head
@@ -49,6 +54,7 @@ ModelImporter:
     3300016: Hero_UpperBody_001
     3300018: Hero_UpperBody_002
     3300020: Hero_UpperBody_003
+    3300022: Plane
     4300000: Hero_UpperBody_003
     4300002: Hero_UpperBody_001
     4300004: Hero_Right_Arm
@@ -59,6 +65,7 @@ ModelImporter:
     4300014: Hero_Head_Eyes
     4300016: Hero_Head_Detail_01
     4300018: Hero_UpperBody_002
+    4300020: Plane
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -94,9 +101,9 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
   tangentSpace:
-    normalSmoothAngle: 70
-    splitTangentsAcrossUV: 1
-    normalImportMode: 1
+    normalSmoothAngle: 112
+    splitTangentsAcrossUV: 0
+    normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
