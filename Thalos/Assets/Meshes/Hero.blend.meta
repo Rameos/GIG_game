@@ -17,6 +17,12 @@ ModelImporter:
     100022: Hero_UpperBody_003
     100024: Hero
     100026: Plane
+    100028: Hero_Body
+    100030: Hero_Body_001
+    100032: Hero_Body_002
+    100034: Hair
+    100036: Hero_Coat_Bottom
+    100038: Hero_Coat_Top
     400000: //RootNode
     400002: Hero_Boots_Details_02
     400004: Hero_Coeat_003
@@ -31,6 +37,12 @@ ModelImporter:
     400022: Hero_UpperBody_003
     400024: Hero
     400026: Plane
+    400028: Hero_Body
+    400030: Hero_Body_001
+    400032: Hero_Body_002
+    400034: Hair
+    400036: Hero_Coat_Bottom
+    400038: Hero_Coat_Top
     2300000: Hero_Boots_Details_02
     2300002: Hero_Coeat_003
     2300004: Hero_Head
@@ -43,6 +55,12 @@ ModelImporter:
     2300018: Hero_UpperBody_002
     2300020: Hero_UpperBody_003
     2300022: Plane
+    2300024: Hero_Body
+    2300026: Hero_Body_001
+    2300028: Hero_Body_002
+    2300030: Hair
+    2300032: Hero_Coat_Bottom
+    2300034: Hero_Coat_Top
     3300000: Hero_Boots_Details_02
     3300002: Hero_Coeat_003
     3300004: Hero_Head
@@ -55,6 +73,12 @@ ModelImporter:
     3300018: Hero_UpperBody_002
     3300020: Hero_UpperBody_003
     3300022: Plane
+    3300024: Hero_Body
+    3300026: Hero_Body_001
+    3300028: Hero_Body_002
+    3300030: Hair
+    3300032: Hero_Coat_Bottom
+    3300034: Hero_Coat_Top
     4300000: Hero_UpperBody_003
     4300002: Hero_UpperBody_001
     4300004: Hero_Right_Arm
@@ -66,10 +90,22 @@ ModelImporter:
     4300016: Hero_Head_Detail_01
     4300018: Hero_UpperBody_002
     4300020: Plane
+    4300022: Hero_Body
+    4300024: Hero_Body_002
+    4300026: Hero_Body_001
+    4300028: Hair
+    4300030: Hero_Coat_Bottom
+    4300032: Hero_Coat_Top
+    6400000: Hair
+    6400002: Hero_Body
+    6400004: Hero_Coat_Bottom
+    6400006: Hero_Coat_Top
+    6400008: Hero_Head
+    6400010: Hero_HealthBar
     7400000: Default Take
     9500000: //RootNode
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
@@ -89,7 +125,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
