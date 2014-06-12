@@ -196,6 +196,9 @@ public class ThirdPersonCamera : MonoBehaviour
         float leftX = Input.GetAxis("Horizontal");
         float leftY = invertY * Input.GetAxis("Vertical");
 
+
+        Debug.Log("RightX:" + rightX);
+        Debug.Log("RightY" + rightY);
         Vector3 characterOffset = followXform.position + new Vector3(0f, distanceUp, 0f);
         Vector3 lookAt = characterOffset;
         Vector3 targetPosition = Vector3.zero;

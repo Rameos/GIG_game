@@ -9,7 +9,7 @@ TagManager:
   - GameManager
   - UISoundManager
   - BackgroundMusicManager
-  - 
+  - PlayerPivot
   - 
   - 
   - 

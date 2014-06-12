@@ -1,0 +1,22 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class PlayerInputManager : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+
+
+	}
+
+    private void move(float intputX, float inputY)
+    {
+
+    }
+}
