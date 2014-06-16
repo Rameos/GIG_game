@@ -965,6 +965,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 408716863}
   - 95: {fileID: 408716864}
+  - 114: {fileID: 408716865}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -1005,6 +1006,17 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
+--- !u!114 &408716865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 408716862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa11866e7f856c43a87ef472fdf88c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &416586836
 Prefab:
   m_ObjectHideFlags: 0
