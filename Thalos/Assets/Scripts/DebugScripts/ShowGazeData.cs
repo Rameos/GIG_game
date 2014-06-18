@@ -77,6 +77,6 @@ public class ShowGazeData : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log("ShowGazedata"+gazeModel.posGazeLeft);
+       // Debug.Log("ShowGazedata"+gazeModel.posGazeLeft);
     }
 }
