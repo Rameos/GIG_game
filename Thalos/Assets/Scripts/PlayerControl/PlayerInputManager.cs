@@ -35,6 +35,8 @@ public class PlayerInputManager : MonoBehaviour {
         float inputY = Input.GetAxis("Vertical");
 
         checkGroundDistance();
+        checkButtonInput();
+        checkGazeMenuStatus();
         checkshotInput();
         move(inputX, inputY);
 
@@ -101,7 +103,40 @@ public class PlayerInputManager : MonoBehaviour {
 
     private void checkButtonInput()
     {
+        if (Input.GetAxis("ButtonY") > 0)
+        {
+            Debug.Log("ButtonY");
+        }
 
+        else if (Input.GetAxis("ButtonX") > 0)
+        {
+            Debug.Log("ButtonX");
+        }
+
+        else if (Input.GetAxis("ButtonA") > 0)
+        {
+            Debug.Log("ButtonA");
+        }
+
+        else if (Input.GetAxis("ButtonB") > 0)
+        {
+            Debug.Log("ButtonB");
+        }
+
+    }
+
+    private void checkGazeMenuStatus()
+    {
+        
+        if (Input.GetAxis("ButtonLB") > 0)
+        {
+            Debug.Log("ButtonLB");
+        }
+
+        else if (Input.GetAxis("ButtonRB") > 0)
+        {
+            Debug.Log("ButtonRB");
+        }
     }
 
     private void StickInputToWorld(float inputX, float inputY,ref float angleOut,ref float speedOut)

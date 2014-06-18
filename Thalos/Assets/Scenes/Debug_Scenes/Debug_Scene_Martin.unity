@@ -1256,6 +1256,7 @@ MonoBehaviour:
   distanceMax: .00999999978
   animator: {fileID: 1490574335}
   speedFactor: .25
+  thresholdTriggers: .100000001
 --- !u!95 &1490574335
 Animator:
   serializedVersion: 3
