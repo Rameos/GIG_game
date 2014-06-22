@@ -59,7 +59,7 @@ namespace Controller
         /// <returns></returns>
         public int TakeDamage(int Damage)
         {
-            playerModel.HealthPoints -= (Damage - playerModel.Armour);
+            playerModel.HealthPoints -= Damage;
             return playerModel.HealthPoints;
         }
 
@@ -82,18 +82,6 @@ namespace Controller
             return playerModel.HealthPoints;
         }
 
-        public int AddArmour(int PieceOfArmour)
-        {
-            playerModel.Armour += PieceOfArmour;
-            return playerModel.Armour;
-        }
-
-        public int AddGold(int GoldCoins)
-        {
-            playerModel.Gold += GoldCoins;
-            return playerModel.Gold;
-        }
-
         #endregion
 
         #region PRIVATE_FIELDS
@@ -110,7 +98,7 @@ namespace Controller
 
         private void ApplyDamageToModel(int damagepoints)
         {
-            playerModel.HealthPoints -= (damagepoints - playerModel.Armour);
+            playerModel.HealthPoints -= damagepoints;
         }
         #endregion
     }

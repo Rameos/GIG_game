@@ -31,9 +31,6 @@ public class Ingredients {
         Ingredient Water = new Ingredient("Water", "Water.jpeg");
         ListOfIngredients.Add("Water", Water);
 
-        Ingredient PureWater = new Ingredient("Pure Water", "PureWater.jpeg");
-        ListOfIngredients.Add("Pure Water", PureWater);
-
         Ingredient Herb = new Ingredient("Herb", "Herb.jpeg");
         ListOfIngredients.Add("Herb", Herb);
 

@@ -8,7 +8,7 @@ namespace Backend
     public class PlayerModel
     {
 
-        public enum DamageTypes {Standard, Fire, Magic, Silver};
+        public enum DamageTypes {Standard, Fire, Ice};
 
     
         private static PlayerModel playerModel;
@@ -18,8 +18,6 @@ namespace Backend
         public int MaxHealthPoints { get; set; }
         public int Phial { get; set; }
         public int Damage { get; set; }
-        public int Gold { get; set; }
-        public int Armour { get; set; }
         public DamageTypes DamageType { get; set; }
 
 
@@ -38,8 +36,6 @@ namespace Backend
             this.MaxHealthPoints = 100;
             this.Phial = 0;
             this.Damage = 42;
-            this.Gold = 10;
-            this.Armour = 5;
             this.DamageType = DamageTypes.Standard;
 
             //Debug
