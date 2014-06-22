@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using Backend;
 public abstract class BaseEnemy {
 
     public int MaxLivePoints { get; private set; }
@@ -18,7 +18,7 @@ public abstract class BaseEnemy {
         this.Armour = Armour;
     }
 
-    public int TakeDamage(int Damage)
+    public int TakeDamage(int Damage, PlayerModel.DamageTypes DamageType)
     {
         this.LivePoints -= (Damage - Armour);
         if (this.LivePoints < 0)
