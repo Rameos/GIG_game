@@ -652,8 +652,8 @@ MonoBehaviour:
   distanceAwayMultipler: 1.5
   distanceUp: 1
   distanceUpMultiplier: 5
-  follow: {fileID: 0}
-  followXform: {fileID: 0}
+  follow: {fileID: 1490574332}
+  followXform: {fileID: 1490574333}
   widescreen: .200000003
   targetingTime: .5
   firstPersonLookSpeed: 3
@@ -1218,6 +1218,7 @@ GameObject:
   - 114: {fileID: 1490574334}
   - 136: {fileID: 1490574336}
   - 54: {fileID: 1490574337}
+  - 114: {fileID: 1490574338}
   m_Layer: 0
   m_Name: Hero_NoFinalRigh_2
   m_TagString: Player
@@ -1300,6 +1301,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1490574338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1490574332}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a9639ea4475ec43991b10aa0cc03ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1605651414
 GameObject:
   m_ObjectHideFlags: 0

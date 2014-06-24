@@ -151,8 +151,8 @@ public class ThirdPersonCamera : MonoBehaviour
             Debug.LogError("Parent camera to empty GameObject.", this);
         }
 
-        follow = GameObject.FindWithTag("Player");
-        followXform = GameObject.FindWithTag("Player").transform;
+     //   follow = GameObject.FindWithTag("Player");
+     //   followXform = GameObject.FindWithTag("Player").transform;
 
         lookDir = followXform.forward;
         curLookDir = followXform.forward;

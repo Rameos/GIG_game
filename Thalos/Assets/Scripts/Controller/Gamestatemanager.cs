@@ -18,6 +18,8 @@ namespace Controller
     public delegate void OpenInGameMenu();
     public delegate void CloseInGameMenu();
 
+    public delegate void RumbleEvent(float duration,float forceHeavy, float forceLight);
+
     public class Gamestatemanager:MonoBehaviour
     {
         public static event OpenMainMenu OpenMainMenuHandler;
@@ -26,8 +28,9 @@ namespace Controller
         public static event CloseMainMenu CloseMainMenuScreenHandler;
         
         public static event PlayerIsDead PlayerIsDeadHandler;
-        public static event PlayerGetsDamage PlayerGetsDamageHandler; 
+        public static event PlayerGetsDamage PlayerGetsDamageHandler;
 
+        public static event RumbleEvent RumbleEventHandler;
 
         public enum Gamestate
         {
@@ -208,6 +211,14 @@ namespace Controller
                 PlayerGetsDamageHandler(damage);
             }
 
+        }
+
+        public static void OnRumbleEvent(float duration,float forceHeavy, float forceLight)
+        {
+            if (RumbleEventHandler != null)
+            {
+                RumbleEventHandler(duration,forceHeavy,forceLight);
+            }
         }
 
         IEnumerator waitForFadeOutEffect(int levelID)

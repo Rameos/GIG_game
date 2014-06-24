@@ -49,7 +49,7 @@ public class XInputTestCS : MonoBehaviour
         }
 
         // Set vibration according to triggers
-        GamePad.SetVibration(playerIndex, state.Triggers.Left, state.Triggers.Right);
+        GamePad.SetVibration(playerIndex,0,0);
 
         // Make the current object turn
         transform.localRotation *= Quaternion.Euler(0.0f, state.ThumbSticks.Left.X * 25.0f * Time.deltaTime, 0.0f);

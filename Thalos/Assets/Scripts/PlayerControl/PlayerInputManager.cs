@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using XInputDotNetPure;
 public class PlayerInputManager : MonoBehaviour {
 
 
@@ -23,12 +23,23 @@ public class PlayerInputManager : MonoBehaviour {
     [SerializeField]
     private float thresholdTriggers = 0.1f;
 
-
+    //ControllerInput
+    bool playerIndexSet = false;
+    PlayerIndex playerIndex;
+    GamePadState state;
+    GamePadState prevState;
 
 	void Start () {
         animator = GetComponent<Animator>();
+        findGameController();
 	}
-	
+
+    void Update()
+    {
+        connectController();
+
+    }
+
 	void FixedUpdate () {
 
         float inputX = Input.GetAxis("Horizontal");
@@ -43,14 +54,60 @@ public class PlayerInputManager : MonoBehaviour {
 
 	}
 
+    public void startRumbleForTime(float rumbleHeavy, float rumbleWeak,float time)
+    {
+        StartCoroutine(rumbleOverTime(Time.deltaTime, 1, 1));
+            
+    }
 
+    private void connectController()
+    {
+        if (!playerIndexSet || !prevState.IsConnected)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                PlayerIndex testPlayerIndex = (PlayerIndex)i;
+                GamePadState testState = GamePad.GetState(testPlayerIndex);
+
+                if (testState.IsConnected)
+                {
+                    Debug.Log(string.Format("GamePad found {0}", testPlayerIndex));
+                    playerIndex = testPlayerIndex;
+                    playerIndexSet = true;
+                }
+            }
+        }
+
+        prevState = state;
+        state = GamePad.GetState(playerIndex);
+    }
+    
+    private bool findGameController()
+    {
+        if (!playerIndexSet || !prevState.IsConnected)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                PlayerIndex testIndex = (PlayerIndex)i;
+                GamePadState testState = GamePad.GetState(testIndex);
+                if(testState.IsConnected)
+                {
+                    playerIndex = testIndex;
+                    playerIndexSet = true;
+                    prevState = state;
+                    state = GamePad.GetState(playerIndex);
+                    return true; 
+                }
+            }
+        }
+        return false;
+    }
+    
     private bool checkGroundDistance()
     {
         RaycastHit hit;
         if(Physics.Raycast(new Ray(transform.position,transform.up*-1),out hit))
         {
-            Debug.Log("Distance:" + hit.distance);
-
             if (hit.distance < distanceMax)
             {
                 rigidbody.isKinematic = true;
@@ -70,9 +127,6 @@ public class PlayerInputManager : MonoBehaviour {
 
     private void move(float inputX, float inputY)
     {
-        animator.SetFloat("Runspeed", inputY);
-
-
         float angle =0f;
         float speedOut = 0f;
         StickInputToWorld(inputX, inputY, ref angle, ref speedOut);
@@ -85,6 +139,9 @@ public class PlayerInputManager : MonoBehaviour {
             transform.position += transform.forward * (speedOut*speedFactor);
             transform.Rotate(0, angle, 0);
         }
+
+        // Setup the Animator Parameters
+        animator.SetFloat("Runspeed", speedOut);
         
     }
     
@@ -159,4 +216,13 @@ public class PlayerInputManager : MonoBehaviour {
         //transform.Rotate(0, angleOut, 0);
 
     }
+
+    IEnumerator rumbleOverTime(float time, float powerHeavy, float powerSoft)
+    {
+        GamePad.SetVibration(playerIndex, powerHeavy, powerSoft);
+        yield return new WaitForSeconds(time);
+
+        GamePad.SetVibration(playerIndex, 0, 0);
+    }
+
 }
