@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using XInputDotNetPure;
+using Controller; 
 public class PlayerInputManager : MonoBehaviour {
 
 
@@ -32,6 +33,7 @@ public class PlayerInputManager : MonoBehaviour {
 	void Start () {
         animator = GetComponent<Animator>();
         findGameController();
+        Gamestatemanager.RumbleEventHandler += startRumbleForTime;
 	}
 
     void Update()
@@ -184,7 +186,7 @@ public class PlayerInputManager : MonoBehaviour {
 
     private void checkGazeMenuStatus()
     {
-        
+
         if (Input.GetAxis("ButtonLB") > 0)
         {
             Debug.Log("ButtonLB");
