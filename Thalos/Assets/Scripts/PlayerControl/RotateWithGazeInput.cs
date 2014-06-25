@@ -21,7 +21,9 @@ public class RotateWithGazeInput : MonoBehaviour {
 
 
     public bool IsEyeDetected = true;
-    public float offSetRightAOI; 
+    public float offSetRightAOI;
+
+    public bool isActive = false;
 
     public enum gazeActionMenu
     {
@@ -36,15 +38,15 @@ public class RotateWithGazeInput : MonoBehaviour {
          GUI.Label(new Rect(25, 5, 250, 60), "Rotationspeed: " + rotationFactor);
             rotationFactor = GUI.HorizontalSlider(new Rect(25, 25, 100, 30), rotationFactor, 0.0f, 1.0f);
             Mathf.Round( rotationFactor * 100 / 100);
-           
 
-        //if (!options.IsEyeDetected)
-        //{
-        //    GUI.DrawTexture(new Rect(Screen.width * 0.5f - 64, 50, 128, 128), noGazeInput);
-        //}
 
-        //GUI.DrawTexture(leftAOI.volume, testTexture_Right);
-        //GUI.DrawTexture(rightAOI.volume, testTexture_Left);
+        if (!IsEyeDetected)
+        {
+            GUI.DrawTexture(new Rect(Screen.width * 0.5f - 64, 50, 128, 128), noGazeInput);
+        }
+
+        GUI.DrawTexture(leftAOI.volume, testTexture_Right);
+        GUI.DrawTexture(rightAOI.volume, testTexture_Left);
 
     }
 
@@ -61,124 +63,110 @@ public class RotateWithGazeInput : MonoBehaviour {
         calculateAOI();
         checkGazeIsInAOI();
 
-
-        //else
-        //{
-        //    camScript.gazeInput = 0;
-        //}
 	}
 
     
     private void checkGazeIsInAOI()
     {
-        Vector3 gazePos = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
-        float rightX = -Input.GetAxis("RightStickX");
-        float rightY = -Input.GetAxis("RightStickY");
-        float leftX = Input.GetAxis("Horizontal");
-        float leftY = Input.GetAxis("Vertical");
-        
-        if (gazePos != Vector3.zero)
+        if (isActive)
         {
+            Vector3 gazePos = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
+            float rightX = -Input.GetAxis("RightStickX");
+            float rightY = -Input.GetAxis("RightStickY");
+            float leftX = Input.GetAxis("Horizontal");
+            float leftY = Input.GetAxis("Vertical");
 
-            #region Left
-            //LeftPosition
-            if (leftAOI.volume.Contains(gazePos))
+            if (gazePos != Vector3.zero)
             {
 
-                if (Mathf.Abs(rightX) < threshold)
+                #region Left
+                //LeftPosition
+                if (leftAOI.volume.Contains(gazePos))
                 {
-                    Debug.Log("AOI:" +leftAOI.volume.width);
 
-                    float speed = Mathf.Abs((leftAOI.volume.width - gazePos.x) / leftAOI.volume.width) * rotationFactor;
-                    Debug.LogError("Speed:" + speed);
+                    if (Mathf.Abs(rightX) < threshold)
+                    {
 
-                    if (speed > 1)
-                        speed = 0.45f;
+                        float speed = Mathf.Abs((leftAOI.volume.width - gazePos.x) / leftAOI.volume.width) * rotationFactor;
+
+                        if (speed > 1)
+                            speed = 0.45f;
+                        switch (actualStateGazeAction)
+                        {
+                            case gazeActionMenu.onlyCam:
+                                camScript.gazeInput = speed;
+                                break;
+
+                            case gazeActionMenu.onlyPlayer:
+                                player.GetComponent<Debug_ThirdPerson>().gazeInput = speed * 10f;
+
+                                break;
+
+                            case gazeActionMenu.camAndPlayer:
+                                player.GetComponent<Debug_ThirdPerson>().gazeInput = speed * 10f;
+
+                                break;
+
+                            case gazeActionMenu.NONE:
+                                break;
+                        }
+                    }
+                }
+                #endregion
+
+                #region right
+                //RightPosition
+                else if (rightAOI.volume.Contains(gazePos))
+                {
+                    float speed = Mathf.Abs(((rightAOI.volume.width - gazePos.x) + offSetRightAOI) / rightAOI.volume.width) * rotationFactor;
+                    
                     switch (actualStateGazeAction)
                     {
                         case gazeActionMenu.onlyCam:
-                            camScript.gazeInput = speed;
+                            camScript.gazeInput = -speed;
                             break;
 
                         case gazeActionMenu.onlyPlayer:
-                            player.GetComponent<Debug_ThirdPerson>().gazeInput = speed * 10f;
-
+                            player.GetComponent<Debug_ThirdPerson>().gazeInput = -speed;
                             break;
 
                         case gazeActionMenu.camAndPlayer:
-                            player.GetComponent<Debug_ThirdPerson>().gazeInput = speed * 10f;
-
+                            player.GetComponent<Debug_ThirdPerson>().gazeInput = -speed;
                             break;
 
                         case gazeActionMenu.NONE:
                             break;
                     }
                 }
-            }
-            #endregion
-
-            #region right
-            //RightPosition
-            else if (rightAOI.volume.Contains(gazePos))
-            {
-                Debug.Log("AOI:" + rightAOI.volume.width);
-
-
-                //float speed = Mathf.Abs((Screen.width-gazePos.x+rightAOI.startPoint.x+offsetX) / rightAOI.volume.width)*rotationFactor;
-                float speed = Mathf.Abs(((rightAOI.volume.width - gazePos.x)+offSetRightAOI) / rightAOI.volume.width) * rotationFactor;
-                Debug.LogError("Speed RIGHT:" + speed);
-
-                switch (actualStateGazeAction)
+                #endregion
+                else
                 {
-                    case gazeActionMenu.onlyCam:
-                        camScript.gazeInput = -speed;
-                        break;
+                    float speed = (leftAOI.volume.width - gazePos.x) / leftAOI.volume.width;
 
-                    case gazeActionMenu.onlyPlayer:
-                        player.GetComponent<Debug_ThirdPerson>().gazeInput = -speed;
-                        break;
+                    switch (actualStateGazeAction)
+                    {
+                        case gazeActionMenu.onlyCam:
+                            camScript.gazeInput = 0;
+                            break;
 
-                    case gazeActionMenu.camAndPlayer:
-                        player.GetComponent<Debug_ThirdPerson>().gazeInput = -speed;
-                        break;
+                        case gazeActionMenu.onlyPlayer:
+                            player.GetComponent<Debug_ThirdPerson>().gazeInput = 0;
 
-                    case gazeActionMenu.NONE:
-                        break;
+                            break;
+
+                        case gazeActionMenu.camAndPlayer:
+                            player.GetComponent<Debug_ThirdPerson>().gazeInput = 0;
+
+                            break;
+                    }
                 }
             }
-            #endregion
             else
             {
-                float speed = (leftAOI.volume.width - gazePos.x) / leftAOI.volume.width;
-                
-                switch (actualStateGazeAction)
-                {
-                    case gazeActionMenu.onlyCam:
-                        camScript.gazeInput = 0;
-                        break;
-
-                    case gazeActionMenu.onlyPlayer:
-                        player.GetComponent<Debug_ThirdPerson>().gazeInput = 0;
-
-                        break;
-
-                    case gazeActionMenu.camAndPlayer:
-                        player.GetComponent<Debug_ThirdPerson>().gazeInput =0;
-
-                        break;
-                }
-            }
-            
-            /*if (!options.IsEyeDetected)
-            {
                 camScript.gazeInput = 0;
-            }*/
-
+            }
         }
-        else
-        {
-            camScript.gazeInput = 0;
-        }
+        
     }
     
   
@@ -194,7 +182,7 @@ public class RotateWithGazeInput : MonoBehaviour {
 
 
         offSetRightAOI = rightAOI.startPoint.x - leftAOI.endPoint.x;
-        Debug.Log("OffSet:" + offSetRightAOI);
+
     }
 }
 public struct AOI

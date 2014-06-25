@@ -2,6 +2,7 @@
 using System.Collections;
 using XInputDotNetPure;
 using Controller; 
+
 public class PlayerInputManager : MonoBehaviour {
 
 
@@ -29,6 +30,7 @@ public class PlayerInputManager : MonoBehaviour {
     PlayerIndex playerIndex;
     GamePadState state;
     GamePadState prevState;
+
 
 	void Start () {
         animator = GetComponent<Animator>();
@@ -137,7 +139,6 @@ public class PlayerInputManager : MonoBehaviour {
 
         if (Mathf.Abs(speedOut) > 0.1f)
         {
-            Debug.Log("SpeedOut:" + speedOut);
             transform.position += transform.forward * (speedOut*speedFactor);
             transform.Rotate(0, angle, 0);
         }
