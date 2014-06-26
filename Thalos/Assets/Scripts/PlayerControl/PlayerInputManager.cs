@@ -182,7 +182,8 @@ public class PlayerInputManager : MonoBehaviour {
         else if (Input.GetAxis("ButtonA") > 0)
         {
             Debug.Log("ButtonA");
-            jump();
+            animator.SetTrigger("Jump");
+            //jump();
         }
 
         else if (Input.GetAxis("ButtonB") > 0)
