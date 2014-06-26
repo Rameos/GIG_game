@@ -28,22 +28,22 @@ public class Ingredients {
 
     private void InitIngredients()
     {
-        Ingredient Water = new Ingredient("Water", "Water.jpeg");
+        BaseIngredient Water = new BaseIngredient("Water", "Water.jpeg");
         ListOfIngredients.Add("Water", Water);
 
-        Ingredient Herb = new Ingredient("Herb", "Herb.jpeg");
+        BaseIngredient Herb = new BaseIngredient("Herb", "Herb.jpeg");
         ListOfIngredients.Add("Herb", Herb);
 
-        Ingredient Oil = new Ingredient("Oil", "Oil.jpeg");
+        BaseIngredient Oil = new BaseIngredient("Oil", "Oil.jpeg");
         ListOfIngredients.Add("Oil", Oil);
 
-        Ingredient PhoenixAsh = new Ingredient("PhoenixAsh", "PhoenixAsh.jpeg");
+        BaseIngredient PhoenixAsh = new BaseIngredient("PhoenixAsh", "PhoenixAsh.jpeg");
         ListOfIngredients.Add("PhoenixAsh", PhoenixAsh);
 
-        Ingredient Snowdrop = new Ingredient("Snowdrop", "Snowdrop.jpeg");
+        BaseIngredient Snowdrop = new BaseIngredient("Snowdrop", "Snowdrop.jpeg");
         ListOfIngredients.Add("Snowdrop", Snowdrop);
 
-        Ingredient CristalFlower = new Ingredient("CristalFlower", "CristalFlower.jpeg");
+        BaseIngredient CristalFlower = new BaseIngredient("CristalFlower", "CristalFlower.jpeg");
         ListOfIngredients.Add("CristalFlower", CristalFlower);            
     }
 
@@ -54,18 +54,18 @@ public class Ingredients {
         return Keys;
     }
 
-    public Ingredient GetSingleIngredient(string Key)
+    public BaseIngredient GetSingleIngredient(string Key)
     {
         if(ListOfIngredients.ContainsKey(Key))
         {
-            return (Ingredient)ListOfIngredients[Key];
+            return (BaseIngredient)ListOfIngredients[Key];
         }
         return null;
     }
 
-    public Ingredient[] GetAllIngredients()
+    public BaseIngredient[] GetAllIngredients()
     {
-        Ingredient[] Values = new Ingredient[ListOfIngredients.Count];
+        BaseIngredient[] Values = new BaseIngredient[ListOfIngredients.Count];
         ListOfIngredients.Values.CopyTo(Values, 0);
         return Values;
     }
