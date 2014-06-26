@@ -144,7 +144,7 @@ public class PlayerInputManager : MonoBehaviour {
         }
 
         // Setup the Animator Parameters
-        animator.SetFloat("Runspeed", speedOut);
+        animator.SetFloat("Speed", speedOut);
         
     }
     
