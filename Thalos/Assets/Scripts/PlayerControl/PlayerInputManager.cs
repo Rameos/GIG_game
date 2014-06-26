@@ -5,7 +5,6 @@ using Controller;
 
 public class PlayerInputManager : MonoBehaviour {
 
-
     private float speed = 0.1f;
     private Camera gameCam;
     private float rotationDegreePerSecon = 120f;
@@ -31,17 +30,20 @@ public class PlayerInputManager : MonoBehaviour {
     GamePadState state;
     GamePadState prevState;
 
+    //ExternalScripts
+    JumpwithGaze jumpScript; 
+
 
 	void Start () {
         animator = GetComponent<Animator>();
         findGameController();
         Gamestatemanager.RumbleEventHandler += startRumbleForTime;
+        jumpScript = gameObject.GetComponent<JumpwithGaze>();
 	}
 
     void Update()
     {
         connectController();
-
     }
 
 	void FixedUpdate () {
@@ -54,8 +56,6 @@ public class PlayerInputManager : MonoBehaviour {
         checkGazeMenuStatus();
         checkshotInput();
         move(inputX, inputY);
-
-
 	}
 
     public void startRumbleForTime(float rumbleHeavy, float rumbleWeak,float time)
@@ -129,6 +129,11 @@ public class PlayerInputManager : MonoBehaviour {
         return false;
     }
 
+    private void jump()
+    {
+        jumpScript.jumpWithGaze();
+    }
+
     private void move(float inputX, float inputY)
     {
         float angle =0f;
@@ -139,6 +144,7 @@ public class PlayerInputManager : MonoBehaviour {
 
         if (Mathf.Abs(speedOut) > 0.1f)
         {
+            Debug.Log("Speed:" + speedOut);
             transform.position += transform.forward * (speedOut*speedFactor);
             transform.Rotate(0, angle, 0);
         }
@@ -176,6 +182,7 @@ public class PlayerInputManager : MonoBehaviour {
         else if (Input.GetAxis("ButtonA") > 0)
         {
             Debug.Log("ButtonA");
+            jump();
         }
 
         else if (Input.GetAxis("ButtonB") > 0)

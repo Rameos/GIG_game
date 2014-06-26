@@ -113,7 +113,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
         StrickToWorldspace(this.transform, gameCam.transform, ref direction, ref charSpeed, ref charAngle, IsInPivot());
 
         speed = charSpeed;
-
+        Debug.Log("Speed:" + speed);
         animator.SetFloat("Speed", speed, speedDampTime, Time.deltaTime);
         animator.SetFloat("Forward", direction, directionDampTime, Time.deltaTime);
 

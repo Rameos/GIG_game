@@ -136,8 +136,6 @@ public class ThirdPersonCamera : MonoBehaviour
 
     #endregion
 
-
-
     #region Unity event functions
 
     /// <summary>

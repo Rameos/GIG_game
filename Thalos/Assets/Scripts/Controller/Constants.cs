@@ -16,6 +16,8 @@ namespace Controller
         public const int BATTLEMUSIC_CHANNEL = 2;
         public const int MAINMENUMUSIC_CHANNEL = 3;
 
+        public const string TAG_PLAYER = "Player";
+        public const string TAG_MAINCAMERA = "MainCamera";
 
     }
 }
