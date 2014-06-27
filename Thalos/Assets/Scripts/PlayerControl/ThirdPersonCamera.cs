@@ -99,7 +99,6 @@ public class ThirdPersonCamera : MonoBehaviour
 
     #endregion
 
-
     #region Properties (public)
 
     public Transform ParentRig

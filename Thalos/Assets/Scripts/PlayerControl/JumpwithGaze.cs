@@ -27,6 +27,7 @@ public class JumpwithGaze : MonoBehaviour {
     {
         if (isActive)
         {
+            Debug.Log("JUMP");
             Vector3 gazePos = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
 
             Ray screenCast = Camera.main.ScreenPointToRay(gazePos);
@@ -34,7 +35,9 @@ public class JumpwithGaze : MonoBehaviour {
             RaycastHit hitInfo;
             if (Physics.Raycast(screenCast, out hitInfo, jumpdistance))
             {
+                
                 destinationPoint = hitInfo.point;
+                destinationPoint = new Vector3(destinationPoint.x, transform.position.y, destinationPoint.z);
             }
         }
     }

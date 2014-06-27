@@ -54,7 +54,7 @@ public class PlayerInputManager : MonoBehaviour {
         checkGroundDistance();
         checkButtonInput();
         checkGazeMenuStatus();
-        checkshotInput();
+        checkshootInput();
         move(inputX, inputY);
 	}
 
@@ -154,16 +154,29 @@ public class PlayerInputManager : MonoBehaviour {
         
     }
     
-    private void checkshotInput()
+    private void checkshootInput()
     {
         if (Input.GetAxis("Triggers") < 0-thresholdTriggers)
         {
+            animator.SetBool("Throw",true);
             Debug.Log("Throw");
         }
 
         else if (Input.GetAxis("Triggers") > thresholdTriggers)
         {
-            Debug.Log("Shot");
+
+            animator.SetBool("Shoot",true);
+            Debug.Log("Shoot");
+            GamePad.SetVibration(playerIndex, Input.GetAxis("Triggers"), 0);
+        }
+
+        else
+        {
+            float time = 0.4f;
+
+            animator.SetBool("Throw", false);
+            animator.SetBool("Shoot", false);
+            GamePad.SetVibration(playerIndex, 0, 0);
         }
     }
 
@@ -183,7 +196,7 @@ public class PlayerInputManager : MonoBehaviour {
         {
             Debug.Log("ButtonA");
             animator.SetTrigger("Jump");
-            //jump();
+            jump();
         }
 
         else if (Input.GetAxis("ButtonB") > 0)
@@ -199,12 +212,15 @@ public class PlayerInputManager : MonoBehaviour {
         if (Input.GetAxis("ButtonLB") > 0)
         {
             Debug.Log("ButtonLB");
+            
         }
 
         else if (Input.GetAxis("ButtonRB") > 0)
         {
-            Debug.Log("ButtonRB");
+            GamePad.SetVibration(playerIndex, 0, 1);
         }
+
+
     }
 
     private void StickInputToWorld(float inputX, float inputY,ref float angleOut,ref float speedOut)
