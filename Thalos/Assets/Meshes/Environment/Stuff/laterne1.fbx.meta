@@ -1,0 +1,85 @@
+fileFormatVersion: 2
+guid: 56f72ae239d1a7d4987ac5d7d796c58e
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Kopfteil
+    100004: Lamp
+    100006: Laterne
+    100008: //RootNode
+    100010: Querstab
+    400000: Camera
+    400002: Kopfteil
+    400004: Lamp
+    400006: Laterne
+    400008: //RootNode
+    400010: Querstab
+    2300000: Kopfteil
+    2300002: Laterne
+    2300004: Querstab
+    3300000: Kopfteil
+    3300002: Laterne
+    3300004: Querstab
+    4300000: Laterne
+    4300002: Kopfteil
+    4300004: Querstab
+    6400000: Kopfteil
+    6400002: Laterne
+    6400004: Querstab
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .5
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 28
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
