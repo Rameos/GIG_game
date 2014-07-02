@@ -15,6 +15,9 @@ public class PlayerInputManager : MonoBehaviour {
     private float jumpMultiplier = 1f;
     private CapsuleCollider capCollider;
 
+    private Vector3 moveDirection;
+    private float jumpPower; 
+
     [SerializeField]
     private float distanceMax =1f;  
     [SerializeField]
@@ -23,6 +26,11 @@ public class PlayerInputManager : MonoBehaviour {
     private float speedFactor = 0.25f;
     [SerializeField]
     private float thresholdTriggers = 0.1f;
+    
+    [SerializeField]
+    private float jumpSpeed = 10f;
+    [SerializeField]
+    private bool isJumping = false;
 
     //ControllerInput
     bool playerIndexSet = false;
@@ -131,7 +139,7 @@ public class PlayerInputManager : MonoBehaviour {
 
     private void jump()
     {
-        jumpScript.jumpWithGaze();
+        //jumpScript.jumpWithGaze();
     }
 
     private void move(float inputX, float inputY)
@@ -145,7 +153,8 @@ public class PlayerInputManager : MonoBehaviour {
         if (Mathf.Abs(speedOut) > 0.1f)
         {
             Debug.Log("Speed:" + speedOut);
-            transform.position += transform.forward * (speedOut*speedFactor);
+            moveDirection = (transform.forward *speedFactor)*Time.deltaTime;
+            transform.position += moveDirection;
             transform.Rotate(0, angle, 0);
         }
 
