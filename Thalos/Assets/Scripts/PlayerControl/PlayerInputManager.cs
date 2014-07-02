@@ -16,6 +16,8 @@ public class PlayerInputManager : MonoBehaviour {
     private CapsuleCollider capCollider;
 
     private Vector3 moveDirection;
+    private Vector3 jumpDirection;
+
     private float jumpPower; 
 
     [SerializeField]
@@ -28,9 +30,26 @@ public class PlayerInputManager : MonoBehaviour {
     private float thresholdTriggers = 0.1f;
     
     [SerializeField]
-    private float jumpSpeed = 10f;
+    private float jumpSpeed = 2f;
     [SerializeField]
     private bool isJumping = false;
+    [SerializeField]
+    private bool isInAir = false;
+    [SerializeField]
+    private bool isGrounded = false;
+    [SerializeField]
+    private Transform centerOfMass;
+
+    float inputX;
+    float inputY;
+
+
+    //Test: 
+    private float jumpVelocity = 2f;
+    private float gravity = 9.81f;
+    private float distance = 2.4f;
+
+
 
     //ControllerInput
     bool playerIndexSet = false;
@@ -39,14 +58,17 @@ public class PlayerInputManager : MonoBehaviour {
     GamePadState prevState;
 
     //ExternalScripts
-    JumpwithGaze jumpScript; 
+    JumpwithGaze jumpScript;
+    private int y; 
 
 
 	void Start () {
+        centerOfMass = transform.FindChild("CenterOfMass");
         animator = GetComponent<Animator>();
         findGameController();
         Gamestatemanager.RumbleEventHandler += startRumbleForTime;
         jumpScript = gameObject.GetComponent<JumpwithGaze>();
+        capCollider = gameObject.GetComponent<CapsuleCollider>();
 	}
 
     void Update()
@@ -56,14 +78,14 @@ public class PlayerInputManager : MonoBehaviour {
 
 	void FixedUpdate () {
 
-        float inputX = Input.GetAxis("Horizontal");
-        float inputY = Input.GetAxis("Vertical");
+       inputX = Input.GetAxis("Horizontal");
+       inputY = Input.GetAxis("Vertical");
 
-        checkGroundDistance();
-        checkButtonInput();
-        checkGazeMenuStatus();
-        checkshootInput();
-        move(inputX, inputY);
+       checkIsGrounded();
+       checkButtonInput();
+       checkGazeMenuStatus();
+       checkshootInput();
+       move(inputX, inputY);
 	}
 
     public void startRumbleForTime(float rumbleHeavy, float rumbleWeak,float time)
@@ -114,32 +136,51 @@ public class PlayerInputManager : MonoBehaviour {
         }
         return false;
     }
-    
-    private bool checkGroundDistance()
+
+    private void checkIsGrounded()
     {
-        RaycastHit hit;
-        if(Physics.Raycast(new Ray(transform.position,transform.up*-1),out hit))
+        Debug.Log(capCollider.height);
+        Ray rayinput = new Ray(centerOfMass.position, -transform.up);
+        Debug.DrawRay(transform.position, -transform.up,Color.red,1);
+        if (Physics.Raycast(rayinput, capCollider.height / 2))
         {
-            if (hit.distance < distanceMax)
-            {
-                rigidbody.isKinematic = true;
-                //rigidbody.isKinematic = false;
-                return false; 
-            }
-
-            else
-            {
-                rigidbody.isKinematic = false;
-                return true;
-            }
+            isGrounded = true;
+            isJumping = false;
+            isInAir = false;
         }
-
-        return false;
+        else if (!isInAir)
+        {
+            isGrounded = false;
+            isInAir = true;
+            //Set JumpDirection
+        }
     }
 
     private void jump()
     {
-        //jumpScript.jumpWithGaze();
+        if(isGrounded)
+        {
+            rigidbody.velocity = new Vector3(0, 20, 0);
+            //rigidbody.velocity.y = 20;
+            //rigidbody.AddForce(transform.up * jumpSpeed, ForceMode.Force);
+        }
+        /*
+        
+        float gravity = Vector3.Magnitude(Physics.gravity);
+        float distance = Vector3.Distance(transform.position, transform.position);
+
+        float angle = Mathf.Atan((Mathf.Pow(jumpVelocity, 2) + Mathf.Sqrt(Mathf.Pow(jumpVelocity, 4) - (gravity * ((gravity * Mathf.Pow(distance, 2)) + (2 * y * Mathf.Pow(jumpVelocity, 2)))))) / (gravity * distance)) * Mathf.Rad2Deg;
+
+        transform.eulerAngles = new Vector3(angle * -1, transform.eulerAngles.y, transform.eulerAngles.z);
+
+        rigidbody.AddRelativeForce(Vector3.forward * jumpVelocity, ForceMode.VelocityChange);
+
+        jumpDirection = new Vector3(inputX, jumpDirection.y, inputY);
+        //isJumping = true;
+        if(isGrounded)
+        rigidbody.AddForce(Vector3.Cross(transform.up,transform.forward) * jumpSpeed);
+       
+        //jumpScript.jumpWithGaze();*/
     }
 
     private void move(float inputX, float inputY)
@@ -148,14 +189,29 @@ public class PlayerInputManager : MonoBehaviour {
         float speedOut = 0f;
         StickInputToWorld(inputX, inputY, ref angle, ref speedOut);
 
-        Debug.DrawLine(transform.position, transform.position + transform.forward*2);
+        Debug.DrawLine(transform.position, transform.position + transform.forward*2,Color.green);
 
         if (Mathf.Abs(speedOut) > 0.1f)
         {
-            Debug.Log("Speed:" + speedOut);
-            moveDirection = (transform.forward *speedFactor)*Time.deltaTime;
-            transform.position += moveDirection;
-            transform.Rotate(0, angle, 0);
+
+            if (isGrounded)
+            {
+                moveDirection = (transform.forward * speedFactor*speedOut) * Time.deltaTime;
+                
+                transform.position += moveDirection;
+                transform.Rotate(0, angle, 0);
+
+            }
+            else
+            {
+                /*
+                Debug.Log("Movement: " + jumpDirection);
+
+                moveDirection = (transform.forward * jumpSpeed) * Time.deltaTime;
+
+                transform.position += moveDirection;*/
+            }
+
         }
 
         // Setup the Animator Parameters
