@@ -28,23 +28,20 @@ public class Ingredients {
 
     private void InitIngredients()
     {
-        BaseIngredient Water = new BaseIngredient("Water", "Water.jpeg");
-        ListOfIngredients.Add("Water", Water);
+        BaseIngredient Water = new BaseIngredient(Strings.WATER, "Water.jpeg");
+        ListOfIngredients.Add(Strings.WATER, Water);
 
-        BaseIngredient Herb = new BaseIngredient("Herb", "Herb.jpeg");
-        ListOfIngredients.Add("Herb", Herb);
+        BaseIngredient Herb = new BaseIngredient(Strings.HERB, "Herb.jpeg");
+        ListOfIngredients.Add(Strings.HERB, Herb);
 
-        BaseIngredient Oil = new BaseIngredient("Oil", "Oil.jpeg");
-        ListOfIngredients.Add("Oil", Oil);
+        BaseIngredient Oil = new BaseIngredient(Strings.OIL, "Oil.jpeg");
+        ListOfIngredients.Add(Strings.OIL, Oil);
 
-        BaseIngredient PhoenixAsh = new BaseIngredient("PhoenixAsh", "PhoenixAsh.jpeg");
-        ListOfIngredients.Add("PhoenixAsh", PhoenixAsh);
+        BaseIngredient PhoenixAsh = new BaseIngredient(Strings.PHOENIXASH, "PhoenixAsh.jpeg");
+        ListOfIngredients.Add(Strings.PHOENIXASH, PhoenixAsh);
 
-        BaseIngredient Snowdrop = new BaseIngredient("Snowdrop", "Snowdrop.jpeg");
-        ListOfIngredients.Add("Snowdrop", Snowdrop);
-
-        BaseIngredient CristalFlower = new BaseIngredient("CristalFlower", "CristalFlower.jpeg");
-        ListOfIngredients.Add("CristalFlower", CristalFlower);            
+        BaseIngredient CristalFlower = new BaseIngredient(Strings.CRISTALFLOWER, "CristalFlower.jpeg");
+        ListOfIngredients.Add(Strings.CRISTALFLOWER, CristalFlower);            
     }
 
     public string[] GetIngredientList()

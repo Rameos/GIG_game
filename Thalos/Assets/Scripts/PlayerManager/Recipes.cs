@@ -29,21 +29,20 @@ public class Recipes
 
     private void InitRecipes()
     {
-        BaseRecipe Healpotion = new BaseRecipe("Healpotion");
-        Healpotion.addNeededIngredient("Water", 1);
-        Healpotion.addNeededIngredient("Herb", 2);
-        ListOfRecipes.Add("Healpotion", Healpotion);
+        BaseRecipe Healpotion = new BaseRecipe(Strings.HEALPOTION);
+        Healpotion.addNeededIngredient(Strings.WATER, 1);
+        Healpotion.addNeededIngredient(Strings.HERB, 1);
+        ListOfRecipes.Add(Strings.HEALPOTION, Healpotion);
 
-        BaseRecipe Firepotion = new BaseRecipe("Firepotion");
-        Firepotion.addNeededIngredient("Oil", 1);
-        Firepotion.addNeededIngredient("PhoenixAsh", 1);
-        ListOfRecipes.Add("Firepotion", Firepotion);
+        BaseRecipe Firepotion = new BaseRecipe(Strings.FIREPOTION);
+        Firepotion.addNeededIngredient(Strings.OIL, 1);
+        Firepotion.addNeededIngredient(Strings.PHOENIXASH, 1);
+        ListOfRecipes.Add(Strings.FIREPOTION, Firepotion);
 
-        BaseRecipe Icepotion = new BaseRecipe("Icepotion");
-        Icepotion.addNeededIngredient("Water", 1);
-        Icepotion.addNeededIngredient("Snowdrop", 1);
-        Icepotion.addNeededIngredient("CristalFlower", 1);
-        ListOfRecipes.Add("Icepotion", Icepotion);
+        BaseRecipe Icepotion = new BaseRecipe(Strings.ICEPOTION);
+        Icepotion.addNeededIngredient(Strings.WATER, 1);
+        Icepotion.addNeededIngredient(Strings.CRISTALFLOWER, 1);
+        ListOfRecipes.Add(Strings.ICEPOTION, Icepotion);
     }
 
     public string[] GetRecipeList()
