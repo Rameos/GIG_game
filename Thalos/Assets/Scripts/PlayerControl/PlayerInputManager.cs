@@ -28,9 +28,11 @@ public class PlayerInputManager : MonoBehaviour {
     private float speedFactor = 0.25f;
     [SerializeField]
     private float thresholdTriggers = 0.1f;
-    
     [SerializeField]
-    private float jumpSpeed = 2f;
+    private float thresholdStics = 0.1f; 
+
+    [SerializeField]
+    private float jumpForcePower = 5f;
     [SerializeField]
     private bool isJumping = false;
     [SerializeField]
@@ -39,6 +41,9 @@ public class PlayerInputManager : MonoBehaviour {
     private bool isGrounded = false;
     [SerializeField]
     private Transform centerOfMass;
+    [SerializeField]
+    private float stepRotation = 5;
+
 
     float inputX;
     float inputY;
@@ -160,7 +165,35 @@ public class PlayerInputManager : MonoBehaviour {
     {
         if(isGrounded)
         {
-            rigidbody.velocity = new Vector3(0, 20, 0);
+            if (!jumpScript.isActive)
+            {
+                rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
+                if (Mathf.Abs(inputX) > thresholdStics || Mathf.Abs(inputY) > thresholdStics)
+                    rigidbody.velocity += transform.forward * jumpForcePower;
+            }
+
+            else
+            {
+
+                Vector3 destinationPoint = jumpScript.getDestinationpoint();
+                Debug.Log("DestinationPoint: " + destinationPoint);
+                Debug.DrawRay(transform.position, destinationPoint, Color.magenta,2f);
+
+                destinationPoint = destinationPoint - transform.position;
+
+                destinationPoint.y = 0;
+
+                Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
+                transform.rotation = lookAtRotation;//Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime);
+                
+                rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
+                rigidbody.velocity += transform.forward * jumpForcePower;
+
+                //if (Mathf.Abs(inputX) > thresholdStics || Mathf.Abs(inputY) > thresholdStics)
+                   
+            
+            }
+            //animator.SetTrigger("Jump");
             //rigidbody.velocity.y = 20;
             //rigidbody.AddForce(transform.up * jumpSpeed, ForceMode.Force);
         }
@@ -185,19 +218,20 @@ public class PlayerInputManager : MonoBehaviour {
 
     private void move(float inputX, float inputY)
     {
-        float angle =0f;
+
+        float angle = 0f;
         float speedOut = 0f;
         StickInputToWorld(inputX, inputY, ref angle, ref speedOut);
 
-        Debug.DrawLine(transform.position, transform.position + transform.forward*2,Color.green);
+        Debug.DrawLine(transform.position, transform.position + transform.forward * 2, Color.green);
 
         if (Mathf.Abs(speedOut) > 0.1f)
         {
 
             if (isGrounded)
             {
-                moveDirection = (transform.forward * speedFactor*speedOut) * Time.deltaTime;
-                
+                moveDirection = (transform.forward * speedFactor * speedOut) * Time.deltaTime;
+
                 transform.position += moveDirection;
                 transform.Rotate(0, angle, 0);
 
@@ -260,7 +294,7 @@ public class PlayerInputManager : MonoBehaviour {
         else if (Input.GetAxis("ButtonA") > 0)
         {
             Debug.Log("ButtonA");
-            animator.SetTrigger("Jump");
+
             jump();
         }
 

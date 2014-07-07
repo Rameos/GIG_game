@@ -58,12 +58,22 @@ public class RotateWithGazeInput : MonoBehaviour {
     }
 
 
-    void Update () 
+    void FixedUpdate () 
     {
         calculateAOI();
+        isActive = checkInput();
         checkGazeIsInAOI();
 
 	}
+
+    private bool checkInput()
+    {
+        if (Input.GetAxis("Horizontal") > threshold || Input.GetAxis("Vertical") > threshold)
+        {
+            return true;
+        }
+        return false; 
+    }
 
     
     private void checkGazeIsInAOI()
