@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Policeman : BaseEnemy {
 
-	public Policeman() : base(100, 5, 1)
+namespace Enemy
+{
+    public class Policeman : BaseEnemy
     {
-    
+
+        public Policeman(int MaxLivePoints, int Damage, int Armour): base(MaxLivePoints, Damage, Armour)
+        {
+
+        }
     }
 }

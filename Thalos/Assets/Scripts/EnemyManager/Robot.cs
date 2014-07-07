@@ -2,19 +2,24 @@
 using System.Collections;
 using Backend;
 
-public class Robot : BaseEnemy {
-
-	public Robot() : base(100, 10, 5)
+namespace Enemy
+{
+    public class Robot : BaseEnemy
     {
-    
-    }
 
-    public int TakeDamage(int Damage, PlayerModel.DamageTypes DamageType)
-    {
-        if (DamageType == PlayerModel.DamageTypes.Fire)
+        public Robot(int MaxLivePoints, int Damage, int Armour)
+            : base(MaxLivePoints, Damage, Armour)
         {
-            return this.LivePoints;
+
         }
-        return base.TakeDamage(Damage, DamageType);
+
+        public int TakeDamage(int Damage, PlayerModel.DamageTypes DamageType)
+        {
+            if (DamageType == PlayerModel.DamageTypes.Fire)
+            {
+                return this.LivePoints;
+            }
+            return base.TakeDamage(Damage, DamageType);
+        }
     }
 }

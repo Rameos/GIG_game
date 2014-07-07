@@ -28,26 +28,20 @@ public class Ingredients {
 
     private void InitIngredients()
     {
-        Ingredient Water = new Ingredient("Water", "Water.jpeg");
-        ListOfIngredients.Add("Water", Water);
+        BaseIngredient Water = new BaseIngredient(Strings.WATER, "Water.jpeg");
+        ListOfIngredients.Add(Strings.WATER, Water);
 
-        Ingredient PureWater = new Ingredient("Pure Water", "PureWater.jpeg");
-        ListOfIngredients.Add("Pure Water", PureWater);
+        BaseIngredient Herb = new BaseIngredient(Strings.HERB, "Herb.jpeg");
+        ListOfIngredients.Add(Strings.HERB, Herb);
 
-        Ingredient Herb = new Ingredient("Herb", "Herb.jpeg");
-        ListOfIngredients.Add("Herb", Herb);
+        BaseIngredient Oil = new BaseIngredient(Strings.OIL, "Oil.jpeg");
+        ListOfIngredients.Add(Strings.OIL, Oil);
 
-        Ingredient Oil = new Ingredient("Oil", "Oil.jpeg");
-        ListOfIngredients.Add("Oil", Oil);
+        BaseIngredient PhoenixAsh = new BaseIngredient(Strings.PHOENIXASH, "PhoenixAsh.jpeg");
+        ListOfIngredients.Add(Strings.PHOENIXASH, PhoenixAsh);
 
-        Ingredient PhoenixAsh = new Ingredient("PhoenixAsh", "PhoenixAsh.jpeg");
-        ListOfIngredients.Add("PhoenixAsh", PhoenixAsh);
-
-        Ingredient Snowdrop = new Ingredient("Snowdrop", "Snowdrop.jpeg");
-        ListOfIngredients.Add("Snowdrop", Snowdrop);
-
-        Ingredient CristalFlower = new Ingredient("CristalFlower", "CristalFlower.jpeg");
-        ListOfIngredients.Add("CristalFlower", CristalFlower);            
+        BaseIngredient CristalFlower = new BaseIngredient(Strings.CRISTALFLOWER, "CristalFlower.jpeg");
+        ListOfIngredients.Add(Strings.CRISTALFLOWER, CristalFlower);            
     }
 
     public string[] GetIngredientList()
@@ -57,18 +51,18 @@ public class Ingredients {
         return Keys;
     }
 
-    public Ingredient GetSingleIngredient(string Key)
+    public BaseIngredient GetSingleIngredient(string Key)
     {
         if(ListOfIngredients.ContainsKey(Key))
         {
-            return (Ingredient)ListOfIngredients[Key];
+            return (BaseIngredient)ListOfIngredients[Key];
         }
         return null;
     }
 
-    public Ingredient[] GetAllIngredients()
+    public BaseIngredient[] GetAllIngredients()
     {
-        Ingredient[] Values = new Ingredient[ListOfIngredients.Count];
+        BaseIngredient[] Values = new BaseIngredient[ListOfIngredients.Count];
         ListOfIngredients.Values.CopyTo(Values, 0);
         return Values;
     }
