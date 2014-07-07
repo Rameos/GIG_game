@@ -18,7 +18,7 @@ public class EnemyObject : MonoBehaviour {
     private Vector3 globalLastSightingPlayer;   //WARNING: INTO Model
     private GameObject player;
     private Animator playerAnim;
-    private Vector3 previousSighing;
+    private Vector3 previousSighting;
 
 
     private BaseEnemy enemyManager;
@@ -45,10 +45,16 @@ public class EnemyObject : MonoBehaviour {
     {
         nav = GetComponent<NavMeshAgent>();
         col = GetComponent<SphereCollider>();
-        anim = GetComponent<Animator>(); 
+        anim = GetComponent<Animator>();
+        globalLastSightingPlayer = Vector3.zero;
+        player = GameObject.FindGameObjectWithTag("Player");
 
-        
+
+        personalLastSightingPlayer = Vector3.zero;
+        previousSighting = Vector3.zero;
+
     }
+
     
     void Start () {
 
@@ -71,16 +77,79 @@ public class EnemyObject : MonoBehaviour {
                 break;
         }
 
-        //Debug: SendDamage
+        //Debug_SendDamage
         Damage debugdamage = new Damage(100, PlayerModel.DamageTypes.Standard);
         SendMessage("ApplyDamage", debugdamage);
 	}
-	
-	
+
+    void Update()
+    {
+        if (globalLastSightingPlayer != previousSighting)
+        {
+            personalLastSightingPlayer = globalLastSightingPlayer;
+        }
+
+        //UpdateAnimation When Status Changed;
+
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        //Is In Sphere
+        if (other.gameObject == player)
+        {
+            playerIsInSight = false;
+
+            Vector3 direction = other.transform.position - transform.position;
+
+            float angle = Vector3.Angle(direction, transform.forward);
+
+            if(angle < fieldOfViewAngle * 0.5f)
+            {
+                RaycastHit hit;
+
+                if(Physics.Raycast(transform.position+transform.up,direction.normalized,out hit, col.radius))
+                {
+                    if(hit.collider.gameObject == player)
+                    {
+                        Debug.Log("PlayerDetected");
+                        playerIsInSight = true;
+                        globalLastSightingPlayer = player.transform.position;
+                        TurnToPlayer();
+                    }
+                }
+            }
+
+            //ANIMATIONEN
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            playerIsInSight = false;
+        }
+    }
+
     void FixedUpdate () {
-        
-	    
+
+        Debug.Log("PlayerIsInSight:" + playerIsInSight);
 	}
+
+    void TurnToPlayer()
+    {
+        Vector3 destinationPoint = player.transform.position - transform.position;
+        destinationPoint.y = 0;
+
+        Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
+        transform.rotation = lookAtRotation;
+    }
+
+    void ShotPlayer()
+    {
+
+    }
 
     private bool isPlayerVisible()
     {
