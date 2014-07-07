@@ -14,8 +14,9 @@ namespace Controller
         #region UNITY_FUNCTIONS
         void Start()
         {
+            Debug.Log("PlayerStatemanager");
             Gamestatemanager.PlayerIsDeadHandler += Gamestatemanager_PlayerIsDeadHandler;
-            Gamestatemanager.PlayerGetsDamageHandler += ApplyDamageToModel;
+            Gamestatemanager.PlayerGetsDamageHandler += TakeDamage;
         }
 
         void Update()
@@ -57,10 +58,10 @@ namespace Controller
         /// </summary>
         /// <param name="Damage"></param>
         /// <returns></returns>
-        public int TakeDamage(int Damage)
+        public void TakeDamage(int Damage)
         {
+            Debug.Log("HitPlayer");
             playerModel.HealthPoints -= Damage;
-            return playerModel.HealthPoints;
         }
 
         public int AddMaxHealthPoints(int HeartPiece)
@@ -96,10 +97,6 @@ namespace Controller
             Debug.Log("PlayerIsDead!");
         }
 
-        private void ApplyDamageToModel(int damagepoints)
-        {
-            playerModel.HealthPoints -= damagepoints;
-        }
         #endregion
     }
 }

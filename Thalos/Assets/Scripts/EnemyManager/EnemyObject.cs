@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Enemy;
-using Backend; 
+using Backend;
+using Controller; 
 
 public class EnemyObject : MonoBehaviour {
 
@@ -24,9 +25,10 @@ public class EnemyObject : MonoBehaviour {
     private BaseEnemy enemyManager;
     public enemyType actualEnemy;
 
+    private bool isShotable = true;
 
-
-
+    [SerializeField]
+    private float coolDown = 2f;
     [SerializeField]
     private float shootfrequence = 2f;
     
@@ -106,22 +108,33 @@ public class EnemyObject : MonoBehaviour {
 
             if(angle < fieldOfViewAngle * 0.5f)
             {
-                RaycastHit hit;
-
-                if(Physics.Raycast(transform.position+transform.up,direction.normalized,out hit, col.radius))
-                {
-                    if(hit.collider.gameObject == player)
-                    {
-                        Debug.Log("PlayerDetected");
-                        playerIsInSight = true;
-                        globalLastSightingPlayer = player.transform.position;
-                        TurnToPlayer();
-                    }
-                }
+                RaycastHit hit = checkPlayerIsInSight(direction);
+                
+                if (angle < fieldOfViewAngle * 0.4f)
+                    ShotPlayer();
             }
+
+
 
             //ANIMATIONEN
         }
+    }
+
+    RaycastHit checkPlayerIsInSight( Vector3 direction)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position + transform.up, direction.normalized, out hit, col.radius))
+        {
+            if (hit.collider.gameObject == player)
+            {
+                Debug.Log("PlayerDetected");
+                playerIsInSight = true;
+                globalLastSightingPlayer = player.transform.position;
+                TurnToPlayer();
+            }
+        }
+
+        return hit;
     }
 
     void OnTriggerExit(Collider other)
@@ -148,7 +161,10 @@ public class EnemyObject : MonoBehaviour {
 
     void ShotPlayer()
     {
-
+        if (isShotable)
+        {
+            StartCoroutine(ShotPlayerCoolDown());
+        }
     }
 
     private bool isPlayerVisible()
@@ -161,5 +177,14 @@ public class EnemyObject : MonoBehaviour {
         Debug.Log("Old Health: " + enemyManager.LivePoints);
         int health = enemyManager.TakeDamage(damage.damage, damage.typeDamage);
         Debug.Log("New Health: " + health);
+    }
+
+    IEnumerator ShotPlayerCoolDown()
+    {
+        isShotable = false;
+        Gamestatemanager.OnPlayerGetsDamage(enemyManager.Damage);
+        Debug.Log("SHOT PLAYER!!!");
+        yield return new WaitForSeconds(coolDown);
+        isShotable = true;
     }
 }

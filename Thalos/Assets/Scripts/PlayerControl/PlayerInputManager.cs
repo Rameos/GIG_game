@@ -197,23 +197,6 @@ public class PlayerInputManager : MonoBehaviour {
             //rigidbody.velocity.y = 20;
             //rigidbody.AddForce(transform.up * jumpSpeed, ForceMode.Force);
         }
-        /*
-        
-        float gravity = Vector3.Magnitude(Physics.gravity);
-        float distance = Vector3.Distance(transform.position, transform.position);
-
-        float angle = Mathf.Atan((Mathf.Pow(jumpVelocity, 2) + Mathf.Sqrt(Mathf.Pow(jumpVelocity, 4) - (gravity * ((gravity * Mathf.Pow(distance, 2)) + (2 * y * Mathf.Pow(jumpVelocity, 2)))))) / (gravity * distance)) * Mathf.Rad2Deg;
-
-        transform.eulerAngles = new Vector3(angle * -1, transform.eulerAngles.y, transform.eulerAngles.z);
-
-        rigidbody.AddRelativeForce(Vector3.forward * jumpVelocity, ForceMode.VelocityChange);
-
-        jumpDirection = new Vector3(inputX, jumpDirection.y, inputY);
-        //isJumping = true;
-        if(isGrounded)
-        rigidbody.AddForce(Vector3.Cross(transform.up,transform.forward) * jumpSpeed);
-       
-        //jumpScript.jumpWithGaze();*/
     }
 
     private void move(float inputX, float inputY)
