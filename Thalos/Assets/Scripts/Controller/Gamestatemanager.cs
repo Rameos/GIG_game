@@ -206,8 +206,10 @@ namespace Controller
 
         public static void OnPlayerGetsDamage(int damage)
         {
+            
             if (PlayerGetsDamageHandler != null)
             {
+                Debug.Log("BOOM!");
                 PlayerGetsDamageHandler(damage);
             }
 
