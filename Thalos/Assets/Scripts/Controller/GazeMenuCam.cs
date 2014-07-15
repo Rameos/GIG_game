@@ -8,11 +8,20 @@ namespace GazeUI
     public class GazeMenuCam : MonoBehaviour
     {
         private Camera guicam;
+        [SerializeField]
+        private GameObject circleMenu;
+        [SerializeField]
+        private GameObject inventoryMenu;
+        [SerializeField]
+        private GameObject pauseMenu;
+
         private BaseGazeUI oldSelection;
 
         void Start()
         {
             guicam = gameObject.camera;
+            closeAllMenus();
+            Gamestatemanager.ChangeInGameMenuHandler += SetMenuState;
         }
 
         void Update()
@@ -45,22 +54,29 @@ namespace GazeUI
             }
         }
 
-        void OpenMenu(int ID_Menu)
+        void SetMenuState(int ID_Menu,bool status)
         {
             switch (ID_Menu)
             {
                 case Constants.INGAMEMENU_CIRCLEMENU:
-
+                    circleMenu.SetActive(status);
                     break;
 
                 case Constants.INGAMEMENU_INVENTORY:
-
+                    inventoryMenu.SetActive(status);
                     break;
 
                 case Constants.INGAMEMENU_PAUSE:
-
+                    pauseMenu.SetActive(status);
                     break;
             }
+        }
+
+        private void closeAllMenus()
+        {
+            circleMenu.SetActive(false);
+            inventoryMenu.SetActive(false);
+            pauseMenu.SetActive(false);
         }
     }
 
