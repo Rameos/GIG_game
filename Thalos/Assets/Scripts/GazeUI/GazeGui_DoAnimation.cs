@@ -6,10 +6,12 @@ namespace GazeUI
     public class GazeGui_DoAnimation : BaseGazeUI
     {
 
+        
         private Vector3 destinationScale = Vector3.one;
         public override void OnEventStart()
         {
             Debug.Log("fancyDancy");
+            
         }
 
         public override void OnGazeEnter()
@@ -30,7 +32,7 @@ namespace GazeUI
 
         void Update()
         {
-            transform.localScale = Vector3.Lerp(transform.localScale, destinationScale, 0.05f);
+            transform.localScale = Vector3.Lerp(transform.localScale, destinationScale, 0.01f);
         }
 
     }
