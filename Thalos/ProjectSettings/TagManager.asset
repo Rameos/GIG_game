@@ -10,7 +10,7 @@ TagManager:
   - UISoundManager
   - BackgroundMusicManager
   - PlayerPivot
-  - 
+  - GazeGui
   - 
   - 
   Builtin Layer 0: Default

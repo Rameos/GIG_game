@@ -3,11 +3,12 @@ using System.Collections;
 using iViewX;
 using Controller;
 
-namespace GazeGUI
+namespace GazeUI
 {
     public class GazeMenuCam : MonoBehaviour
     {
-        Camera guicam;
+        private Camera guicam;
+        private BaseGazeUI oldSelection;
 
         void Start()
         {
@@ -18,29 +19,30 @@ namespace GazeGUI
         {
 
             Vector2 gazePosOnScreen = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
+            gazePosOnScreen.y = Screen.height-gazePosOnScreen.y;
             RaycastHit2D hit = Physics2D.Raycast(guicam.ScreenToWorldPoint(gazePosOnScreen), Vector2.zero);
 
-            if (hit.collider != null)
+            if (hit.collider != null&& hit.collider.tag =="GazeGui")
             {
-                Debug.Log("Target Position: " + hit.collider.gameObject.name);
-            }
+                BaseGazeUI uiItem = hit.collider.gameObject.GetComponent<BaseGazeUI>();
+                
+                if (oldSelection == null)
+                    oldSelection = uiItem;
 
-            /*Debug.Log("updateGUICAM");
-
-            
-            
-            
-            RaycastHit2D hit2D = new RaycastHit2D();
-            if (Physics2D.Raycast(new Vector2(123, 123), new Vector2(1, 1)))
-            {
-                if (hit2D != null)
+                else if (uiItem != oldSelection)
                 {
-                    Debug.Log("Hit2D: " + hit2D.collider.gameObject.name);
+                    oldSelection.OnObjectExit();
+                    oldSelection = uiItem;
                 }
-            }*/
 
+                uiItem.onObjectHit();
 
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    uiItem.OnEventStart();
+                }
 
+            }
         }
     }
 
