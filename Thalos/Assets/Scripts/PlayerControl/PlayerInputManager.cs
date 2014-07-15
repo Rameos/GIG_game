@@ -18,7 +18,8 @@ public class PlayerInputManager : MonoBehaviour {
     private Vector3 moveDirection;
     private Vector3 jumpDirection;
 
-    private float jumpPower; 
+    private float jumpPower;
+    private bool circleMenuIsOpen = false;
 
     [SerializeField]
     private float distanceMax =1f;  
@@ -254,13 +255,14 @@ public class PlayerInputManager : MonoBehaviour {
 
         else
         {
-            float time = 0.4f;
-
             animator.SetBool("Throw", false);
             animator.SetBool("Shoot", false);
             GamePad.SetVibration(playerIndex, 0, 0);
         }
+
     }
+
+    
 
     private void checkButtonInput()
     {
@@ -294,7 +296,8 @@ public class PlayerInputManager : MonoBehaviour {
         if (Input.GetAxis("ButtonLB") > 0)
         {
             Debug.Log("ButtonLB");
-            
+            Gamestatemanager.OnOpenInGameMenu(Constants.INGAMEMENU_CIRCLEMENU);
+            circleMenuIsOpen = true;
         }
 
         else if (Input.GetAxis("ButtonRB") > 0)
@@ -302,7 +305,12 @@ public class PlayerInputManager : MonoBehaviour {
             GamePad.SetVibration(playerIndex, 0, 1);
         }
 
-
+        else if(circleMenuIsOpen== true && Input.GetAxis("ButtonLB")<=0)
+        {
+            circleMenuIsOpen = false;
+            Gamestatemanager.OnCloseInGameMenu();
+            Debug.Log("CircleMenuClose!");
+        }
     }
 
     private void StickInputToWorld(float inputX, float inputY,ref float angleOut,ref float speedOut)

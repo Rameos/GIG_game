@@ -21,6 +21,9 @@ namespace Controller
         public const string TAG_GUI = "GazeGui";
         public const string TAG_ENEMY = "Enemy";
 
+        public const int INGAMEMENU_PAUSE = 0;
+        public const int INGAMEMENU_CIRCLEMENU = 1;
+        public const int INGAMEMENU_INVENTORY = 2; 
 
         public const int LAYERMASK_GUI = 9;
 

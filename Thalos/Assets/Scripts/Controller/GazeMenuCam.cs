@@ -44,6 +44,24 @@ namespace GazeUI
 
             }
         }
+
+        void OpenMenu(int ID_Menu)
+        {
+            switch (ID_Menu)
+            {
+                case Constants.INGAMEMENU_CIRCLEMENU:
+
+                    break;
+
+                case Constants.INGAMEMENU_INVENTORY:
+
+                    break;
+
+                case Constants.INGAMEMENU_PAUSE:
+
+                    break;
+            }
+        }
     }
 
 }

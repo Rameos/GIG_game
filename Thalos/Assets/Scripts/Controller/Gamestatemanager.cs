@@ -15,7 +15,7 @@ namespace Controller
     public delegate void PlayerIsDead();
     public delegate void PlayerGetsDamage(int damagepoints);
     
-    public delegate void OpenInGameMenu();
+    public delegate void OpenInGameMenu(int ID_Menu);
     public delegate void CloseInGameMenu();
 
     public delegate void RumbleEvent(float duration,float forceHeavy, float forceLight);
@@ -26,7 +26,10 @@ namespace Controller
         public static event OpenPlayScreen OpenPlayScreenHandler;
         public static event ClosePlayScreen ClosePlayScreenHandler;
         public static event CloseMainMenu CloseMainMenuScreenHandler;
-        
+
+        public static event OpenInGameMenu OpenInGameMenuHandler;
+        public static event CloseInGameMenu CloseIngameMenuHandler;
+
         public static event PlayerIsDead PlayerIsDeadHandler;
         public static event PlayerGetsDamage PlayerGetsDamageHandler;
 
@@ -66,7 +69,7 @@ namespace Controller
             else if (levelID == Constants.ID_MAINMENU)
             {
                 OnOpenMainMenu();
-                OnClodePlayView();
+                OnClosePlayView();
             }
         }
         
@@ -186,7 +189,7 @@ namespace Controller
             }
         }
 
-        public static void OnClodePlayView()
+        public static void OnClosePlayView()
         {
             if (ClosePlayScreenHandler != null)
             {
@@ -222,6 +225,23 @@ namespace Controller
                 RumbleEventHandler(duration,forceHeavy,forceLight);
             }
         }
+
+        public static void OnOpenInGameMenu(int ID_MenuState)
+        {
+            if (OpenInGameMenuHandler != null)
+            {
+                OpenInGameMenuHandler(ID_MenuState);
+            }
+        }
+
+        public static void OnCloseInGameMenu()
+        {
+            if (CloseIngameMenuHandler != null)
+            {
+                CloseIngameMenuHandler();
+            }
+        }
+
 
         IEnumerator waitForFadeOutEffect(int levelID)
         {
