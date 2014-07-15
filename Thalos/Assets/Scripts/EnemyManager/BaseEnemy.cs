@@ -11,13 +11,13 @@ namespace Enemy
         public int LivePoints { get; private set; }
         public int Damage { get; private set; }
         public int Armour { get; private set; }
-
+        
         public BaseEnemy(int MaxLivePoints, int Damage, int Armour)
         {
             this.MaxLivePoints = MaxLivePoints;
             this.LivePoints = MaxLivePoints;
             this.Damage = Damage;
-            this.Armour = Armour;
+            this.Armour = Armour;    
         }
 
         public int TakeDamage(int Damage, PlayerModel.DamageTypes DamageType)

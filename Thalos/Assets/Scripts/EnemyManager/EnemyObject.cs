@@ -22,6 +22,8 @@ public class EnemyObject : MonoBehaviour {
     private Vector3 previousSighting;
 
 
+    private Damage damageInformation;
+
     private BaseEnemy enemyManager;
     public enemyType actualEnemy;
 
@@ -53,35 +55,35 @@ public class EnemyObject : MonoBehaviour {
 
 
         personalLastSightingPlayer = Vector3.zero;
-        previousSighting = Vector3.zero;
-
+        previousSighting = Vector3.zero; 
     }
 
     
-    void Start () {
+    void Start() {
 
         switch (actualEnemy)
         {
             case enemyType.policeman_LVL01:
                 enemyManager = new Policeman(100,5,5);
+                damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Standard);
                 break;
 
             case enemyType.policeman_LVL02:
                 enemyManager = new Policeman(150, 5, 5);
+                damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Fire);
                 break;
 
             case enemyType.policeman_LVL03:
                 enemyManager = new Policeman(200, 5, 5);
+                damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Ice);
                 break;
 
             case enemyType.roboter_LVL01:
                 enemyManager = new Robot(300, 10, 20);
+                damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Standard);
                 break;
         }
 
-        //Debug_SendDamage
-        Damage debugdamage = new Damage(100, PlayerModel.DamageTypes.Standard);
-        SendMessage("ApplyDamage", debugdamage);
 	}
 
     void Update()
@@ -111,7 +113,7 @@ public class EnemyObject : MonoBehaviour {
                 RaycastHit hit = checkPlayerIsInSight(direction);
                 
                 if (angle < fieldOfViewAngle * 0.4f)
-                    ShotPlayer();
+                    ShotPlayer(damageInformation);
             }
 
 
@@ -127,7 +129,7 @@ public class EnemyObject : MonoBehaviour {
         {
             if (hit.collider.gameObject == player)
             {
-                Debug.Log("PlayerDetected");
+               //Debug.Log("PlayerDetected");
                 playerIsInSight = true;
                 globalLastSightingPlayer = player.transform.position;
                 TurnToPlayer();
@@ -145,11 +147,6 @@ public class EnemyObject : MonoBehaviour {
         }
     }
 
-    void FixedUpdate () {
-
-        Debug.Log("PlayerIsInSight:" + playerIsInSight);
-	}
-
     void TurnToPlayer()
     {
         Vector3 destinationPoint = player.transform.position - transform.position;
@@ -159,11 +156,11 @@ public class EnemyObject : MonoBehaviour {
         transform.rotation = lookAtRotation;
     }
 
-    void ShotPlayer()
+    void ShotPlayer(Damage debugdamage)
     {
         if (isShotable)
         {
-            StartCoroutine(ShotPlayerCoolDown());
+            StartCoroutine(ShotPlayerCoolDown(debugdamage));
         }
     }
 
@@ -179,11 +176,10 @@ public class EnemyObject : MonoBehaviour {
         Debug.Log("New Health: " + health);
     }
 
-    IEnumerator ShotPlayerCoolDown()
+    IEnumerator ShotPlayerCoolDown(Damage debugdamage)
     {
+        GetComponent<Debug_BulletCaster>().shoot(debugdamage);
         isShotable = false;
-        Gamestatemanager.OnPlayerGetsDamage(enemyManager.Damage);
-        Debug.Log("SHOT PLAYER!!!");
         yield return new WaitForSeconds(coolDown);
         isShotable = true;
     }

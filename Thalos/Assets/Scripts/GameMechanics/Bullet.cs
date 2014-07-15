@@ -1,23 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Controller;
+using Backend; 
 
 public class Bullet : MonoBehaviour {
 
     private float bulletSpeed;
     private Vector3 forwardVector;
     private int parentType;
+    private float lifetime = 5f;
+    private Damage damageInformation;
 
-    void Init(Vector3 forwardVector, int parentType)
+    public void Init(Vector3 forwardVector, int parentType,Damage damageInformation)
     {
-        this.forwardVector = forwardVector;
+        this.damageInformation = damageInformation;
+        this.forwardVector = forwardVector.normalized;
         this.parentType = parentType;
-        this.bulletSpeed = Constants.BULLETSPEED; 
+        this.bulletSpeed = Constants.BULLETSPEED;
+        transform.rotation = Quaternion.LookRotation(this.forwardVector);
+        StartCoroutine(removeAfterLiveTime());
     }
 
     void FixedUpdate()
     {
-        this.transform.position += forwardVector * bulletSpeed;
+        this.transform.position += forwardVector.normalized * bulletSpeed;
     }
 
     void OnCollisionEnter(Collision col)
@@ -29,7 +35,8 @@ public class Bullet : MonoBehaviour {
 
                 if (col.gameObject.tag == Constants.TAG_ENEMY)
                 {
-                    Debug.Log("Enemy shot");
+                    Debug.Log("Enemy shot!");
+                    
                 }
 
                 break; 
@@ -38,13 +45,23 @@ public class Bullet : MonoBehaviour {
 
                 if (col.gameObject.tag == Constants.TAG_PLAYER)
                 {
-                    Debug.Log("Player");
+                    Gamestatemanager.OnPlayerGetsDamage(damageInformation.damage);
+                    Debug.Log("Player shot!");
                 }
                 break;
         }
 
-        
+        //ToDO: Explosion
+
+        Destroy(gameObject);
     }
+
+    IEnumerator removeAfterLiveTime()
+    {
+        yield return new WaitForSeconds(lifetime);
+        Destroy(gameObject);
+    }
+
 }
 
 

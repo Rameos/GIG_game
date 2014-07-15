@@ -16,7 +16,6 @@ namespace Backend
         {
             this.damage = damagePoints;
             this.typeDamage = typeDamage;
-
         }
     }
 }

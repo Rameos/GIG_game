@@ -20,10 +20,14 @@ namespace Controller
         public const string TAG_MAINCAMERA = "MainCamera";
         public const string TAG_ENEMY = "Enemy";
 
+
+        public const int LAYERMASK_GUI = 9;
+
+
         public const int ID_PLAYER = 0;
         public const int ID_ENEMY = 1;
 
-        public const float BULLETSPEED = 2f;
+        public const float BULLETSPEED = 0.1f;
 
 
     }
