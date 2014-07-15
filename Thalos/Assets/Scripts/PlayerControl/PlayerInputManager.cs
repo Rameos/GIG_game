@@ -145,9 +145,7 @@ public class PlayerInputManager : MonoBehaviour {
 
     private void checkIsGrounded()
     {
-        Debug.Log(capCollider.height);
         Ray rayinput = new Ray(centerOfMass.position, -transform.up);
-        Debug.DrawRay(transform.position, -transform.up,Color.red,1);
         if (Physics.Raycast(rayinput, capCollider.height / 2))
         {
             isGrounded = true;
@@ -177,7 +175,6 @@ public class PlayerInputManager : MonoBehaviour {
             {
 
                 Vector3 destinationPoint = jumpScript.getDestinationpoint();
-                Debug.Log("DestinationPoint: " + destinationPoint);
                 Debug.DrawRay(transform.position, destinationPoint, Color.magenta,2f);
 
                 destinationPoint = destinationPoint - transform.position;

@@ -26,7 +26,6 @@ namespace GazeUI
 
         void Update()
         {
-
             Vector2 gazePosOnScreen = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
             gazePosOnScreen.y = Screen.height-gazePosOnScreen.y;
             RaycastHit2D hit = Physics2D.Raycast(guicam.ScreenToWorldPoint(gazePosOnScreen), Vector2.zero);
@@ -50,7 +49,6 @@ namespace GazeUI
                 {
                     uiItem.OnEventStart();
                 }
-
             }
         }
 
