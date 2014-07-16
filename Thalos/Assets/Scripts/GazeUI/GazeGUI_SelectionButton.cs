@@ -10,6 +10,13 @@ namespace GazeGUI
         private Constants.selectableItemsCircleMenu actionItem;
         private bool isSelectable = true;
 
+        private GameObject Icon;
+        private GameObject CountText;
+
+        void Start()
+        {
+
+        }
 
 
         public override void OnGazeEnter()
