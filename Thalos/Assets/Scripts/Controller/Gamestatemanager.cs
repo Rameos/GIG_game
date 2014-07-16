@@ -16,7 +16,7 @@ namespace Controller
     public delegate void PlayerGetsDamage(int damagepoints);
     
     public delegate void ChangeInGameMenu(int ID_Menu,bool status);
-    public delegate void SelectNewItem(Constants.item newItem);
+    public delegate void SelectNewItem(Constants.selectableItemsCircleMenu newItem);
 
     public delegate void RumbleEvent(float duration,float forceHeavy, float forceLight);
 
@@ -234,7 +234,7 @@ namespace Controller
             }
         }
 
-        public static void OnSelectNewItem(Constants.item selectedItem)
+        public static void OnSelectNewItem(Constants.selectableItemsCircleMenu selectedItem)
         {
             if(SelectNewItemHandler != null)
             {

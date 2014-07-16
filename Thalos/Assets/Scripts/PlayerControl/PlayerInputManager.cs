@@ -292,7 +292,6 @@ public class PlayerInputManager : MonoBehaviour {
 
         if (Input.GetAxis("ButtonLB") > 0)
         {
-            Debug.Log("ButtonLB");
             Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU,true);
             circleMenuIsOpen = true;
         }
@@ -306,7 +305,7 @@ public class PlayerInputManager : MonoBehaviour {
         {
             circleMenuIsOpen = false;
             Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU, false);
-            Debug.Log("CircleMenuClose!");
+
         }
     }
 

@@ -16,6 +16,7 @@ namespace GazeGUI
         private GameObject pauseMenu;
 
         private BaseGazeUI oldSelection;
+        private BaseGazeUI actualSelection;
 
         void Start()
         {
@@ -32,41 +33,66 @@ namespace GazeGUI
 
             if (hit.collider != null&& hit.collider.tag =="GazeGui")
             {
-                BaseGazeUI uiItem = hit.collider.gameObject.GetComponent<BaseGazeUI>();
+               actualSelection = hit.collider.gameObject.GetComponent<BaseGazeUI>();
                 
                 if (oldSelection == null)
-                    oldSelection = uiItem;
+                    oldSelection = actualSelection;
 
-                else if (uiItem != oldSelection)
+                else if (actualSelection != oldSelection)
                 {
                     oldSelection.OnObjectExit();
-                    oldSelection = uiItem;
+                    oldSelection = actualSelection;
                 }
 
-                uiItem.onObjectHit();
+                actualSelection.onObjectHit();
 
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    uiItem.OnEventStart();
-                }
+            }
+            else
+            {
+                if (oldSelection != null)
+                    oldSelection.OnObjectExit();
             }
         }
 
         void SetMenuState(int ID_Menu,bool status)
         {
-            switch (ID_Menu)
+            if(status == true)
             {
-                case Constants.INGAMEMENU_CIRCLEMENU:
-                    circleMenu.SetActive(status);
-                    break;
+                switch (ID_Menu)
+                {
+                    case Constants.INGAMEMENU_CIRCLEMENU:
+                        circleMenu.SetActive(status);
+                        break;
 
-                case Constants.INGAMEMENU_INVENTORY:
-                    inventoryMenu.SetActive(status);
-                    break;
+                    case Constants.INGAMEMENU_INVENTORY:
+                        inventoryMenu.SetActive(status);
+                        break;
 
-                case Constants.INGAMEMENU_PAUSE:
-                    pauseMenu.SetActive(status);
-                    break;
+                    case Constants.INGAMEMENU_PAUSE:
+                        pauseMenu.SetActive(status);
+                        break;
+                }
+            }
+            else
+            {
+                switch (ID_Menu)
+                {
+                    case Constants.INGAMEMENU_CIRCLEMENU:
+                        if(actualSelection!=null)
+                        {
+                            actualSelection.OnEventStart();
+                        }
+                        circleMenu.SetActive(status);
+                        break;
+
+                    case Constants.INGAMEMENU_INVENTORY:
+                        inventoryMenu.SetActive(status);
+                        break;
+
+                    case Constants.INGAMEMENU_PAUSE:
+                        pauseMenu.SetActive(status);
+                        break;
+                }
             }
         }
 

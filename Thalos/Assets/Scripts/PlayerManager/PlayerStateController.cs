@@ -17,6 +17,7 @@ namespace Controller
             Debug.Log("PlayerStatemanager");
             Gamestatemanager.PlayerIsDeadHandler += Gamestatemanager_PlayerIsDeadHandler;
             Gamestatemanager.PlayerGetsDamageHandler += TakeDamage;
+            Gamestatemanager.SelectNewItemHandler += Gamestatemanager_SelectItem;
         }
 
         void Update()
@@ -97,6 +98,38 @@ namespace Controller
             Debug.Log("PlayerIsDead!");
         }
 
+        private void Gamestatemanager_SelectItem(Constants.selectableItemsCircleMenu selectedItem)
+        {
+            Debug.Log("SelectITEM");
+
+            switch (selectedItem)
+            {
+                case Constants.selectableItemsCircleMenu.HealPoison:
+                    Debug.Log("Heal!");
+                    Heal(Constants.healPower);
+                    break;
+ 
+                case  Constants.selectableItemsCircleMenu.NormalBolt:
+                    playerModel.DamageType_Bolt = PlayerModel.DamageTypes.Standard;
+                    break;
+
+                case Constants.selectableItemsCircleMenu.FireBolt:
+                    playerModel.DamageType_Bolt = PlayerModel.DamageTypes.Fire;
+                    break;
+
+                case Constants.selectableItemsCircleMenu.IceBolt:
+                    playerModel.DamageType_Bolt = PlayerModel.DamageTypes.Ice;
+                    break;
+
+                case Constants.selectableItemsCircleMenu.FirePoison:
+                    playerModel.DamageType_Poision = PlayerModel.DamageTypes.Fire;
+                    break;
+
+                case Constants.selectableItemsCircleMenu.IcePoison:
+                    playerModel.DamageType_Poision = PlayerModel.DamageTypes.Ice;
+                    break;
+            }
+        }
         #endregion
     }
 }

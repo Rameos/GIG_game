@@ -32,8 +32,9 @@ namespace Controller
 
         public const float BULLETSPEED = 0.1f;
 
-
-        public enum item
+        public const int healPower = 25;
+        
+        public enum selectableItemsCircleMenu
         {
             NormalBolt,
             FireBolt,
