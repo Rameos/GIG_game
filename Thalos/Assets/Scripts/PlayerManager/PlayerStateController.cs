@@ -18,6 +18,8 @@ namespace Controller
             Gamestatemanager.PlayerIsDeadHandler += Gamestatemanager_PlayerIsDeadHandler;
             Gamestatemanager.PlayerGetsDamageHandler += TakeDamage;
             Gamestatemanager.SelectNewItemHandler += Gamestatemanager_SelectItem;
+
+            PlayerModel.Instance();
         }
 
         void Update()
@@ -73,15 +75,20 @@ namespace Controller
 
         public int Heal(int HealPotion)
         {
-            if (playerModel.HealthPoints + HealPotion >= playerModel.MaxHealthPoints)
+            if(playerModel.getCountOfPhialsOfSortInInventory(PlayerModel.PhialType.Heal)>0)
             {
-                playerModel.HealthPoints = playerModel.MaxHealthPoints;
+                if (playerModel.HealthPoints + HealPotion >= playerModel.MaxHealthPoints)
+                {
+                    playerModel.HealthPoints = playerModel.MaxHealthPoints;
+                }
+                else
+                {
+                    playerModel.HealthPoints += HealPotion;
+                }
+                return playerModel.HealthPoints;
             }
-            else
-            {
-                playerModel.HealthPoints += HealPotion;
-            }
-            return playerModel.HealthPoints;
+
+            return 0;
         }
 
         #endregion
@@ -129,6 +136,11 @@ namespace Controller
                     playerModel.DamageType_Poision = PlayerModel.DamageTypes.Ice;
                     break;
             }
+        }
+
+        private void setPoisionDamage(PlayerModel.DamageTypes type)
+        {
+            //if()
         }
         #endregion
     }

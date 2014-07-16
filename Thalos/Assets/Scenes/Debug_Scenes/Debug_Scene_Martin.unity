@@ -11576,7 +11576,7 @@ GameObject:
   - 212: {fileID: 311591750}
   m_Layer: 9
   m_Name: 01_IceBolt_Button
-  m_TagString: Untagged
+  m_TagString: GazeGui_Icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13007,7 +13007,7 @@ GameObject:
   - 102: {fileID: 352952752}
   m_Layer: 9
   m_Name: New Text
-  m_TagString: Untagged
+  m_TagString: GazeGui_Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13943,7 +13943,7 @@ GameObject:
   - 102: {fileID: 375951227}
   m_Layer: 9
   m_Name: New Text
-  m_TagString: Untagged
+  m_TagString: GazeGui_Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15874,7 +15874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &412330904
 Transform:
   m_ObjectHideFlags: 0
@@ -17293,7 +17293,7 @@ GameObject:
   - 212: {fileID: 452273229}
   m_Layer: 9
   m_Name: 04_Potion_Heal
-  m_TagString: Untagged
+  m_TagString: GazeGui_Icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21911,7 +21911,7 @@ GameObject:
   - 212: {fileID: 569785423}
   m_Layer: 9
   m_Name: 06_Potion_Ice
-  m_TagString: Untagged
+  m_TagString: GazeGui_Icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28060,7 +28060,7 @@ GameObject:
   - 102: {fileID: 724186471}
   m_Layer: 9
   m_Name: New Text
-  m_TagString: Untagged
+  m_TagString: GazeGui_Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28084,7 +28084,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 724186469}
-  m_Text: Count_Fire
+  m_Text: Fire Bolt
   m_OffsetZ: 0
   m_CharacterSize: .25
   m_LineSpacing: 1
@@ -31364,7 +31364,7 @@ GameObject:
   - 102: {fileID: 814308799}
   m_Layer: 9
   m_Name: NormalBolt_Text
-  m_TagString: Untagged
+  m_TagString: GazeGui_Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31388,7 +31388,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 814308797}
-  m_Text: Count_Normal
+  m_Text: Normal Bolt
   m_OffsetZ: 0
   m_CharacterSize: .25
   m_LineSpacing: 1
@@ -46621,7 +46621,7 @@ GameObject:
   - 102: {fileID: 1264427848}
   m_Layer: 9
   m_Name: IceBolt_Text
-  m_TagString: Untagged
+  m_TagString: GazeGui_Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46645,7 +46645,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1264427846}
-  m_Text: Count_Ice
+  m_Text: Ice Bolt
   m_OffsetZ: 0
   m_CharacterSize: .25
   m_LineSpacing: 1
@@ -64240,7 +64240,7 @@ GameObject:
   - 102: {fileID: 1750439370}
   m_Layer: 9
   m_Name: New Text
-  m_TagString: Untagged
+  m_TagString: GazeGui_Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65776,7 +65776,7 @@ GameObject:
   - 212: {fileID: 1803862995}
   m_Layer: 9
   m_Name: 05_Potion_Fire
-  m_TagString: Untagged
+  m_TagString: GazeGui_Icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73266,7 +73266,7 @@ GameObject:
   - 60: {fileID: 1964234763}
   m_Layer: 9
   m_Name: FireBolt_Icon
-  m_TagString: Untagged
+  m_TagString: GazeGui_Icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

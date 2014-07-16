@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 
 namespace Backend
 {
@@ -13,20 +13,16 @@ namespace Backend
 
         private static PlayerModel playerModel;
 
-
         public int HealthPoints { get; set; }
         public int MaxHealthPoints { get; set; }
-        public PhialType[] Phial { get; set; }
-        public int phialSize { get; set; }
+        
+        public List<PhialType> PhialInventory { get; set; }
+        public List<Recipes> FoundedRecipes { get; set; }
+        public int phialSizeMax { get; set; }
 
         public int Damage { get; set; }
         public DamageTypes DamageType_Bolt { get; set; }
         public DamageTypes DamageType_Poision { get; set; }
-        public int Phial_heal { get; set; }
-        public int Phial_fire { get; set; }
-        public int Phial_ice  { get; set; }
-
-
 
         public static PlayerModel Instance()
         {
@@ -38,24 +34,67 @@ namespace Backend
             return playerModel;
         }
 
+        public void addPhialToinventory(PhialType type)
+        {
+            if(PhialInventory.Count<phialSizeMax)
+            {
+                PhialInventory.Add(type);
+            }
+        }
+
+        public bool checkIfPhialIsInInventory(PhialType type)
+        {
+            if(PhialInventory.Contains(type))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public int getCountOfPhialsOfSortInInventory( PhialType type)
+        {
+            int count = 0;
+
+            foreach (PhialType itemInList in PhialInventory)
+            {
+                if(itemInList ==type)
+                {
+                    count++;
+                }
+            }
+            return count; 
+        
+        }
+
+        public void removePhialFromInventory(PhialType type)
+        {
+            PhialInventory.Remove(type);
+        }
+
         private PlayerModel()
         {
             this.MaxHealthPoints = 100;
-            this.phialSize = 5;
+            this.phialSizeMax = 5;
 
-            // Init PhialCount
-            this.Phial_heal = 1;
-            this.Phial_fire = 0;
-            this.Phial_ice = 0; 
-            
-            
+            //Damage
             this.Damage = 42;
             this.DamageType_Bolt = DamageTypes.Standard;
             this.DamageType_Poision = DamageTypes.None;
+            
             //Debug
             this.HealthPoints = 100;
 
-            // ToDo: SetItem
+            // Inventory Setup
+            PhialInventory = new List<PhialType>();
+            addPhialToinventory(PhialType.Heal);
+            addPhialToinventory(PhialType.Heal);
+            addPhialToinventory(PhialType.Heal);
+            addPhialToinventory(PhialType.Heal);
+            addPhialToinventory(PhialType.Heal);
+
+            Debug.Log("PhialCountHeal:" + getCountOfPhialsOfSortInInventory(PhialType.Heal));
         }
+
+
     }
 }

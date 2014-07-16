@@ -11,7 +11,7 @@ public class Debug_Playerstats : MonoBehaviour {
        int HP = PlayerModel.Instance().HealthPoints;
        GUI.Label(new Rect(20,20,200,20), "HealthPoints: " +  PlayerModel.Instance().HealthPoints);
        GUI.Label(new Rect(20, 40, 200, 20), "Max_HealthPoints: " + PlayerModel.Instance().MaxHealthPoints);
-       GUI.Label(new Rect(20, 60, 200, 20), "Phial: " + PlayerModel.Instance().Phial);
+       GUI.Label(new Rect(20, 60, 200, 20), "Phial: " + PlayerModel.Instance().PhialInventory);
        GUI.Label(new Rect(20, 100, 200, 20), "Damage: " + PlayerModel.Instance().Damage);
        GUI.Label(new Rect(20, 120, 200, 20), "DamageType: " + PlayerModel.Instance().DamageType_Bolt);
 
