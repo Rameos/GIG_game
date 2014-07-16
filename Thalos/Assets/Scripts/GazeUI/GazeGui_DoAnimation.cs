@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace GazeUI
+namespace GazeGUI
 {
     public class GazeGui_DoAnimation : BaseGazeUI
     {

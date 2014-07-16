@@ -3,7 +3,7 @@ using System.Collections;
 using iViewX;
 using Controller;
 
-namespace GazeUI
+namespace GazeGUI
 {
     public class GazeMenuCam : MonoBehaviour
     {
