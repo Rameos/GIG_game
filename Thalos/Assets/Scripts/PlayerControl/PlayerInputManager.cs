@@ -45,17 +45,15 @@ public class PlayerInputManager : MonoBehaviour {
     [SerializeField]
     private float stepRotation = 5;
 
+    private ShotManager_Player shotManager;
 
     float inputX;
     float inputY;
-
 
     //Test: 
     private float jumpVelocity = 2f;
     private float gravity = 9.81f;
     private float distance = 2.4f;
-
-
 
     //ControllerInput
     bool playerIndexSet = false;
@@ -75,6 +73,8 @@ public class PlayerInputManager : MonoBehaviour {
         Gamestatemanager.RumbleEventHandler += startRumbleForTime;
         jumpScript = gameObject.GetComponent<JumpwithGaze>();
         capCollider = gameObject.GetComponent<CapsuleCollider>();
+        shotManager = gameObject.GetComponent<ShotManager_Player>();
+
 	}
 
     void Update()
@@ -238,15 +238,17 @@ public class PlayerInputManager : MonoBehaviour {
     {
         if (Input.GetAxis("Triggers") < 0-thresholdTriggers)
         {
+            shotManager.ThrowPoison();
             animator.SetBool("Throw",true);
             Debug.Log("Throw");
         }
 
         else if (Input.GetAxis("Triggers") > thresholdTriggers)
         {
-
+            shotManager.Shot(); 
             animator.SetBool("Shoot",true);
             Debug.Log("Shoot");
+
             GamePad.SetVibration(playerIndex, Input.GetAxis("Triggers"), 0);
         }
 

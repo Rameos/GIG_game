@@ -252,7 +252,6 @@ namespace Controller
             if (levelID < 0)
             {
                 Application.Quit();
-
             }
             else
             {

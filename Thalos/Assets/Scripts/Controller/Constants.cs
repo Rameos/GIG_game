@@ -34,6 +34,15 @@ namespace Controller
 
         public const int healPower = 25;
         
+        //Damage
+        public const int damageStandardBolt = 15;
+        public const int damageFireBolt = 15;
+        public const int damageIceBolt = 15;
+
+        public const float COOLDOWN_BOLT = 0.05f;
+        public const float COOLDOWN_POISON = 0.1f;
+
+
         public enum selectableItemsCircleMenu
         {
             NormalBolt,

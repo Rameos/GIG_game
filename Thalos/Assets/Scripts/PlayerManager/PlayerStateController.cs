@@ -57,7 +57,7 @@ namespace Controller
         }
 
         /// <summary>
-        /// Remove HealthPoints (
+        /// Remove HealthPoints
         /// </summary>
         /// <param name="Damage"></param>
         /// <returns></returns>
@@ -116,7 +116,6 @@ namespace Controller
             switch (selectedItem)
             {
                 case Constants.selectableItemsCircleMenu.HealPoison:
-                    Debug.Log("Heal!");
                     Heal(Constants.healPower);
                     break;
  
