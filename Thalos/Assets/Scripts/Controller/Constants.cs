@@ -33,5 +33,15 @@ namespace Controller
         public const float BULLETSPEED = 0.1f;
 
 
+        public enum item
+        {
+            NormalBolt,
+            FireBolt,
+            IceBolt,
+            HealPoison,
+            FirePoison,
+            IcePoison
+        }
+
     }
 }

@@ -9,8 +9,7 @@ namespace Backend
     {
 
         public enum DamageTypes {Standard, Fire, Ice};
-
-    
+        
         private static PlayerModel playerModel;
 
 
@@ -40,6 +39,8 @@ namespace Backend
 
             //Debug
             this.HealthPoints = 100;
+
+            // ToDo: SetItem
         }
     }
 }

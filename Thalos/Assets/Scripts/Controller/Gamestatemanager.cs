@@ -16,6 +16,7 @@ namespace Controller
     public delegate void PlayerGetsDamage(int damagepoints);
     
     public delegate void ChangeInGameMenu(int ID_Menu,bool status);
+    public delegate void SelectNewItem(Constants.item newItem);
 
     public delegate void RumbleEvent(float duration,float forceHeavy, float forceLight);
 
@@ -27,6 +28,7 @@ namespace Controller
         public static event CloseMainMenu CloseMainMenuScreenHandler;
 
         public static event ChangeInGameMenu ChangeInGameMenuHandler;
+        public static event SelectNewItem SelectNewItemHandler;
 
         public static event PlayerIsDead PlayerIsDeadHandler;
         public static event PlayerGetsDamage PlayerGetsDamageHandler;
@@ -232,6 +234,13 @@ namespace Controller
             }
         }
 
+        public static void OnSelectNewItem(Constants.item selectedItem)
+        {
+            if(SelectNewItemHandler != null)
+            {
+                SelectNewItemHandler(selectedItem);
+            }
+        }
 
 
         IEnumerator waitForFadeOutEffect(int levelID)
