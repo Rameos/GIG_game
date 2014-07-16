@@ -81,10 +81,14 @@ namespace Controller
                 {
                     playerModel.HealthPoints = playerModel.MaxHealthPoints;
                 }
+
                 else
                 {
                     playerModel.HealthPoints += HealPotion;
                 }
+
+                playerModel.removePhialFromInventory(PlayerModel.PhialType.Heal);
+                Debug.Log("Healitem:" + playerModel.getCountOfPhialsOfSortInInventory(PlayerModel.PhialType.Heal));
                 return playerModel.HealthPoints;
             }
 
