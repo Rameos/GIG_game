@@ -11932,8 +11932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af054e5592e94b2478df24b42febda90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectFirePoison: {fileID: 100000, guid: 95206e49c74074f41bb2409f17c46cc5, type: 2}
-  effectIcePoision: {fileID: 100000, guid: d17b834a6e5f64346a25b55a95f02e57, type: 2}
+  effectFirePoison: {fileID: 100004, guid: 7bf315f9d468c3d4da2258ed52a686e9, type: 2}
+  effectIcePoision: {fileID: 100004, guid: 36ace7209db17464fb409e4186a779b2, type: 2}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

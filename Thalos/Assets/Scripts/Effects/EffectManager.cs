@@ -15,27 +15,27 @@ namespace Effects
         [SerializeField]
         private GameObject effectIcePoision;
 
-        public static startFirePoisonEffect StartFirePoisonEffectHandler;
-        public static startFirePoisonEffect StartIcePoisonEffectHandler;
 
+        private static EffectManager instance;
 
-
-        public static void OnStartFirePoisonEffect(Vector3 triggerPosition)
+        public static EffectManager Instance()
         {
-            if (StartFirePoisonEffectHandler != null)
+            if(instance!= null)
             {
-                StartFirePoisonEffectHandler(triggerPosition);
-            }
-        }
-
-        public static void OnStartIcePoisonEffect(Vector3 triggerPosition)
-        {
-            if(StartIcePoisonEffectHandler != null)
-            {
-                StartIcePoisonEffectHandler(triggerPosition);
+                instance = new EffectManager(); 
             }
 
+            return instance; 
         }
 
+        public void OnStartIcePoisonEffect(Vector3 position)
+        {
+            GameObject instance = GameObject.Instantiate(effectFirePoison, position, effectFirePoison.transform.localRotation) as GameObject;
+        }
+
+        public void OnStartFirePoisonEffect(Vector3 position)
+        {
+            GameObject instance = GameObject.Instantiate(effectIcePoision, position, effectFirePoison.transform.localRotation) as GameObject;
+        }
     }
 }

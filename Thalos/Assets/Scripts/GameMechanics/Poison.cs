@@ -10,6 +10,8 @@ public class Poison : MonoBehaviour {
     private float throwDistance = 5f;
 
 
+    public GameObject explosionEffect;
+
     public void Init(Vector3 forceVector, Damage poisonInformation, int parentType)
     {
         this.damageInformation = poisonInformation;
@@ -41,8 +43,9 @@ public class Poison : MonoBehaviour {
     void OnCollisionEnter(Collision information)
     {
         Debug.Log("Boom");
-        StartCoroutine(explosion());
+        StartCoroutine(explosion(information.contacts[0].point));
     }
+
 
     Vector3 getDestinationPoint()
     {
@@ -67,10 +70,12 @@ public class Poison : MonoBehaviour {
         return Vector3.zero;
     }
 
-    IEnumerator explosion()
+    private IEnumerator explosion(Vector3 position)
     {
         yield return new WaitForSeconds(0.1f);
-        
+
+        Instantiate(explosionEffect, position, explosionEffect.transform.rotation);
+        Destroy(this);
     }
 
 }

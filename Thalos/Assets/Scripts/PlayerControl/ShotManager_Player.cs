@@ -85,6 +85,11 @@ namespace Controller
                     instance = GameObject.Instantiate(PoisonIce, instanciatePointPoison.position, instanciatePointPoison.localRotation) as GameObject;
                     instance.GetComponent<Poison>().Init(transform.forward, new Damage(Constants.damageIceBolt, PlayerModel.DamageTypes.Ice), Constants.ID_PLAYER);
                     break;
+
+                case PlayerModel.DamageTypes.Standard:
+                case PlayerModel.DamageTypes.None:
+                    Debug.Log("Nope!");
+                    break;
             }
             Debug.Log("DamageTypePoison: " + damage);
 
