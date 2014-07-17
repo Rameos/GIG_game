@@ -5,9 +5,9 @@ using Backend;
 public class Poison : MonoBehaviour {
 
     private Damage damageInformation;
-    private float forcePower = 10f;
+    private float forcePower = 5f;
     private int parentType;
-    private float throwDistance = 20f;
+    private float throwDistance = 5f;
 
 
     public void Init(Vector3 forceVector, Damage poisonInformation, int parentType)
