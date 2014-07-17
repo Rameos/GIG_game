@@ -159,6 +159,9 @@ ModelImporter:
     100306: ORG-upper_arm_R
     100308: rig
     100310: root
+    100312: Circle
+    100314: Cube
+    100316: Cube_001
     400000: DEF-chest
     400002: DEF-f_index_01_L_01
     400004: DEF-f_index_01_L_02
@@ -315,12 +318,25 @@ ModelImporter:
     400306: ORG-upper_arm_R
     400308: rig
     400310: root
+    400312: Circle
+    400314: Cube
+    400316: Cube_001
+    2300000: Circle
+    2300002: Cube
+    2300004: Cube_001
+    3300000: Circle
+    3300002: Cube
+    3300004: Cube_001
     4300000: Hero_Coat_Top
     4300002: Hero_Head
     4300004: Hero_Body
     4300006: Hair
     4300008: Hero_Coat_Bottom
+    4300010: Cube
+    4300012: Circle
+    4300014: Cube_001
     7400000: Default Take
+    7400002: Idle
     9500000: //RootNode
     13700000: Hair
     13700002: Hero_Body
