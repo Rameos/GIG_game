@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 96f79f253be1bc2429676ec5d7b6a490
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Background_CircleMenu
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

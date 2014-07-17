@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 57f8419df9f45d144af0d42a8976215b
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Normal-Bolt
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

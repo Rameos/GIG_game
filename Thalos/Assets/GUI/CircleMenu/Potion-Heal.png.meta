@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 5e660d03546b73d40913f5b62a72dde8
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Potion-Heal
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

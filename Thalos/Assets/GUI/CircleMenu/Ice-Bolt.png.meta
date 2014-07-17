@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 5d553b4fb04994341afa5c1d9c14ab13
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Ice-Bolt
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

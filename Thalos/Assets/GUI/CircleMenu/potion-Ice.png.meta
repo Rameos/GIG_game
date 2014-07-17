@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 5910f3d832bed284b9c13ff92bdc8094
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: potion-Ice
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

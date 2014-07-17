@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using XInputDotNetPure;
-using Controller; 
+using Controller;
 
 public class PlayerInputManager : MonoBehaviour {
 
@@ -45,11 +45,11 @@ public class PlayerInputManager : MonoBehaviour {
     [SerializeField]
     private float stepRotation = 5;
 
-    private ShotManager_Player shotManager;
-
+    
     float inputX;
     float inputY;
-
+    private int y;
+    
     //Test: 
     private float jumpVelocity = 2f;
     private float gravity = 9.81f;
@@ -62,9 +62,8 @@ public class PlayerInputManager : MonoBehaviour {
     GamePadState prevState;
 
     //ExternalScripts
-    JumpwithGaze jumpScript;
-    private int y; 
-
+    private JumpwithGaze jumpScript;
+    private ShotManager_Player shotManager;
 
 	void Start () {
         centerOfMass = transform.FindChild("CenterOfMass");
@@ -166,6 +165,7 @@ public class PlayerInputManager : MonoBehaviour {
         {
             if (!jumpScript.isActive)
             {
+                Debug.Log("JumpScript Not Active");
                 rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
                 if (Mathf.Abs(inputX) > thresholdStics || Mathf.Abs(inputY) > thresholdStics)
                     rigidbody.velocity += transform.forward * jumpForcePower;

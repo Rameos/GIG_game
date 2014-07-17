@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 739716641e1c1264aa90cda07ebfd9c8
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Potion-Fire
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

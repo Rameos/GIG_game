@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 6d376c4b26ceaee4f9f83b188d69638a
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Fire-Bolt
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

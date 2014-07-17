@@ -72,15 +72,18 @@ namespace Controller
         IEnumerator throwCoolDown()
         {
             PlayerModel.DamageTypes damage = PlayerModel.Instance().DamageType_Poision;
-
+            GameObject instance;
             switch (damage)
             {
                 case PlayerModel.DamageTypes.Fire:
-
+                    instance = GameObject.Instantiate(PoisonFire, instanciatePointPoison.position, instanciatePointPoison.localRotation) as GameObject;
+                    instance.GetComponent<Poison>().Init(transform.forward,new Damage(Constants.damageIcePoison, PlayerModel.DamageTypes.Fire),Constants.ID_PLAYER);
+                    
                     break;
 
                 case PlayerModel.DamageTypes.Ice:
-
+                    instance = GameObject.Instantiate(PoisonIce, instanciatePointPoison.position, instanciatePointPoison.localRotation) as GameObject;
+                    instance.GetComponent<Poison>().Init(transform.forward, new Damage(Constants.damageIceBolt, PlayerModel.DamageTypes.Ice), Constants.ID_PLAYER);
                     break;
             }
             Debug.Log("DamageTypePoison: " + damage);
