@@ -46,7 +46,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .619317949, g: .943556905, b: .846433222, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6
