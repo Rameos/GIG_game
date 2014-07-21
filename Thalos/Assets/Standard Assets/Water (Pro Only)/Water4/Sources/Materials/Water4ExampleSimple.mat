@@ -112,11 +112,11 @@ Material:
       data:
         first:
           name: _DistortParams
-        second: {r: 1.02857149, g: .360000014, b: 2.3599999, a: -.0299999993}
+        second: {r: 1.02857149, g: .360000014, b: 3.52999997, a: -.460000008}
       data:
         first:
           name: _InvFadeParemeter
-        second: {r: .275081277, g: .0856210217, b: .0941423923, a: .480310023}
+        second: {r: .219999999, g: .0856210217, b: .0941423923, a: .779999971}
       data:
         first:
           name: _AnimationTiling
@@ -136,7 +136,7 @@ Material:
       data:
         first:
           name: _BaseColor
-        second: {r: .65882355, g: .435294122, b: .294117659, a: .603921592}
+        second: {r: .742647052, g: .510256529, b: .420469284, a: .603921592}
       data:
         first:
           name: _ReflectionColor
@@ -160,7 +160,7 @@ Material:
       data:
         first:
           name: _GFrequency
-        second: {r: .5, g: .25, b: .600000024, a: .245000005}
+        second: {r: .5, g: 0, b: .600000024, a: .245000005}
       data:
         first:
           name: _GSteepness
@@ -172,7 +172,7 @@ Material:
       data:
         first:
           name: _GDirectionAB
-        second: {r: .850000024, g: .300000012, b: .25, a: .25}
+        second: {r: .850000024, g: .5, b: .25, a: .25}
       data:
         first:
           name: _GDirectionCD
