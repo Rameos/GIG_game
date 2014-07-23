@@ -9,3 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/particleCallbacks_public_001.unity
   - enabled: 1
     path: Assets/Scenes/Debug_Scenes/Debug_UI.unity
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/intro/MainMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/scene_01.unity
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/intro/MenuOverview.unity
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/intro/MenuMixing.unity
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/intro/MenuInventory.unity
