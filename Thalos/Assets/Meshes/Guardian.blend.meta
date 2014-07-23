@@ -526,6 +526,7 @@ ModelImporter:
     101040: toe_R_0
     101042: upper_arm_L_0
     101044: upper_arm_R_0
+    101046: Circle
     400000: DEF-chest
     400002: DEF-f_index_01_L_01
     400004: DEF-f_index_01_L_02
@@ -1049,6 +1050,7 @@ ModelImporter:
     401040: toe_R_0
     401042: upper_arm_L_0
     401044: upper_arm_R_0
+    401046: Circle
     2300000: Cube
     2300002: WGT-chest_001
     2300004: WGT-elbow_hose_L_001
@@ -1145,6 +1147,7 @@ ModelImporter:
     2300186: WGT-VIS-thigh_pole_ik_R_001
     2300188: WGT-VIS-upper_arm_pole_ik_L_001
     2300190: WGT-VIS-upper_arm_pole_ik_R_001
+    2300192: Circle
     3300000: Cube
     3300002: WGT-chest_001
     3300004: WGT-elbow_hose_L_001
@@ -1241,7 +1244,9 @@ ModelImporter:
     3300186: WGT-VIS-thigh_pole_ik_R_001
     3300188: WGT-VIS-upper_arm_pole_ik_L_001
     3300190: WGT-VIS-upper_arm_pole_ik_R_001
+    3300192: Circle
     4300000: Cube
+    4300002: Circle
     4300076: WGT-foot_fk_L_001
     4300078: WGT-foot_fk_R_001
     4300080: WGT-foot_ik_L_001
