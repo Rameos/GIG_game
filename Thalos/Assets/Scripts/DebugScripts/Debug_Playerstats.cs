@@ -18,7 +18,7 @@ public class Debug_Playerstats : MonoBehaviour {
 
        if (GUI.Button(new Rect(200, 20, 50, 20), "-10LP"))
        {
-           Gamestatemanager.OnPlayerGetsDamage(10);
+           Gamestatemanager.OnPlayerGetsDamage(1);
        }
     }
 }
