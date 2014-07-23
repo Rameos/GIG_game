@@ -3,7 +3,7 @@ using System.Collections;
 using iViewX;
 using Controller;
 
-public class MenuOverview : MonoBehaviour {
+public class MenuOverviewController : MonoBehaviour {
 
 	//public Texture3D blubb;
 	private int selectionGridInt = 0; 
