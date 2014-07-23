@@ -462,6 +462,70 @@ ModelImporter:
     100912: WGT-VIS-thigh_pole_ik_R_001
     100914: WGT-VIS-upper_arm_pole_ik_L_001
     100916: WGT-VIS-upper_arm_pole_ik_R_001
+    100918: chest_0
+    100920: f_index_01_L_0
+    100922: f_index_01_R_0
+    100924: f_index_02_L_0
+    100926: f_index_02_R_0
+    100928: f_index_03_L_0
+    100930: f_index_03_R_0
+    100932: f_middle_01_L_0
+    100934: f_middle_01_R_0
+    100936: f_middle_02_L_0
+    100938: f_middle_02_R_0
+    100940: f_middle_03_L_0
+    100942: f_middle_03_R_0
+    100944: f_pinky_01_L_0
+    100946: f_pinky_01_R_0
+    100948: f_pinky_02_L_0
+    100950: f_pinky_02_R_0
+    100952: f_pinky_03_L_0
+    100954: f_pinky_03_R_0
+    100956: f_ring_01_L_0
+    100958: f_ring_01_R_0
+    100960: f_ring_02_L_0
+    100962: f_ring_02_R_0
+    100964: f_ring_03_L_0
+    100966: f_ring_03_R_0
+    100968: foot_L_0
+    100970: foot_R_0
+    100972: forearm_L_0
+    100974: forearm_R_0
+    100976: hand_L_0
+    100978: hand_R_0
+    100980: head_0
+    100982: heel_02_L_0
+    100984: heel_02_R_0
+    100986: heel_L_0
+    100988: heel_R_0
+    100990: hips_0
+    100992: metarig_001
+    100994: neck_0
+    100996: palm_01_L_0
+    100998: palm_01_R_0
+    101000: palm_02_L_0
+    101002: palm_02_R_0
+    101004: palm_03_L_0
+    101006: palm_03_R_0
+    101008: palm_04_L_0
+    101010: palm_04_R_0
+    101012: shin_L_0
+    101014: shin_R_0
+    101016: shoulder_L_0
+    101018: shoulder_R_0
+    101020: spine_0
+    101022: thigh_L_0
+    101024: thigh_R_0
+    101026: thumb_01_L_0
+    101028: thumb_01_R_0
+    101030: thumb_02_L_0
+    101032: thumb_02_R_0
+    101034: thumb_03_L_0
+    101036: thumb_03_R_0
+    101038: toe_L_0
+    101040: toe_R_0
+    101042: upper_arm_L_0
+    101044: upper_arm_R_0
     400000: DEF-chest
     400002: DEF-f_index_01_L_01
     400004: DEF-f_index_01_L_02
@@ -921,6 +985,70 @@ ModelImporter:
     400912: WGT-VIS-thigh_pole_ik_R_001
     400914: WGT-VIS-upper_arm_pole_ik_L_001
     400916: WGT-VIS-upper_arm_pole_ik_R_001
+    400918: chest_0
+    400920: f_index_01_L_0
+    400922: f_index_01_R_0
+    400924: f_index_02_L_0
+    400926: f_index_02_R_0
+    400928: f_index_03_L_0
+    400930: f_index_03_R_0
+    400932: f_middle_01_L_0
+    400934: f_middle_01_R_0
+    400936: f_middle_02_L_0
+    400938: f_middle_02_R_0
+    400940: f_middle_03_L_0
+    400942: f_middle_03_R_0
+    400944: f_pinky_01_L_0
+    400946: f_pinky_01_R_0
+    400948: f_pinky_02_L_0
+    400950: f_pinky_02_R_0
+    400952: f_pinky_03_L_0
+    400954: f_pinky_03_R_0
+    400956: f_ring_01_L_0
+    400958: f_ring_01_R_0
+    400960: f_ring_02_L_0
+    400962: f_ring_02_R_0
+    400964: f_ring_03_L_0
+    400966: f_ring_03_R_0
+    400968: foot_L_0
+    400970: foot_R_0
+    400972: forearm_L_0
+    400974: forearm_R_0
+    400976: hand_L_0
+    400978: hand_R_0
+    400980: head_0
+    400982: heel_02_L_0
+    400984: heel_02_R_0
+    400986: heel_L_0
+    400988: heel_R_0
+    400990: hips_0
+    400992: metarig_001
+    400994: neck_0
+    400996: palm_01_L_0
+    400998: palm_01_R_0
+    401000: palm_02_L_0
+    401002: palm_02_R_0
+    401004: palm_03_L_0
+    401006: palm_03_R_0
+    401008: palm_04_L_0
+    401010: palm_04_R_0
+    401012: shin_L_0
+    401014: shin_R_0
+    401016: shoulder_L_0
+    401018: shoulder_R_0
+    401020: spine_0
+    401022: thigh_L_0
+    401024: thigh_R_0
+    401026: thumb_01_L_0
+    401028: thumb_01_R_0
+    401030: thumb_02_L_0
+    401032: thumb_02_R_0
+    401034: thumb_03_L_0
+    401036: thumb_03_R_0
+    401038: toe_L_0
+    401040: toe_R_0
+    401042: upper_arm_L_0
+    401044: upper_arm_R_0
     2300000: Cube
     2300002: WGT-chest_001
     2300004: WGT-elbow_hose_L_001
@@ -1131,6 +1259,7 @@ ModelImporter:
     7400004: Run
     7400006: Walk
     9500000: //RootNode
+    13700000: Cube
   materials:
     importMaterials: 1
     materialName: 0
