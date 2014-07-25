@@ -492,10 +492,6 @@ GameObject:
   - 124: {fileID: 1298486258}
   - 81: {fileID: 1298486257}
   - 114: {fileID: 1298486262}
-  - 114: {fileID: 1298486263}
-  - 114: {fileID: 1298486265}
-  - 114: {fileID: 1298486264}
-  - 114: {fileID: 1298486266}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -574,56 +570,11 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1298486256}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1eaba0ea272e547bccde701efa533c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1298486263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1298486256}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a2c8bd37619fd544a1c190201c30c47, type: 3}
+  m_Script: {fileID: 11500000, guid: 89438cda77d7f8f4e85530c0549c6ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1298486264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1298486256}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc2dae5e8824e8747a9bfbb8b0257110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1298486265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1298486256}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23b812c3ed0d2fc409f4a5a13c9d9fdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1298486266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1298486256}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d33a6e584fb3247995fefc66af640c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blubb: {fileID: 0}
 --- !u!1 &1426321123
 GameObject:
   m_ObjectHideFlags: 0
