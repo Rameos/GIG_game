@@ -5968,7 +5968,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 821478496}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9478,9 +9478,8 @@ GameObject:
   - 65: {fileID: 1374770745}
   - 23: {fileID: 1374770744}
   - 114: {fileID: 1374770747}
-  - 114: {fileID: 1374770748}
-  m_Layer: 9
-  m_Name: Cube
+  m_Layer: 13
+  m_Name: ProgressBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9550,18 +9549,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aed06593a3667c74c988636b8265da8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1374770748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 8d8ed56e63ea27e4a82bb9f80267548e,
-    type: 2}
-  m_PrefabInternal: {fileID: 447467726}
-  m_GameObject: {fileID: 1374770742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baa11866e7f856c43a87ef472fdf88c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1380992730
@@ -11226,7 +11213,7 @@ GameObject:
   - 20: {fileID: 1632607068}
   - 124: {fileID: 1632607067}
   - 92: {fileID: 1632607066}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11258,7 +11245,7 @@ Camera:
   m_GameObject: {fileID: 1632607064}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -11274,7 +11261,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 8192
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 154925451090f5e4f87012ac70eff417, type: 2}
   m_TargetDisplay: 0

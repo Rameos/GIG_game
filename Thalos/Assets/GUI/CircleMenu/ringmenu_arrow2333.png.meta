@@ -1,8 +1,9 @@
 fileFormatVersion: 2
-guid: e874c2e22898d6a4f8a1b4423142569c
+guid: 4504174f58e3ebb49a07ee4a43c3bfdf
 TextureImporter:
   fileIDToRecycleName:
     21300000: ringmenu_arrow2
+    21300002: ringmenu_arrow2333
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

@@ -19,7 +19,7 @@ public class RotateWithGazeInput : MonoBehaviour {
     public ThirdPersonCamera camScript;
     public gazeActionMenu actualStateGazeAction;
 
-
+    private bool isInGameMenu = false;
     public bool IsEyeDetected = true;
     public float offSetRightAOI;
 
@@ -75,6 +75,10 @@ public class RotateWithGazeInput : MonoBehaviour {
         return false; 
     }
 
+    public void OpenGazeMenu (bool status)
+    {
+        isInGameMenu = status;
+    }
     
     private void checkGazeIsInAOI()
     {
@@ -86,7 +90,7 @@ public class RotateWithGazeInput : MonoBehaviour {
             float leftX = Input.GetAxis("Horizontal");
             float leftY = Input.GetAxis("Vertical");
 
-            if (gazePos != Vector3.zero)
+            if (gazePos != Vector3.zero && !isInGameMenu)
             {
 
                 #region Left
@@ -173,6 +177,7 @@ public class RotateWithGazeInput : MonoBehaviour {
             }
             else
             {
+                Debug.Log("resetInput:");
                 camScript.gazeInput = 0;
             }
         }
