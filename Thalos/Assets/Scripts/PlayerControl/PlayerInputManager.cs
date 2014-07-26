@@ -40,6 +40,8 @@ public class PlayerInputManager : MonoBehaviour {
     private bool isInAir = false;
     [SerializeField]
     private bool isGrounded = false;
+
+    //private bool jumpClimax = false;
     [SerializeField]
     private Transform centerOfMass;
     [SerializeField]
@@ -216,7 +218,7 @@ public class PlayerInputManager : MonoBehaviour {
         float speedOut = 0f;
         StickInputToWorld(inputX, inputY, ref angle, ref speedOut);
         
-        AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
+
 
         Debug.DrawLine(transform.position, transform.position + transform.forward * 2, Color.green);
 
@@ -227,11 +229,15 @@ public class PlayerInputManager : MonoBehaviour {
         if (Mathf.Abs(speedOut) > 0.1f)
         {
 
-            if (currentState.nameHash == shoot_Walking)
+            AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
+
+            Debug.Log("AnimationState:" + currentState.nameHash);
+            Debug.Log("hashOtherID: " + shoot_Walking);
+            
+            if (currentState.IsName("Shoot_Walk"))
             {
                 Debug.Log("SHOT AND RUN!");
-                speedOut = 0.1f;
-                speedFactor = 0.1f;
+                speedOut = 0.5f;
             }
 
             if (isGrounded)
@@ -276,7 +282,7 @@ public class PlayerInputManager : MonoBehaviour {
             animator.SetBool("Shoot",true);
             Debug.Log("Shoot");
 
-            GamePad.SetVibration(playerIndex, Input.GetAxis("Triggers"), 0);
+           // GamePad.SetVibration(playerIndex, Input.GetAxis("Triggers"), 0);
         }
 
         else
@@ -287,8 +293,6 @@ public class PlayerInputManager : MonoBehaviour {
         }
 
     }
-
-    
 
     private void checkButtonInput()
     {
@@ -321,6 +325,8 @@ public class PlayerInputManager : MonoBehaviour {
 
         if (Input.GetAxis("ButtonLB") > 0)
         {
+
+            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
             Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU,true);
             circleMenuIsOpen = true;
         }
@@ -332,6 +338,8 @@ public class PlayerInputManager : MonoBehaviour {
 
         else if(circleMenuIsOpen== true && Input.GetAxis("ButtonLB")<=0)
         {
+
+            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(false);
             circleMenuIsOpen = false;
             Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU, false);
 
@@ -359,6 +367,24 @@ public class PlayerInputManager : MonoBehaviour {
 
     }
 
+    
+    void OnCollisionStay(Collision colInfo)
+    {
+        try
+        {
+            Vector3 contactPoint = colInfo.contacts[0].point;
+
+            if (isInAir || isJumping)
+            {
+                rigidbody.AddForceAtPosition(-rigidbody.velocity, contactPoint);
+            }
+        }
+        catch
+        {
+            rigidbody.AddForce(Vector3.up*2f);            
+        }
+        
+    }
 
     IEnumerator rumbleOverTime(float time, float powerHeavy, float powerSoft)
     {

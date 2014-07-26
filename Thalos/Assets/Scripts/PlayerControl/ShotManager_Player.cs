@@ -48,6 +48,8 @@ namespace Controller
 
                     break;
             }
+
+            gameObject.GetComponent<PlayerInputManager>().startRumbleForTime(0.1f, 0, 0.1f);
            
             //if(isShotable)
             //{

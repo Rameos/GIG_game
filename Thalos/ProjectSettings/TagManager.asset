@@ -27,7 +27,7 @@ TagManager:
   User Layer 10: Effects
   User Layer 11: Player
   User Layer 12: Items
-  User Layer 13: 
+  User Layer 13: HealthBar
   User Layer 14: 
   User Layer 15: 
   User Layer 16: 
@@ -46,4 +46,8 @@ TagManager:
   User Layer 29: 
   User Layer 30: 
   User Layer 31: 
-  m_SortingLayers: []
+  m_SortingLayers:
+  - name: Default
+    userID: 0
+    uniqueID: 0
+    locked: 0
