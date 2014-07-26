@@ -42,7 +42,7 @@ namespace Controller
         public const int damageFirePoison = 15;
         public const int damageIcePoison = 15;
 
-        public const float COOLDOWN_BOLT = 0.05f;
+        public const float COOLDOWN_BOLT = 0.5f;
         public const float COOLDOWN_POISON = 0.1f;
 
 

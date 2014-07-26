@@ -26,12 +26,33 @@ namespace Controller
         private bool isShotable = true;
         private bool isThrowable = true;
 
-        public void Shot()
+        public void ShootBullet()
         {
-            if(isShotable)
+            PlayerModel.DamageTypes damage = PlayerModel.Instance().DamageType_Bolt;
+            GameObject instance;
+            switch (damage)
             {
-                StartCoroutine(shotCoolDown());
-            }            
+                case PlayerModel.DamageTypes.Fire:
+                    instance = GameObject.Instantiate(BoltFire, instanciatePointBullet.position, instanciatePointBullet.localRotation) as GameObject;
+                    instance.GetComponent<Bullet>().Init(transform.forward, Constants.ID_PLAYER, new Damage(Constants.damageFireBolt, PlayerModel.DamageTypes.Fire));
+                    break;
+
+                case PlayerModel.DamageTypes.Ice:
+                    instance = GameObject.Instantiate(BoltIce, instanciatePointBullet.position, instanciatePointBullet.localRotation) as GameObject;
+                    instance.GetComponent<Bullet>().Init(transform.forward, Constants.ID_PLAYER, new Damage(Constants.damageIceBolt, PlayerModel.DamageTypes.Ice));
+                    break;
+
+                case PlayerModel.DamageTypes.Standard:
+                    instance = GameObject.Instantiate(BoltNormal, instanciatePointBullet.position, instanciatePointBullet.localRotation) as GameObject;
+                    instance.GetComponent<Bullet>().Init(transform.forward, Constants.ID_PLAYER, new Damage(Constants.damageStandardBolt, PlayerModel.DamageTypes.Standard));
+
+                    break;
+            }
+           
+            //if(isShotable)
+            //{
+            //    StartCoroutine(shotCoolDown());
+            //}            
         }
 
         public void ThrowPoison()

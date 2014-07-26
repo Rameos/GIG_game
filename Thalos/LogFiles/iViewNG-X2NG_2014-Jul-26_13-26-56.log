@@ -1,0 +1,1233 @@
+1096 00000.195   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00000.196   TRACE        Constructing: StreamAdministrator
+1096 00000.196   FUNC         ---> enter function: addStatusChangeListener
+1096 00000.196   FUNC            <--- exit  function: addStatusChangeListener
+1096 00000.196   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00000.196   FUNC            ---> enter function: enableStreamDataCallback
+1096 00000.196   FUNC               ---> enter function: isConnected
+1096 00000.196   FUNC                  <--- exit  function: isConnected
+1096 00000.196   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00000.196   TRACE           return:  RET_SUCCESS
+1096 00000.196   FUNC            <--- exit  function: setGazeDataSampleCallback
+2492 00000.196   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STARTED
+1096 00000.196   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00000.196   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+5452 00000.196   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Polling Watchdog Thread <<< :: STARTING
+5452 00000.196   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Polling Watchdog Thread <<< :: STATE IDLE
+2492 00000.197   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00000.198   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00000.198   FUNC         ---> enter function: useGazeDataFilter
+1096 00000.198   FUNC            ---> enter function: setStreamSpec
+1096 00000.198   FUNC               ---> enter function: isSubscribed
+1096 00000.198   FUNC                  <--- exit  function: isSubscribed
+1096 00000.198   FUNC               <--- exit  function: setStreamSpec
+1096 00000.198   TRACE           gaze filter  enabled
+1096 00000.198   TRACE           return:  RET_SUCCESS
+1096 00000.198   FUNC            <--- exit  function: useGazeDataFilter
+1096 00000.198   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00002.481   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00002.481   FUNC         ---> enter function: addStatusChangeListener
+1096 00002.481   FUNC            <--- exit  function: addStatusChangeListener
+1096 00002.481   FUNC         ---> enter function: isConnected
+1096 00002.481   FUNC            <--- exit  function: isConnected
+1096 00002.481   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00002.481   TRACE           removing user callback
+1096 00002.481   TRACE           return:  RET_SUCCESS
+1096 00002.481   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00002.481   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00002.481   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00002.481   FUNC         ---> enter function: disconnectServer
+1096 00002.481   FUNC            ---> enter function: isConnected
+1096 00002.481   FUNC               <--- exit  function: isConnected
+1096 00002.481   TRACE           return:  RET_SUCCESS
+1096 00002.482   FUNC            <--- exit  function: disconnectServer
+1096 00002.482   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00156.304   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00156.304   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00156.304   FUNC            ---> enter function: enableStreamDataCallback
+1096 00156.304   FUNC               ---> enter function: isConnected
+1096 00156.304   FUNC                  <--- exit  function: isConnected
+1096 00156.304   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00156.304   TRACE           return:  RET_SUCCESS
+1096 00156.304   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00156.304   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00156.305   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00156.306   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00156.306   FUNC         ---> enter function: useGazeDataFilter
+1096 00156.306   TRACE           gaze filter  enabled
+1096 00156.306   TRACE           return:  RET_SUCCESS
+1096 00156.306   FUNC            <--- exit  function: useGazeDataFilter
+1096 00156.307   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00169.312   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00169.312   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00169.313   TRACE           removing user callback
+1096 00169.313   TRACE           return:  RET_SUCCESS
+1096 00169.313   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00169.313   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00169.313   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00169.313   FUNC         ---> enter function: disconnectServer
+1096 00169.313   FUNC            ---> enter function: isConnected
+1096 00169.313   FUNC               <--- exit  function: isConnected
+1096 00169.313   TRACE           return:  RET_SUCCESS
+1096 00169.313   FUNC            <--- exit  function: disconnectServer
+1096 00169.313   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00302.852   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00302.852   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00302.852   FUNC            ---> enter function: enableStreamDataCallback
+1096 00302.852   FUNC               ---> enter function: isConnected
+1096 00302.852   FUNC                  <--- exit  function: isConnected
+1096 00302.852   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00302.852   TRACE           return:  RET_SUCCESS
+1096 00302.852   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00302.852   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00302.853   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00302.854   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00302.854   FUNC         ---> enter function: useGazeDataFilter
+1096 00302.854   TRACE           gaze filter  enabled
+1096 00302.854   TRACE           return:  RET_SUCCESS
+1096 00302.854   FUNC            <--- exit  function: useGazeDataFilter
+1096 00302.854   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00306.175   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00306.175   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00306.175   TRACE           removing user callback
+1096 00306.175   TRACE           return:  RET_SUCCESS
+1096 00306.175   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00306.175   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00306.175   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00306.175   FUNC         ---> enter function: disconnectServer
+1096 00306.175   FUNC            ---> enter function: isConnected
+1096 00306.175   FUNC               <--- exit  function: isConnected
+1096 00306.175   TRACE           return:  RET_SUCCESS
+1096 00306.175   FUNC            <--- exit  function: disconnectServer
+1096 00306.175   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00312.475   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00312.475   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00312.475   FUNC            ---> enter function: enableStreamDataCallback
+1096 00312.476   FUNC               ---> enter function: isConnected
+1096 00312.476   FUNC                  <--- exit  function: isConnected
+1096 00312.476   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00312.476   TRACE           return:  RET_SUCCESS
+1096 00312.476   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00312.476   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00312.476   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00312.478   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00312.478   FUNC         ---> enter function: useGazeDataFilter
+1096 00312.478   TRACE           gaze filter  enabled
+1096 00312.478   TRACE           return:  RET_SUCCESS
+1096 00312.478   FUNC            <--- exit  function: useGazeDataFilter
+1096 00312.478   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00318.680   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00318.680   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00318.680   TRACE           removing user callback
+1096 00318.680   TRACE           return:  RET_SUCCESS
+1096 00318.680   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00318.680   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00318.681   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00318.681   FUNC         ---> enter function: disconnectServer
+1096 00318.681   FUNC            ---> enter function: isConnected
+1096 00318.681   FUNC               <--- exit  function: isConnected
+1096 00318.681   TRACE           return:  RET_SUCCESS
+1096 00318.681   FUNC            <--- exit  function: disconnectServer
+1096 00318.681   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00364.895   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00364.895   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00364.895   FUNC            ---> enter function: enableStreamDataCallback
+1096 00364.895   FUNC               ---> enter function: isConnected
+1096 00364.895   FUNC                  <--- exit  function: isConnected
+1096 00364.895   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00364.895   TRACE           return:  RET_SUCCESS
+1096 00364.895   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00364.895   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00364.896   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00364.898   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00364.898   FUNC         ---> enter function: useGazeDataFilter
+1096 00364.898   TRACE           gaze filter  enabled
+1096 00364.898   TRACE           return:  RET_SUCCESS
+1096 00364.898   FUNC            <--- exit  function: useGazeDataFilter
+1096 00364.898   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00377.857   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00377.857   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00377.857   TRACE           removing user callback
+1096 00377.857   TRACE           return:  RET_SUCCESS
+1096 00377.857   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00377.857   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00377.857   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00377.857   FUNC         ---> enter function: disconnectServer
+1096 00377.858   FUNC            ---> enter function: isConnected
+1096 00377.858   FUNC               <--- exit  function: isConnected
+1096 00377.858   TRACE           return:  RET_SUCCESS
+1096 00377.858   FUNC            <--- exit  function: disconnectServer
+1096 00377.858   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00424.158   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00424.158   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00424.158   FUNC            ---> enter function: enableStreamDataCallback
+1096 00424.158   FUNC               ---> enter function: isConnected
+1096 00424.158   FUNC                  <--- exit  function: isConnected
+1096 00424.158   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00424.158   TRACE           return:  RET_SUCCESS
+1096 00424.158   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00424.158   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00424.159   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00424.160   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00424.160   FUNC         ---> enter function: useGazeDataFilter
+1096 00424.160   TRACE           gaze filter  enabled
+1096 00424.160   TRACE           return:  RET_SUCCESS
+1096 00424.160   FUNC            <--- exit  function: useGazeDataFilter
+1096 00424.160   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00437.608   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00437.608   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00437.608   TRACE           removing user callback
+1096 00437.608   TRACE           return:  RET_SUCCESS
+1096 00437.608   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00437.608   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00437.609   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00437.609   FUNC         ---> enter function: disconnectServer
+1096 00437.609   FUNC            ---> enter function: isConnected
+1096 00437.609   FUNC               <--- exit  function: isConnected
+1096 00437.609   TRACE           return:  RET_SUCCESS
+1096 00437.609   FUNC            <--- exit  function: disconnectServer
+1096 00437.609   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00459.017   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00459.017   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00459.017   FUNC            ---> enter function: enableStreamDataCallback
+1096 00459.017   FUNC               ---> enter function: isConnected
+1096 00459.017   FUNC                  <--- exit  function: isConnected
+1096 00459.017   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00459.017   TRACE           return:  RET_SUCCESS
+1096 00459.017   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00459.017   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00459.018   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00459.019   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00459.019   FUNC         ---> enter function: useGazeDataFilter
+1096 00459.019   TRACE           gaze filter  enabled
+1096 00459.019   TRACE           return:  RET_SUCCESS
+1096 00459.019   FUNC            <--- exit  function: useGazeDataFilter
+1096 00459.019   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00466.990   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00466.990   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00466.990   TRACE           removing user callback
+1096 00466.990   TRACE           return:  RET_SUCCESS
+1096 00466.990   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00466.990   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00466.990   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00466.990   FUNC         ---> enter function: disconnectServer
+1096 00466.990   FUNC            ---> enter function: isConnected
+1096 00466.990   FUNC               <--- exit  function: isConnected
+1096 00466.990   TRACE           return:  RET_SUCCESS
+1096 00466.990   FUNC            <--- exit  function: disconnectServer
+1096 00466.990   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00510.334   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00510.334   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00510.334   FUNC            ---> enter function: enableStreamDataCallback
+1096 00510.334   FUNC               ---> enter function: isConnected
+1096 00510.334   FUNC                  <--- exit  function: isConnected
+1096 00510.334   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00510.334   TRACE           return:  RET_SUCCESS
+1096 00510.334   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00510.334   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00510.335   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00510.336   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00510.336   FUNC         ---> enter function: useGazeDataFilter
+1096 00510.336   TRACE           gaze filter  enabled
+1096 00510.336   TRACE           return:  RET_SUCCESS
+1096 00510.336   FUNC            <--- exit  function: useGazeDataFilter
+1096 00510.336   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00522.574   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00522.574   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00522.574   TRACE           removing user callback
+1096 00522.574   TRACE           return:  RET_SUCCESS
+1096 00522.574   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00522.574   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00522.574   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00522.574   FUNC         ---> enter function: disconnectServer
+1096 00522.574   FUNC            ---> enter function: isConnected
+1096 00522.574   FUNC               <--- exit  function: isConnected
+1096 00522.574   TRACE           return:  RET_SUCCESS
+1096 00522.574   FUNC            <--- exit  function: disconnectServer
+1096 00522.575   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00579.756   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00579.756   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00579.756   FUNC            ---> enter function: enableStreamDataCallback
+1096 00579.756   FUNC               ---> enter function: isConnected
+1096 00579.756   FUNC                  <--- exit  function: isConnected
+1096 00579.756   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00579.756   TRACE           return:  RET_SUCCESS
+1096 00579.756   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00579.756   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00579.757   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00579.758   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00579.758   FUNC         ---> enter function: useGazeDataFilter
+1096 00579.758   TRACE           gaze filter  enabled
+1096 00579.758   TRACE           return:  RET_SUCCESS
+1096 00579.759   FUNC            <--- exit  function: useGazeDataFilter
+1096 00579.759   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00587.870   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00587.871   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00587.871   TRACE           removing user callback
+1096 00587.871   TRACE           return:  RET_SUCCESS
+1096 00587.871   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00587.871   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00587.871   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00587.871   FUNC         ---> enter function: disconnectServer
+1096 00587.871   FUNC            ---> enter function: isConnected
+1096 00587.871   FUNC               <--- exit  function: isConnected
+1096 00587.871   TRACE           return:  RET_SUCCESS
+1096 00587.871   FUNC            <--- exit  function: disconnectServer
+1096 00587.871   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00610.002   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00610.002   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00610.002   FUNC            ---> enter function: enableStreamDataCallback
+1096 00610.002   FUNC               ---> enter function: isConnected
+1096 00610.003   FUNC                  <--- exit  function: isConnected
+1096 00610.003   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00610.003   TRACE           return:  RET_SUCCESS
+1096 00610.003   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00610.003   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00610.004   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00610.005   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00610.005   FUNC         ---> enter function: useGazeDataFilter
+1096 00610.005   TRACE           gaze filter  enabled
+1096 00610.005   TRACE           return:  RET_SUCCESS
+1096 00610.005   FUNC            <--- exit  function: useGazeDataFilter
+1096 00610.005   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00618.065   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00618.065   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00618.065   TRACE           removing user callback
+1096 00618.065   TRACE           return:  RET_SUCCESS
+1096 00618.065   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00618.065   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00618.065   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00618.065   FUNC         ---> enter function: disconnectServer
+1096 00618.065   FUNC            ---> enter function: isConnected
+1096 00618.065   FUNC               <--- exit  function: isConnected
+1096 00618.065   TRACE           return:  RET_SUCCESS
+1096 00618.065   FUNC            <--- exit  function: disconnectServer
+1096 00618.065   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00632.347   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00632.347   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00632.347   FUNC            ---> enter function: enableStreamDataCallback
+1096 00632.347   FUNC               ---> enter function: isConnected
+1096 00632.347   FUNC                  <--- exit  function: isConnected
+1096 00632.347   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00632.347   TRACE           return:  RET_SUCCESS
+1096 00632.347   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00632.347   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00632.348   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00632.349   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00632.349   FUNC         ---> enter function: useGazeDataFilter
+1096 00632.349   TRACE           gaze filter  enabled
+1096 00632.349   TRACE           return:  RET_SUCCESS
+1096 00632.349   FUNC            <--- exit  function: useGazeDataFilter
+1096 00632.349   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00641.216   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00641.216   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00641.216   TRACE           removing user callback
+1096 00641.216   TRACE           return:  RET_SUCCESS
+1096 00641.216   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00641.216   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00641.216   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00641.216   FUNC         ---> enter function: disconnectServer
+1096 00641.216   FUNC            ---> enter function: isConnected
+1096 00641.216   FUNC               <--- exit  function: isConnected
+1096 00641.216   TRACE           return:  RET_SUCCESS
+1096 00641.216   FUNC            <--- exit  function: disconnectServer
+1096 00641.216   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00693.157   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00693.157   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00693.157   FUNC            ---> enter function: enableStreamDataCallback
+1096 00693.157   FUNC               ---> enter function: isConnected
+1096 00693.157   FUNC                  <--- exit  function: isConnected
+1096 00693.157   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00693.157   TRACE           return:  RET_SUCCESS
+1096 00693.157   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00693.157   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00693.158   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00693.159   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00693.159   FUNC         ---> enter function: useGazeDataFilter
+1096 00693.159   TRACE           gaze filter  enabled
+1096 00693.159   TRACE           return:  RET_SUCCESS
+1096 00693.159   FUNC            <--- exit  function: useGazeDataFilter
+1096 00693.159   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00705.455   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00705.455   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00705.455   TRACE           removing user callback
+1096 00705.455   TRACE           return:  RET_SUCCESS
+1096 00705.455   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00705.455   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00705.456   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00705.456   FUNC         ---> enter function: disconnectServer
+1096 00705.456   FUNC            ---> enter function: isConnected
+1096 00705.456   FUNC               <--- exit  function: isConnected
+1096 00705.456   TRACE           return:  RET_SUCCESS
+1096 00705.456   FUNC            <--- exit  function: disconnectServer
+1096 00705.456   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00742.529   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00742.529   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00742.529   FUNC            ---> enter function: enableStreamDataCallback
+1096 00742.529   FUNC               ---> enter function: isConnected
+1096 00742.529   FUNC                  <--- exit  function: isConnected
+1096 00742.529   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00742.529   TRACE           return:  RET_SUCCESS
+1096 00742.529   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00742.529   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00742.530   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00742.531   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00742.531   FUNC         ---> enter function: useGazeDataFilter
+1096 00742.531   TRACE           gaze filter  enabled
+1096 00742.531   TRACE           return:  RET_SUCCESS
+1096 00742.531   FUNC            <--- exit  function: useGazeDataFilter
+1096 00742.531   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00745.574   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00745.574   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00745.574   TRACE           removing user callback
+1096 00745.574   TRACE           return:  RET_SUCCESS
+1096 00745.575   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00745.575   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00745.575   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00745.575   FUNC         ---> enter function: disconnectServer
+1096 00745.575   FUNC            ---> enter function: isConnected
+1096 00745.575   FUNC               <--- exit  function: isConnected
+1096 00745.575   TRACE           return:  RET_SUCCESS
+1096 00745.575   FUNC            <--- exit  function: disconnectServer
+1096 00745.575   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00759.057   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00759.057   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00759.057   FUNC            ---> enter function: enableStreamDataCallback
+1096 00759.057   FUNC               ---> enter function: isConnected
+1096 00759.057   FUNC                  <--- exit  function: isConnected
+1096 00759.057   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00759.057   TRACE           return:  RET_SUCCESS
+1096 00759.057   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00759.057   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00759.058   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00759.059   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00759.059   FUNC         ---> enter function: useGazeDataFilter
+1096 00759.059   TRACE           gaze filter  enabled
+1096 00759.059   TRACE           return:  RET_SUCCESS
+1096 00759.059   FUNC            <--- exit  function: useGazeDataFilter
+1096 00759.059   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00785.562   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00785.562   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00785.562   TRACE           removing user callback
+1096 00785.562   TRACE           return:  RET_SUCCESS
+1096 00785.562   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00785.562   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00785.563   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00785.563   FUNC         ---> enter function: disconnectServer
+1096 00785.563   FUNC            ---> enter function: isConnected
+1096 00785.563   FUNC               <--- exit  function: isConnected
+1096 00785.563   TRACE           return:  RET_SUCCESS
+1096 00785.563   FUNC            <--- exit  function: disconnectServer
+1096 00785.563   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00858.184   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00858.185   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00858.185   FUNC            ---> enter function: enableStreamDataCallback
+1096 00858.185   FUNC               ---> enter function: isConnected
+1096 00858.185   FUNC                  <--- exit  function: isConnected
+1096 00858.185   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00858.185   TRACE           return:  RET_SUCCESS
+1096 00858.185   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00858.185   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00858.185   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00858.187   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00858.187   FUNC         ---> enter function: useGazeDataFilter
+1096 00858.187   TRACE           gaze filter  enabled
+1096 00858.187   TRACE           return:  RET_SUCCESS
+1096 00858.187   FUNC            <--- exit  function: useGazeDataFilter
+1096 00858.187   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00884.595   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00884.595   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00884.595   TRACE           removing user callback
+1096 00884.595   TRACE           return:  RET_SUCCESS
+1096 00884.595   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00884.595   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00884.596   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00884.596   FUNC         ---> enter function: disconnectServer
+1096 00884.596   FUNC            ---> enter function: isConnected
+1096 00884.596   FUNC               <--- exit  function: isConnected
+1096 00884.596   TRACE           return:  RET_SUCCESS
+1096 00884.596   FUNC            <--- exit  function: disconnectServer
+1096 00884.596   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 00890.503   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 00890.503   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 00890.503   FUNC            ---> enter function: enableStreamDataCallback
+1096 00890.503   FUNC               ---> enter function: isConnected
+1096 00890.503   FUNC                  <--- exit  function: isConnected
+1096 00890.503   FUNC               <--- exit  function: enableStreamDataCallback
+1096 00890.503   TRACE           return:  RET_SUCCESS
+1096 00890.503   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 00890.503   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 00890.504   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 00890.505   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 00890.505   FUNC         ---> enter function: useGazeDataFilter
+1096 00890.505   TRACE           gaze filter  enabled
+1096 00890.505   TRACE           return:  RET_SUCCESS
+1096 00890.505   FUNC            <--- exit  function: useGazeDataFilter
+1096 00890.505   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 00929.926   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 00929.926   FUNC         ---> enter function: setCalibrationPointCallback
+1096 00929.926   TRACE           removing user callback
+1096 00929.926   TRACE           return:  RET_SUCCESS
+1096 00929.926   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 00929.926   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 00929.927   iV_FUNC   ---> enter function: iV_Disconnect
+1096 00929.927   FUNC         ---> enter function: disconnectServer
+1096 00929.927   FUNC            ---> enter function: isConnected
+1096 00929.927   FUNC               <--- exit  function: isConnected
+1096 00929.927   TRACE           return:  RET_SUCCESS
+1096 00929.927   FUNC            <--- exit  function: disconnectServer
+1096 00929.927   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 01031.995   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 01031.995   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 01031.995   FUNC            ---> enter function: enableStreamDataCallback
+1096 01031.995   FUNC               ---> enter function: isConnected
+1096 01031.995   FUNC                  <--- exit  function: isConnected
+1096 01031.995   FUNC               <--- exit  function: enableStreamDataCallback
+1096 01031.995   TRACE           return:  RET_SUCCESS
+1096 01031.995   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 01031.995   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 01031.996   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 01031.997   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 01031.997   FUNC         ---> enter function: useGazeDataFilter
+1096 01031.997   TRACE           gaze filter  enabled
+1096 01031.997   TRACE           return:  RET_SUCCESS
+1096 01031.997   FUNC            <--- exit  function: useGazeDataFilter
+1096 01031.997   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 01202.811   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 01202.811   FUNC         ---> enter function: setCalibrationPointCallback
+1096 01202.811   TRACE           removing user callback
+1096 01202.811   TRACE           return:  RET_SUCCESS
+1096 01202.811   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 01202.811   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 01202.812   iV_FUNC   ---> enter function: iV_Disconnect
+1096 01202.812   FUNC         ---> enter function: disconnectServer
+1096 01202.812   FUNC            ---> enter function: isConnected
+1096 01202.812   FUNC               <--- exit  function: isConnected
+1096 01202.812   TRACE           return:  RET_SUCCESS
+1096 01202.812   FUNC            <--- exit  function: disconnectServer
+1096 01202.812   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 01619.245   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 01619.245   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 01619.245   FUNC            ---> enter function: enableStreamDataCallback
+1096 01619.245   FUNC               ---> enter function: isConnected
+1096 01619.245   FUNC                  <--- exit  function: isConnected
+1096 01619.245   FUNC               <--- exit  function: enableStreamDataCallback
+1096 01619.245   TRACE           return:  RET_SUCCESS
+1096 01619.245   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 01619.245   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 01619.246   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 01619.247   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 01619.247   FUNC         ---> enter function: useGazeDataFilter
+1096 01619.247   TRACE           gaze filter  enabled
+1096 01619.247   TRACE           return:  RET_SUCCESS
+1096 01619.247   FUNC            <--- exit  function: useGazeDataFilter
+1096 01619.247   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 01622.195   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 01622.195   FUNC         ---> enter function: setCalibrationPointCallback
+1096 01622.195   TRACE           removing user callback
+1096 01622.195   TRACE           return:  RET_SUCCESS
+1096 01622.195   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 01622.195   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 01622.195   iV_FUNC   ---> enter function: iV_Disconnect
+1096 01622.195   FUNC         ---> enter function: disconnectServer
+1096 01622.195   FUNC            ---> enter function: isConnected
+1096 01622.195   FUNC               <--- exit  function: isConnected
+1096 01622.195   TRACE           return:  RET_SUCCESS
+1096 01622.195   FUNC            <--- exit  function: disconnectServer
+1096 01622.196   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 01758.664   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 01758.664   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 01758.664   FUNC            ---> enter function: enableStreamDataCallback
+1096 01758.664   FUNC               ---> enter function: isConnected
+1096 01758.664   FUNC                  <--- exit  function: isConnected
+1096 01758.664   FUNC               <--- exit  function: enableStreamDataCallback
+1096 01758.664   TRACE           return:  RET_SUCCESS
+1096 01758.664   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 01758.664   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 01758.665   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 01758.666   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 01758.667   FUNC         ---> enter function: useGazeDataFilter
+1096 01758.667   TRACE           gaze filter  enabled
+1096 01758.667   TRACE           return:  RET_SUCCESS
+1096 01758.667   FUNC            <--- exit  function: useGazeDataFilter
+1096 01758.667   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 01788.430   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 01788.430   FUNC         ---> enter function: setCalibrationPointCallback
+1096 01788.430   TRACE           removing user callback
+1096 01788.430   TRACE           return:  RET_SUCCESS
+1096 01788.430   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 01788.430   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 01788.431   iV_FUNC   ---> enter function: iV_Disconnect
+1096 01788.431   FUNC         ---> enter function: disconnectServer
+1096 01788.431   FUNC            ---> enter function: isConnected
+1096 01788.431   FUNC               <--- exit  function: isConnected
+1096 01788.431   TRACE           return:  RET_SUCCESS
+1096 01788.431   FUNC            <--- exit  function: disconnectServer
+1096 01788.431   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 01809.876   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 01809.876   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 01809.876   FUNC            ---> enter function: enableStreamDataCallback
+1096 01809.876   FUNC               ---> enter function: isConnected
+1096 01809.876   FUNC                  <--- exit  function: isConnected
+1096 01809.876   FUNC               <--- exit  function: enableStreamDataCallback
+1096 01809.876   TRACE           return:  RET_SUCCESS
+1096 01809.876   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 01809.876   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 01809.877   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 01809.878   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 01809.878   FUNC         ---> enter function: useGazeDataFilter
+1096 01809.878   TRACE           gaze filter  enabled
+1096 01809.878   TRACE           return:  RET_SUCCESS
+1096 01809.878   FUNC            <--- exit  function: useGazeDataFilter
+1096 01809.878   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 01843.901   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 01843.901   FUNC         ---> enter function: setCalibrationPointCallback
+1096 01843.901   TRACE           removing user callback
+1096 01843.901   TRACE           return:  RET_SUCCESS
+1096 01843.901   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 01843.901   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 01843.901   iV_FUNC   ---> enter function: iV_Disconnect
+1096 01843.902   FUNC         ---> enter function: disconnectServer
+1096 01843.902   FUNC            ---> enter function: isConnected
+1096 01843.902   FUNC               <--- exit  function: isConnected
+1096 01843.902   TRACE           return:  RET_SUCCESS
+1096 01843.902   FUNC            <--- exit  function: disconnectServer
+1096 01843.902   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 01864.129   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 01864.129   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 01864.129   FUNC            ---> enter function: enableStreamDataCallback
+1096 01864.129   FUNC               ---> enter function: isConnected
+1096 01864.129   FUNC                  <--- exit  function: isConnected
+1096 01864.129   FUNC               <--- exit  function: enableStreamDataCallback
+1096 01864.129   TRACE           return:  RET_SUCCESS
+1096 01864.129   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 01864.129   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 01864.130   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 01864.131   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 01864.131   FUNC         ---> enter function: useGazeDataFilter
+1096 01864.131   TRACE           gaze filter  enabled
+1096 01864.131   TRACE           return:  RET_SUCCESS
+1096 01864.131   FUNC            <--- exit  function: useGazeDataFilter
+1096 01864.131   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 01864.404   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 01864.404   FUNC         ---> enter function: setCalibrationPointCallback
+1096 01864.404   TRACE           removing user callback
+1096 01864.404   TRACE           return:  RET_SUCCESS
+1096 01864.404   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 01864.404   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 01864.405   iV_FUNC   ---> enter function: iV_Disconnect
+1096 01864.405   FUNC         ---> enter function: disconnectServer
+1096 01864.405   FUNC            ---> enter function: isConnected
+1096 01864.405   FUNC               <--- exit  function: isConnected
+1096 01864.405   TRACE           return:  RET_SUCCESS
+1096 01864.405   FUNC            <--- exit  function: disconnectServer
+1096 01864.405   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 01868.268   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 01868.268   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 01868.268   FUNC            ---> enter function: enableStreamDataCallback
+1096 01868.268   FUNC               ---> enter function: isConnected
+1096 01868.268   FUNC                  <--- exit  function: isConnected
+1096 01868.268   FUNC               <--- exit  function: enableStreamDataCallback
+1096 01868.268   TRACE           return:  RET_SUCCESS
+1096 01868.268   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 01868.268   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 01868.269   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 01868.270   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 01868.270   FUNC         ---> enter function: useGazeDataFilter
+1096 01868.270   TRACE           gaze filter  enabled
+1096 01868.270   TRACE           return:  RET_SUCCESS
+1096 01868.270   FUNC            <--- exit  function: useGazeDataFilter
+1096 01868.270   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 01913.517   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 01913.517   FUNC         ---> enter function: setCalibrationPointCallback
+1096 01913.517   TRACE           removing user callback
+1096 01913.517   TRACE           return:  RET_SUCCESS
+1096 01913.517   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 01913.517   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 01913.517   iV_FUNC   ---> enter function: iV_Disconnect
+1096 01913.518   FUNC         ---> enter function: disconnectServer
+1096 01913.518   FUNC            ---> enter function: isConnected
+1096 01913.518   FUNC               <--- exit  function: isConnected
+1096 01913.518   TRACE           return:  RET_SUCCESS
+1096 01913.518   FUNC            <--- exit  function: disconnectServer
+1096 01913.518   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 02150.545   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 02150.545   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 02150.545   FUNC            ---> enter function: enableStreamDataCallback
+1096 02150.545   FUNC               ---> enter function: isConnected
+1096 02150.545   FUNC                  <--- exit  function: isConnected
+1096 02150.545   FUNC               <--- exit  function: enableStreamDataCallback
+1096 02150.545   TRACE           return:  RET_SUCCESS
+1096 02150.545   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 02150.545   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 02150.546   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 02150.547   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 02150.547   FUNC         ---> enter function: useGazeDataFilter
+1096 02150.547   TRACE           gaze filter  enabled
+1096 02150.547   TRACE           return:  RET_SUCCESS
+1096 02150.547   FUNC            <--- exit  function: useGazeDataFilter
+1096 02150.547   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 02158.709   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 02158.709   FUNC         ---> enter function: setCalibrationPointCallback
+1096 02158.709   TRACE           removing user callback
+1096 02158.709   TRACE           return:  RET_SUCCESS
+1096 02158.709   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 02158.709   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 02158.709   iV_FUNC   ---> enter function: iV_Disconnect
+1096 02158.709   FUNC         ---> enter function: disconnectServer
+1096 02158.709   FUNC            ---> enter function: isConnected
+1096 02158.709   FUNC               <--- exit  function: isConnected
+1096 02158.709   TRACE           return:  RET_SUCCESS
+1096 02158.709   FUNC            <--- exit  function: disconnectServer
+1096 02158.710   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 02334.681   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 02334.681   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 02334.681   FUNC            ---> enter function: enableStreamDataCallback
+1096 02334.681   FUNC               ---> enter function: isConnected
+1096 02334.681   FUNC                  <--- exit  function: isConnected
+1096 02334.681   FUNC               <--- exit  function: enableStreamDataCallback
+1096 02334.681   TRACE           return:  RET_SUCCESS
+1096 02334.681   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 02334.681   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 02334.682   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 02334.683   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 02334.683   FUNC         ---> enter function: useGazeDataFilter
+1096 02334.683   TRACE           gaze filter  enabled
+1096 02334.683   TRACE           return:  RET_SUCCESS
+1096 02334.684   FUNC            <--- exit  function: useGazeDataFilter
+1096 02334.684   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 02419.435   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 02419.435   FUNC         ---> enter function: setCalibrationPointCallback
+1096 02419.435   TRACE           removing user callback
+1096 02419.435   TRACE           return:  RET_SUCCESS
+1096 02419.435   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 02419.435   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 02419.435   iV_FUNC   ---> enter function: iV_Disconnect
+1096 02419.435   FUNC         ---> enter function: disconnectServer
+1096 02419.435   FUNC            ---> enter function: isConnected
+1096 02419.435   FUNC               <--- exit  function: isConnected
+1096 02419.435   TRACE           return:  RET_SUCCESS
+1096 02419.435   FUNC            <--- exit  function: disconnectServer
+1096 02419.436   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 02495.504   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 02495.505   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 02495.505   FUNC            ---> enter function: enableStreamDataCallback
+1096 02495.505   FUNC               ---> enter function: isConnected
+1096 02495.505   FUNC                  <--- exit  function: isConnected
+1096 02495.505   FUNC               <--- exit  function: enableStreamDataCallback
+1096 02495.505   TRACE           return:  RET_SUCCESS
+1096 02495.505   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 02495.505   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 02495.505   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 02495.507   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 02495.507   FUNC         ---> enter function: useGazeDataFilter
+1096 02495.507   TRACE           gaze filter  enabled
+1096 02495.507   TRACE           return:  RET_SUCCESS
+1096 02495.507   FUNC            <--- exit  function: useGazeDataFilter
+1096 02495.507   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 02529.235   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 02529.235   FUNC         ---> enter function: setCalibrationPointCallback
+1096 02529.235   TRACE           removing user callback
+1096 02529.235   TRACE           return:  RET_SUCCESS
+1096 02529.235   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 02529.236   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 02529.236   iV_FUNC   ---> enter function: iV_Disconnect
+1096 02529.236   FUNC         ---> enter function: disconnectServer
+1096 02529.236   FUNC            ---> enter function: isConnected
+1096 02529.236   FUNC               <--- exit  function: isConnected
+1096 02529.236   TRACE           return:  RET_SUCCESS
+1096 02529.236   FUNC            <--- exit  function: disconnectServer
+1096 02529.236   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 02579.620   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 02579.620   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 02579.620   FUNC            ---> enter function: enableStreamDataCallback
+1096 02579.620   FUNC               ---> enter function: isConnected
+1096 02579.620   FUNC                  <--- exit  function: isConnected
+1096 02579.620   FUNC               <--- exit  function: enableStreamDataCallback
+1096 02579.620   TRACE           return:  RET_SUCCESS
+1096 02579.620   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 02579.620   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 02579.621   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 02579.622   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 02579.622   FUNC         ---> enter function: useGazeDataFilter
+1096 02579.622   TRACE           gaze filter  enabled
+1096 02579.622   TRACE           return:  RET_SUCCESS
+1096 02579.622   FUNC            <--- exit  function: useGazeDataFilter
+1096 02579.622   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 02589.969   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 02589.969   FUNC         ---> enter function: setCalibrationPointCallback
+1096 02589.969   TRACE           removing user callback
+1096 02589.969   TRACE           return:  RET_SUCCESS
+1096 02589.969   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 02589.969   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 02589.970   iV_FUNC   ---> enter function: iV_Disconnect
+1096 02589.970   FUNC         ---> enter function: disconnectServer
+1096 02589.970   FUNC            ---> enter function: isConnected
+1096 02589.970   FUNC               <--- exit  function: isConnected
+1096 02589.970   TRACE           return:  RET_SUCCESS
+1096 02589.970   FUNC            <--- exit  function: disconnectServer
+1096 02589.970   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 02616.601   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 02616.602   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 02616.602   FUNC            ---> enter function: enableStreamDataCallback
+1096 02616.602   FUNC               ---> enter function: isConnected
+1096 02616.602   FUNC                  <--- exit  function: isConnected
+1096 02616.602   FUNC               <--- exit  function: enableStreamDataCallback
+1096 02616.602   TRACE           return:  RET_SUCCESS
+1096 02616.602   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 02616.602   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 02616.602   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 02616.604   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 02616.604   FUNC         ---> enter function: useGazeDataFilter
+1096 02616.604   TRACE           gaze filter  enabled
+1096 02616.604   TRACE           return:  RET_SUCCESS
+1096 02616.604   FUNC            <--- exit  function: useGazeDataFilter
+1096 02616.604   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 02774.366   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 02774.366   FUNC         ---> enter function: setCalibrationPointCallback
+1096 02774.366   TRACE           removing user callback
+1096 02774.366   TRACE           return:  RET_SUCCESS
+1096 02774.366   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 02774.366   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 02774.366   iV_FUNC   ---> enter function: iV_Disconnect
+1096 02774.366   FUNC         ---> enter function: disconnectServer
+1096 02774.366   FUNC            ---> enter function: isConnected
+1096 02774.367   FUNC               <--- exit  function: isConnected
+1096 02774.367   TRACE           return:  RET_SUCCESS
+1096 02774.367   FUNC            <--- exit  function: disconnectServer
+1096 02774.367   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 02916.946   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 02916.946   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 02916.946   FUNC            ---> enter function: enableStreamDataCallback
+1096 02916.946   FUNC               ---> enter function: isConnected
+1096 02916.946   FUNC                  <--- exit  function: isConnected
+1096 02916.946   FUNC               <--- exit  function: enableStreamDataCallback
+1096 02916.946   TRACE           return:  RET_SUCCESS
+1096 02916.946   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 02916.946   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 02916.946   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 02916.948   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 02916.948   FUNC         ---> enter function: useGazeDataFilter
+1096 02916.948   TRACE           gaze filter  enabled
+1096 02916.948   TRACE           return:  RET_SUCCESS
+1096 02916.948   FUNC            <--- exit  function: useGazeDataFilter
+1096 02916.948   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 02922.148   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 02922.149   FUNC         ---> enter function: setCalibrationPointCallback
+1096 02922.149   TRACE           removing user callback
+1096 02922.149   TRACE           return:  RET_SUCCESS
+1096 02922.149   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 02922.149   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 02922.149   iV_FUNC   ---> enter function: iV_Disconnect
+1096 02922.149   FUNC         ---> enter function: disconnectServer
+1096 02922.149   FUNC            ---> enter function: isConnected
+1096 02922.149   FUNC               <--- exit  function: isConnected
+1096 02922.149   TRACE           return:  RET_SUCCESS
+1096 02922.149   FUNC            <--- exit  function: disconnectServer
+1096 02922.149   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 02946.747   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 02946.747   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 02946.747   FUNC            ---> enter function: enableStreamDataCallback
+1096 02946.747   FUNC               ---> enter function: isConnected
+1096 02946.747   FUNC                  <--- exit  function: isConnected
+1096 02946.747   FUNC               <--- exit  function: enableStreamDataCallback
+1096 02946.747   TRACE           return:  RET_SUCCESS
+1096 02946.747   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 02946.747   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 02946.748   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 02946.749   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 02946.749   FUNC         ---> enter function: useGazeDataFilter
+1096 02946.749   TRACE           gaze filter  enabled
+1096 02946.749   TRACE           return:  RET_SUCCESS
+1096 02946.749   FUNC            <--- exit  function: useGazeDataFilter
+1096 02946.749   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 02956.298   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 02956.298   FUNC         ---> enter function: setCalibrationPointCallback
+1096 02956.298   TRACE           removing user callback
+1096 02956.298   TRACE           return:  RET_SUCCESS
+1096 02956.298   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 02956.298   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 02956.298   iV_FUNC   ---> enter function: iV_Disconnect
+1096 02956.298   FUNC         ---> enter function: disconnectServer
+1096 02956.298   FUNC            ---> enter function: isConnected
+1096 02956.298   FUNC               <--- exit  function: isConnected
+1096 02956.298   TRACE           return:  RET_SUCCESS
+1096 02956.298   FUNC            <--- exit  function: disconnectServer
+1096 02956.298   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 03116.710   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 03116.711   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 03116.711   FUNC            ---> enter function: enableStreamDataCallback
+1096 03116.711   FUNC               ---> enter function: isConnected
+1096 03116.711   FUNC                  <--- exit  function: isConnected
+1096 03116.711   FUNC               <--- exit  function: enableStreamDataCallback
+1096 03116.711   TRACE           return:  RET_SUCCESS
+1096 03116.711   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 03116.711   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 03116.711   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 03116.713   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 03116.713   FUNC         ---> enter function: useGazeDataFilter
+1096 03116.713   TRACE           gaze filter  enabled
+1096 03116.713   TRACE           return:  RET_SUCCESS
+1096 03116.713   FUNC            <--- exit  function: useGazeDataFilter
+1096 03116.713   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 03130.129   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 03130.129   FUNC         ---> enter function: setCalibrationPointCallback
+1096 03130.129   TRACE           removing user callback
+1096 03130.129   TRACE           return:  RET_SUCCESS
+1096 03130.129   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 03130.129   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 03130.129   iV_FUNC   ---> enter function: iV_Disconnect
+1096 03130.129   FUNC         ---> enter function: disconnectServer
+1096 03130.129   FUNC            ---> enter function: isConnected
+1096 03130.129   FUNC               <--- exit  function: isConnected
+1096 03130.129   TRACE           return:  RET_SUCCESS
+1096 03130.130   FUNC            <--- exit  function: disconnectServer
+1096 03130.130   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 03151.255   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 03151.255   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 03151.255   FUNC            ---> enter function: enableStreamDataCallback
+1096 03151.255   FUNC               ---> enter function: isConnected
+1096 03151.255   FUNC                  <--- exit  function: isConnected
+1096 03151.256   FUNC               <--- exit  function: enableStreamDataCallback
+1096 03151.256   TRACE           return:  RET_SUCCESS
+1096 03151.256   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 03151.256   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 03151.256   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 03151.258   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 03151.258   FUNC         ---> enter function: useGazeDataFilter
+1096 03151.258   TRACE           gaze filter  enabled
+1096 03151.258   TRACE           return:  RET_SUCCESS
+1096 03151.258   FUNC            <--- exit  function: useGazeDataFilter
+1096 03151.258   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 03170.388   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 03170.388   FUNC         ---> enter function: setCalibrationPointCallback
+1096 03170.388   TRACE           removing user callback
+1096 03170.388   TRACE           return:  RET_SUCCESS
+1096 03170.388   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 03170.388   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 03170.388   iV_FUNC   ---> enter function: iV_Disconnect
+1096 03170.388   FUNC         ---> enter function: disconnectServer
+1096 03170.388   FUNC            ---> enter function: isConnected
+1096 03170.389   FUNC               <--- exit  function: isConnected
+1096 03170.389   TRACE           return:  RET_SUCCESS
+1096 03170.389   FUNC            <--- exit  function: disconnectServer
+1096 03170.389   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 03180.827   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 03180.827   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 03180.827   FUNC            ---> enter function: enableStreamDataCallback
+1096 03180.827   FUNC               ---> enter function: isConnected
+1096 03180.827   FUNC                  <--- exit  function: isConnected
+1096 03180.827   FUNC               <--- exit  function: enableStreamDataCallback
+1096 03180.827   TRACE           return:  RET_SUCCESS
+1096 03180.827   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 03180.827   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 03180.828   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 03180.829   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 03180.829   FUNC         ---> enter function: useGazeDataFilter
+1096 03180.829   TRACE           gaze filter  enabled
+1096 03180.829   TRACE           return:  RET_SUCCESS
+1096 03180.829   FUNC            <--- exit  function: useGazeDataFilter
+1096 03180.829   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 03205.073   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 03205.073   FUNC         ---> enter function: setCalibrationPointCallback
+1096 03205.073   TRACE           removing user callback
+1096 03205.073   TRACE           return:  RET_SUCCESS
+1096 03205.073   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 03205.073   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 03205.074   iV_FUNC   ---> enter function: iV_Disconnect
+1096 03205.074   FUNC         ---> enter function: disconnectServer
+1096 03205.074   FUNC            ---> enter function: isConnected
+1096 03205.074   FUNC               <--- exit  function: isConnected
+1096 03205.074   TRACE           return:  RET_SUCCESS
+1096 03205.074   FUNC            <--- exit  function: disconnectServer
+1096 03205.074   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 03249.060   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 03249.060   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 03249.060   FUNC            ---> enter function: enableStreamDataCallback
+1096 03249.060   FUNC               ---> enter function: isConnected
+1096 03249.060   FUNC                  <--- exit  function: isConnected
+1096 03249.060   FUNC               <--- exit  function: enableStreamDataCallback
+1096 03249.060   TRACE           return:  RET_SUCCESS
+1096 03249.060   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 03249.060   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 03249.061   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 03249.062   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 03249.062   FUNC         ---> enter function: useGazeDataFilter
+1096 03249.062   TRACE           gaze filter  enabled
+1096 03249.062   TRACE           return:  RET_SUCCESS
+1096 03249.062   FUNC            <--- exit  function: useGazeDataFilter
+1096 03249.062   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 03293.374   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 03293.374   FUNC         ---> enter function: setCalibrationPointCallback
+1096 03293.374   TRACE           removing user callback
+1096 03293.374   TRACE           return:  RET_SUCCESS
+1096 03293.374   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 03293.374   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 03293.375   iV_FUNC   ---> enter function: iV_Disconnect
+1096 03293.375   FUNC         ---> enter function: disconnectServer
+1096 03293.375   FUNC            ---> enter function: isConnected
+1096 03293.375   FUNC               <--- exit  function: isConnected
+1096 03293.375   TRACE           return:  RET_SUCCESS
+1096 03293.375   FUNC            <--- exit  function: disconnectServer
+1096 03293.375   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 03673.758   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 03673.758   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 03673.758   FUNC            ---> enter function: enableStreamDataCallback
+1096 03673.758   FUNC               ---> enter function: isConnected
+1096 03673.758   FUNC                  <--- exit  function: isConnected
+1096 03673.758   FUNC               <--- exit  function: enableStreamDataCallback
+1096 03673.758   TRACE           return:  RET_SUCCESS
+1096 03673.758   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 03673.758   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 03673.758   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 03673.760   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 03673.760   FUNC         ---> enter function: useGazeDataFilter
+1096 03673.760   TRACE           gaze filter  enabled
+1096 03673.760   TRACE           return:  RET_SUCCESS
+1096 03673.760   FUNC            <--- exit  function: useGazeDataFilter
+1096 03673.760   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 03680.925   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 03680.925   FUNC         ---> enter function: setCalibrationPointCallback
+1096 03680.925   TRACE           removing user callback
+1096 03680.925   TRACE           return:  RET_SUCCESS
+1096 03680.925   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 03680.925   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 03680.925   iV_FUNC   ---> enter function: iV_Disconnect
+1096 03680.925   FUNC         ---> enter function: disconnectServer
+1096 03680.925   FUNC            ---> enter function: isConnected
+1096 03680.925   FUNC               <--- exit  function: isConnected
+1096 03680.925   TRACE           return:  RET_SUCCESS
+1096 03680.925   FUNC            <--- exit  function: disconnectServer
+1096 03680.925   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 03689.539   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 03689.539   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 03689.539   FUNC            ---> enter function: enableStreamDataCallback
+1096 03689.539   FUNC               ---> enter function: isConnected
+1096 03689.539   FUNC                  <--- exit  function: isConnected
+1096 03689.539   FUNC               <--- exit  function: enableStreamDataCallback
+1096 03689.539   TRACE           return:  RET_SUCCESS
+1096 03689.539   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 03689.539   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 03689.540   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 03689.541   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 03689.541   FUNC         ---> enter function: useGazeDataFilter
+1096 03689.542   TRACE           gaze filter  enabled
+1096 03689.542   TRACE           return:  RET_SUCCESS
+1096 03689.542   FUNC            <--- exit  function: useGazeDataFilter
+1096 03689.542   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 03698.734   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 03698.735   FUNC         ---> enter function: setCalibrationPointCallback
+1096 03698.735   TRACE           removing user callback
+1096 03698.735   TRACE           return:  RET_SUCCESS
+1096 03698.735   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 03698.735   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 03698.735   iV_FUNC   ---> enter function: iV_Disconnect
+1096 03698.735   FUNC         ---> enter function: disconnectServer
+1096 03698.735   FUNC            ---> enter function: isConnected
+1096 03698.735   FUNC               <--- exit  function: isConnected
+1096 03698.735   TRACE           return:  RET_SUCCESS
+1096 03698.735   FUNC            <--- exit  function: disconnectServer
+1096 03698.735   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 04063.719   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 04063.719   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 04063.719   FUNC            ---> enter function: enableStreamDataCallback
+1096 04063.719   FUNC               ---> enter function: isConnected
+1096 04063.719   FUNC                  <--- exit  function: isConnected
+1096 04063.719   FUNC               <--- exit  function: enableStreamDataCallback
+1096 04063.719   TRACE           return:  RET_SUCCESS
+1096 04063.720   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 04063.720   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 04063.720   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 04063.722   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 04063.722   FUNC         ---> enter function: useGazeDataFilter
+1096 04063.722   TRACE           gaze filter  enabled
+1096 04063.722   TRACE           return:  RET_SUCCESS
+1096 04063.722   FUNC            <--- exit  function: useGazeDataFilter
+1096 04063.722   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 04069.874   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 04069.874   FUNC         ---> enter function: setCalibrationPointCallback
+1096 04069.874   TRACE           removing user callback
+1096 04069.874   TRACE           return:  RET_SUCCESS
+1096 04069.874   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 04069.874   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 04069.874   iV_FUNC   ---> enter function: iV_Disconnect
+1096 04069.874   FUNC         ---> enter function: disconnectServer
+1096 04069.874   FUNC            ---> enter function: isConnected
+1096 04069.874   FUNC               <--- exit  function: isConnected
+1096 04069.874   TRACE           return:  RET_SUCCESS
+1096 04069.874   FUNC            <--- exit  function: disconnectServer
+1096 04069.874   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 04082.408   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 04082.408   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 04082.408   FUNC            ---> enter function: enableStreamDataCallback
+1096 04082.408   FUNC               ---> enter function: isConnected
+1096 04082.409   FUNC                  <--- exit  function: isConnected
+1096 04082.409   FUNC               <--- exit  function: enableStreamDataCallback
+1096 04082.409   TRACE           return:  RET_SUCCESS
+1096 04082.409   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 04082.409   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 04082.409   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 04082.411   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 04082.411   FUNC         ---> enter function: useGazeDataFilter
+1096 04082.411   TRACE           gaze filter  enabled
+1096 04082.411   TRACE           return:  RET_SUCCESS
+1096 04082.411   FUNC            <--- exit  function: useGazeDataFilter
+1096 04082.411   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 04099.602   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 04099.602   FUNC         ---> enter function: setCalibrationPointCallback
+1096 04099.602   TRACE           removing user callback
+1096 04099.603   TRACE           return:  RET_SUCCESS
+1096 04099.603   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 04099.603   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 04099.603   iV_FUNC   ---> enter function: iV_Disconnect
+1096 04099.603   FUNC         ---> enter function: disconnectServer
+1096 04099.603   FUNC            ---> enter function: isConnected
+1096 04099.603   FUNC               <--- exit  function: isConnected
+1096 04099.603   TRACE           return:  RET_SUCCESS
+1096 04099.603   FUNC            <--- exit  function: disconnectServer
+1096 04099.603   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 04125.434   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 04125.434   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 04125.434   FUNC            ---> enter function: enableStreamDataCallback
+1096 04125.434   FUNC               ---> enter function: isConnected
+1096 04125.434   FUNC                  <--- exit  function: isConnected
+1096 04125.434   FUNC               <--- exit  function: enableStreamDataCallback
+1096 04125.435   TRACE           return:  RET_SUCCESS
+1096 04125.435   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 04125.435   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 04125.435   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 04125.437   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 04125.437   FUNC         ---> enter function: useGazeDataFilter
+1096 04125.437   TRACE           gaze filter  enabled
+1096 04125.437   TRACE           return:  RET_SUCCESS
+1096 04125.437   FUNC            <--- exit  function: useGazeDataFilter
+1096 04125.437   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 04157.978   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 04157.978   FUNC         ---> enter function: setCalibrationPointCallback
+1096 04157.978   TRACE           removing user callback
+1096 04157.978   TRACE           return:  RET_SUCCESS
+1096 04157.978   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 04157.978   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 04157.978   iV_FUNC   ---> enter function: iV_Disconnect
+1096 04157.979   FUNC         ---> enter function: disconnectServer
+1096 04157.979   FUNC            ---> enter function: isConnected
+1096 04157.979   FUNC               <--- exit  function: isConnected
+1096 04157.979   TRACE           return:  RET_SUCCESS
+1096 04157.979   FUNC            <--- exit  function: disconnectServer
+1096 04157.979   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 04395.227   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 04395.227   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 04395.227   FUNC            ---> enter function: enableStreamDataCallback
+1096 04395.227   FUNC               ---> enter function: isConnected
+1096 04395.227   FUNC                  <--- exit  function: isConnected
+1096 04395.227   FUNC               <--- exit  function: enableStreamDataCallback
+1096 04395.227   TRACE           return:  RET_SUCCESS
+1096 04395.227   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 04395.227   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 04395.228   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 04395.229   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 04395.229   FUNC         ---> enter function: useGazeDataFilter
+1096 04395.229   TRACE           gaze filter  enabled
+1096 04395.230   TRACE           return:  RET_SUCCESS
+1096 04395.230   FUNC            <--- exit  function: useGazeDataFilter
+1096 04395.230   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 04456.946   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 04456.946   FUNC         ---> enter function: setCalibrationPointCallback
+1096 04456.946   TRACE           removing user callback
+1096 04456.946   TRACE           return:  RET_SUCCESS
+1096 04456.946   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 04456.946   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 04456.947   iV_FUNC   ---> enter function: iV_Disconnect
+1096 04456.947   FUNC         ---> enter function: disconnectServer
+1096 04456.947   FUNC            ---> enter function: isConnected
+1096 04456.947   FUNC               <--- exit  function: isConnected
+1096 04456.947   TRACE           return:  RET_SUCCESS
+1096 04456.947   FUNC            <--- exit  function: disconnectServer
+1096 04456.947   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 04492.202   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 04492.202   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 04492.202   FUNC            ---> enter function: enableStreamDataCallback
+1096 04492.202   FUNC               ---> enter function: isConnected
+1096 04492.202   FUNC                  <--- exit  function: isConnected
+1096 04492.202   FUNC               <--- exit  function: enableStreamDataCallback
+1096 04492.202   TRACE           return:  RET_SUCCESS
+1096 04492.202   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 04492.202   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 04492.203   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 04492.204   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 04492.205   FUNC         ---> enter function: useGazeDataFilter
+1096 04492.205   TRACE           gaze filter  enabled
+1096 04492.205   TRACE           return:  RET_SUCCESS
+1096 04492.205   FUNC            <--- exit  function: useGazeDataFilter
+1096 04492.205   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 04571.301   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 04571.301   FUNC         ---> enter function: setCalibrationPointCallback
+1096 04571.301   TRACE           removing user callback
+1096 04571.301   TRACE           return:  RET_SUCCESS
+1096 04571.301   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 04571.301   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 04571.302   iV_FUNC   ---> enter function: iV_Disconnect
+1096 04571.302   FUNC         ---> enter function: disconnectServer
+1096 04571.302   FUNC            ---> enter function: isConnected
+1096 04571.302   FUNC               <--- exit  function: isConnected
+1096 04571.302   TRACE           return:  RET_SUCCESS
+1096 04571.302   FUNC            <--- exit  function: disconnectServer
+1096 04571.302   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 05208.155   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 05208.155   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 05208.155   FUNC            ---> enter function: enableStreamDataCallback
+1096 05208.155   FUNC               ---> enter function: isConnected
+1096 05208.155   FUNC                  <--- exit  function: isConnected
+1096 05208.155   FUNC               <--- exit  function: enableStreamDataCallback
+1096 05208.155   TRACE           return:  RET_SUCCESS
+1096 05208.155   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 05208.155   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 05208.156   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 05208.157   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 05208.157   FUNC         ---> enter function: useGazeDataFilter
+1096 05208.157   TRACE           gaze filter  enabled
+1096 05208.158   TRACE           return:  RET_SUCCESS
+1096 05208.158   FUNC            <--- exit  function: useGazeDataFilter
+1096 05208.158   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 05227.862   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 05227.862   FUNC         ---> enter function: setCalibrationPointCallback
+1096 05227.862   TRACE           removing user callback
+1096 05227.862   TRACE           return:  RET_SUCCESS
+1096 05227.862   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 05227.862   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 05227.862   iV_FUNC   ---> enter function: iV_Disconnect
+1096 05227.862   FUNC         ---> enter function: disconnectServer
+1096 05227.863   FUNC            ---> enter function: isConnected
+1096 05227.863   FUNC               <--- exit  function: isConnected
+1096 05227.863   TRACE           return:  RET_SUCCESS
+1096 05227.863   FUNC            <--- exit  function: disconnectServer
+1096 05227.863   iV_FUNC      <--- exit  function: iV_Disconnect
+1096 05267.911   iV_FUNC   ---> enter function: iV_SetSampleCallback
+1096 05267.911   FUNC         ---> enter function: setGazeDataSampleCallback
+1096 05267.911   FUNC            ---> enter function: enableStreamDataCallback
+1096 05267.911   FUNC               ---> enter function: isConnected
+1096 05267.911   FUNC                  <--- exit  function: isConnected
+1096 05267.911   FUNC               <--- exit  function: enableStreamDataCallback
+1096 05267.911   TRACE           return:  RET_SUCCESS
+1096 05267.911   FUNC            <--- exit  function: setGazeDataSampleCallback
+1096 05267.911   iV_FUNC      <--- exit  function: iV_SetSampleCallback
+2492 05267.912   TRACE     IVIEWDATASTREAM_GAZE_INFORMATION >>> Stream Data Dispatcher Thread <<< :: STATE WAIT FOR DATA
+1096 05267.913   iV_FUNC   ---> enter function: iV_EnableGazeDataFilter
+1096 05267.913   FUNC         ---> enter function: useGazeDataFilter
+1096 05267.913   TRACE           gaze filter  enabled
+1096 05267.913   TRACE           return:  RET_SUCCESS
+1096 05267.914   FUNC            <--- exit  function: useGazeDataFilter
+1096 05267.914   iV_FUNC      <--- exit  function: iV_EnableGazeDataFilter
+1096 05288.204   iV_FUNC   ---> enter function: iV_SetCalibrationCallback
+1096 05288.205   FUNC         ---> enter function: setCalibrationPointCallback
+1096 05288.205   TRACE           removing user callback
+1096 05288.205   TRACE           return:  RET_SUCCESS
+1096 05288.205   FUNC            <--- exit  function: setCalibrationPointCallback
+1096 05288.205   iV_FUNC      <--- exit  function: iV_SetCalibrationCallback
+1096 05288.205   iV_FUNC   ---> enter function: iV_Disconnect
+1096 05288.205   FUNC         ---> enter function: disconnectServer
+1096 05288.205   FUNC            ---> enter function: isConnected
+1096 05288.205   FUNC               <--- exit  function: isConnected
+1096 05288.205   TRACE           return:  RET_SUCCESS
+1096 05288.205   FUNC            <--- exit  function: disconnectServer
+1096 05288.205   iV_FUNC      <--- exit  function: iV_Disconnect
