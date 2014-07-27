@@ -11,7 +11,8 @@ TagManager:
   - BackgroundMusicManager
   - PlayerPivot
   - GazeGui
-  - 
+  - GazeGui_Icon
+  - GazeGui_Text
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -23,10 +24,10 @@ TagManager:
   Builtin Layer 7: 
   User Layer 8: Cloth
   User Layer 9: GUI
-  User Layer 10: 
-  User Layer 11: 
-  User Layer 12: 
-  User Layer 13: 
+  User Layer 10: Effects
+  User Layer 11: Player
+  User Layer 12: Items
+  User Layer 13: HealthBar
   User Layer 14: 
   User Layer 15: 
   User Layer 16: 

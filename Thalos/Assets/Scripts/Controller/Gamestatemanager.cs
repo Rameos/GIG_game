@@ -15,8 +15,8 @@ namespace Controller
     public delegate void PlayerIsDead();
     public delegate void PlayerGetsDamage(int damagepoints);
     
-    public delegate void OpenInGameMenu();
-    public delegate void CloseInGameMenu();
+    public delegate void ChangeInGameMenu(int ID_Menu,bool status);
+    public delegate void SelectNewItem(Constants.selectableItemsCircleMenu newItem);
 
     public delegate void RumbleEvent(float duration,float forceHeavy, float forceLight);
 
@@ -26,7 +26,10 @@ namespace Controller
         public static event OpenPlayScreen OpenPlayScreenHandler;
         public static event ClosePlayScreen ClosePlayScreenHandler;
         public static event CloseMainMenu CloseMainMenuScreenHandler;
-        
+
+        public static event ChangeInGameMenu ChangeInGameMenuHandler;
+        public static event SelectNewItem SelectNewItemHandler;
+
         public static event PlayerIsDead PlayerIsDeadHandler;
         public static event PlayerGetsDamage PlayerGetsDamageHandler;
 
@@ -66,7 +69,7 @@ namespace Controller
             else if (levelID == Constants.ID_MAINMENU)
             {
                 OnOpenMainMenu();
-                OnClodePlayView();
+                OnClosePlayView();
             }
         }
         
@@ -186,7 +189,7 @@ namespace Controller
             }
         }
 
-        public static void OnClodePlayView()
+        public static void OnClosePlayView()
         {
             if (ClosePlayScreenHandler != null)
             {
@@ -223,6 +226,23 @@ namespace Controller
             }
         }
 
+        public static void OnChangeInGameMenu(int ID_MenuState,bool state)
+        {
+            if (ChangeInGameMenuHandler != null)
+            {
+                ChangeInGameMenuHandler(ID_MenuState,state);
+            }
+        }
+
+        public static void OnSelectNewItem(Constants.selectableItemsCircleMenu selectedItem)
+        {
+            if(SelectNewItemHandler != null)
+            {
+                SelectNewItemHandler(selectedItem);
+            }
+        }
+
+
         IEnumerator waitForFadeOutEffect(int levelID)
         {
             FadeSceneEffect.FadeOut();
@@ -232,7 +252,6 @@ namespace Controller
             if (levelID < 0)
             {
                 Application.Quit();
-
             }
             else
             {

@@ -91,11 +91,11 @@ Material:
       data:
         first:
           name: _FresnelScale
-        second: .389714301
+        second: .819999993
       data:
         first:
           name: _GerstnerIntensity
-        second: 1
+        second: 1.16999996
       data:
         first:
           name: _HeightDisplacement
@@ -112,11 +112,11 @@ Material:
       data:
         first:
           name: _DistortParams
-        second: {r: 1.02857149, g: .201872215, b: 2.76662493, a: -.417142838}
+        second: {r: 1.02857149, g: .360000014, b: 3.52999997, a: -.460000008}
       data:
         first:
           name: _InvFadeParemeter
-        second: {r: .275081277, g: .0856210217, b: .0941423923, a: .480310023}
+        second: {r: .219999999, g: .0856210217, b: .0941423923, a: .779999971}
       data:
         first:
           name: _AnimationTiling
@@ -136,15 +136,15 @@ Material:
       data:
         first:
           name: _BaseColor
-        second: {r: .172755614, g: .224076003, b: .24626863, a: .505882382}
+        second: {r: .742647052, g: .510256529, b: .420469284, a: .603921592}
       data:
         first:
           name: _ReflectionColor
-        second: {r: .47582978, g: .606486499, b: .664179087, a: .470588237}
+        second: {r: .198529422, g: .198529422, b: .198529422, a: .294117659}
       data:
         first:
           name: _SpecularColor
-        second: {r: .820895553, g: .805815935, b: .771886885, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _WorldLightDir
@@ -160,7 +160,7 @@ Material:
       data:
         first:
           name: _GFrequency
-        second: {r: .5, g: .25, b: .600000024, a: .245000005}
+        second: {r: .5, g: 0, b: .600000024, a: .245000005}
       data:
         first:
           name: _GSteepness
@@ -172,7 +172,7 @@ Material:
       data:
         first:
           name: _GDirectionAB
-        second: {r: .850000024, g: .300000012, b: .25, a: .25}
+        second: {r: .850000024, g: .5, b: .25, a: .25}
       data:
         first:
           name: _GDirectionCD

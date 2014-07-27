@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: af054e5592e94b2478df24b42febda90
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - effectFirePoison: {fileID: 100004, guid: 7bf315f9d468c3d4da2258ed52a686e9, type: 2}
+  - effectIcePoision: {fileID: 100004, guid: 36ace7209db17464fb409e4186a779b2, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

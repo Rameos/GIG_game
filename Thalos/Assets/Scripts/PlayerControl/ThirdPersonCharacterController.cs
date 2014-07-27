@@ -4,7 +4,6 @@ using System.Collections;
 public class ThirdPersonCharacterController : MonoBehaviour
 {
 
-
     #region Variables
     [SerializeField]
     private Animator animator;
@@ -131,6 +130,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
         }
 
     }
+
 
 
 

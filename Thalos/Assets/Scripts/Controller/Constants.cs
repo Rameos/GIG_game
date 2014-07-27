@@ -21,6 +21,9 @@ namespace Controller
         public const string TAG_GUI = "GazeGui";
         public const string TAG_ENEMY = "Enemy";
 
+        public const int INGAMEMENU_PAUSE = 0;
+        public const int INGAMEMENU_CIRCLEMENU = 1;
+        public const int INGAMEMENU_INVENTORY = 2; 
 
         public const int LAYERMASK_GUI = 9;
 
@@ -29,6 +32,29 @@ namespace Controller
 
         public const float BULLETSPEED = 0.1f;
 
+        public const int healPower = 25;
+        
+        //Damage
+        public const int damageStandardBolt = 15;
+        public const int damageFireBolt = 15;
+        public const int damageIceBolt = 15;
+
+        public const int damageFirePoison = 15;
+        public const int damageIcePoison = 15;
+
+        public const float COOLDOWN_BOLT = 0.5f;
+        public const float COOLDOWN_POISON = 0.1f;
+
+
+        public enum selectableItemsCircleMenu
+        {
+            NormalBolt,
+            FireBolt,
+            IceBolt,
+            HealPoison,
+            FirePoison,
+            IcePoison
+        }
 
     }
 }

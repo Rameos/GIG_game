@@ -17,6 +17,9 @@ namespace Controller
             Debug.Log("PlayerStatemanager");
             Gamestatemanager.PlayerIsDeadHandler += Gamestatemanager_PlayerIsDeadHandler;
             Gamestatemanager.PlayerGetsDamageHandler += TakeDamage;
+            Gamestatemanager.SelectNewItemHandler += Gamestatemanager_SelectItem;
+
+            PlayerModel.Instance();
         }
 
         void Update()
@@ -54,7 +57,7 @@ namespace Controller
         }
 
         /// <summary>
-        /// Remove HealthPoints (
+        /// Remove HealthPoints
         /// </summary>
         /// <param name="Damage"></param>
         /// <returns></returns>
@@ -72,15 +75,24 @@ namespace Controller
 
         public int Heal(int HealPotion)
         {
-            if (playerModel.HealthPoints + HealPotion >= playerModel.MaxHealthPoints)
+            if(playerModel.getCountOfPhialsOfSortInInventory(PlayerModel.PhialType.Heal)>0)
             {
-                playerModel.HealthPoints = playerModel.MaxHealthPoints;
+                if (playerModel.HealthPoints + HealPotion >= playerModel.MaxHealthPoints)
+                {
+                    playerModel.HealthPoints = playerModel.MaxHealthPoints;
+                }
+
+                else
+                {
+                    playerModel.HealthPoints += HealPotion;
+                }
+
+                playerModel.removePhialFromInventory(PlayerModel.PhialType.Heal);
+                Debug.Log("Healitem:" + playerModel.getCountOfPhialsOfSortInInventory(PlayerModel.PhialType.Heal));
+                return playerModel.HealthPoints;
             }
-            else
-            {
-                playerModel.HealthPoints += HealPotion;
-            }
-            return playerModel.HealthPoints;
+
+            return 0;
         }
 
         #endregion
@@ -97,6 +109,42 @@ namespace Controller
             Debug.Log("PlayerIsDead!");
         }
 
+        private void Gamestatemanager_SelectItem(Constants.selectableItemsCircleMenu selectedItem)
+        {
+            Debug.Log("SelectITEM");
+
+            switch (selectedItem)
+            {
+                case Constants.selectableItemsCircleMenu.HealPoison:
+                    Heal(Constants.healPower);
+                    break;
+ 
+                case  Constants.selectableItemsCircleMenu.NormalBolt:
+                    playerModel.DamageType_Bolt = PlayerModel.DamageTypes.Standard;
+                    break;
+
+                case Constants.selectableItemsCircleMenu.FireBolt:
+                    playerModel.DamageType_Bolt = PlayerModel.DamageTypes.Fire;
+                    break;
+
+                case Constants.selectableItemsCircleMenu.IceBolt:
+                    playerModel.DamageType_Bolt = PlayerModel.DamageTypes.Ice;
+                    break;
+
+                case Constants.selectableItemsCircleMenu.FirePoison:
+                    playerModel.DamageType_Poision = PlayerModel.DamageTypes.Fire;
+                    break;
+
+                case Constants.selectableItemsCircleMenu.IcePoison:
+                    playerModel.DamageType_Poision = PlayerModel.DamageTypes.Ice;
+                    break;
+            }
+        }
+
+        private void setPoisionDamage(PlayerModel.DamageTypes type)
+        {
+            //if()
+        }
         #endregion
     }
 }
