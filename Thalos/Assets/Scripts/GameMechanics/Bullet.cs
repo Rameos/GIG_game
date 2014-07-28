@@ -35,7 +35,8 @@ public class Bullet : MonoBehaviour {
 
                 if (col.gameObject.tag == Constants.TAG_ENEMY)
                 {
-                    Debug.Log("Enemy shot!");
+                    col.gameObject.GetComponent<EnemyObject>().ApplyDamage(damageInformation);
+                    Debug.Log("Enemy gets Damage!");
                     
                 }
 
@@ -46,7 +47,7 @@ public class Bullet : MonoBehaviour {
                 if (col.gameObject.tag == Constants.TAG_PLAYER)
                 {
                     Gamestatemanager.OnPlayerGetsDamage(damageInformation.damage);
-                    Debug.Log("Player shot!");
+                    Debug.Log("Player Gets Damage!");
                 }
                 break;
         }
