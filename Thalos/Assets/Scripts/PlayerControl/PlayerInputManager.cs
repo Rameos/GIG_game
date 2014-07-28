@@ -230,10 +230,6 @@ public class PlayerInputManager : MonoBehaviour {
         {
 
             AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
-
-            Debug.Log("AnimationState:" + currentState.nameHash);
-            Debug.Log("hashOtherID: " + shoot_Walking);
-            
             if (currentState.IsName("Shoot_Walk"))
             {
                 Debug.Log("SHOT AND RUN!");

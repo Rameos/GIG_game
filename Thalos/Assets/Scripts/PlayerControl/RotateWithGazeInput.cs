@@ -19,6 +19,8 @@ public class RotateWithGazeInput : MonoBehaviour {
     public ThirdPersonCamera camScript;
     public gazeActionMenu actualStateGazeAction;
 
+    [SerializeField]
+    private bool drawAOI = false; 
     private bool isInGameMenu = false;
     public bool IsEyeDetected = true;
     public float offSetRightAOI;
@@ -45,9 +47,12 @@ public class RotateWithGazeInput : MonoBehaviour {
             GUI.DrawTexture(new Rect(Screen.width * 0.5f - 64, 50, 128, 128), noGazeInput);
         }
 
-        GUI.DrawTexture(leftAOI.volume, testTexture_Right);
-        GUI.DrawTexture(rightAOI.volume, testTexture_Left);
-
+        if(drawAOI)
+        {
+            GUI.DrawTexture(leftAOI.volume, testTexture_Right);
+            GUI.DrawTexture(rightAOI.volume, testTexture_Left);
+        }
+        
     }
 
     void Start()
@@ -177,7 +182,6 @@ public class RotateWithGazeInput : MonoBehaviour {
             }
             else
             {
-                Debug.Log("resetInput:");
                 camScript.gazeInput = 0;
             }
         }
