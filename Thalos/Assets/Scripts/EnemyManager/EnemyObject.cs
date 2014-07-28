@@ -28,6 +28,7 @@ public class EnemyObject : MonoBehaviour {
     public enemyType actualEnemy;
 
     private bool isShotable = true;
+    private bool isAlive = true;
 
     [SerializeField]
     private float coolDown = 2f;
@@ -88,10 +89,15 @@ public class EnemyObject : MonoBehaviour {
 
     void Update()
     {
-        if (globalLastSightingPlayer != previousSighting)
+        if (isAlive)
         {
-            personalLastSightingPlayer = globalLastSightingPlayer;
+            if (globalLastSightingPlayer != previousSighting)
+            {
+                personalLastSightingPlayer = globalLastSightingPlayer;
+            }
         }
+
+        Destroyitem();
 
         //UpdateAnimation When Status Changed;
 
@@ -129,7 +135,6 @@ public class EnemyObject : MonoBehaviour {
         {
             if (hit.collider.gameObject == player)
             {
-               //Debug.Log("PlayerDetected");
                 playerIsInSight = true;
                 globalLastSightingPlayer = player.transform.position;
                 TurnToPlayer();
@@ -137,6 +142,14 @@ public class EnemyObject : MonoBehaviour {
         }
 
         return hit;
+    }
+
+    void Destroyitem()
+    {
+        if(!isAlive)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -158,7 +171,7 @@ public class EnemyObject : MonoBehaviour {
 
     void ShotPlayer(Damage debugdamage)
     {
-        if (isShotable)
+        if (isShotable&&isAlive)
         {
             StartCoroutine(ShotPlayerCoolDown(debugdamage));
         }
@@ -169,11 +182,16 @@ public class EnemyObject : MonoBehaviour {
         return false;
     }
 
-    private void ApplyDamage(Damage damage)
+    public void ApplyDamage(Damage damage)
     {
         Debug.Log("Old Health: " + enemyManager.LivePoints);
         int health = enemyManager.TakeDamage(damage.damage, damage.typeDamage);
-        Debug.Log("New Health: " + health);
+
+        if (enemyManager.LivePoints <= 0)
+        {
+            isAlive = false;
+        }
+
     }
 
     IEnumerator ShotPlayerCoolDown(Damage debugdamage)
