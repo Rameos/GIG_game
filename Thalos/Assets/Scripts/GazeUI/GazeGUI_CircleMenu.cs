@@ -6,20 +6,24 @@ namespace GazeGUI
 {
     public class GazeGUI_CircleMenu : MonoBehaviour
     {
+        private Animator animator;
         void Start()
         {
+            animator = GetComponent<Animator>();
             Gamestatemanager.ChangeInGameMenuHandler += CloseMenu;
         }
 
         void OnEnable()
         {
-            Debug.Log("FadeInAnimation");
+            // NiceTohave: Animation
         }
 
         void CloseMenu(int ID_Menu, bool status)
         {
             if(ID_Menu == Constants.INGAMEMENU_CIRCLEMENU && status == false)
             {
+
+                //Nice To have: Animation
                 Debug.Log("CloseCircleMenu");
             }
         }

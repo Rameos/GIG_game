@@ -13,14 +13,27 @@ namespace GazeGUI
         private GameObject Icon;
         private GameObject CountText;
 
+        public Color32 notSelectedColor;
+        public Color32 selectedColor;
+
+        private Color32 destinationColor;
+        private SpriteRenderer renderer;
+
         void Start()
         {
-            //ToDo: add Counter for the Poisoncount
+            renderer = GetComponent<SpriteRenderer>();
+            destinationColor = notSelectedColor;
         }
 
+        void Update()
+        {
+            renderer.material.color = Color32.Lerp(renderer.material.color,destinationColor,1f);
+        }
 
         public override void OnGazeEnter()
         {
+            destinationColor = selectedColor; 
+
             Debug.Log("GazeEnter!");
                //FancyAnimation
         }
@@ -32,7 +45,8 @@ namespace GazeGUI
 
         public override void OnGazeExit()
         {
-            //FancyAnimation
+
+            destinationColor = notSelectedColor;
         }
 
         public override void OnEventStart()

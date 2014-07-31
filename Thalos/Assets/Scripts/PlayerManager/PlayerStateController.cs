@@ -137,7 +137,7 @@ namespace Controller
 
                 case Constants.selectableItemsCircleMenu.IcePoison:
                     playerModel.DamageType_Poision = PlayerModel.DamageTypes.Ice;
-                    break;
+                    break;                    
             }
         }
 

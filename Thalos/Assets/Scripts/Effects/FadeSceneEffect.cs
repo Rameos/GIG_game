@@ -47,6 +47,7 @@ public class FadeSceneEffect : MonoBehaviour
         }
     }
 
+
     void StartScene()
     {
         guiTexture.color = Color.Lerp(guiTexture.color, Color.clear, fadeSpeed * Time.deltaTime);
@@ -71,4 +72,5 @@ public class FadeSceneEffect : MonoBehaviour
         }
 
     }
+
 }

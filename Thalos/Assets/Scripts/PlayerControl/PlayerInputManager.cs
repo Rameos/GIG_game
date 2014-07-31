@@ -269,7 +269,6 @@ public class PlayerInputManager : MonoBehaviour {
     {
         if (Input.GetAxis("Triggers") < 0-thresholdTriggers)
         {
-            shotManager.ThrowPoison();
             animator.SetBool("Throw",true);
             Debug.Log("Throw");
         }

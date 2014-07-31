@@ -82,7 +82,7 @@ namespace Backend
             this.DamageType_Poision = DamageTypes.None;
             
             //Debug
-            this.HealthPoints = 100;
+            this.HealthPoints = 25;
 
             // Inventory Setup
             PhialInventory = new List<PhialType>();

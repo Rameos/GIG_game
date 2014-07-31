@@ -24,7 +24,9 @@ public class RotateWithGazeInput : MonoBehaviour {
     public float offSetRightAOI;
 
     public bool isActive = false;
-
+    
+    [SerializeField]
+    private bool isVisualisationActive = false; 
     public enum gazeActionMenu
     {
         onlyCam, 
@@ -44,10 +46,12 @@ public class RotateWithGazeInput : MonoBehaviour {
         {
             GUI.DrawTexture(new Rect(Screen.width * 0.5f - 64, 50, 128, 128), noGazeInput);
         }
-
-        GUI.DrawTexture(leftAOI.volume, testTexture_Right);
-        GUI.DrawTexture(rightAOI.volume, testTexture_Left);
-
+        if (isVisualisationActive)
+        {
+            GUI.DrawTexture(leftAOI.volume, testTexture_Right);
+            GUI.DrawTexture(rightAOI.volume, testTexture_Left);
+        }
+        
     }
 
     void Start()
