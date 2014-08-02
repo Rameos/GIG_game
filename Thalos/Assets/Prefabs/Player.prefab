@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400298}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|VIS-upper_arm_pole.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400240}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|VIS-upper_arm_pole.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400160}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|VIS-thigh_pole.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400122}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|VIS-thigh_pole.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400300}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|VIS-hand.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400242}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|VIS-hand.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400162}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|VIS-foot.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400124}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|VIS-foot.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400072}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-sub_spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400074}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400076}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-par_spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400096}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-sub_hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400086}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-spine.reverse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400080}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-chest.reverse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400082}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-chest.flex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400084}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-chest.flex_s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400088}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-spine.flex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400090}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-spine.flex_s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400078}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips.reverse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400092}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips.flex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400094}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips.flex_s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400098}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400100}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-sub_chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400102}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +368,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400104}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400334}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-heel.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400336}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-heel.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400342}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-toe.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400344}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-toe.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400338}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-toe.R.socket2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400340}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-foot.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400346}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-foot.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400326}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-shin.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +503,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400328}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin_smth.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400330}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +533,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400332}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-shin.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400348}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-shin.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +563,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400324}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin.junc.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400320}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh_smth.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400322}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-thigh.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,7 +608,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400350}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-thigh.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +623,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400366}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-heel.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,7 +638,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400368}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-heel.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +653,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400374}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-toe.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,7 +668,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400376}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-toe.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -683,7 +683,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400370}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-toe.L.socket2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400372}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-foot.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -713,7 +713,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400378}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-foot.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,7 +728,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400358}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-shin.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +743,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400360}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin_smth.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400362}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -773,7 +773,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400364}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-shin.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,7 +788,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400380}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-shin.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -803,7 +803,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400356}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin.junc.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -818,7 +818,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400352}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh_smth.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -833,7 +833,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400354}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-thigh.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -848,7 +848,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400382}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-thigh.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,7 +863,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400386}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|shoulder.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -878,7 +878,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400388}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|shoulder.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +893,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400422}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|palm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,7 +908,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400450}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_pinky.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -923,7 +923,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400452}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_pinky.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -938,7 +938,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400448}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_pinky.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -953,7 +953,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400454}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_pinky.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +968,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400444}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_pinky.01.R.tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,7 +983,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400446}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_pinky.01.R.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -998,7 +998,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400456}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_pinky.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1013,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400426}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_pinky.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1028,7 +1028,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400428}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_pinky.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1043,7 +1043,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400430}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_pinky.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1058,7 +1058,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400432}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_pinky.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1073,7 +1073,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400434}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_pinky.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1088,7 +1088,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400436}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_pinky.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1103,7 +1103,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400438}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_pinky.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1118,7 +1118,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400442}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-palm.04.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1133,7 +1133,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400440}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_pinky.01.R.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1148,7 +1148,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400458}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-palm.04.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1163,7 +1163,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400484}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_ring.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1178,7 +1178,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400486}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_ring.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1193,7 +1193,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400482}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_ring.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1208,7 +1208,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400488}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_ring.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1223,7 +1223,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400478}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_ring.01.R.tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1238,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400480}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_ring.01.R.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1253,7 +1253,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400490}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_ring.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1268,7 +1268,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400460}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_ring.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1283,7 +1283,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400462}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_ring.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1298,7 +1298,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400464}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_ring.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1313,7 +1313,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400466}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_ring.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1328,7 +1328,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400468}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_ring.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1343,7 +1343,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400470}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_ring.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1358,7 +1358,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400472}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_ring.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1373,7 +1373,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400476}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-palm.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1388,7 +1388,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400474}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_ring.01.R.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1403,7 +1403,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400492}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-palm.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1418,7 +1418,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400518}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_middle.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1433,7 +1433,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400520}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_middle.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1448,7 +1448,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400516}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_middle.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1463,7 +1463,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400522}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_middle.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1478,7 +1478,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400512}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_middle.01.R.tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1493,7 +1493,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400514}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_middle.01.R.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1508,7 +1508,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400524}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_middle.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1523,7 +1523,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400494}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_middle.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1538,7 +1538,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400496}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_middle.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1553,7 +1553,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400498}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_middle.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1568,7 +1568,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400500}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_middle.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,7 +1583,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400502}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_middle.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1598,7 +1598,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400504}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_middle.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1613,7 +1613,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400506}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_middle.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1628,7 +1628,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400510}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-palm.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1643,7 +1643,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400508}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_middle.01.R.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1658,7 +1658,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400526}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-palm.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1673,7 +1673,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400540}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|thumb.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1688,7 +1688,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400568}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-thumb.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1703,7 +1703,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400570}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-thumb.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1718,7 +1718,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400566}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-thumb.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1733,7 +1733,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400572}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-thumb.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1748,7 +1748,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400562}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thumb.01.R.tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1763,7 +1763,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400564}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-thumb.01.R.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1778,7 +1778,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400574}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-thumb.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1793,7 +1793,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400582}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_index.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1808,7 +1808,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400584}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_index.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1823,7 +1823,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400580}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_index.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1838,7 +1838,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400586}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_index.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1853,7 +1853,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400576}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_index.01.R.tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1868,7 +1868,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400578}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_index.01.R.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1883,7 +1883,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400588}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_index.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1898,7 +1898,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400528}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|thumb.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1913,7 +1913,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400530}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thumb.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1928,7 +1928,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400532}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|thumb.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1943,7 +1943,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400534}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thumb.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1958,7 +1958,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400536}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|thumb.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1973,7 +1973,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400538}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thumb.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1988,7 +1988,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400544}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_index.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2003,7 +2003,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400546}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_index.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2018,7 +2018,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400548}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_index.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2033,7 +2033,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400550}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_index.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2048,7 +2048,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400552}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_index.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2063,7 +2063,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400554}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_index.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2078,7 +2078,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400556}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_index.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2093,7 +2093,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400542}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-thumb.01.R.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2108,7 +2108,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400560}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-palm.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2123,7 +2123,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400558}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_index.01.R.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2138,7 +2138,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400590}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-palm.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2153,7 +2153,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400424}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2168,7 +2168,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400592}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2183,7 +2183,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400414}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-forearm.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2198,7 +2198,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400416}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm_smth.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2213,7 +2213,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400418}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2228,7 +2228,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400420}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-forearm.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2243,7 +2243,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400594}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-forearm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2258,7 +2258,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400412}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm.junc.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2273,7 +2273,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400408}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm_smth.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2288,7 +2288,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400410}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-upper_arm.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2303,7 +2303,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400596}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-upper_arm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2318,7 +2318,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400404}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shoulder_rh_ns_intr.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2333,7 +2333,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400400}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shoulder_ik_ns_intr.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2348,7 +2348,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400402}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shoulder_fk_ns_intr.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2363,7 +2363,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400406}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-shoulder.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2378,7 +2378,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400598}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-shoulder.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2393,7 +2393,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400622}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|palm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2408,7 +2408,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400650}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_pinky.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2423,7 +2423,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400652}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_pinky.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2438,7 +2438,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400648}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_pinky.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2453,7 +2453,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400654}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_pinky.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2468,7 +2468,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400644}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_pinky.01.L.tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2483,7 +2483,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400646}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_pinky.01.L.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2498,7 +2498,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400656}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_pinky.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2513,7 +2513,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400626}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_pinky.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2528,7 +2528,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400628}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_pinky.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2543,7 +2543,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400630}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_pinky.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2558,7 +2558,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400632}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_pinky.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2573,7 +2573,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400634}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_pinky.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2588,7 +2588,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400636}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_pinky.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2603,7 +2603,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400638}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_pinky.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2618,7 +2618,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400642}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-palm.04.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2633,7 +2633,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400640}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_pinky.01.L.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2648,7 +2648,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400658}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-palm.04.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2663,7 +2663,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_ring.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2678,7 +2678,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400686}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_ring.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2693,7 +2693,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400682}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_ring.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2708,7 +2708,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400688}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_ring.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2723,7 +2723,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400678}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_ring.01.L.tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2738,7 +2738,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400680}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_ring.01.L.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2753,7 +2753,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400690}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_ring.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2768,7 +2768,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400660}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_ring.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2783,7 +2783,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400662}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_ring.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2798,7 +2798,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400664}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_ring.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2813,7 +2813,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400666}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_ring.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2828,7 +2828,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400668}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_ring.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2843,7 +2843,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400670}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_ring.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2858,7 +2858,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400672}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_ring.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2873,7 +2873,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400676}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-palm.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2888,7 +2888,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400674}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_ring.01.L.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2903,7 +2903,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400692}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-palm.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2918,7 +2918,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400718}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_middle.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2933,7 +2933,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400720}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_middle.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2948,7 +2948,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400716}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_middle.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2963,7 +2963,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400722}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_middle.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2978,7 +2978,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400712}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_middle.01.L.tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2993,7 +2993,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400714}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_middle.01.L.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3008,7 +3008,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400724}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_middle.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3023,7 +3023,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400694}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_middle.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3038,7 +3038,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400696}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_middle.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3053,7 +3053,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400698}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_middle.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3068,7 +3068,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400700}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_middle.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3083,7 +3083,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400702}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_middle.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3098,7 +3098,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400704}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_middle.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3113,7 +3113,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400706}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_middle.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3128,7 +3128,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400710}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-palm.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3143,7 +3143,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400708}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_middle.01.L.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3158,7 +3158,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400726}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-palm.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3173,7 +3173,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400740}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|thumb.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3188,7 +3188,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400768}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-thumb.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3203,7 +3203,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400770}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-thumb.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3218,7 +3218,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400766}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-thumb.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3233,7 +3233,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400772}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-thumb.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3248,7 +3248,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400762}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thumb.01.L.tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3263,7 +3263,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400764}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-thumb.01.L.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3278,7 +3278,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400774}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-thumb.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3293,7 +3293,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400782}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_index.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3308,7 +3308,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400784}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_index.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3323,7 +3323,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400780}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_index.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3338,7 +3338,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400786}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_index.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3353,7 +3353,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400776}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_index.01.L.tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3368,7 +3368,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400778}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_index.01.L.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3383,7 +3383,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400788}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-f_index.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3398,7 +3398,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400728}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|thumb.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3413,7 +3413,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400730}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thumb.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3428,7 +3428,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400732}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|thumb.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3443,7 +3443,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400734}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thumb.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3458,7 +3458,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400736}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|thumb.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3473,7 +3473,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400738}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thumb.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3488,7 +3488,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400744}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_index.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3503,7 +3503,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400746}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_index.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3518,7 +3518,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400748}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_index.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3533,7 +3533,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400750}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_index.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3548,7 +3548,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400752}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_index.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3563,7 +3563,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400754}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-f_index.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3578,7 +3578,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400756}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|f_index.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3593,7 +3593,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400742}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-thumb.01.L.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3608,7 +3608,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400760}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-palm.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3623,7 +3623,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400758}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-f_index.01.L.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3638,7 +3638,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400790}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-palm.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3653,7 +3653,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400624}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3668,7 +3668,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400792}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3683,7 +3683,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400614}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-forearm.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3698,7 +3698,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400616}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm_smth.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3713,7 +3713,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400618}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3728,7 +3728,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400620}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-forearm.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3743,7 +3743,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400794}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-forearm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3758,7 +3758,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400612}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm.junc.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3773,7 +3773,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400608}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm_smth.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3788,7 +3788,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400610}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-upper_arm.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3803,7 +3803,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400796}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-upper_arm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3818,7 +3818,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400604}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shoulder_rh_ns_intr.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3833,7 +3833,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400600}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shoulder_ik_ns_intr.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3848,7 +3848,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400602}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shoulder_fk_ns_intr.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3863,7 +3863,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400606}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-shoulder.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3878,7 +3878,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400798}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-shoulder.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3893,7 +3893,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400810}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3908,7 +3908,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400808}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3923,7 +3923,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400812}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3938,7 +3938,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400802}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-neck.child
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3953,7 +3953,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400804}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3968,7 +3968,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400806}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-neck.follow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3983,7 +3983,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400394}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3998,7 +3998,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400396}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-neck.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4013,7 +4013,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400800}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-head.socket1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4028,7 +4028,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400390}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-head.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4043,7 +4043,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400392}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-head.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4058,7 +4058,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400398}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4073,7 +4073,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400814}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4088,7 +4088,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400384}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4103,7 +4103,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400816}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4118,7 +4118,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400310}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips_rh_ns_intr.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4133,7 +4133,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400316}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips_rh_ns_intr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4148,7 +4148,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400306}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips_ik_ns_intr.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4163,7 +4163,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400312}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips_ik_ns_intr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4178,7 +4178,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400308}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips_fk_ns_intr.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4193,7 +4193,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400314}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips_fk_ns_intr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4208,7 +4208,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400318}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4223,7 +4223,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400818}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|ORG-hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4238,7 +4238,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400268}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4253,7 +4253,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400270}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|hand.fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4268,7 +4268,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400272}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm_antistr.fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4283,7 +4283,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400274}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|forearm.fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4298,7 +4298,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400276}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm_antistr.fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4313,7 +4313,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400278}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|upper_arm.fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4328,7 +4328,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400280}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm.fk.R.socket2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4343,7 +4343,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400210}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4358,7 +4358,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400212}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|hand.fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4373,7 +4373,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400214}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm_antistr.fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4388,7 +4388,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400216}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|forearm.fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4403,7 +4403,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400218}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm_antistr.fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4418,7 +4418,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400220}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|upper_arm.fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4433,7 +4433,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400222}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm.fk.L.socket2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4448,7 +4448,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400146}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-foot.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4463,7 +4463,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400148}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|foot.fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4478,7 +4478,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400150}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin_antistr.fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4493,7 +4493,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400152}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|shin.fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4508,7 +4508,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400154}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh_antistr.fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4523,7 +4523,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400156}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|thigh.fk.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4538,7 +4538,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400158}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh.fk.R.socket2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4553,7 +4553,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400108}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-foot.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4568,7 +4568,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400110}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|foot.fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4583,7 +4583,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400112}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin_antistr.fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4598,7 +4598,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400114}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|shin.fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4613,7 +4613,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400116}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh_antistr.fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4628,7 +4628,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400118}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|thigh.fk.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4643,7 +4643,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400120}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh.fk.L.socket2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4658,7 +4658,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400248}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|upper_arm_hose.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4673,7 +4673,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400250}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm_hose_parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4688,7 +4688,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400254}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|forearm_hose.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4703,7 +4703,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400256}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm_hose_parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4718,7 +4718,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400258}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|elbow_hose.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4733,7 +4733,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400260}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-elbow_hose_parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4748,7 +4748,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400252}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-upper_arm.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4763,7 +4763,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400262}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shoulder_rh_ns_ch.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4778,7 +4778,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400190}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|upper_arm_hose.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4793,7 +4793,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400192}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm_hose_parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4808,7 +4808,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400196}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|forearm_hose.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,7 +4823,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400198}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm_hose_parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4838,7 +4838,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400200}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|elbow_hose.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4853,7 +4853,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400202}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-elbow_hose_parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4868,7 +4868,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400194}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-upper_arm.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4883,7 +4883,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400204}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shoulder_rh_ns_ch.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4898,7 +4898,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400284}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm.stretch.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4913,7 +4913,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400286}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm.nostr.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4928,7 +4928,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400288}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm.nostr.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4943,7 +4943,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400290}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4958,7 +4958,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400292}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4973,7 +4973,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400294}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm.stretch.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4988,7 +4988,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400282}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|elbow_target.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5003,7 +5003,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400296}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shoulder_ik_ns_ch.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5018,7 +5018,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400226}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm.stretch.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5033,7 +5033,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400228}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm.nostr.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5048,7 +5048,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400230}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm.nostr.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5063,7 +5063,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400232}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5078,7 +5078,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400234}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5093,7 +5093,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400236}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-forearm.stretch.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5108,7 +5108,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400224}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|elbow_target.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5123,7 +5123,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400238}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shoulder_ik_ns_ch.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5138,7 +5138,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400264}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm.fk.R.socket1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5153,7 +5153,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400266}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shoulder_fk_ns_ch.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5168,7 +5168,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400206}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-upper_arm.fk.L.socket1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5183,7 +5183,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400208}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shoulder_fk_ns_ch.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5198,7 +5198,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400020}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|thigh_hose.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5213,7 +5213,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400022}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh_hose_parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5228,7 +5228,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400026}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|shin_hose.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5243,7 +5243,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400028}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin_hose_parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5258,7 +5258,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400030}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|knee_hose.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5273,7 +5273,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400032}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-knee_hose_parent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5288,7 +5288,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400024}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-thigh.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5303,7 +5303,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400034}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips_rh_ns_ch.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5318,7 +5318,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400056}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|thigh_hose.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5333,7 +5333,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400058}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh_hose_parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5348,7 +5348,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400062}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|shin_hose.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5363,7 +5363,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400064}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin_hose_parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5378,7 +5378,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400066}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|knee_hose.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5393,7 +5393,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400068}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-knee_hose_parent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5408,7 +5408,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400060}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-thigh.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5423,7 +5423,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400070}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips_rh_ns_ch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5438,7 +5438,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh.stretch.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5453,7 +5453,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400004}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin.nostr.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5468,7 +5468,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400006}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh.nostr.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5483,7 +5483,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400008}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5498,7 +5498,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400010}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5513,7 +5513,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400012}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin.stretch.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5528,7 +5528,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|knee_target.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5543,7 +5543,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400014}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips_ik_ns_ch.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5558,7 +5558,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400038}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh.stretch.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5573,7 +5573,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400040}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin.nostr.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5588,7 +5588,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400042}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh.nostr.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5603,7 +5603,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400044}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5618,7 +5618,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400046}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5633,7 +5633,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400048}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-shin.stretch.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5648,7 +5648,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400036}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|knee_target.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5663,7 +5663,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400050}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips_ik_ns_ch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5678,7 +5678,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400016}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh.fk.R.socket1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5693,7 +5693,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400018}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips_fk_ns_ch.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5708,7 +5708,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400052}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-thigh.fk.L.socket1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5723,7 +5723,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400054}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hips_fk_ns_ch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5738,7 +5738,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400184}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5753,7 +5753,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400186}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5768,7 +5768,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400188}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-head.socket2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5783,7 +5783,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400302}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hand.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5798,7 +5798,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400304}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|hand.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5813,7 +5813,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400244}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-hand.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5828,7 +5828,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400246}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|hand.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5843,7 +5843,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400170}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|toe.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5858,7 +5858,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400172}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-toe.R.parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5873,7 +5873,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400174}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-toe.R.socket1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5888,7 +5888,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400166}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-foot.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5903,7 +5903,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400168}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-foot.R.roll.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5918,7 +5918,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400176}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-foot.R.roll.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5933,7 +5933,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400178}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-foot.R.rocker.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5948,7 +5948,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400180}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-foot.R.rocker.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5963,7 +5963,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400164}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|foot_roll.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5978,7 +5978,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400182}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|foot.ik.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5993,7 +5993,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400132}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|toe.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6008,7 +6008,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400134}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-toe.L.parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6023,7 +6023,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400136}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-toe.L.socket1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6038,7 +6038,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400128}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-foot.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6053,7 +6053,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400130}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-foot.L.roll.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6068,7 +6068,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400138}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-foot.L.roll.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6083,7 +6083,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400140}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-foot.L.rocker.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6098,7 +6098,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400142}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|MCH-foot.L.rocker.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6113,7 +6113,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400126}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|foot_roll.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6128,7 +6128,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400144}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|foot.ik.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6143,7 +6143,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400106}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|DEF-hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6158,7 +6158,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400820}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig|root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6173,7 +6173,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400822}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6189,7 +6189,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400824}
   - 137: {fileID: 13700000}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hero_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6205,7 +6205,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400826}
   - 137: {fileID: 13700002}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hero_Coat_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6221,7 +6221,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400828}
   - 137: {fileID: 13700004}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hero_Coat_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6237,7 +6237,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400830}
   - 137: {fileID: 13700006}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hero_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6260,7 +6260,8 @@ GameObject:
   - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
   - 136: {fileID: 13600000}
-  m_Layer: 0
+  - 114: {fileID: 11400016}
+  m_Layer: 11
   m_Name: Hero_Final4
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6290,7 +6291,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400836}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -6335,7 +6336,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400842}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6357,9 +6358,45 @@ GameObject:
   - 114: {fileID: 11400012}
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400014}
-  m_Layer: 0
+  - 114: {fileID: 11400018}
+  - 114: {fileID: 11400020}
+  m_Layer: 11
   m_Name: Camera
   m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100846
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400846}
+  - 198: {fileID: 19800000}
+  - 199: {fileID: 19900000}
+  m_Layer: 0
+  m_Name: Particle System 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400848}
+  - 198: {fileID: 19800002}
+  - 199: {fileID: 19900002}
+  m_Layer: 0
+  m_Name: Effect_Heal
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11794,7 +11831,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100834}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 2.25495182e-06}
-  m_LocalPosition: {x: -.167453036, y: .785327017, z: -.723950565}
+  m_LocalPosition: {x: .157030672, y: .891077042, z: .37474823}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400832}
@@ -11805,7 +11842,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100836}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: .258818686, z: 0, w: .965925932}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11819,7 +11856,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100838}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 2.25495182e-06}
-  m_LocalPosition: {x: .249981672, y: .7853266, z: -.723952472}
+  m_LocalPosition: {x: -.166685075, y: .890164256, z: .373846054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400832}
@@ -11831,7 +11868,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100840}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 2.25495182e-06}
-  m_LocalPosition: {x: -.00354706123, y: .652607918, z: 0}
+  m_LocalPosition: {x: -1.47532532e-07, y: .5, z: -3.95311659e-08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400832}
@@ -11848,6 +11885,7 @@ Transform:
   m_Children:
   - {fileID: 400836}
   - {fileID: 400832}
+  - {fileID: 400848}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400844
@@ -11862,6 +11900,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400836}
   m_RootOrder: 0
+--- !u!4 &400846
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100846}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400848}
+  m_RootOrder: 0
+--- !u!4 &400848
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100848}
+  m_LocalRotation: {x: -.70710665, y: 0, z: 0, w: .707106948}
+  m_LocalPosition: {x: 0, y: .750750184, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400846}
+  m_Father: {fileID: 400842}
+  m_RootOrder: 2
 --- !u!20 &2000000
 Camera:
   m_ObjectHideFlags: 1
@@ -11886,7 +11949,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294966783
+    m_Bits: 4294958591
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -11968,6 +12031,7 @@ MonoBehaviour:
   instanciatePointPoison: {fileID: 400834}
   PoisonFire: {fileID: 100000, guid: 95206e49c74074f41bb2409f17c46cc5, type: 2}
   PoisonIce: {fileID: 100000, guid: d17b834a6e5f64346a25b55a95f02e57, type: 2}
+  gazeInputManagerShooting: {fileID: 11400020}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11991,7 +12055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
-  gazeVisualisation: {fileID: 100000, guid: 38ad06f0c9de83f4d8641e4ce4f303e6, type: 2}
+  gazeVisualisation: {fileID: 100000, guid: f1b9838ac3a044d439c963cabb0973bd, type: 2}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12008,7 +12072,7 @@ MonoBehaviour:
   speedFactor: 3
   thresholdTriggers: .100000001
   thresholdStics: .100000001
-  jumpForcePower: 5
+  jumpForcePower: 3
   isJumping: 0
   isInAir: 0
   isGrounded: 1
@@ -12051,7 +12115,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100844}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 115dcedfe49211b4b8b30ce7f1dfca81, type: 3}
   m_Name: 
@@ -12061,13 +12125,14 @@ MonoBehaviour:
   testTexture_Right: {fileID: 2800000, guid: 3b980d6083b05964286f0e122400b484, type: 3}
   testTexture_Left: {fileID: 2800000, guid: 4e3a692339945b646bd1ac1a7b38b95d, type: 3}
   noGazeInput: {fileID: 2800000, guid: a947f944bff444a48951bd93097af927, type: 3}
-  sizeWidthAOI: 0
-  player: {fileID: 100000, guid: 2480f5d9163e9b54184f15be9c82994c, type: 2}
-  camScript: {fileID: 0}
+  sizeWidthAOI: .540000021
+  player: {fileID: 100832}
+  camScript: {fileID: 11400010}
   actualStateGazeAction: 0
   IsEyeDetected: 1
   offSetRightAOI: 0
-  isActive: 0
+  isActive: 1
+  isVisualisationActive: 0
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12079,8 +12144,105 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af054e5592e94b2478df24b42febda90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectFirePoison: {fileID: 0}
-  effectIcePoision: {fileID: 0}
+  effectFirePoison: {fileID: 100004, guid: 7bf315f9d468c3d4da2258ed52a686e9, type: 2}
+  effectIcePoision: {fileID: 100004, guid: 36ace7209db17464fb409e4186a779b2, type: 2}
+--- !u!114 &11400016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa11866e7f856c43a87ef472fdf88c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922c66f2a87d9bb4aa4103569dd80c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualisationOfAccuracyWindow: 1
+  gazeCursor: {fileID: 2800000, guid: e976c6d3ebc1e4a85aa7186a3192d8c5, type: 3}
+  fontStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+--- !u!114 &11400020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e63a78a12b98a41940d2c41e3b068c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position_GazeAim: {fileID: 0}
+  startPoint_Bullet: {fileID: 400838}
+  startPoint_Poison: {fileID: 400834}
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -12097,8 +12259,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1.08411574
+  m_Radius: .222506315
+  m_Height: 1.10000002
   m_Direction: 1
   m_Center: {x: 0, y: .550000012, z: 0}
 --- !u!137 &13700000
@@ -12559,7 +12721,7 @@ SkinnedMeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: acd4c481ff17acd45a34f7f3f042f472, type: 2}
   - {fileID: 2100000, guid: d34c06bf26ce9f74182af755dfde1e16, type: 2}
-  - {fileID: 2100000, guid: 59efd97b6d632d9449b4740a76a91655, type: 2}
+  - {fileID: 2100000, guid: 819226f6e5961434087c87bab9a2e025, type: 2}
   - {fileID: 2100000, guid: d8e4bff6dfbf51f46b80af70ded9e4e2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -13874,6 +14036,2174 @@ SkinnedMeshRenderer:
     m_Center: {x: .0130749196, y: .0564884767, z: .436832547}
     m_Extent: {x: .208435908, y: .199578345, z: .520611346}
   m_DirtyAABB: 0
+--- !u!198 &19800000
+ParticleSystem:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100846}
+  lengthInSec: 1
+  startDelay: 0
+  speed: 1
+  randomSeed: 0
+  looping: 0
+  prewarm: 0
+  playOnAwake: 1
+  moveWithTransform: 1
+  InitialModule:
+    enabled: 1
+    startLifetime:
+      scalar: .449999988
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    startSpeed:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    startColor:
+      maxGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      maxColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      minMaxState: 0
+    startSize:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    startRotation:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    gravityModifier: 0
+    inheritVelocity: 0
+    maxNumParticles: 1000
+  ShapeModule:
+    serializedVersion: 2
+    enabled: 1
+    type: 0
+    radius: .119999997
+    angle: 25
+    length: 5
+    boxX: 1
+    boxY: 1
+    boxZ: 1
+    placementMode: 0
+    m_Mesh: {fileID: 0}
+    randomDirection: 0
+  EmissionModule:
+    enabled: 1
+    m_Type: 0
+    rate:
+      scalar: 25
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    cnt0: 30
+    cnt1: 30
+    cnt2: 30
+    cnt3: 30
+    time0: 0
+    time1: 0
+    time2: 0
+    time3: 0
+    m_BurstCount: 0
+  SizeModule:
+    enabled: 0
+    curve:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 1
+  RotationModule:
+    enabled: 0
+    curve:
+      scalar: .785398185
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+  ColorModule:
+    enabled: 1
+    gradient:
+      maxGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 2634022911
+        key1:
+          serializedVersion: 2
+          rgba: 2224351999
+        key2:
+          serializedVersion: 2
+          rgba: 8642047
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 17926
+        ctime2: 43947
+        ctime3: 65535
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 43754
+        atime2: 65535
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 4
+        m_NumAlphaKeys: 3
+      minGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      maxColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      minMaxState: 1
+  UVModule:
+    enabled: 0
+    frameOverTime:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 1
+    tilesX: 1
+    tilesY: 1
+    animationType: 0
+    rowIndex: 0
+    cycles: 1
+    randomRow: 1
+  VelocityModule:
+    enabled: 0
+    x:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    y:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    z:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    inWorldSpace: 0
+  ForceModule:
+    enabled: 0
+    x:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    y:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    z:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    inWorldSpace: 0
+    randomizePerFrame: 0
+  ExternalForcesModule:
+    enabled: 0
+    multiplier: 1
+  ClampVelocityModule:
+    enabled: 0
+    x:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    y:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    z:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    magnitude:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    separateAxis: 0
+    inWorldSpace: 0
+    dampen: 1
+  SizeBySpeedModule:
+    enabled: 0
+    curve:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 1
+    range: {x: 0, y: 1}
+  RotationBySpeedModule:
+    enabled: 0
+    curve:
+      scalar: .785398185
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    range: {x: 0, y: 1}
+  ColorBySpeedModule:
+    enabled: 0
+    gradient:
+      maxGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      maxColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      minMaxState: 1
+    range: {x: 0, y: 1}
+  CollisionModule:
+    enabled: 0
+    type: 0
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
+    dampen: 0
+    bounce: 1
+    energyLossOnCollision: 0
+    minKillSpeed: 0
+    particleRadius: .00999999978
+    collidesWith:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    quality: 0
+    voxelSize: .5
+    collisionMessages: 0
+  SubModule:
+    enabled: 0
+    subEmitterBirth: {fileID: 0}
+    subEmitterBirth1: {fileID: 0}
+    subEmitterCollision: {fileID: 0}
+    subEmitterCollision1: {fileID: 0}
+    subEmitterDeath: {fileID: 0}
+    subEmitterDeath1: {fileID: 0}
+--- !u!198 &19800002
+ParticleSystem:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100848}
+  lengthInSec: 1
+  startDelay: 0
+  speed: 1
+  randomSeed: 0
+  looping: 0
+  prewarm: 0
+  playOnAwake: 1
+  moveWithTransform: 1
+  InitialModule:
+    enabled: 1
+    startLifetime:
+      scalar: 2
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    startSpeed:
+      scalar: .5
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    startColor:
+      maxGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      maxColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      minMaxState: 0
+    startSize:
+      scalar: .300000012
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    startRotation:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    gravityModifier: 0
+    inheritVelocity: 0
+    maxNumParticles: 1000
+  ShapeModule:
+    serializedVersion: 2
+    enabled: 1
+    type: 0
+    radius: .100000001
+    angle: 0
+    length: 5
+    boxX: 1
+    boxY: 1
+    boxZ: 1
+    placementMode: 0
+    m_Mesh: {fileID: 0}
+    randomDirection: 0
+  EmissionModule:
+    enabled: 1
+    m_Type: 0
+    rate:
+      scalar: 25
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    cnt0: 30
+    cnt1: 30
+    cnt2: 30
+    cnt3: 30
+    time0: 0
+    time1: 0
+    time2: 0
+    time3: 0
+    m_BurstCount: 0
+  SizeModule:
+    enabled: 1
+    curve:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: -2
+          outSlope: -2
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 1
+  RotationModule:
+    enabled: 0
+    curve:
+      scalar: .785398185
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+  ColorModule:
+    enabled: 1
+    gradient:
+      maxGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 3734301439
+        key2:
+          serializedVersion: 2
+          rgba: 1221851
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 17926
+        ctime2: 49151
+        ctime3: 65535
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 49730
+        atime2: 65535
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 4
+        m_NumAlphaKeys: 3
+      minGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      maxColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      minMaxState: 1
+  UVModule:
+    enabled: 0
+    frameOverTime:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 1
+    tilesX: 1
+    tilesY: 1
+    animationType: 0
+    rowIndex: 0
+    cycles: 1
+    randomRow: 1
+  VelocityModule:
+    enabled: 0
+    x:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    y:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    z:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    inWorldSpace: 0
+  ForceModule:
+    enabled: 0
+    x:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    y:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    z:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    inWorldSpace: 0
+    randomizePerFrame: 0
+  ExternalForcesModule:
+    enabled: 0
+    multiplier: 1
+  ClampVelocityModule:
+    enabled: 0
+    x:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    y:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    z:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    magnitude:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    separateAxis: 0
+    inWorldSpace: 0
+    dampen: 1
+  SizeBySpeedModule:
+    enabled: 0
+    curve:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 1
+    range: {x: 0, y: 1}
+  RotationBySpeedModule:
+    enabled: 0
+    curve:
+      scalar: .785398185
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    range: {x: 0, y: 1}
+  ColorBySpeedModule:
+    enabled: 0
+    gradient:
+      maxGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      maxColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      minMaxState: 1
+    range: {x: 0, y: 1}
+  CollisionModule:
+    enabled: 0
+    type: 0
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
+    dampen: 0
+    bounce: 1
+    energyLossOnCollision: 0
+    minKillSpeed: 0
+    particleRadius: .00999999978
+    collidesWith:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    quality: 0
+    voxelSize: .5
+    collisionMessages: 0
+  SubModule:
+    enabled: 0
+    subEmitterBirth: {fileID: 0}
+    subEmitterBirth1: {fileID: 0}
+    subEmitterCollision: {fileID: 0}
+    subEmitterCollision1: {fileID: 0}
+    subEmitterDeath: {fileID: 0}
+    subEmitterDeath1: {fileID: 0}
+--- !u!199 &19900000
+ParticleSystemRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100846}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_RenderMode: 0
+  m_MaxParticleSize: 1
+  m_CameraVelocityScale: 0
+  m_VelocityScale: 0
+  m_LengthScale: 2
+  m_SortingFudge: 0
+  m_NormalDirection: 1
+  m_SortMode: 0
+  m_Mesh: {fileID: 0}
+  m_Mesh1: {fileID: 0}
+  m_Mesh2: {fileID: 0}
+  m_Mesh3: {fileID: 0}
+--- !u!199 &19900002
+ParticleSystemRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100848}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 7c98ffa948c8d43d5ac42a3e9f0ea897, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_RenderMode: 0
+  m_MaxParticleSize: .5
+  m_CameraVelocityScale: 0
+  m_VelocityScale: 0
+  m_LengthScale: 2
+  m_SortingFudge: 0
+  m_NormalDirection: 1
+  m_SortMode: 0
+  m_Mesh: {fileID: 0}
+  m_Mesh1: {fileID: 0}
+  m_Mesh2: {fileID: 0}
+  m_Mesh3: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
