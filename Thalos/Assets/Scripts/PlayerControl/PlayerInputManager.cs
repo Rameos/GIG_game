@@ -74,6 +74,7 @@ public class PlayerInputManager : MonoBehaviour {
     private ShotManager_Player shotManager;
 
 	void Start () {
+        connectController();
         centerOfMass = transform.FindChild("CenterOfMass");
         animator = GetComponent<Animator>();
         findGameController();
@@ -84,10 +85,6 @@ public class PlayerInputManager : MonoBehaviour {
 
 	}
 
-    void Update()
-    {
-        connectController();
-    }
 
 	void FixedUpdate () {
 
@@ -95,7 +92,7 @@ public class PlayerInputManager : MonoBehaviour {
        inputY = Input.GetAxis("Vertical");
 
 
-       //checkIsGrounded();
+       checkIsGrounded();
        checkButtonInput();
        checkGazeMenuStatus();
        checkshootInput();
@@ -153,8 +150,10 @@ public class PlayerInputManager : MonoBehaviour {
 
     private void checkIsGrounded()
     {
+        float distance = capCollider.height / 2;
+        Debug.Log("Distance: " + distance);
         Ray rayinput = new Ray(centerOfMass.position, -transform.up);
-        if (Physics.Raycast(rayinput, capCollider.height / 2))
+        if (Physics.Raycast(rayinput, distance))
         {
             isGrounded = true;
             isJumping = false;
@@ -170,6 +169,7 @@ public class PlayerInputManager : MonoBehaviour {
 
     private void jump()
     {
+        Debug.Log("Jump!");
         animator.SetTrigger("Jump");
     }
 
@@ -250,12 +250,16 @@ public class PlayerInputManager : MonoBehaviour {
             }
             else
             {
-                /*
-                Debug.Log("Movement: " + jumpDirection);
+                //BUG!
+                Vector3 destinationPoint = jumpScript.getDestinationpoint();
+                Debug.DrawRay(transform.position, destinationPoint, Color.magenta, 2f);
 
-                moveDirection = (transform.forward * jumpSpeed) * Time.deltaTime;
+                destinationPoint = destinationPoint - transform.position;
 
-                transform.position += moveDirection;*/
+                destinationPoint.y = 0;
+
+                Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
+                transform.rotation = lookAtRotation;//Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime);
             }
 
         }
