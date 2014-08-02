@@ -20,6 +20,8 @@ namespace Backend
         public List<Recipes> FoundedRecipes { get; set; }
         public int phialSizeMax { get; set; }
 
+        public List<BaseIngredient> ingredieceInventory;
+
         public int Damage { get; set; }
         public DamageTypes DamageType_Bolt { get; set; }
         public DamageTypes DamageType_Poision { get; set; }
@@ -34,6 +36,8 @@ namespace Backend
             return playerModel;
         }
 
+
+        ///PHIALS
         public void addPhialToinventory(PhialType type)
         {
             if(PhialInventory.Count<phialSizeMax)
@@ -69,6 +73,29 @@ namespace Backend
         public void removePhialFromInventory(PhialType type)
         {
             PhialInventory.Remove(type);
+        }
+
+
+
+        ///INGREDIENCE
+        public void addIngredience(BaseIngredient newIngredience)
+        {
+            ingredieceInventory.Add(newIngredience);
+        }
+
+        public bool isCountOfIngredience(BaseIngredient searchIngredience, int needCount)
+        {
+            return false; 
+        }
+
+        public void removeCountOfIngredience(BaseIngredient searchIngredience, int needCount)
+        {
+            //CLEAR
+        }
+
+        public int getCountOfIngredience(BaseIngredient searchIngredience)
+        {
+            return 0;
         }
 
         private PlayerModel()

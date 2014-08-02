@@ -44,13 +44,10 @@ public class PlayerInputManager : MonoBehaviour {
     //private bool jumpClimax = false;
     [SerializeField]
     private Transform centerOfMass;
-    [SerializeField]
-    private float stepRotation = 5;
 
     
     float inputX;
     float inputY;
-    private float maxSpeedWalking = 0.2f;
     private int y;
 
     static int idle = Animator.StringToHash("Idle");
