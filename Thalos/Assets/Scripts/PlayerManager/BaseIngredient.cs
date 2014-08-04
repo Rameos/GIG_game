@@ -12,4 +12,9 @@ public class BaseIngredient
         this.Name = Name;
         this.Object = Object;
     }
+
+    public string ToString()
+    {
+        return Name;
+    }
 }

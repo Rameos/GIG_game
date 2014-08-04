@@ -85,17 +85,72 @@ namespace Backend
 
         public bool isCountOfIngredience(BaseIngredient searchIngredience, int needCount)
         {
-            return false; 
+            int count = 0;
+            foreach (BaseIngredient itemInList in ingredieceInventory)
+            {
+                if (itemInList == searchIngredience)
+                {
+                    count++;
+                }
+            }
+
+            if(count >= needCount)
+            {
+                return true;
+            }
+
+            return false;
         }
 
-        public void removeCountOfIngredience(BaseIngredient searchIngredience, int needCount)
+        public bool removeCountOfIngredience(BaseIngredient searchIngredience, int needCount)
         {
-            //CLEAR
+            List<BaseIngredient> items = new List<BaseIngredient>();
+
+            foreach (BaseIngredient itemInList in ingredieceInventory)
+            {
+                if (itemInList == searchIngredience)
+                {
+                    items.Add(itemInList);
+                }
+            }
+
+            if(items.Count>= needCount)
+            {
+                for (int i = 0; i < needCount; i++ )
+                {
+                    ingredieceInventory.Remove(searchIngredience);
+                }
+                    return true;
+            }
+            return false;
         }
 
         public int getCountOfIngredience(BaseIngredient searchIngredience)
         {
-            return 0;
+            int count = 0;
+            foreach (BaseIngredient itemInList in ingredieceInventory)
+            {
+                if (itemInList == searchIngredience)
+                {
+                    count++;
+                }
+            }
+            return count; 
+        }
+
+        public Hashtable convertInventoryToHashTable()
+        {
+            Hashtable table = new Hashtable();
+
+            string [] ingredients = Ingredients.Instance().GetIngredientList();
+
+            foreach (string ingredientName in ingredients)
+            {
+                int count = getCountOfIngredience(Ingredients.Instance().GetSingleIngredient(ingredientName));
+                table.Add(ingredientName, count);
+            }
+
+            return table;
         }
 
         private PlayerModel()
@@ -115,11 +170,11 @@ namespace Backend
             PhialInventory = new List<PhialType>();
             addPhialToinventory(PhialType.Heal);
             addPhialToinventory(PhialType.Heal);
-            addPhialToinventory(PhialType.Heal);
-            addPhialToinventory(PhialType.Heal);
-            addPhialToinventory(PhialType.Heal);
+
 
             Debug.Log("PhialCountHeal:" + getCountOfPhialsOfSortInInventory(PhialType.Heal));
+
+            ingredieceInventory = new List<BaseIngredient>();
         }
 
 

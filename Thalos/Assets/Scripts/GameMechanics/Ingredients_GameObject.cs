@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Backend;
-
-public class Debug_ShowInventory : MonoBehaviour
+using Controller;
+public class Ingredients_GameObject : MonoBehaviour
 {
 
     public enum IngredienceType
@@ -18,7 +18,13 @@ public class Debug_ShowInventory : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        PlayerModel.Instance().addIngredience(getIngredience());
+        if(other.tag ==Constants.TAG_PLAYER)
+        {
+            Debug.Log("Collect:" + getIngredience().ToString());
+            PlayerModel.Instance().addIngredience(getIngredience());
+
+            StartCoroutine(startDestroyEffect());
+        }
     }
 
     BaseIngredient getIngredience()
@@ -38,5 +44,11 @@ public class Debug_ShowInventory : MonoBehaviour
 
         }
         return null;
+    }
+    IEnumerator startDestroyEffect()
+    {
+        collider.active = false;
+        yield return new WaitForSeconds(1);
+        Destroy(this.gameObject);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Backend;
 
 public class Recipes
 {
@@ -29,17 +30,17 @@ public class Recipes
 
     private void InitRecipes()
     {
-        BaseRecipe Healpotion = new BaseRecipe(Strings.HEALPOTION);
+        BaseRecipe Healpotion = new BaseRecipe(PlayerModel.PhialType.Heal,Strings.HEALPOTION);
         Healpotion.addNeededIngredient(Strings.WATER, 1);
         Healpotion.addNeededIngredient(Strings.HERB, 1);
         ListOfRecipes.Add(Strings.HEALPOTION, Healpotion);
 
-        BaseRecipe Firepotion = new BaseRecipe(Strings.FIREPOTION);
+        BaseRecipe Firepotion = new BaseRecipe(PlayerModel.PhialType.Fire,Strings.FIREPOTION);
         Firepotion.addNeededIngredient(Strings.OIL, 1);
         Firepotion.addNeededIngredient(Strings.PHOENIXASH, 1);
         ListOfRecipes.Add(Strings.FIREPOTION, Firepotion);
 
-        BaseRecipe Icepotion = new BaseRecipe(Strings.ICEPOTION);
+        BaseRecipe Icepotion = new BaseRecipe(PlayerModel.PhialType.Ice,Strings.ICEPOTION);
         Icepotion.addNeededIngredient(Strings.WATER, 1);
         Icepotion.addNeededIngredient(Strings.CRISTALFLOWER, 1);
         ListOfRecipes.Add(Strings.ICEPOTION, Icepotion);

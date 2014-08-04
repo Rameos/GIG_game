@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using Backend; 
 public class BaseRecipe {
 
+    //public string name { get; set; }
+    public PlayerModel.PhialType phialType { get; set; }
     public string name { get; set; }
-
     private Hashtable NeededIngredients = new Hashtable();
 
-    public BaseRecipe(string name) 
+    public BaseRecipe(PlayerModel.PhialType phialType,string name) 
     {
+        this.phialType = phialType;
         this.name = name;
     }
 
