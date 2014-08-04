@@ -11,6 +11,10 @@ public class Bullet : MonoBehaviour {
     private float lifetime = 5f;
     private Damage damageInformation;
 
+    [SerializeField]
+    private GameObject explosion;
+
+
     public void Init(Vector3 forwardVector, int parentType,Damage damageInformation)
     {
         this.damageInformation = damageInformation;
@@ -26,8 +30,17 @@ public class Bullet : MonoBehaviour {
         this.transform.position += forwardVector.normalized * bulletSpeed;
     }
 
+
     void OnCollisionEnter(Collision col)
     {
+        Debug.Log("Coli: " +col.gameObject);
+        if (col.gameObject.rigidbody)
+        {
+            col.gameObject.rigidbody.AddForce(col.contacts[0].normal * -4f);
+        }
+
+        GameObject.Instantiate(explosion,col.contacts[0].point,explosion.transform.rotation);
+
 
         switch (parentType)
         {
@@ -37,7 +50,6 @@ public class Bullet : MonoBehaviour {
                 {
                     col.gameObject.GetComponent<EnemyObject>().ApplyDamage(damageInformation);
                     Debug.Log("Enemy gets Damage!");
-                    
                 }
 
                 break; 
@@ -59,6 +71,7 @@ public class Bullet : MonoBehaviour {
 
     IEnumerator removeAfterLiveTime()
     {
+
         yield return new WaitForSeconds(lifetime);
         Destroy(gameObject);
     }
