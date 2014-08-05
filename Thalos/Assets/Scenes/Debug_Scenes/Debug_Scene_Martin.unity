@@ -17981,12 +17981,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionItem: 4
+  isSelectable: 0
+  isEndless: 0
+  Icon: {fileID: 0}
+  CountText: {fileID: 0}
   notSelectedColor:
     serializedVersion: 2
     rgba: 4287541700
   selectedColor:
     serializedVersion: 2
     rgba: 4278190335
+  notSelectableColor:
+    serializedVersion: 2
+    rgba: 4283650899
 --- !u!1 &654251737
 GameObject:
   m_ObjectHideFlags: 0
@@ -23978,6 +23985,58 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .00502639497
       objectReference: {fileID: 0}
+    - target: {fileID: 11400016, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: Icon
+      value: 
+      objectReference: {fileID: 452273227}
+    - target: {fileID: 11400016, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: notSelectableColor.rgba
+      value: 4283650899
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: isSelectable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400012, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: isSelectable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400014, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: isSelectable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400016, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: isSelectable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400018, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: isSelectable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400020, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: isSelectable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: notSelectableColor.rgba
+      value: 4283650899
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400012, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: notSelectableColor.rgba
+      value: 4283650899
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400014, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: notSelectableColor.rgba
+      value: 4283650899
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400018, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: notSelectableColor.rgba
+      value: 4283650899
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400020, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
+      propertyPath: notSelectableColor.rgba
+      value: 4283650899
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400004, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
     - {fileID: 11400000, guid: 70fae4d1796c3eb46aa1dfc074a8037a, type: 2}
@@ -28994,12 +29053,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionItem: 2
+  isSelectable: 0
+  isEndless: 0
+  Icon: {fileID: 0}
+  CountText: {fileID: 0}
   notSelectedColor:
     serializedVersion: 2
     rgba: 4287541700
   selectedColor:
     serializedVersion: 2
     rgba: 4278190335
+  notSelectableColor:
+    serializedVersion: 2
+    rgba: 4283650899
 --- !u!1 &1005773969
 GameObject:
   m_ObjectHideFlags: 0
@@ -29617,12 +29683,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionItem: 0
+  isSelectable: 0
+  isEndless: 0
+  Icon: {fileID: 0}
+  CountText: {fileID: 0}
   notSelectedColor:
     serializedVersion: 2
     rgba: 4287541700
   selectedColor:
     serializedVersion: 2
     rgba: 4278190335
+  notSelectableColor:
+    serializedVersion: 2
+    rgba: 4283650899
 --- !u!1001 &1019660990
 Prefab:
   m_ObjectHideFlags: 0
@@ -52011,12 +52084,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionItem: 3
+  isSelectable: 0
+  isEndless: 0
+  Icon: {fileID: 452273227}
+  CountText: {fileID: 0}
   notSelectedColor:
     serializedVersion: 2
     rgba: 4287541700
   selectedColor:
     serializedVersion: 2
     rgba: 4278190335
+  notSelectableColor:
+    serializedVersion: 2
+    rgba: 4283650899
 --- !u!1 &1689174298
 GameObject:
   m_ObjectHideFlags: 0
@@ -61176,12 +61256,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionItem: 1
+  isSelectable: 0
+  isEndless: 0
+  Icon: {fileID: 0}
+  CountText: {fileID: 0}
   notSelectedColor:
     serializedVersion: 2
     rgba: 4287541700
   selectedColor:
     serializedVersion: 2
     rgba: 4278190335
+  notSelectableColor:
+    serializedVersion: 2
+    rgba: 4283650899
 --- !u!1 &1911159678
 GameObject:
   m_ObjectHideFlags: 0
@@ -61884,12 +61971,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionItem: 5
+  isSelectable: 0
+  isEndless: 0
+  Icon: {fileID: 0}
+  CountText: {fileID: 0}
   notSelectedColor:
     serializedVersion: 2
     rgba: 4287541700
   selectedColor:
     serializedVersion: 2
     rgba: 4278190335
+  notSelectableColor:
+    serializedVersion: 2
+    rgba: 4283650899
 --- !u!1 &1933095812
 GameObject:
   m_ObjectHideFlags: 0
