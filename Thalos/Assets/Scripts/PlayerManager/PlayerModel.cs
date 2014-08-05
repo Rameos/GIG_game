@@ -177,6 +177,18 @@ namespace Backend
             ingredieceInventory = new List<BaseIngredient>();
         }
 
+        public PlayerModel.PhialType convertDamageTypeToPhialType()
+        {
+            switch (DamageType_Poision)
+            {
+                case DamageTypes.Fire:
+                    return PhialType.Fire;
+                case DamageTypes.Ice:
+                    return PhialType.Ice;
+                    
+            }
+            return PhialType.Empty;
+        }
 
     }
 }

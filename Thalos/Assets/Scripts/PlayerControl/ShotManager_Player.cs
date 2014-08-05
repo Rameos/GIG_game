@@ -26,6 +26,8 @@ namespace Controller
         [SerializeField]
         private ShotAndThrowWithGaze gazeInputManagerShooting;
 
+        [SerializeField]
+        private bool isEndlessMunition = false;
         public void ShootBullet()
         {
 
@@ -57,28 +59,41 @@ namespace Controller
 
         public void ThrowPoison()
         {
+
                 PlayerModel.DamageTypes damage = PlayerModel.Instance().DamageType_Poision;
                 GameObject instance;
+                PlayerModel.PhialType type = PlayerModel.Instance().convertDamageTypeToPhialType();
 
-                Vector3 direction = gazeInputManagerShooting.directionPoison;
-                switch (damage)
+                if (PlayerModel.Instance().getCountOfPhialsOfSortInInventory(type) > 0)
                 {
-                    case PlayerModel.DamageTypes.Fire:
-                        instance = GameObject.Instantiate(PoisonFire, instanciatePointPoison.position, instanciatePointPoison.localRotation) as GameObject;
-                        instance.GetComponent<Poison>().Init(direction, new Damage(Constants.damageIcePoison, PlayerModel.DamageTypes.Fire), Constants.ID_PLAYER);
+                    Vector3 direction = gazeInputManagerShooting.directionPoison;
+                    switch (damage)
+                    {
+                        case PlayerModel.DamageTypes.Fire:
+                            instance = GameObject.Instantiate(PoisonFire, instanciatePointPoison.position, instanciatePointPoison.localRotation) as GameObject;
+                            instance.GetComponent<Poison>().Init(direction, new Damage(Constants.damageIcePoison, PlayerModel.DamageTypes.Fire), Constants.ID_PLAYER);
 
-                        break;
+                            break;
 
-                    case PlayerModel.DamageTypes.Ice:
-                        instance = GameObject.Instantiate(PoisonIce, instanciatePointPoison.position, instanciatePointPoison.localRotation) as GameObject;
-                        instance.GetComponent<Poison>().Init(direction, new Damage(Constants.damageIceBolt, PlayerModel.DamageTypes.Ice), Constants.ID_PLAYER);
-                        break;
+                        case PlayerModel.DamageTypes.Ice:
+                            instance = GameObject.Instantiate(PoisonIce, instanciatePointPoison.position, instanciatePointPoison.localRotation) as GameObject;
+                            instance.GetComponent<Poison>().Init(direction, new Damage(Constants.damageIceBolt, PlayerModel.DamageTypes.Ice), Constants.ID_PLAYER);
+                            break;
 
-                    case PlayerModel.DamageTypes.Standard:
-                    case PlayerModel.DamageTypes.None:
-                        Debug.Log("Nope!");
-                        break;
+                        case PlayerModel.DamageTypes.Standard:
+                        case PlayerModel.DamageTypes.None:
+                            Debug.Log("Nope!");
+                            break;
+                    }
+
+                    if(!isEndlessMunition)
+                    {
+                        PlayerModel.Instance().removePhialFromInventory(type);
+                    }
                 }
-        }    
+
+        }
+
+
     }
 }
