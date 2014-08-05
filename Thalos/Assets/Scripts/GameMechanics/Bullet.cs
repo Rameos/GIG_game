@@ -37,7 +37,6 @@ public class Bullet : MonoBehaviour {
         if (col.gameObject.rigidbody)
         {
             col.gameObject.rigidbody.AddForce(col.contacts[0].normal * -4f);
-            
         }
 
         GameObject.Instantiate(explosion,col.contacts[0].point,explosion.transform.rotation);

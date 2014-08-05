@@ -70,11 +70,6 @@ public class PlayerInputManager : MonoBehaviour {
     private JumpwithGaze jumpScript;
     private ShotManager_Player shotManager;
 
-    //ForceRumble
-    float powerHeavy;
-    float powerSoft;
-    bool isRumbleRunning = false;
-
 	void Start () {
         connectController();
         centerOfMass = transform.FindChild("CenterOfMass");
@@ -85,7 +80,6 @@ public class PlayerInputManager : MonoBehaviour {
         capCollider = gameObject.GetComponent<CapsuleCollider>();
         shotManager = gameObject.GetComponent<ShotManager_Player>();
 
-       
 	}
 
 
@@ -100,35 +94,12 @@ public class PlayerInputManager : MonoBehaviour {
        checkGazeMenuStatus();
        checkshootInput();
        move(inputX, inputY);
-       handleRumbleEvent();
 	}
-
-    void OnApplicationQuit()
-    {
-        GamePad.SetVibration(playerIndex, 0, 0);
-    }
-
-    private void handleRumbleEvent()
-    {
-        if (isRumbleRunning)
-        {
-            GamePad.SetVibration(playerIndex, powerHeavy, powerSoft);
-        }
-        else
-        {
-            GamePad.SetVibration(playerIndex, 0, 0);
-        }
-    }
 
     public void startRumbleForTime(float rumbleHeavy, float rumbleWeak,float time)
     {
-        Debug.Log("Rumble");
-        if (!isRumbleRunning)
-        {
-            this.powerHeavy = rumbleHeavy;
-            this.powerSoft = rumbleWeak;
-            StartCoroutine(rumbleOverTime(time));   
-        }
+        StartCoroutine(rumbleOverTime(Time.deltaTime, 1, 1));
+            
     }
 
     private void connectController()
@@ -197,7 +168,6 @@ public class PlayerInputManager : MonoBehaviour {
     {
         Debug.Log("Jump!");
         animator.SetTrigger("Jump");
-        
     }
 
     private void createJumpCurve()
@@ -312,12 +282,14 @@ public class PlayerInputManager : MonoBehaviour {
             animator.SetBool("Shoot",true);
             Debug.Log("Shoot");
 
+           // GamePad.SetVibration(playerIndex, Input.GetAxis("Triggers"), 0);
         }
 
         else
         {
             animator.SetBool("Throw", false);
             animator.SetBool("Shoot", false);
+            GamePad.SetVibration(playerIndex, 0, 0);
         }
 
     }
@@ -414,11 +386,12 @@ public class PlayerInputManager : MonoBehaviour {
         
     }
 
-    IEnumerator rumbleOverTime(float time)
+    IEnumerator rumbleOverTime(float time, float powerHeavy, float powerSoft)
     {
-        isRumbleRunning = true; 
+        GamePad.SetVibration(playerIndex, powerHeavy, powerSoft);
         yield return new WaitForSeconds(time);
-        isRumbleRunning = false;
+
+        GamePad.SetVibration(playerIndex, 0, 0);
     }
 
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Controller;
+
 public class DestroyAfterTimer : MonoBehaviour {
 
     public float lifeTime = 2; 
@@ -9,6 +9,7 @@ public class DestroyAfterTimer : MonoBehaviour {
 	void Start () {
 
         StartCoroutine(destroyAfterWait());
+	
 	}
 	
 	// Update is called once per frame
