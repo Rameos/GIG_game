@@ -19,6 +19,7 @@ namespace Controller
     public delegate void SelectNewItem(Constants.selectableItemsCircleMenu newItem);
 
     public delegate void RumbleEvent(float duration,float forceHeavy, float forceLight);
+    public delegate void RumbleEventStop();
 
     public class Gamestatemanager:MonoBehaviour
     {
@@ -34,7 +35,7 @@ namespace Controller
         public static event PlayerGetsDamage PlayerGetsDamageHandler;
 
         public static event RumbleEvent RumbleEventHandler;
-
+        public static event RumbleEventStop RumbleEventStopHandler;
         public enum Gamestate
         {
             Mainmenu,
@@ -223,6 +224,14 @@ namespace Controller
             if (RumbleEventHandler != null)
             {
                 RumbleEventHandler(duration,forceHeavy,forceLight);
+            }
+        }
+
+        public static void OnRumbleEventStop()
+        {
+            if(RumbleEventStopHandler != null)
+            {
+                RumbleEventStopHandler();
             }
         }
 

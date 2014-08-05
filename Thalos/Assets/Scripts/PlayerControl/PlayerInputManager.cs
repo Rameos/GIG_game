@@ -81,6 +81,7 @@ public class PlayerInputManager : MonoBehaviour {
         animator = GetComponent<Animator>();
         findGameController();
         Gamestatemanager.RumbleEventHandler += startRumbleForTime;
+        Gamestatemanager.RumbleEventStopHandler += stopRumbleEvent;
         jumpScript = gameObject.GetComponent<JumpwithGaze>();
         capCollider = gameObject.GetComponent<CapsuleCollider>();
         shotManager = gameObject.GetComponent<ShotManager_Player>();
@@ -102,6 +103,11 @@ public class PlayerInputManager : MonoBehaviour {
        ManageRumbleEvents();
 
 	}
+    public void stopRumbleEvent()
+    {
+        StopCoroutine(rumbleOverTime(0f));
+        isRumbleActive = false;
+    }
 
     public void startRumbleForTime(float rumbleHeavy, float rumbleWeak,float time)
     {

@@ -32,8 +32,9 @@ namespace GazeGUI
 
         public override void OnGazeEnter()
         {
-            destinationColor = selectedColor; 
+            destinationColor = selectedColor;
 
+            Gamestatemanager.OnRumbleEvent(0.5f, 0.1f, 0.1f);
             Debug.Log("GazeEnter!");
                //FancyAnimation
         }
@@ -46,6 +47,7 @@ namespace GazeGUI
         public override void OnGazeExit()
         {
 
+            //Gamestatemanager.OnRumbleEventStop();
             destinationColor = notSelectedColor;
         }
 
