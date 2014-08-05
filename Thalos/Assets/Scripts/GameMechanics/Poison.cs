@@ -39,9 +39,11 @@ public class Poison : MonoBehaviour {
     void OnCollisionEnter(Collision information)
     {
         Debug.Log("Boom");
+        Gamestatemanager.OnRumbleEvent(2, 2, 1);
         if(information.collider.gameObject.tag != Constants.TAG_PLAYER)
         {
             StartCoroutine(explosion(information.contacts[0].point));
+            
         }
     }
 

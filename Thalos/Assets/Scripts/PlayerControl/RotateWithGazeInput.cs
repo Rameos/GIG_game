@@ -185,6 +185,12 @@ public class RotateWithGazeInput : MonoBehaviour {
                 camScript.gazeInput = 0;
             }
         }
+
+        else
+        {
+            Debug.Log("resetInput:");
+            camScript.gazeInput = 0;
+        }
         
     }
     

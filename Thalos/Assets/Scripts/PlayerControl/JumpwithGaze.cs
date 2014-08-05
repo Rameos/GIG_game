@@ -30,8 +30,9 @@ public class JumpwithGaze : MonoBehaviour {
 
             Ray screenCast = Camera.main.ScreenPointToRay(gazePos);
 
+            LayerMask playermask = LayerMask.NameToLayer("Player");
             RaycastHit hitInfo;
-            if (Physics.Raycast(screenCast, out hitInfo, jumpdistance))
+            if (Physics.Raycast(screenCast, out hitInfo, jumpdistance,playermask))
             {
                 
                 destinationPoint = hitInfo.point;
