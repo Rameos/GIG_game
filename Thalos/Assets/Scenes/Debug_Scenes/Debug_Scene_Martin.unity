@@ -27395,7 +27395,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1335496902}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baa11866e7f856c43a87ef472fdf88c6, type: 3}
   m_Name: 
@@ -46913,13 +46913,10 @@ GameObject:
   - 92: {fileID: 2002459174}
   - 81: {fileID: 2002459173}
   - 114: {fileID: 2002459172}
+  - 114: {fileID: 2002459180}
   - 114: {fileID: 2002459171}
   - 114: {fileID: 2002459178}
-  - 114: {fileID: 2002459182}
-  - 114: {fileID: 2002459181}
   - 114: {fileID: 2002459179}
-  - 114: {fileID: 2002459180}
-  - 114: {fileID: 2002459183}
   m_Layer: 11
   m_Name: Camera
   m_TagString: MainCamera
@@ -47074,7 +47071,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2002459170}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 922c66f2a87d9bb4aa4103569dd80c4d, type: 3}
   m_Name: 
@@ -47155,106 +47152,6 @@ MonoBehaviour:
   position_GazeAim: {fileID: 850260375}
   startPoint_Bullet: {fileID: 1230872554}
   startPoint_Poison: {fileID: 46568559}
---- !u!114 &2002459181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400026, guid: 1b6f365806368e946afb5053967d4bcd,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2002459170}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6e63a78a12b98a41940d2c41e3b068c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position_GazeAim: {fileID: 0}
-  startPoint_Bullet: {fileID: 1230872554}
-  startPoint_Poison: {fileID: 46568559}
---- !u!114 &2002459182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400028, guid: 1b6f365806368e946afb5053967d4bcd,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2002459170}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922c66f2a87d9bb4aa4103569dd80c4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visualisationOfAccuracyWindow: 1
-  gazeCursor: {fileID: 2800000, guid: e976c6d3ebc1e4a85aa7186a3192d8c5, type: 3}
-  fontStyle:
-    m_Name: 
-    m_Normal:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Hover:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Active:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Focused:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnNormal:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnHover:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnActive:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnFocused:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Border:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Margin:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Overflow:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Font: {fileID: 0}
-    m_FontSize: 0
-    m_FontStyle: 0
-    m_Alignment: 0
-    m_WordWrap: 0
-    m_RichText: 1
-    m_TextClipping: 0
-    m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
-    m_StretchWidth: 1
-    m_StretchHeight: 0
---- !u!114 &2002459183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400030, guid: 1b6f365806368e946afb5053967d4bcd,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2002459170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0319fc1ccc276049a030927c4391c41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2005242543
 GameObject:
   m_ObjectHideFlags: 0
