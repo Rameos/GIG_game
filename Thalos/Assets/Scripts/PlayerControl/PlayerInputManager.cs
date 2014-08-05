@@ -88,19 +88,27 @@ public class PlayerInputManager : MonoBehaviour {
 
 	}
 
+    void Update()
+    {
 
+        inputX = Input.GetAxis("Horizontal");
+        inputY = Input.GetAxis("Vertical");
+
+
+        checkIsGrounded();
+
+        move(inputX, inputY);
+
+
+        checkshootInput();
+        ManageRumbleEvents();
+
+        checkButtonInput();
+        checkGazeMenuStatus();
+    }
+    
+    
 	void FixedUpdate () {
-
-       inputX = Input.GetAxis("Horizontal");
-       inputY = Input.GetAxis("Vertical");
-
-
-       checkIsGrounded();
-       checkButtonInput();
-       checkGazeMenuStatus();
-       checkshootInput();
-       move(inputX, inputY);
-       ManageRumbleEvents();
 
 	}
     public void stopRumbleEvent()
@@ -113,7 +121,6 @@ public class PlayerInputManager : MonoBehaviour {
     {
         forceHeavy = rumbleHeavy;
         forceWeak = rumbleWeak;
-        Debug.Log("Fuckyeah start thath Shiat");
         isRumbleActive = true; 
         StartCoroutine(rumbleOverTime(time));
             
@@ -165,7 +172,6 @@ public class PlayerInputManager : MonoBehaviour {
     private void checkIsGrounded()
     {
         float distance = capCollider.height / 2;
-        Debug.Log("Distance: " + distance);
         Ray rayinput = new Ray(centerOfMass.position, -transform.up);
         if (Physics.Raycast(rayinput, distance))
         {
@@ -245,8 +251,6 @@ public class PlayerInputManager : MonoBehaviour {
 
             AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
 
-            Debug.Log("AnimationState:" + currentState.nameHash);
-            Debug.Log("hashOtherID: " + shoot_Walking);
             
             if (currentState.IsName("Shoot_Walk"))
             {

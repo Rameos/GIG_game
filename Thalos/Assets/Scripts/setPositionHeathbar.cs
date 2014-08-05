@@ -9,8 +9,6 @@ public class setPositionHeathbar : MonoBehaviour {
 
         int hp = PlayerModel.Instance().HealthPoints;
         float maxHp = PlayerModel.Instance().MaxHealthPoints*0.1f;
-        Debug.Log("HealthPoints:" + hp);
-
         Vector3 position = transform.position;
 
         float percent = PlayerModel.Instance().HealthPoints * 0.1f;
