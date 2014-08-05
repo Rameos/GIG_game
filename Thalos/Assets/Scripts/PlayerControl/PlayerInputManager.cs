@@ -100,14 +100,16 @@ public class PlayerInputManager : MonoBehaviour {
        checkshootInput();
        move(inputX, inputY);
        ManageRumbleEvents();
+
 	}
 
     public void startRumbleForTime(float rumbleHeavy, float rumbleWeak,float time)
     {
         forceHeavy = rumbleHeavy;
         forceWeak = rumbleWeak;
-
-        StartCoroutine(rumbleOverTime(Time.deltaTime));
+        Debug.Log("Fuckyeah start thath Shiat");
+        isRumbleActive = true; 
+        StartCoroutine(rumbleOverTime(time));
             
     }
 
@@ -298,7 +300,6 @@ public class PlayerInputManager : MonoBehaviour {
         {
             animator.SetBool("Throw", false);
             animator.SetBool("Shoot", false);
-            GamePad.SetVibration(playerIndex, 0, 0);
         }
 
     }
@@ -340,10 +341,10 @@ public class PlayerInputManager : MonoBehaviour {
             circleMenuIsOpen = true;
         }
 
-        else if (Input.GetAxis("ButtonRB") > 0)
-        {
-            GamePad.SetVibration(playerIndex, 0, 1);
-        }
+        //else if (Input.GetAxis("ButtonRB") > 0)
+        //{
+        //    GamePad.SetVibration(playerIndex, 0, 1);
+        //}
 
         else if(circleMenuIsOpen== true && Input.GetAxis("ButtonLB")<=0)
         {
@@ -413,8 +414,10 @@ public class PlayerInputManager : MonoBehaviour {
 
     IEnumerator rumbleOverTime(float time)
     {
-        isRumbleActive = true; 
-        yield return new WaitForSeconds(time);
+        Debug.Log("Rumble!!!");
+        yield return new WaitForSeconds(2);
+        Debug.Log("Rumble OVER!!!");
+        
         isRumbleActive = false; 
     }
 

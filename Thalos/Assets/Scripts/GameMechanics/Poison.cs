@@ -38,6 +38,8 @@ public class Poison : MonoBehaviour {
 
     void OnCollisionEnter(Collision information)
     {
+
+        Gamestatemanager.OnRumbleEvent(1, 1, 1);
         Debug.Log("Boom");
         if(information.collider.gameObject.tag != Constants.TAG_PLAYER)
         {
@@ -48,7 +50,6 @@ public class Poison : MonoBehaviour {
 
     private IEnumerator explosion(Vector3 position)
     {
-        Gamestatemanager.OnRumbleEvent(1, 1, 1);
         yield return new WaitForSeconds(0.1f);
 
         Instantiate(explosionEffect, position, explosionEffect.transform.rotation);
