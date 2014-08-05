@@ -370,13 +370,17 @@ public class PlayerInputManager : MonoBehaviour {
     
     void OnCollisionStay(Collision colInfo)
     {
+       
         try
         {
             Vector3 contactPoint = colInfo.contacts[0].point;
+            Vector3 contactPointNormal = colInfo.contacts[0].normal;
 
             if (isInAir || isJumping)
             {
-                rigidbody.AddForceAtPosition(-rigidbody.velocity, contactPoint);
+                Debug.LogError("ColStay");
+                Debug.DrawRay(contactPoint, contactPointNormal,Color.green);
+                rigidbody.AddForceAtPosition(contactPointNormal * 10, contactPoint);
             }
         }
         catch
