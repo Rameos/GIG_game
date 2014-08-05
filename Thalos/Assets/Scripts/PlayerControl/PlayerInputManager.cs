@@ -70,6 +70,11 @@ public class PlayerInputManager : MonoBehaviour {
     private JumpwithGaze jumpScript;
     private ShotManager_Player shotManager;
 
+    //RumbleAttributes
+    private float forceHeavy =0f;
+    private float forceWeak =0f;
+    private bool isRumbleActive = false;
+
 	void Start () {
         connectController();
         centerOfMass = transform.FindChild("CenterOfMass");
@@ -94,11 +99,15 @@ public class PlayerInputManager : MonoBehaviour {
        checkGazeMenuStatus();
        checkshootInput();
        move(inputX, inputY);
+       ManageRumbleEvents();
 	}
 
     public void startRumbleForTime(float rumbleHeavy, float rumbleWeak,float time)
     {
-        StartCoroutine(rumbleOverTime(Time.deltaTime, 1, 1));
+        forceHeavy = rumbleHeavy;
+        forceWeak = rumbleWeak;
+
+        StartCoroutine(rumbleOverTime(Time.deltaTime));
             
     }
 
@@ -367,6 +376,18 @@ public class PlayerInputManager : MonoBehaviour {
 
     }
 
+    private void ManageRumbleEvents()
+    {
+        if(isRumbleActive)
+        {
+            GamePad.SetVibration(playerIndex, forceHeavy, forceWeak);
+        }
+        else
+        {
+            GamePad.SetVibration(playerIndex, 0, 0);
+            
+        }
+    }
     
     void OnCollisionStay(Collision colInfo)
     {
@@ -390,12 +411,11 @@ public class PlayerInputManager : MonoBehaviour {
         
     }
 
-    IEnumerator rumbleOverTime(float time, float powerHeavy, float powerSoft)
+    IEnumerator rumbleOverTime(float time)
     {
-        GamePad.SetVibration(playerIndex, powerHeavy, powerSoft);
+        isRumbleActive = true; 
         yield return new WaitForSeconds(time);
-
-        GamePad.SetVibration(playerIndex, 0, 0);
+        isRumbleActive = false; 
     }
 
 }
