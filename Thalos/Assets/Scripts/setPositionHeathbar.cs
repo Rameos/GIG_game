@@ -13,6 +13,6 @@ public class setPositionHeathbar : MonoBehaviour {
 
         float percent = PlayerModel.Instance().HealthPoints * 0.1f;
         position.y = percent-maxHp;
-        this.transform.position = position; 
+        this.transform.position =Vector3.Lerp(transform.position,position,0.2f); 
 	}
 }
