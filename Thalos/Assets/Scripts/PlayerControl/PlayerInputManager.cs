@@ -316,6 +316,12 @@ public class PlayerInputManager : MonoBehaviour {
 
     private void checkButtonInput()
     {
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         if (Input.GetAxis("ButtonY") > 0)
         {
             Debug.Log("ButtonY");

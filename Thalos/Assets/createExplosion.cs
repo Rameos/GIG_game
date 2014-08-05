@@ -7,8 +7,10 @@ public class createExplosion : MonoBehaviour {
     private float force;
     
     [SerializeField]
-    private float radius; 
+    private float radius;
 
+    [SerializeField]
+    private float delaySec;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +19,7 @@ public class createExplosion : MonoBehaviour {
 	
     IEnumerator delayExplosion()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(delaySec);
                 Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
 
         foreach(Collider colliderItem in colliders)
