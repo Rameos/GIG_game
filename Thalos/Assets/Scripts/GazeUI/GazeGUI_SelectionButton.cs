@@ -69,7 +69,10 @@ namespace GazeGUI
             }
             else
             {
-                CountText.SetActive(true);
+                if(CountText!=null)
+                {
+                    CountText.SetActive(true);
+                }
             }
 
 
@@ -110,10 +113,6 @@ namespace GazeGUI
             if(isSelectable)
             {
                 destinationColor = selectedColor;
-
-                Gamestatemanager.OnRumbleEvent(0.5f, 0.1f, 0.1f);
-                Debug.Log("GazeEnter!");
-                //FancyAnimation
             }
 
         }
