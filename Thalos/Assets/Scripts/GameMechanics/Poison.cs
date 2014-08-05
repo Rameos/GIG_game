@@ -41,12 +41,14 @@ public class Poison : MonoBehaviour {
         Debug.Log("Boom");
         if(information.collider.gameObject.tag != Constants.TAG_PLAYER)
         {
+            
             StartCoroutine(explosion(information.contacts[0].point));
         }
     }
 
     private IEnumerator explosion(Vector3 position)
     {
+        Gamestatemanager.OnRumbleEvent(1, 1, 1);
         yield return new WaitForSeconds(0.1f);
 
         Instantiate(explosionEffect, position, explosionEffect.transform.rotation);
