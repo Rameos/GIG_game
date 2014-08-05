@@ -9,8 +9,6 @@ public class JumpwithGaze : MonoBehaviour {
     private Vector3 destinationPoint;
     public bool isActive = true;
     
-    public GameObject gazeVisualisation;
-
 	// Use this for initialization
 	void Start () {
 
@@ -38,8 +36,6 @@ public class JumpwithGaze : MonoBehaviour {
 
                 destinationPoint = new Vector3(destinationPoint.x, transform.position.y, destinationPoint.z);
 
-                GameObject obj = Instantiate(gazeVisualisation) as GameObject;
-                obj.transform.position = hitInfo.point;
 
                 return destinationPoint;
 
