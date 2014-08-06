@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour {
 
     void FixedUpdate()
     {
-        this.transform.position += forwardVector.normalized * bulletSpeed;
+        this.rigidbody.velocity = forwardVector.normalized * bulletSpeed;
     }
 
 

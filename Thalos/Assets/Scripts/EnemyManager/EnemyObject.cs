@@ -89,6 +89,7 @@ public class EnemyObject : MonoBehaviour {
 
     void Update()
     {
+        Debug.Log("update Enemy");
         if (isAlive)
         {
             if (globalLastSightingPlayer != previousSighting)
@@ -99,9 +100,10 @@ public class EnemyObject : MonoBehaviour {
 
         Destroyitem();
 
-        //UpdateAnimation When Status Changed;
 
+        
     }
+
 
     void OnTriggerStay(Collider other)
     {
@@ -118,8 +120,10 @@ public class EnemyObject : MonoBehaviour {
             {
                 RaycastHit hit = checkPlayerIsInSight(direction);
                 
-                if (angle < fieldOfViewAngle * 0.4f)
-                    ShotPlayer(damageInformation);
+                //Behaviour 
+                updateBehaviour(angle);
+
+
             }
 
 
@@ -144,6 +148,30 @@ public class EnemyObject : MonoBehaviour {
         return hit;
     }
 
+    /// <summary>
+    /// activate shooting, when Player stands at the 0.5f radius of the Sphere Collider and is visible
+    /// </summary>
+    /// <param name="angle"></param>
+    void updateBehaviour(float angle)
+    {
+        float distance = Vector3.Distance(transform.position, player.transform.position);
+        float distanceNaveMesh = gameObject.GetComponent<NavMeshAgent>().remainingDistance;
+         NavMeshPath navPath = new NavMeshPath();
+         gameObject.GetComponent<NavMeshAgent>().CalculatePath(player.transform.position, navPath);
+       // Debug.Log("DistanceNaveMesh:" + distanceNaveMesh);
+        
+        if (angle < fieldOfViewAngle * 0.4f && distance <= col.radius * 0.45f)
+        {
+            ShotPlayer(damageInformation);
+            gameObject.GetComponent<NavMeshAgent>().destination = transform.position;
+        }
+        else
+        {
+            gameObject.GetComponent<NavMeshAgent>().destination = player.transform.position;
+        }
+
+    }
+
     void Destroyitem()
     {
         if(!isAlive)
@@ -166,7 +194,7 @@ public class EnemyObject : MonoBehaviour {
         destinationPoint.y = 0;
 
         Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
-        transform.rotation = lookAtRotation;
+        transform.rotation = Quaternion.Lerp(transform.rotation,lookAtRotation,0.2f);
     }
 
     void ShotPlayer(Damage debugdamage)
@@ -174,6 +202,7 @@ public class EnemyObject : MonoBehaviour {
         if (isShotable&&isAlive)
         {
             StartCoroutine(ShotPlayerCoolDown(debugdamage));
+
         }
     }
 
