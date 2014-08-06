@@ -5658,7 +5658,7 @@ GameObject:
   - 4: {fileID: 310052680}
   m_Layer: 0
   m_Name: hips
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8964,7 +8964,7 @@ GameObject:
   - 108: {fileID: 415269251}
   m_Layer: 0
   m_Name: Point light
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31070,7 +31070,7 @@ GameObject:
   - 4: {fileID: 1436987019}
   m_Layer: 0
   m_Name: BulletSpawnPoint
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: -771928, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32543,7 +32543,7 @@ GameObject:
   - 4: {fileID: 1528334050}
   m_Layer: 0
   m_Name: metarig
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36034,7 +36034,7 @@ GameObject:
   - 136: {fileID: 1598166346}
   m_Layer: 0
   m_Name: Guardian
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37479,7 +37479,7 @@ GameObject:
   - 108: {fileID: 1624238355}
   m_Layer: 0
   m_Name: Point light
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38054,7 +38054,7 @@ GameObject:
   - 23: {fileID: 1657316033}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

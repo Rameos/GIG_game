@@ -80,7 +80,7 @@ public class EnemyObject : MonoBehaviour {
                 break;
 
             case enemyType.roboter_LVL01:
-                enemyManager = new Robot(300, 10, 20);
+                enemyManager = new Robot(30, 1, 5);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Standard);
                 break;
         }

@@ -23,6 +23,10 @@ public class Bullet : MonoBehaviour {
         this.bulletSpeed = Constants.BULLETSPEED;
         transform.rotation = Quaternion.LookRotation(this.forwardVector);
         StartCoroutine(removeAfterLiveTime());
+
+        Debug.Log("DamageInfo:" + damageInformation.typeDamage);
+        Debug.Log("DamageInfo: damage" + damageInformation.damage);
+
     }
 
     void FixedUpdate()
@@ -40,14 +44,14 @@ public class Bullet : MonoBehaviour {
 
         GameObject.Instantiate(explosion,col.contacts[0].point,explosion.transform.rotation);
 
-
+        Debug.Log("Parent:" + parentType);
         switch (parentType)
         {
             case Constants.ID_PLAYER:
 
                 if (col.gameObject.tag == Constants.TAG_ENEMY)
                 {
-                    col.gameObject.GetComponent<EnemyObject>().ApplyDamage(damageInformation);
+                    col.gameObject.transform.parent.gameObject.GetComponent<EnemyObject>().ApplyDamage(damageInformation);
                     Debug.Log("Enemy gets Damage!");
                 }
 
