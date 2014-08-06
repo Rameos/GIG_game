@@ -89,7 +89,6 @@ public class EnemyObject : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log("update Enemy");
         if (isAlive)
         {
             if (globalLastSightingPlayer != previousSighting)

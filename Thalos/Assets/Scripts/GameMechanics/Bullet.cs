@@ -27,13 +27,12 @@ public class Bullet : MonoBehaviour {
 
     void FixedUpdate()
     {
-        this.rigidbody.velocity = forwardVector.normalized * bulletSpeed;
+        this.transform.position += forwardVector.normalized * bulletSpeed;
     }
 
 
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log("Coli: " +col.gameObject);
         if (col.gameObject.rigidbody)
         {
             col.gameObject.rigidbody.AddForce(col.contacts[0].normal * -4f);
