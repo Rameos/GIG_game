@@ -30295,10 +30295,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .254044354
-  m_Height: 1.25
+  m_Radius: .25
+  m_Height: 1.20000005
   m_Direction: 1
-  m_Center: {x: 0, y: .629999995, z: 0}
+  m_Center: {x: 0, y: .600000024, z: 0}
 --- !u!54 &656537220
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30306,7 +30306,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 656537216}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
