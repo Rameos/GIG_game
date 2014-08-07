@@ -60,7 +60,6 @@ namespace Controller
 
         public void ThrowPoison()
         {
-
                 PlayerModel.DamageTypes damage = PlayerModel.Instance().DamageType_Poision;
                 GameObject instance;
                 PlayerModel.PhialType type = PlayerModel.Instance().convertDamageTypeToPhialType();
@@ -72,13 +71,13 @@ namespace Controller
                     {
                         case PlayerModel.DamageTypes.Fire:
                             instance = GameObject.Instantiate(PoisonFire, instanciatePointPoison.position, instanciatePointPoison.localRotation) as GameObject;
-                            instance.GetComponent<Poison>().Init(direction, new Damage(Constants.damageIcePoison, PlayerModel.DamageTypes.Fire), Constants.ID_PLAYER);
+                            instance.GetComponent<Poison>().Init(direction, new Damage(Constants.damageIcePoison, PlayerModel.DamageTypes.Fire), Constants.ID_PLAYER, gazeInputManagerShooting.destinationPoint_Poison);
 
                             break;
 
                         case PlayerModel.DamageTypes.Ice:
                             instance = GameObject.Instantiate(PoisonIce, instanciatePointPoison.position, instanciatePointPoison.localRotation) as GameObject;
-                            instance.GetComponent<Poison>().Init(direction, new Damage(Constants.damageIceBolt, PlayerModel.DamageTypes.Ice), Constants.ID_PLAYER);
+                            instance.GetComponent<Poison>().Init(direction, new Damage(Constants.damageIceBolt, PlayerModel.DamageTypes.Ice), Constants.ID_PLAYER, gazeInputManagerShooting.destinationPoint_Poison);
                             break;
 
                         case PlayerModel.DamageTypes.Standard:

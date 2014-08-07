@@ -77,6 +77,9 @@ public class PlayerInputManager : MonoBehaviour {
 
     private Vector3 destinationPoint; 
 
+    //Bullshit
+    private bool isGlitchJumpingOn = false;
+
 	void Start () {
         connectController();
         centerOfMass = transform.FindChild("CenterOfMass");
@@ -107,6 +110,16 @@ public class PlayerInputManager : MonoBehaviour {
 
         checkButtonInput();
         checkGazeMenuStatus();
+        
+        // !!!bullshitTime!!!
+        if(destinationPoint!= transform.position && isGlitchJumpingOn)
+        {
+            transform.position = Vector3.Lerp(transform.position, destinationPoint, 0.2f);
+        }
+        else 
+        {
+            isGlitchJumpingOn = false;
+        }
     }
 
     public void stopRumbleEvent() 
@@ -214,10 +227,15 @@ public class PlayerInputManager : MonoBehaviour {
                 destinationPoint.y = 0;
 
                 Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
-                transform.rotation = lookAtRotation;//Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime);
-
-                rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
-                rigidbody.velocity += transform.forward * jumpForcePower;
+                transform.rotation = lookAtRotation;
+                //Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime);
+                
+                //And heeeere is the biggest bullshit
+                isGlitchJumpingOn = true;
+                
+                // Old and Good Stuff
+                //rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
+                //rigidbody.velocity += transform.forward * jumpForcePower;
 
                 //if (Mathf.Abs(inputX) > thresholdStics || Mathf.Abs(inputY) > thresholdStics)
 

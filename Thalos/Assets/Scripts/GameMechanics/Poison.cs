@@ -10,6 +10,8 @@ public class Poison : MonoBehaviour {
     private float throwDistance = 5f;
     private Vector3 directionPoison;
 
+    private Vector3 destinationPoint;
+
     public GameObject explosionEffect;
 
     public void Init(Vector3 forceVector, Damage poisonInformation, int parentType)
@@ -18,6 +20,15 @@ public class Poison : MonoBehaviour {
         this.parentType = parentType;
         directionPoison = forceVector;
     }
+
+    public void Init(Vector3 forceVector, Damage poisonInformation, int parentType, Vector3 destinationPoint)
+    {
+        this.destinationPoint = destinationPoint;
+        this.damageInformation = poisonInformation;
+        this.parentType = parentType;
+        directionPoison = forceVector;
+    }
+
 	// Use this for initialization
 	void Start () {
 
@@ -33,7 +44,8 @@ public class Poison : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+        this.transform.position = Vector3.Lerp(transform.position, destinationPoint,0.2f);
 	}
 
     void OnCollisionEnter(Collision information)

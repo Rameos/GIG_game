@@ -15,6 +15,9 @@ public class ShotAndThrowWithGaze : MonoBehaviour {
     public Vector3 directionShoot { private set; get; }
     public Vector3 directionPoison { private set; get; }
 
+    public Vector3 destinationPoint_Shoot { private set; get; }
+    public Vector3 destinationPoint_Poison { private set; get; }
+
     void Update()
     {
         int playerLayerMask = LayerMask.NameToLayer("Player");
@@ -31,6 +34,9 @@ public class ShotAndThrowWithGaze : MonoBehaviour {
         if (hitInformation.Equals(null) == false)
         {
             position_GazeAim.transform.position = hitInformation.point;
+
+            destinationPoint_Shoot = position_GazeAim.transform.position;
+            destinationPoint_Poison = position_GazeAim.transform.position;
         
         //update to better Stuff
         }
@@ -39,6 +45,7 @@ public class ShotAndThrowWithGaze : MonoBehaviour {
 
         directionPoison = (hitInformation.point - startPoint_Poison.position).normalized;
         directionShoot = (hitInformation.point - startPoint_Bullet.position).normalized;
+        
 
         Debug.DrawRay(startPoint_Bullet.position, directionShoot, Color.red);
         Debug.DrawRay(startPoint_Poison.position, directionShoot, Color.red);
