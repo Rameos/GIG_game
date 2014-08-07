@@ -78,6 +78,7 @@ public class PlayerInputManager : MonoBehaviour {
     private Vector3 destinationPoint; 
 
     //Bullshit
+    [SerializeField]
     private bool isGlitchJumpingOn = false;
 
 	void Start () {
@@ -112,9 +113,13 @@ public class PlayerInputManager : MonoBehaviour {
         checkGazeMenuStatus();
         
         // !!!bullshitTime!!!
-        if(destinationPoint!= transform.position && isGlitchJumpingOn)
+        float distance = Vector3.Distance(transform.position, destinationPoint);
+        if( distance >0.15f && isGlitchJumpingOn)
         {
-            transform.position = Vector3.Lerp(transform.position, destinationPoint, 0.2f);
+            Debug.Log("To DestinationPoint");
+            
+            transform.position = Vector3.Lerp(transform.position, destinationPoint, 0.05f);
+            
         }
         else 
         {
@@ -207,14 +212,12 @@ public class PlayerInputManager : MonoBehaviour {
 
     private void createJumpCurve()
     {
-        if (isGrounded)
-        {
             if (!jumpScript.isActive)
             {
-                Debug.Log("JumpScript Not Active");
-                rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
-                if (Mathf.Abs(inputX) > thresholdStics || Mathf.Abs(inputY) > thresholdStics)
-                    rigidbody.velocity += transform.forward * jumpForcePower;
+                //Debug.Log("JumpScript Not Active");
+                //rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
+                //if (Mathf.Abs(inputX) > thresholdStics || Mathf.Abs(inputY) > thresholdStics)
+                //    rigidbody.velocity += transform.forward * jumpForcePower;
             }
 
             else
@@ -222,34 +225,18 @@ public class PlayerInputManager : MonoBehaviour {
                 destinationPoint = jumpScript.getDestinationpoint();
                 Debug.DrawRay(transform.position, destinationPoint, Color.magenta, 2f);
 
-                destinationPoint = destinationPoint - transform.position;
+                Vector3 local_destinationPoint = destinationPoint - transform.position;
+                //destinationPoint.y = 0;
 
-                destinationPoint.y = 0;
 
-                Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
-                transform.rotation = lookAtRotation;
-                //Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime);
+                //Quaternion lookAtRotation = Quaternion.LookRotation(local_destinationPoint);
+                //transform.rotation = lookAtRotation;
                 
                 //And heeeere is the biggest bullshit
                 isGlitchJumpingOn = true;
-                
-                // Old and Good Stuff
-                //rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
-                //rigidbody.velocity += transform.forward * jumpForcePower;
-
-                //if (Mathf.Abs(inputX) > thresholdStics || Mathf.Abs(inputY) > thresholdStics)
-
-
+                rigidbody.velocity = new Vector3(0, jumpForcePower*2, 0);
             }
-
-            //rigidbody.velocity.y = 20;
-            //rigidbody.AddForce(transform.up * jumpSpeed, ForceMode.Force);
-        }
-        else
-        {
-            Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
-            transform.rotation = lookAtRotation;
-        }
+        
     }
 
     private void move(float inputX, float inputY)
