@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.3595142, y: 8.9851508e-16, z: -40.4655228}
+  m_LocalPosition: {x: -29.1689186, y: 1.11022302e-14, z: -33.3037186}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -143,7 +143,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: .300000012
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -270,7 +270,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .170000002
+      scalar: .600000024
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -387,7 +387,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    cnt0: 35
+    cnt0: 150
     cnt1: 30
     cnt2: 30
     cnt3: 30
@@ -432,7 +432,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 1
   RotationModule:
-    enabled: 0
+    enabled: 1
     curve:
       scalar: 6.28318501
       maxCurve:

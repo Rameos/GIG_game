@@ -37,6 +37,8 @@ public class Bullet : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
+        Debug.Log("ColEnter!!!!");
+
         if (col.gameObject.rigidbody)
         {
             col.gameObject.rigidbody.AddForce(col.contacts[0].normal * -4f);
@@ -71,6 +73,7 @@ public class Bullet : MonoBehaviour {
 
         Destroy(gameObject);
     }
+
 
     IEnumerator removeAfterLiveTime()
     {

@@ -7,9 +7,18 @@ using Controller;
 public class EnemyObject : MonoBehaviour {
 
     //Sight
+    [SerializeField]
+    private float coolDown = 2f;
+    [SerializeField]
+    private float shootfrequence = 2f;
+    [SerializeField]
+    private float isAlarmed_Distance = 20f;
+    [SerializeField]
+    private GameObject explosion; 
+
 
     private float fieldOfViewAngle = 110f;
-    private bool playerIsInSight;
+    private bool playerIsInSight = false;
     private Vector3 personalLastSightingPlayer;
 
     private NavMeshAgent nav;
@@ -29,14 +38,7 @@ public class EnemyObject : MonoBehaviour {
 
     private bool isShotable = true;
     private bool isAlive = true;
-
-    [SerializeField]
-    private float coolDown = 2f;
-    [SerializeField]
-    private float shootfrequence = 2f;
-    
-    [SerializeField]
-    private float isAlarmed_Distance = 20f;
+    private Animator animator;
     
     public enum enemyType
     {
@@ -53,7 +55,7 @@ public class EnemyObject : MonoBehaviour {
         anim = GetComponent<Animator>();
         globalLastSightingPlayer = Vector3.zero;
         player = GameObject.FindGameObjectWithTag("Player");
-
+        animator = gameObject.GetComponentInChildren<Animator>();
 
         personalLastSightingPlayer = Vector3.zero;
         previousSighting = Vector3.zero; 
@@ -95,14 +97,39 @@ public class EnemyObject : MonoBehaviour {
             {
                 personalLastSightingPlayer = globalLastSightingPlayer;
             }
+        
+        
         }
 
         Destroyitem();
 
-
+        updateAnimation();
         
     }
 
+    private void updateAnimation()
+    {
+        float distance = Vector3.Distance(gameObject.GetComponentInChildren<NavMeshAgent>().destination, transform.position);
+        
+        if (distance > 0.1f)
+        {
+            try
+            {
+                animator.SetBool("Walk", true);
+                animator.SetBool("Shoot", false);
+       
+            }
+            catch
+            {
+
+            }
+             }
+        else
+        {
+            animator.SetBool("Walk", false);
+
+        }
+    }
 
     void OnTriggerStay(Collider other)
     {
@@ -115,7 +142,7 @@ public class EnemyObject : MonoBehaviour {
 
             float angle = Vector3.Angle(direction, transform.forward);
 
-            if(angle < fieldOfViewAngle * 0.5f)
+            if(angle < fieldOfViewAngle * 0.75f)
             {
                 RaycastHit hit = checkPlayerIsInSight(direction);
                 
@@ -124,6 +151,7 @@ public class EnemyObject : MonoBehaviour {
 
 
             }
+
 
 
 
@@ -158,15 +186,22 @@ public class EnemyObject : MonoBehaviour {
          NavMeshPath navPath = new NavMeshPath();
          gameObject.GetComponent<NavMeshAgent>().CalculatePath(player.transform.position, navPath);
        // Debug.Log("DistanceNaveMesh:" + distanceNaveMesh);
-        
-        if (angle < fieldOfViewAngle * 0.4f && distance <= col.radius * 0.45f)
+
+
+         gameObject.GetComponent<NavMeshAgent>().destination = transform.position;
+
+        if (angle < fieldOfViewAngle * 0.65f && distance <= col.radius * 0.75f)
         {
             ShotPlayer(damageInformation);
-            gameObject.GetComponent<NavMeshAgent>().destination = transform.position;
+            animator.SetBool("Shoot", true);
+            playerIsInSight = true;
+
         }
         else
         {
+
             gameObject.GetComponent<NavMeshAgent>().destination = player.transform.position;
+            playerIsInSight = false;
         }
 
     }
@@ -175,6 +210,8 @@ public class EnemyObject : MonoBehaviour {
     {
         if(!isAlive)
         {
+            Gamestatemanager.OnRumbleEvent(2, 1, 1);
+            Instantiate(explosion, transform.position, explosion.transform.rotation);
             Destroy(this.gameObject);
         }
     }
@@ -200,15 +237,13 @@ public class EnemyObject : MonoBehaviour {
     {
         if (isShotable&&isAlive)
         {
+            animator.SetBool("Shoot", true);
             StartCoroutine(ShotPlayerCoolDown(debugdamage));
 
         }
+
     }
 
-    private bool isPlayerVisible()
-    {
-        return false;
-    }
 
     public void ApplyDamage(Damage damage)
     {
