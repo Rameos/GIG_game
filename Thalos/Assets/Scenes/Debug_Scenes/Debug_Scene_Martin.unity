@@ -30306,12 +30306,12 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 656537216}
   serializedVersion: 2
-  m_Mass: 50
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &656537221
@@ -30408,7 +30408,7 @@ MonoBehaviour:
   speedFactor: 3
   thresholdTriggers: .100000001
   thresholdStics: .100000001
-  jumpForcePower: 3.5
+  jumpForcePower: 5
   isJumping: 0
   isInAir: 0
   isGrounded: 1
@@ -34065,8 +34065,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 747096940}
   m_LocalRotation: {x: -.0666415468, y: -.70395869, z: -.0666414052, w: .703960299}
-  m_LocalPosition: {x: -10.1957121, y: -.909677148, z: -45.3139763}
-  m_LocalScale: {x: 2.38680029, y: 2.60000014, z: 2.60000014}
+  m_LocalPosition: {x: -10.1957102, y: -.909677625, z: -45.3272324}
+  m_LocalScale: {x: 2.62548041, y: 2.60000014, z: 2.60000014}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 405
@@ -73866,8 +73866,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400644, guid: 1b6f365806368e946afb5053967d4bcd, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1624677608}
-  m_LocalRotation: {x: 0, y: 4.65764032e-07, z: 0, w: 1}
-  m_LocalPosition: {x: -8.58912754, y: -.00810492039, z: -39.0114975}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 1.34519109e-06}
+  m_LocalPosition: {x: -11.6273861, y: -.00810492039, z: -36.1761818}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 656537217}
@@ -94692,16 +94692,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invertY: .75
   parentRig: {fileID: 0}
-  distanceAway: 1
-  distanceAwayMultipler: 1.5
-  distanceUp: 0
+  distanceAway: .75
+  distanceAwayMultipler: 2
+  distanceUp: 1
   distanceUpMultiplier: 5
   follow: {fileID: 656537216}
   followXform: {fileID: 656537217}
   widescreen: .200000003
-  targetingTime: .5
+  targetingTime: .75
   firstPersonLookSpeed: 3
-  firstPersonXAxisClamp: {x: -70, y: 90}
+  firstPersonXAxisClamp: {x: -90, y: 90}
   fPSRotationDegreePerSecond: 120
   firstPersonThreshold: .5
   freeThreshold: -.100000001
@@ -94723,11 +94723,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: .100000001
-  rotationFactor: 1
+  rotationFactor: .25
   testTexture_Right: {fileID: 2800000, guid: 3b980d6083b05964286f0e122400b484, type: 3}
   testTexture_Left: {fileID: 2800000, guid: 4e3a692339945b646bd1ac1a7b38b95d, type: 3}
   noGazeInput: {fileID: 2800000, guid: a947f944bff444a48951bd93097af927, type: 3}
-  sizeWidthAOI: .400000006
+  sizeWidthAOI: .449999988
   player: {fileID: 0}
   camScript: {fileID: 2002459171}
   actualStateGazeAction: 0
