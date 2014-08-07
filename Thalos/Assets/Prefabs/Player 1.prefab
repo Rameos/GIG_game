@@ -11940,7 +11940,7 @@ Rigidbody:
   m_GameObject: {fileID: 100240}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -12077,7 +12077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceMax: .00999999978
   animator: {fileID: 0}
-  speedFactor: 3
+  speedFactor: 5
   thresholdTriggers: .100000001
   thresholdStics: .100000001
   jumpForcePower: 5

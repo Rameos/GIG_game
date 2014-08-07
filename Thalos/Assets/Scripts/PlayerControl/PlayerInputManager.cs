@@ -338,6 +338,8 @@ public class PlayerInputManager : MonoBehaviour {
 
         else if (Input.GetAxis("ButtonX") > 0)
         {
+
+
             Debug.Log("ButtonX");
         }
 
@@ -358,11 +360,11 @@ public class PlayerInputManager : MonoBehaviour {
     private void checkGazeMenuStatus()
     {
 
-        if (Input.GetAxis("ButtonLB") > 0)
+        if (Input.GetAxis("ButtonLB") > 0 || Input.GetAxis("ButtonX") > 0)
         {
 
             Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
-            Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU,true);
+            Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU, true);
             circleMenuIsOpen = true;
         }
 
@@ -371,7 +373,7 @@ public class PlayerInputManager : MonoBehaviour {
         //    GamePad.SetVibration(playerIndex, 0, 1);
         //}
 
-        else if(circleMenuIsOpen== true && Input.GetAxis("ButtonLB")<=0)
+        else if (circleMenuIsOpen == true && Input.GetAxis("ButtonLB") <= 0 || Input.GetAxis("ButtonX") <= 0)
         {
 
             Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(false);

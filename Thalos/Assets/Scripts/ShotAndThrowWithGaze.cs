@@ -31,14 +31,13 @@ public class ShotAndThrowWithGaze : MonoBehaviour {
         RaycastHit hitInformation;
         Physics.Raycast(ray, out hitInformation, 1000f, playerLayerMask);
 
+
         if (hitInformation.Equals(null) == false)
         {
             position_GazeAim.transform.position = hitInformation.point;
 
             destinationPoint_Shoot = position_GazeAim.transform.position;
             destinationPoint_Poison = position_GazeAim.transform.position;
-        
-        //update to better Stuff
         }
         
         //Debug.DrawLine(position_GazeAim.transform.position, GameObject.FindGameObjectWithTag("Player").transform.position,Color.red);
