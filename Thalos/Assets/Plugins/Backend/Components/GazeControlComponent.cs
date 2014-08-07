@@ -20,6 +20,9 @@ namespace iViewX
         private MonoBehaviourWithGazeComponent oldSelection;
 
 
+        [SerializeField]
+        private Texture2D noGazeInput;
+
         private static GazeControlComponent instance;
 
         public static GazeControlComponent Instance
@@ -142,6 +145,25 @@ namespace iViewX
         void Update()
         {
 
+
+            if (!gazeModel.isEyeTrackerRunning)
+            {
+
+                gazeModel.isEyeDetected = false;
+            }
+            else
+            {
+                Vector3 gazeInput = gazeModel.posGazeLeft+gazeModel.posGazeRight;
+                if (gazeInput == Vector3.zero)
+                {
+                    gazeModel.isEyeDetected = false;
+                }
+                else
+                {
+                    gazeModel.isEyeDetected = true;
+                }
+            }
+
 #if UNITY_EDITOR || UNITY_STANDALONE_WIN
             if (gazeModel.isEyeTrackerRunning)
             {
@@ -160,7 +182,17 @@ namespace iViewX
 #endif
         }
 
+        void OnGUI()
+        {
 
+            if (!gazeModel.isEyeDetected)
+            {
+                GUI.DrawTexture(new Rect(Screen.width * 0.5f - 64, 50, 128, 128), noGazeInput);
+            }
+
+        }
+        
+        
         /// <summary>
         /// Mono Behaviour OnApplicationQuit Function:
         /// Stops the EyeTrackingController and Joins the Thread

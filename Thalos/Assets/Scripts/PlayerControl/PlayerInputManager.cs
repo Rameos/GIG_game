@@ -79,6 +79,7 @@ public class PlayerInputManager : MonoBehaviour {
 
 
 	void Start () {
+
         connectController();
         centerOfMass = transform.FindChild("CenterOfMass");
         animator = GetComponent<Animator>();
@@ -99,15 +100,16 @@ public class PlayerInputManager : MonoBehaviour {
 
 
         checkIsGrounded();
+        ManageRumbleEvents();
 
         move(inputX, inputY);
 
-
-        checkshootInput();
-        ManageRumbleEvents();
-
-        checkButtonInput();
-        checkGazeMenuStatus();
+        if(gazeModel.isEyeDetected)
+        {
+            checkshootInput();        
+            checkButtonInput();
+            checkGazeMenuStatus();
+        }
         
     }
 
@@ -194,6 +196,12 @@ public class PlayerInputManager : MonoBehaviour {
         animator.SetTrigger("Jump");
     }
 
+    public void turnToPosition(Vector3 destinationPosition)
+    {
+        Quaternion lookAtRotation = Quaternion.LookRotation(destinationPosition);
+        transform.rotation = lookAtRotation;
+    }
+
     private void createJumpCurve()
     {
         if (isGrounded)
@@ -212,27 +220,18 @@ public class PlayerInputManager : MonoBehaviour {
                 Debug.DrawRay(transform.position, destinationPoint, Color.magenta, 2f);
 
                 destinationPoint = destinationPoint - transform.position;
-
                 destinationPoint.y = 0;
 
-                Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
-                transform.rotation = lookAtRotation;//Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime);
+                turnToPosition(destinationPoint);
 
                 rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
                 rigidbody.velocity += transform.forward * jumpForcePower;
-
-                //if (Mathf.Abs(inputX) > thresholdStics || Mathf.Abs(inputY) > thresholdStics)
-
-
             }
 
-            //rigidbody.velocity.y = 20;
-            //rigidbody.AddForce(transform.up * jumpSpeed, ForceMode.Force);
         }
         else
         {
-            Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
-            transform.rotation = lookAtRotation;
+            turnToPosition(destinationPoint);
         }
         
     }

@@ -45,10 +45,6 @@ public class RotateWithGazeInput : MonoBehaviour {
             Mathf.Round( rotationFactor * 100 / 100);
 
 
-        if (gazeModel.isEyeDetected)
-        {
-            GUI.DrawTexture(new Rect(Screen.width * 0.5f - 64, 50, 128, 128), noGazeInput);
-        }
         if (isVisualisationActive)
         {
             GUI.DrawTexture(leftAOI.volume, testTexture_Right);
@@ -75,23 +71,7 @@ public class RotateWithGazeInput : MonoBehaviour {
 
     private bool checkInput()
     {
-        if(!gazeModel.isEyeTrackerRunning)
-        {
-
-            IsEyeDetected = false; 
-        }
-        else
-        {
-            Vector3 gazeInput = gazeModel.posGazeLeft;
-            if (gazeInput == Vector3.zero)
-            {
-                IsEyeDetected = false; 
-            }
-            else
-            {
-                IsEyeDetected = true; 
-            }
-        }
+        
 
         if (Input.GetAxis("Horizontal") > threshold || Input.GetAxis("Vertical") > threshold || isAlwaysEnable)
         {
