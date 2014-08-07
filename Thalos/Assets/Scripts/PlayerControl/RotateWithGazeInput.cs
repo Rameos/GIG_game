@@ -26,7 +26,10 @@ public class RotateWithGazeInput : MonoBehaviour {
     public bool isActive = false;
     
     [SerializeField]
-    private bool isVisualisationActive = false; 
+    private bool isVisualisationActive = false;
+
+    [SerializeField]
+    private bool isAlwaysEnable = true;
     public enum gazeActionMenu
     {
         onlyCam, 
@@ -72,7 +75,8 @@ public class RotateWithGazeInput : MonoBehaviour {
 
     private bool checkInput()
     {
-        if (Input.GetAxis("Horizontal") > threshold || Input.GetAxis("Vertical") > threshold)
+
+        if (Input.GetAxis("Horizontal") > threshold || Input.GetAxis("Vertical") > threshold || isAlwaysEnable)
         {
             return true;
         }

@@ -18,7 +18,7 @@ public class ShotAndThrowWithGaze : MonoBehaviour {
     void Update()
     {
         int playerLayerMask = LayerMask.NameToLayer("Player");
-        //Invert GazeY for Unity
+       
         Vector3 gazePosition = (gazeModel.posGazeLeft+gazeModel.posGazeRight)*0.5f;
         gazePosition.y = Screen.height - gazePosition.y;
 
@@ -31,6 +31,8 @@ public class ShotAndThrowWithGaze : MonoBehaviour {
         if (hitInformation.Equals(null) == false)
         {
             position_GazeAim.transform.position = hitInformation.point;
+        
+        //update to better Stuff
         }
         
         //Debug.DrawLine(position_GazeAim.transform.position, GameObject.FindGameObjectWithTag("Player").transform.position,Color.red);

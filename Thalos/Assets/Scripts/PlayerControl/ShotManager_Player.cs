@@ -28,6 +28,7 @@ namespace Controller
 
         [SerializeField]
         private bool isEndlessMunition = false;
+        
         public void ShootBullet()
         {
 
@@ -93,7 +94,6 @@ namespace Controller
                 }
 
         }
-
 
     }
 }

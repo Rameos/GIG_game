@@ -75,6 +75,8 @@ public class PlayerInputManager : MonoBehaviour {
     private float forceWeak =0f;
     private bool isRumbleActive = false;
 
+    private Vector3 destinationPoint; 
+
 	void Start () {
         connectController();
         centerOfMass = transform.FindChild("CenterOfMass");
@@ -88,7 +90,7 @@ public class PlayerInputManager : MonoBehaviour {
 
 	}
 
-    void Update()
+    void Update() 
     {
 
         inputX = Input.GetAxis("Horizontal");
@@ -106,18 +108,14 @@ public class PlayerInputManager : MonoBehaviour {
         checkButtonInput();
         checkGazeMenuStatus();
     }
-    
-    
-	void FixedUpdate () {
 
-	}
-    public void stopRumbleEvent()
+    public void stopRumbleEvent() 
     {
         StopCoroutine(rumbleOverTime(0f));
         isRumbleActive = false;
     }
 
-    public void startRumbleForTime(float rumbleHeavy, float rumbleWeak,float time)
+    public void startRumbleForTime(float rumbleHeavy, float rumbleWeak,float time) 
     {
         forceHeavy = rumbleHeavy;
         forceWeak = rumbleWeak;
@@ -173,6 +171,7 @@ public class PlayerInputManager : MonoBehaviour {
     {
         float distance = capCollider.height / 2;
         Ray rayinput = new Ray(centerOfMass.position, -transform.up);
+
         if (Physics.Raycast(rayinput, distance))
         {
             isGrounded = true;
@@ -207,8 +206,7 @@ public class PlayerInputManager : MonoBehaviour {
 
             else
             {
-
-                Vector3 destinationPoint = jumpScript.getDestinationpoint();
+                destinationPoint = jumpScript.getDestinationpoint();
                 Debug.DrawRay(transform.position, destinationPoint, Color.magenta, 2f);
 
                 destinationPoint = destinationPoint - transform.position;
@@ -228,6 +226,11 @@ public class PlayerInputManager : MonoBehaviour {
 
             //rigidbody.velocity.y = 20;
             //rigidbody.AddForce(transform.up * jumpSpeed, ForceMode.Force);
+        }
+        else
+        {
+            Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
+            transform.rotation = lookAtRotation;
         }
     }
 
@@ -255,7 +258,7 @@ public class PlayerInputManager : MonoBehaviour {
             if (currentState.IsName("Shoot_Walk"))
             {
                 Debug.Log("SHOT AND RUN!");
-                speedOut = 0.5f;
+                //speedOut = 0.5f;
             }
 
             if (isGrounded)
@@ -298,12 +301,15 @@ public class PlayerInputManager : MonoBehaviour {
         else if (Input.GetAxis("Triggers") > thresholdTriggers)
         {
             //shotManager.Shot(); 
-
+            if(isInAir||isJumping)
+            {
+                Debug.Log("OH MY GAWD IM  A FUCKING BIRD!!! LETS SHOOT SOME STUPID STUFF");
+                //this.rigidbody.isKinematic = true;
+                //this.rigidbody.useGravity = false;
+            }
             
             animator.SetBool("Shoot",true);
             Debug.Log("Shoot");
-
-           // GamePad.SetVibration(playerIndex, Input.GetAxis("Triggers"), 0);
         }
 
         else

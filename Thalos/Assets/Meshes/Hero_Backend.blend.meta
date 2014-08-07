@@ -316,6 +316,10 @@ ModelImporter:
     4300004: Hero_Body
     4300006: Hero_Coat_Bottom
     7400000: Default Take
+    7400002: Idle
+    7400004: Jump_FromIdle
+    7400006: Shoot
+    7400008: Throw
     9500000: //RootNode
     13700000: Hero_Body
     13700002: Hero_Coat_Bottom

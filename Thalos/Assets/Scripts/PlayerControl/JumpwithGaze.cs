@@ -15,9 +15,6 @@ public class JumpwithGaze : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag(Constants.TAG_PLAYER);
 	}
 	
-
-
-
     public Vector3 getDestinationpoint()
     {
         if (isActive)
@@ -29,16 +26,13 @@ public class JumpwithGaze : MonoBehaviour {
             Ray screenCast = Camera.main.ScreenPointToRay(gazePos);
             LayerMask player = LayerMask.NameToLayer("Player");
             RaycastHit hitInfo;
+            
             if (Physics.Raycast(screenCast, out hitInfo, jumpdistance,player))
             {
-                
                 destinationPoint = hitInfo.point;
-
                 destinationPoint = new Vector3(destinationPoint.x, transform.position.y, destinationPoint.z);
 
-
                 return destinationPoint;
-
             }
         }
 

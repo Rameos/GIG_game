@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ GameObject:
   - 198: {fileID: 19800000}
   - 199: {fileID: 19900000}
   - 54: {fileID: 5400000}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Bullet_Ice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - 198: {fileID: 19800002}
   - 199: {fileID: 19900002}
   - 108: {fileID: 10800000}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   - 198: {fileID: 19800004}
   - 199: {fileID: 19900004}
   - 108: {fileID: 10800002}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: SmokeGameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

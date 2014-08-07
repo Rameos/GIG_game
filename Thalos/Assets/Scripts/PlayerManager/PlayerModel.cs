@@ -170,6 +170,9 @@ namespace Backend
             PhialInventory = new List<PhialType>();
             addPhialToinventory(PhialType.Heal);
             addPhialToinventory(PhialType.Heal);
+            addPhialToinventory(PhialType.Fire);
+            addPhialToinventory(PhialType.Ice);
+            addPhialToinventory(PhialType.Fire);
 
 
             Debug.Log("PhialCountHeal:" + getCountOfPhialsOfSortInInventory(PhialType.Heal));

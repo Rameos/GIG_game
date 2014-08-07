@@ -24,7 +24,7 @@ public class createExplosion : MonoBehaviour {
 
         foreach(Collider colliderItem in colliders)
         {
-            if (colliderItem.rigidbody == null)
+            if (colliderItem.rigidbody == null || colliderItem.gameObject.tag == Controller.Constants.TAG_PLAYER)
             {
                 continue; 
             }
