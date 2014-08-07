@@ -40,4 +40,6 @@ using iViewX;
         public static Vector2 gameScreenPosition { get; set; }
 
         #endregion
+
+        public static bool isEyeDetected = false;
     }
