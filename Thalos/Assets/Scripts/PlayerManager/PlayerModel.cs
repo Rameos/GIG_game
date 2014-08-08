@@ -161,7 +161,7 @@ namespace Backend
             //Damage
             this.Damage = 42;
             this.DamageType_Bolt = DamageTypes.Standard;
-            this.DamageType_Poision = DamageTypes.None;
+            this.DamageType_Poision = DamageTypes.Fire;
             
             //Debug
             this.HealthPoints = 25;

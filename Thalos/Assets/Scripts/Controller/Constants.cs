@@ -36,11 +36,11 @@ namespace Controller
         
         //Damage
         public const int damageStandardBolt = 15;
-        public const int damageFireBolt = 15;
-        public const int damageIceBolt = 15;
+        public const int damageFireBolt = 20;
+        public const int damageIceBolt = 50;
 
-        public const int damageFirePoison = 15;
-        public const int damageIcePoison = 15;
+        public const int damageFirePoison = 30;
+        public const int damageIcePoison = 50;
 
         public const float COOLDOWN_BOLT = 0.5f;
         public const float COOLDOWN_POISON = 0.1f;
