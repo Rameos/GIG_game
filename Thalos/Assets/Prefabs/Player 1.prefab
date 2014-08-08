@@ -12080,7 +12080,7 @@ MonoBehaviour:
   speedFactor: 5
   thresholdTriggers: .100000001
   thresholdStics: .100000001
-  jumpForcePower: 5
+  jumpForcePower: 7
   isJumping: 0
   isInAir: 0
   isGrounded: 1
