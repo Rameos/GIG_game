@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using iViewX;
+using Controller;
 public class DemoManagement : MonoBehaviour {
 
 
@@ -21,23 +22,126 @@ public class DemoManagement : MonoBehaviour {
     public bool isRotationSpeedVisible = false;
     public bool isKillingProcessActive = false;
 
+    private bool isCheatConsoleOpen = false;
+    private string cheat = "";
+
+
+    private const string cheat_AllFast = "AllFast";
+    private const string cheat_IceFast = "IceFast";
+    private const string cheat_FireFast = "FireFast";
+    private const string cheat_StandardFast = "StandardFast";
+
+    private const string cheat_AllSlow = "AllSlow";
+    private const string cheat_IceSlow = "IceSlow";
+    private const string cheat_FireSlow = "FireSlow";
+    private const string cheat_StandardSlow = "StandardSlow";
+
+    private const int TYPESTANDARD = 0;
+    private const int TYPEFIRE = 1;
+    private const int TYPEICE = 2;
+
+    private float SpeedSlow;
+    private float SpeedFast = 3;
 	// Use this for initialization
 	void Start () {
-	
+
+        SpeedSlow = Constants.BULLETSPEED_STANDARD;
+        cheat = cheat_AllFast;
 	}
 	
     void OnGUI()
     {
         if (IsGazeCursorVisible)
         {
+            float offset = gazeCursor.width * 0.25f;
             posGaze = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
-            GUI.DrawTexture(new Rect(posGaze.x, posGaze.y, gazeCursor.width * 0.5f, gazeCursor.height * 0.5f), gazeCursor);
+            GUI.DrawTexture(new Rect(posGaze.x-offset, posGaze.y - offset, gazeCursor.width * 0.5f, gazeCursor.height * 0.5f), gazeCursor);
         }
+
+        if(isCheatConsoleOpen)
+        {
+            cheat = GUI.TextArea(new Rect(200, 20, 500, 20),cheat);
+            if(GUI.Button( new Rect(200,50,100,100),"Activate Cheat"))
+            {
+
+                switch (cheat)
+                {
+                    case cheat_AllFast:
+
+                        Debug.Log("ALLFAST!!");
+                        setSpeed(TYPESTANDARD, SpeedFast);
+                        setSpeed(TYPEFIRE, SpeedFast);
+                        setSpeed(TYPEICE, SpeedFast);
+                        break;
+
+                    case cheat_AllSlow:
+                        setSpeed(TYPESTANDARD, SpeedSlow);
+                        setSpeed(TYPEFIRE, SpeedSlow);
+                        setSpeed(TYPEICE, SpeedSlow);
+                        break;
+
+                    case cheat_FireFast:
+                        setSpeed(TYPEFIRE, SpeedFast);
+                        break;
+
+                    case cheat_FireSlow:
+                        setSpeed(TYPEFIRE, SpeedSlow);
+                        break;
+
+                    case cheat_IceFast:
+                        setSpeed(TYPEICE, SpeedFast);
+                        break;
+
+                    case cheat_IceSlow:
+                        setSpeed(TYPEICE, SpeedSlow);
+                        break;
+
+                    case cheat_StandardFast:
+                        setSpeed(TYPESTANDARD, SpeedFast);
+                        break;
+
+                    case cheat_StandardSlow:
+                        setSpeed(TYPESTANDARD, SpeedSlow);
+                        break;
+                }
+            }
+        }
+    }
+
+
+    private void setSpeed(int type,float speed)
+    {
+        switch (type)
+        {
+            case TYPESTANDARD:
+                Constants.BULLETSPEED_STANDARD = speed;
+                break;
+
+            case TYPEFIRE:
+                Constants.BULLETSPEED_FIRE = speed;
+                break;
+            
+            case TYPEICE:
+                Constants.BULLETSPEED_ICE= speed;
+                break;
+        }
+
     }
 	// Update is called once per frame
 	void Update () {
 	#region keyManager
 
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            if (isCheatConsoleOpen)
+            {
+                isCheatConsoleOpen = false;
+            }
+            else
+            {
+                isCheatConsoleOpen = true;
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.J))
         {
@@ -96,7 +200,7 @@ public class DemoManagement : MonoBehaviour {
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
             GazeControlComponent.Instance.Disconnect();
-
+            Application.Quit();
         }
         #endregion
 
@@ -127,7 +231,7 @@ public class DemoManagement : MonoBehaviour {
         if (countTime >= maxTime)
         {
 
-            gazeModel.isEyeDetected = true;
+            gazeModel.isEyeDetected = false;
             CancelInvoke("updateCounter");
         }
         else

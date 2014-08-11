@@ -35,6 +35,8 @@ namespace Controller
             PlayerModel.DamageTypes damage = PlayerModel.Instance().DamageType_Bolt;
             GameObject instance;
             Vector3 direction = gazeInputManagerShooting.directionShoot;
+
+            //Standard Way
             switch (damage)
             {
                 case PlayerModel.DamageTypes.Fire:

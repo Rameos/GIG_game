@@ -108,8 +108,6 @@ public class PlayerInputManager : MonoBehaviour {
         
     }
 
-
-
     public void stopRumbleEvent() 
     {
         StopCoroutine(rumbleOverTime(0f));

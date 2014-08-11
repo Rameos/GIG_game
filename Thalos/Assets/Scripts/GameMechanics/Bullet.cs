@@ -20,13 +20,32 @@ public class Bullet : MonoBehaviour {
         this.damageInformation = damageInformation;
         this.forwardVector = forwardVector.normalized;
         this.parentType = parentType;
-        this.bulletSpeed = Constants.BULLETSPEED;
+
+        initSpeed();
+
         transform.rotation = Quaternion.LookRotation(this.forwardVector);
         StartCoroutine(removeAfterLiveTime());
+    }
 
-        Debug.Log("DamageInfo:" + damageInformation.typeDamage);
-        Debug.Log("DamageInfo: damage" + damageInformation.damage);
+    private void initSpeed()
+    {
+        switch (damageInformation.typeDamage)
+        {
+            case PlayerModel.DamageTypes.Standard:
+                this.bulletSpeed = Constants.BULLETSPEED_STANDARD;
+                break;
 
+            case PlayerModel.DamageTypes.Fire:
+
+                this.bulletSpeed = Constants.BULLETSPEED_FIRE;
+                break;
+            
+            case PlayerModel.DamageTypes.Ice:
+
+                this.bulletSpeed = Constants.BULLETSPEED_ICE;
+                break;
+
+        }
     }
 
     void FixedUpdate()

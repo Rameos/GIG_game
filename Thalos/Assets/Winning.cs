@@ -17,9 +17,9 @@ public class Winning : MonoBehaviour {
 
     [SerializeField]
     private TextMesh enemyOutPut;
+    private bool isTimerRunning = false;
 
-    
-
+    public static bool isDone = false;
     
 	// Use this for initialization
 	void Start () {
@@ -40,8 +40,10 @@ public class Winning : MonoBehaviour {
 
         if (neededDeadRobots <= 0)
         {
+            isDone = true;
+
             StopTimer();
-            //FadeSceneEffect.FadeOut();
+            StartCoroutine(finishScene());//FadeSceneEffect.FadeOut();
 
         }
 	}
@@ -70,7 +72,11 @@ public class Winning : MonoBehaviour {
 
     public void StartTimer()
     {
-        InvokeRepeating("updateTimer", 1, 1);
+        if(!isTimerRunning)
+        {
+            InvokeRepeating("updateTimer", 1, 1);
+            isTimerRunning = true;
+        }
     }
 
     public void StopTimer()
@@ -111,7 +117,7 @@ public class Winning : MonoBehaviour {
     IEnumerator finishScene()
     {
         FadeSceneEffect.FadeOut();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(7);
         Application.Quit();
     }
 }

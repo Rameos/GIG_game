@@ -105,8 +105,8 @@ namespace iViewX
         {
            if(useGazeFilter)
            {
-               useGazeFilter = true;
-               gazeController.enableGazeFilter();
+               useGazeFilter = true; 
+               gazeController.disableGazeFilter();
            }
            else
            {
@@ -151,18 +151,18 @@ namespace iViewX
 
                 gazeModel.isEyeDetected = false;
             }
-            else
-            {
-                Vector3 gazeInput = gazeModel.posGazeLeft+gazeModel.posGazeRight;
-                if (gazeInput == Vector3.zero)
-                {
-                    gazeModel.isEyeDetected = false;
-                }
-                else
-                {
-                    gazeModel.isEyeDetected = true;
-                }
-            }
+            //else
+            //{
+            //    Vector3 gazeInput = gazeModel.posGazeLeft+gazeModel.posGazeRight;
+            //    if (gazeInput == Vector3.zero)
+            //    {
+            //        gazeModel.isEyeDetected = false;
+            //    }
+            //    else
+            //    {
+            //        gazeModel.isEyeDetected = true;
+            //    }
+            //}
 
 #if UNITY_EDITOR || UNITY_STANDALONE_WIN
             if (gazeModel.isEyeTrackerRunning)
