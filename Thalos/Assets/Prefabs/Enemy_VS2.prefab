@@ -9220,8 +9220,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100152}
-  m_LocalRotation: {x: 0, y: 1.47736801e-08, z: 0, w: 1}
-  m_LocalPosition: {x: -36.2434349, y: .262496948, z: -41.9840546}
+  m_LocalRotation: {x: 0, y: .952670813, z: 0, w: .304003984}
+  m_LocalPosition: {x: 51.8452606, y: 56.8860016, z: 114.794899}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400446}
@@ -15405,10 +15405,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d7fdd2f7b4608f47b0a24d5bbd1e9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolDown: .100000001
+  coolDown: .25
   shootfrequence: .5
   isAlarmed_Distance: 20
   explosion: {fileID: 100004, guid: 7bf315f9d468c3d4da2258ed52a686e9, type: 2}
+  player: {fileID: 0}
   actualEnemy: 3
 --- !u!135 &13500000
 SphereCollider:
@@ -15420,7 +15421,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 11.5558672
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &13600000
 CapsuleCollider:
@@ -15431,10 +15432,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .907741547
-  m_Height: 2
+  m_Radius: .657275617
+  m_Height: 2.5
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.29999995, z: 0}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

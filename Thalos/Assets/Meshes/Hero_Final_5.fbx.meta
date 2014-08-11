@@ -4294,7 +4294,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Jump_FromIdle
       takeName: Jump_FromIdle
-      firstFrame: -1
+      firstFrame: 9.19999981
       lastFrame: 32
       wrapMode: 0
       orientationOffsetY: 0
@@ -9487,7 +9487,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
+      - time: 1.66228098e-09
         functionName: createJumpCurve
         data: 
         objectReferenceParameter: {instanceID: 0}

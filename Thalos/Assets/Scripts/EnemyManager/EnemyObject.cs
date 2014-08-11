@@ -15,7 +15,9 @@ public class EnemyObject : MonoBehaviour {
     private float isAlarmed_Distance = 20f;
     [SerializeField]
     private GameObject explosion; 
-
+    [SerializeField]
+    private GameObject player;
+    
 
     private float fieldOfViewAngle = 110f;
     private bool playerIsInSight = false;
@@ -26,7 +28,6 @@ public class EnemyObject : MonoBehaviour {
     private Animator anim;
     
     private Vector3 globalLastSightingPlayer;   //WARNING: INTO Model
-    private GameObject player;
     private Animator playerAnim;
     private Vector3 previousSighting;
 
@@ -133,6 +134,17 @@ public class EnemyObject : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
+        reactOnTrigger(other);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        reactOnTrigger(other);
+    }
+
+
+    void reactOnTrigger(Collider other)
+    {
         //Is In Sphere
         if (other.gameObject == player)
         {
@@ -142,10 +154,10 @@ public class EnemyObject : MonoBehaviour {
 
             float angle = Vector3.Angle(direction, transform.forward);
 
-            if(angle < fieldOfViewAngle * 0.75f)
+            if (angle < fieldOfViewAngle * 0.75f)
             {
                 RaycastHit hit = checkPlayerIsInSight(direction);
-                
+
                 //Behaviour 
                 updateBehaviour(angle);
 
@@ -161,7 +173,9 @@ public class EnemyObject : MonoBehaviour {
 
     RaycastHit checkPlayerIsInSight( Vector3 direction)
     {
+        Debug.Log("CheckPlayerisinsight");
         RaycastHit hit;
+        Debug.DrawRay(transform.position + transform.up, direction.normalized,Color.cyan);
         if (Physics.Raycast(transform.position + transform.up, direction.normalized, out hit, col.radius))
         {
             if (hit.collider.gameObject == player)
@@ -210,6 +224,7 @@ public class EnemyObject : MonoBehaviour {
     {
         if(!isAlive)
         {
+            GameObject.FindGameObjectWithTag("PlayerComplete").GetComponent<Winning>().RemoveHead();
             Gamestatemanager.OnRumbleEvent(2, 1, 1);
             Instantiate(explosion, transform.position, explosion.transform.rotation);
             Destroy(this.gameObject);

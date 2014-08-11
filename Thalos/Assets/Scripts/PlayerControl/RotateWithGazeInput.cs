@@ -7,12 +7,12 @@ public class RotateWithGazeInput : MonoBehaviour {
     private AOI leftAOI;
     private AOI rightAOI;
     public float threshold = 0.1f;
-
+    public float speedUp = 1.2f;
 
     public float rotationFactor;
     public Texture2D testTexture_Right;
     public Texture2D testTexture_Left;
-    public Texture2D noGazeInput;
+   
     public float sizeWidthAOI;
    
     public GameObject player;
@@ -40,10 +40,13 @@ public class RotateWithGazeInput : MonoBehaviour {
 
     void OnGUI()
     {
-         GUI.Label(new Rect(25, 5, 250, 60), "Rotationspeed: " + rotationFactor);
-            rotationFactor = GUI.HorizontalSlider(new Rect(25, 25, 100, 30), rotationFactor, 0.0f, 1.0f);
-            Mathf.Round( rotationFactor * 100 / 100);
 
+        if (gameObject.GetComponentInParent <DemoManagement>().isRotationSpeedVisible)
+        {
+            GUI.Label(new Rect(25, 5, 250, 60), "Rotationspeed: " + rotationFactor);
+            rotationFactor = GUI.HorizontalSlider(new Rect(25, 25, 100, 30), rotationFactor, 0.0f, 1.0f);
+            Mathf.Round(rotationFactor * 100 / 100);
+        }
 
         if (isVisualisationActive)
         {
@@ -61,7 +64,7 @@ public class RotateWithGazeInput : MonoBehaviour {
     }
 
 
-    void Update () 
+    void FixedUpdate () 
     {
         calculateAOI();
         isActive = checkInput();
@@ -71,12 +74,14 @@ public class RotateWithGazeInput : MonoBehaviour {
 
     private bool checkInput()
     {
-        
-
-        if (Input.GetAxis("Horizontal") > threshold || Input.GetAxis("Vertical") > threshold || isAlwaysEnable)
+        if(gazeModel.isEyeDetected)
         {
-            return true;
+            if (Input.GetAxis("Horizontal") > threshold || Input.GetAxis("Vertical") > threshold || isAlwaysEnable)
+            {
+                return true;
+            }
         }
+        
         return false; 
     }
 
@@ -113,7 +118,7 @@ public class RotateWithGazeInput : MonoBehaviour {
                         switch (actualStateGazeAction)
                         {
                             case gazeActionMenu.onlyCam:
-                                camScript.gazeInput = speed;
+                                camScript.gazeInput = speed * speedUp;
                                 break;
 
                             case gazeActionMenu.onlyPlayer:
@@ -142,7 +147,7 @@ public class RotateWithGazeInput : MonoBehaviour {
                     switch (actualStateGazeAction)
                     {
                         case gazeActionMenu.onlyCam:
-                            camScript.gazeInput = -speed;
+                            camScript.gazeInput = -speed * speedUp;
                             break;
 
                         case gazeActionMenu.onlyPlayer:

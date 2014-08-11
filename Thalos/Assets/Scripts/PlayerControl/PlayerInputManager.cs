@@ -10,9 +10,7 @@ public class PlayerInputManager : MonoBehaviour {
     private float rotationDegreePerSecon = 120f;
     private float directionSpeed = 1.5f;
     private float directionDampTime = 0.25f;
-    private float speedDampTime = 0.05f;
     private float focDampTime = 3f;
-    private float jumpMultiplier = 1f;
     private CapsuleCollider capCollider;
 
     private Vector3 moveDirection;
@@ -50,10 +48,7 @@ public class PlayerInputManager : MonoBehaviour {
     float inputY;
     private int y;
 
-    static int idle = Animator.StringToHash("Idle");
-    static int walk = Animator.StringToHash("Locomotion");
-    static int shoot_Idle = Animator.StringToHash("Shoot_Idle");
-    static int shoot_Walking = Animator.StringToHash("Shoot_Walk"); 
+
     
     //Test: 
     private float jumpVelocity = 2f;
@@ -112,6 +107,8 @@ public class PlayerInputManager : MonoBehaviour {
         }
         
     }
+
+
 
     public void stopRumbleEvent() 
     {
@@ -242,27 +239,10 @@ public class PlayerInputManager : MonoBehaviour {
         float angle = 0f;
         float speedOut = 0f;
         StickInputToWorld(inputX, inputY, ref angle, ref speedOut);
-        
-
-
-        Debug.DrawLine(transform.position, transform.position + transform.forward * 2, Color.green);
-
-
-
-
 
         if (Mathf.Abs(speedOut) > 0.1f)
         {
-
             AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
-
-            
-            if (currentState.IsName("Shoot_Walk"))
-            {
-                Debug.Log("SHOT AND RUN!");
-                //speedOut = 0.5f;
-            }
-
             if (isGrounded)
             {
                 moveDirection = (transform.forward * speedFactor * speedOut) * Time.deltaTime;
@@ -309,6 +289,8 @@ public class PlayerInputManager : MonoBehaviour {
                 //this.rigidbody.isKinematic = true;
                 //this.rigidbody.useGravity = false;
             }
+            
+
             
             animator.SetBool("Shoot",true);
             Debug.Log("Shoot");

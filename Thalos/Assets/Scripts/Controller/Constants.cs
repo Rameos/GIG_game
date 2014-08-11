@@ -30,7 +30,7 @@ namespace Controller
         public const int ID_PLAYER = 0;
         public const int ID_ENEMY = 1;
 
-        public const float BULLETSPEED = 0.35f;
+        public const float BULLETSPEED = 0.95f;
 
         public const int healPower = 25;
         

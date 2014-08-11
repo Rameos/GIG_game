@@ -54,8 +54,15 @@ namespace Controller
                     break;
             }
 
+
+            Vector3 gazeDirection = gazeInputManagerShooting.destinationPoint_Shoot-transform.position;
+            gazeDirection.y = 0f;
+            float step = 0.4f * Time.deltaTime;
+            Vector3 newDir = Vector3.RotateTowards(transform.forward, gazeDirection, 1,0.0f);
+            this.gameObject.transform.rotation = Quaternion.LookRotation(newDir);
+
             gameObject.GetComponent<PlayerInputManager>().startRumbleForTime(0.1f, 0, 0.1f);
-        
+           
         }
 
         public void ThrowPoison()

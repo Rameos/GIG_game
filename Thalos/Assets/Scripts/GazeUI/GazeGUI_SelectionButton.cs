@@ -39,6 +39,11 @@ namespace GazeGUI
             phialType = convertCircleItemInPhial();
         }
 
+        void FixedUpdate()
+        {
+
+            renderer.material.color = destinationColor;
+        }
         void Update()
         {
             if (!isEndless)
@@ -51,8 +56,7 @@ namespace GazeGUI
                 CountText.SetActive(false); 
             }
 
-
-            renderer.material.color = Color32.Lerp(renderer.material.color,destinationColor,1f);
+            //renderer.material.color = Color32.Lerp(renderer.material.color,destinationColor,1f);
             Icon.renderer.material.color = Color.white;
 
             if(CountText!= null)

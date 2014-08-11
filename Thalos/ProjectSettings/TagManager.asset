@@ -15,6 +15,9 @@ TagManager:
   - GazeGui_Text
   - Enemy
   - Bullet
+  - PlayerComplete
+  - EnemyComplete
+  - FadeManager
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
