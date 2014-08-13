@@ -17,7 +17,10 @@ public class MainMenuController : MonoBehaviour {
     private float threseholdController = 0.1f;
     private bool isFadeActive = false;
     private bool canSwitchBetweenItems = true;
-    private int IDSelection = 0; 
+    private int IDSelection = 0;
+
+    private bool isMainMenuActive = true;
+    private bool isOptionsActive = false;
     void Start()
     {
         buttonsMainmenu = GetComponentsInChildren<BaseMainMenuButton>();
@@ -29,10 +32,22 @@ public class MainMenuController : MonoBehaviour {
 
     void Update()
     {
-        manageInput();
+        if(isMainMenuActive)
+        {
+            manageInputForMainMenu();
+        }
+        else if(isOptionsActive)
+        {
+
+        }
     }
 
-    private void manageInput()
+
+    private void manageInputForOptionsMenu()
+    {
+
+    }
+    private void manageInputForMainMenu()
     {
         float input = Input.GetAxis("Vertical");
         if (Mathf.Abs(input) > threseholdController)
