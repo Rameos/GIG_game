@@ -5,7 +5,12 @@ public class ExitButton : BaseMainMenuButton {
 
     void OnMouseDown()
     {
-        Application.Quit();
+        DoActionWhenActivated();
     }
 
+
+    public override void DoActionWhenActivated()
+    {
+        Application.Quit();
+    }
 }

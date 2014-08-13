@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseMainMenuButton : MonoBehaviour {
+public abstract class BaseMainMenuButton : MonoBehaviour {
 
     private Vector3 destinationScale;
 
@@ -17,7 +17,11 @@ public class BaseMainMenuButton : MonoBehaviour {
     private MainMenuController controlComponent;
     private Color32  colorAlpha =  new Color32(0,0,0,0);
 
-    private Color statusColor; 
+    private Color statusColor;
+
+    public abstract void DoActionWhenActivated();
+
+
     void Start()
     {
         destinationScale = Vector3.one;
@@ -42,11 +46,6 @@ public class BaseMainMenuButton : MonoBehaviour {
         }
     }
 
-    void OnMouseDown()
-    {
-
-    }
-
     void OnMouseOver()
     {
         destinationScale = selectedScale;
@@ -56,6 +55,23 @@ public class BaseMainMenuButton : MonoBehaviour {
     {
         destinationScale = Vector3.one;
     }
+
+    public void SelectItem()
+    {
+        OnMouseOver();
+    }
+
+    public void DeselectItem()
+    {
+        OnMouseExit();
+    }
+
+    public void DoActionItem()
+    {
+        DoActionWhenActivated();
+    }
+
+    
 
 
     private void setColor(Color color)
