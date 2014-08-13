@@ -97,6 +97,8 @@ public class ThirdPersonCamera : MonoBehaviour
     private float distanceUpFree;
     private Vector2 rightStickPrevFrame = Vector2.zero;
 
+    private bool isStartScene = true;
+
     #endregion
 
     #region Properties (public)
@@ -142,6 +144,8 @@ public class ThirdPersonCamera : MonoBehaviour
     /// </summary>
     void Start()
     {
+        initPosition();
+
         parentRig = this.transform.parent;
         if (parentRig == null)
         {
@@ -192,6 +196,11 @@ public class ThirdPersonCamera : MonoBehaviour
         float rightY =- Input.GetAxis("RightStickY");
         float leftX = Input.GetAxis("Horizontal");
         float leftY = invertY * Input.GetAxis("Vertical");
+        
+        if(isStartScene)
+        {
+            rightY += 1;
+        }
 
 
         //Debug.Log("RightX:" + rightX);
@@ -353,6 +362,11 @@ public class ThirdPersonCamera : MonoBehaviour
 
     #region Methods
 
+    private void initPosition()
+    {
+        StartCoroutine(startScene());
+    }
+
     private void SmoothPosition(Vector3 fromPos, Vector3 toPos)
     {
         // Making a smooth transition between camera's current position and the position it wants to be in
@@ -381,4 +395,10 @@ public class ThirdPersonCamera : MonoBehaviour
     }
 
     #endregion Methods
+
+    IEnumerator startScene()
+    {
+        yield return new WaitForSeconds(2);
+        isStartScene = false;
+    }
 }

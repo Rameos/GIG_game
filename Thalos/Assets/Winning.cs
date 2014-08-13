@@ -118,6 +118,6 @@ public class Winning : MonoBehaviour {
     {
         FadeSceneEffect.FadeOut();
         yield return new WaitForSeconds(7);
-        Application.Quit();
+        Application.LoadLevel(Application.loadedLevel);
     }
 }

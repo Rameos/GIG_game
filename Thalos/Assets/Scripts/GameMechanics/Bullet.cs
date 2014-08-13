@@ -50,7 +50,8 @@ public class Bullet : MonoBehaviour {
 
     void FixedUpdate()
     {
-        this.transform.position += forwardVector.normalized * bulletSpeed;
+        //this.transform.position += forwardVector.normalized;
+        this.transform.Translate(0, 0, bulletSpeed, Space.Self);
     }
 
 

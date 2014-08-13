@@ -4722,6 +4722,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400626}
   - 114: {fileID: 11400026}
+  - 114: {fileID: 11400028}
   m_Layer: 11
   m_Name: Player
   m_TagString: PlayerComplete
@@ -10464,8 +10465,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100626}
-  m_LocalRotation: {x: 0, y: .70710665, z: 0, w: .707106948}
-  m_LocalPosition: {x: -40.5259209, y: -.00810492039, z: -36.1129723}
+  m_LocalRotation: {x: 0, y: .9994784, z: 0, w: .0322957486}
+  m_LocalPosition: {x: 15.2454834, y: 56.9299736, z: 89.872261}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400238}
@@ -11614,7 +11615,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100802}
   m_LocalRotation: {x: -.0364299752, y: -.000126947925, z: -.00112561276, w: .999335587}
-  m_LocalPosition: {x: 9.4406937e-07, y: .708686829, z: -2.0957036}
+  m_LocalPosition: {x: .03535771, y: .708686829, z: -1.54917002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400120}
@@ -12100,7 +12101,7 @@ MonoBehaviour:
   invertY: .75
   parentRig: {fileID: 0}
   distanceAway: .75
-  distanceAwayMultipler: 2
+  distanceAwayMultipler: 1
   distanceUp: 1
   distanceUpMultiplier: 5
   follow: {fileID: 100238}
@@ -12130,7 +12131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   threshold: .0500000007
   speedUp: 2
-  rotationFactor: .75
+  rotationFactor: .25
   testTexture_Right: {fileID: 2800000, guid: 3b980d6083b05964286f0e122400b484, type: 3}
   testTexture_Left: {fileID: 2800000, guid: 4e3a692339945b646bd1ac1a7b38b95d, type: 3}
   sizeWidthAOI: .474999994
@@ -12256,6 +12257,20 @@ MonoBehaviour:
   maxTime: 2
   isRotationSpeedVisible: 0
   isKillingProcessActive: 0
+--- !u!114 &11400028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3538a34ab430f0944bee6a0c39f172a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neededDeadRobots: 5
+  textOutPut: {fileID: 0}
+  enemyOutPut: {fileID: 0}
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
