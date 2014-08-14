@@ -41,6 +41,7 @@ public class PlayerInputManager : MonoBehaviour {
     [SerializeField]
     private bool isGrounded = false;
 
+    private bool isMenuOpen = false;
     //private bool jumpClimax = false;
     [SerializeField]
     private Transform centerOfMass;
@@ -92,21 +93,23 @@ public class PlayerInputManager : MonoBehaviour {
 
     void Update() 
     {
-
-        inputX = Input.GetAxis("Horizontal");
-        inputY = Input.GetAxis("Vertical");
-
-
-        checkIsGrounded();
-
-        move(inputX, inputY);
+        if (!isMenuOpen)
+        {
+            inputX = Input.GetAxis("Horizontal");
+            inputY = Input.GetAxis("Vertical");
 
 
-        checkshootInput();
-        ManageRumbleEvents();
+            checkIsGrounded();
 
-        checkButtonInput();
-        checkGazeMenuStatus();
+            move(inputX, inputY);
+
+
+            checkshootInput();
+            ManageRumbleEvents();
+
+            checkButtonInput();
+            checkGazeMenuStatus();
+        }
     }
 
     public void stopRumbleEvent() 
@@ -331,6 +334,9 @@ public class PlayerInputManager : MonoBehaviour {
         if (Input.GetAxis("ButtonY") > 0)
         {
             Debug.Log("ButtonY");
+            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
+            Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_INVENTORY, true);
+            isMenuOpen = true;
         }
 
         else if (Input.GetAxis("ButtonX") > 0)
