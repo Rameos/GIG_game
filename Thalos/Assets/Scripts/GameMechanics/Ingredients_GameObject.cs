@@ -5,16 +5,9 @@ using Controller;
 public class Ingredients_GameObject : MonoBehaviour
 {
 
-    public enum IngredienceType
-    {
-        Water,
-        Oil,
-        Herb,
-        Phoenixash,
-        Cristalflower
-    }
+
     [SerializeField]
-    public IngredienceType type;
+    public PlayerModel.IngredienceType type;
 
     void OnTriggerEnter(Collider other)
     {
@@ -31,15 +24,15 @@ public class Ingredients_GameObject : MonoBehaviour
     {
         switch (type)
         {
-            case IngredienceType.Water:
+            case PlayerModel.IngredienceType.Water:
                 return Ingredients.Instance().GetSingleIngredient(Strings.WATER);
-            case IngredienceType.Phoenixash:
+            case PlayerModel.IngredienceType.Phoenixash:
                 return Ingredients.Instance().GetSingleIngredient(Strings.PHOENIXASH);
-            case IngredienceType.Oil:
+            case PlayerModel.IngredienceType.Oil:
                 return Ingredients.Instance().GetSingleIngredient(Strings.OIL);
-            case IngredienceType.Herb:
+            case PlayerModel.IngredienceType.Herb:
                 return Ingredients.Instance().GetSingleIngredient(Strings.HERB);
-            case IngredienceType.Cristalflower:
+            case PlayerModel.IngredienceType.Cristalflower:
                 return Ingredients.Instance().GetSingleIngredient(Strings.CRISTALFLOWER);
 
         }

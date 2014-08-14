@@ -10,7 +10,14 @@ namespace Backend
 
         public enum DamageTypes {Standard, Fire, Ice, None};
         public enum PhialType { Empty, Fire, Ice, Heal };
-
+        public enum IngredienceType
+        {
+            Water,
+            Oil,
+            Herb,
+            Phoenixash,
+            Cristalflower
+        }
         private static PlayerModel playerModel;
 
         public int HealthPoints { get; set; }
@@ -156,16 +163,15 @@ namespace Backend
         private PlayerModel()
         {
             this.MaxHealthPoints = 100;
-            this.phialSizeMax = 5;
+            this.HealthPoints = 100;
+            this.phialSizeMax = 9999;
 
             //Damage
             this.Damage = 42;
             this.DamageType_Bolt = DamageTypes.Standard;
             this.DamageType_Poision = DamageTypes.None;
             
-            //Debug
-            this.HealthPoints = 25;
-
+            
             // Inventory Setup
             PhialInventory = new List<PhialType>();
             addPhialToinventory(PhialType.Heal);
@@ -174,8 +180,6 @@ namespace Backend
             addPhialToinventory(PhialType.Ice);
             addPhialToinventory(PhialType.Fire);
 
-
-            Debug.Log("PhialCountHeal:" + getCountOfPhialsOfSortInInventory(PhialType.Heal));
 
             ingredieceInventory = new List<BaseIngredient>();
         }
