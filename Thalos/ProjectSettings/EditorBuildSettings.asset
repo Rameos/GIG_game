@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Debug_Scenes/Debug_Scene_Martin.unity
   - enabled: 0
     path: Assets/Scenes/Debug_Scenes/Debug_Scene_Martin.unity
+  - enabled: 0
+    path: Assets/Scenes/GameScenes/intro/MainMenu.unity

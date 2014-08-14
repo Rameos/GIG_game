@@ -112,7 +112,7 @@ namespace iViewX
 
 
             m_CalibrationData.displayDevice = displayDevice;
-            m_CalibrationData.autoAccept = 1;
+            m_CalibrationData.autoAccept = 2;
             m_CalibrationData.method = calibrationPoints;
             m_CalibrationData.visualization = 1;
             m_CalibrationData.speed = 0;
@@ -245,6 +245,7 @@ namespace iViewX
             gazeModel.posLeftEye = new Vector3((float)sampleData.leftEye.eyePositionX, (float)sampleData.leftEye.eyePositionY, (float)sampleData.leftEye.eyePositionZ);
             gazeModel.posRightEye = new Vector3((float)sampleData.rightEye.eyePositionX, (float)sampleData.rightEye.eyePositionY, (float)sampleData.rightEye.eyePositionZ);
 
+            //GazePosition
             if (isFilterEnable)
             {
                 if (actualCount < sampleCount)
@@ -307,8 +308,36 @@ namespace iViewX
 
             else
             {
-                gazeModel.posGazeLeft = new Vector2((float)sampleData.leftEye.gazeX, (float)sampleData.leftEye.gazeY);
-                gazeModel.posGazeRight = new Vector2((float)sampleData.rightEye.gazeX, (float)sampleData.rightEye.gazeY);
+
+                Vector2 sampleLeft = new Vector2((float)sampleData.leftEye.gazeX, (float)sampleData.leftEye.gazeY);
+                Vector2 sampleRight = new Vector2((float)sampleData.rightEye.gazeX, (float)sampleData.rightEye.gazeY);
+                
+                Debug.Log("Pos left: " + gazeModel.posGazeLeft);
+                Debug.Log("Pos right: " + gazeModel.posGazeRight);
+
+                //LEFT == ZERO
+                if (sampleLeft == Vector2.zero && sampleRight != Vector2.zero)
+                {
+                    Debug.Log("Left is Zero!");
+                    gazeModel.posGazeLeft = sampleRight;
+                    gazeModel.posGazeRight = sampleRight;
+                }
+                
+                //RIGHT == ZERO
+                else if (sampleRight == Vector2.zero && sampleLeft != Vector2.zero)
+                {
+                    Debug.Log("Right is Zero!");
+                    gazeModel.posGazeRight = sampleLeft;
+                    gazeModel.posGazeLeft = sampleLeft;
+                }
+
+                else
+                {
+                    Debug.Log("Both Eyes Detected!");
+                    gazeModel.posGazeLeft = sampleLeft;
+                    gazeModel.posGazeRight = sampleRight;
+
+                }
             }
 
             /*Left Eye

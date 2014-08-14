@@ -123,6 +123,7 @@ namespace iViewX
             public int targetSize;
             [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
             public string targetFilename;
+
         };
 
 
