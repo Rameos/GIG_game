@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Backend;
+using Controller;
 public class BaseReciepeButton : MonoBehaviour {
 
     Vector3 scaleSelected = Vector3.one * 0.7f;
@@ -38,6 +39,24 @@ public class BaseReciepeButton : MonoBehaviour {
         PerformAction();
     }
     
+    void getInfo()
+    {
+        switch (phial)
+        {
+            case PlayerModel.PhialType.Fire:
+                GameObject.FindGameObjectWithTag("AlchemySystemMenu").GetComponent<AlchemyGUIManager>().createPopUp(Constants.POPUP_ID_FIREHELP);
+                break;
+
+            case PlayerModel.PhialType.Heal:
+                GameObject.FindGameObjectWithTag("AlchemySystemMenu").GetComponent<AlchemyGUIManager>().createPopUp(Constants.POPUP_ID_HEALHELD);
+                break;
+
+            case PlayerModel.PhialType.Ice:
+                GameObject.FindGameObjectWithTag("AlchemySystemMenu").GetComponent<AlchemyGUIManager>().createPopUp(Constants.POPUP_ID_ICE);
+                break;
+
+        }
+    }
     
     void EnterFocus()
     {
@@ -45,20 +64,26 @@ public class BaseReciepeButton : MonoBehaviour {
     }
     void PerformAction()
     {
+        bool isDone = true;
         switch (phial)
         {
             case PlayerModel.PhialType.Fire:
-                GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(Strings.FIREPOTION));
+               isDone= GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(Strings.FIREPOTION));
                 break;
             
             case PlayerModel.PhialType.Heal:
-                GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(Strings.HEALPOTION));
+                isDone= GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(Strings.HEALPOTION));
                 break;
 
             case PlayerModel.PhialType.Ice:
-                GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(Strings.ICEPOTION));
+                isDone= GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(Strings.ICEPOTION));
                 break;
 
+        }
+
+        if(isDone == false)
+        {
+            GameObject.FindGameObjectWithTag("AlchemySystemMenu").GetComponent<AlchemyGUIManager>().createPopUp(Constants.POPUP_ID_NORESOURCES);
         }
     }
 

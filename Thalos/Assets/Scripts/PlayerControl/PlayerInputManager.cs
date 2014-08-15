@@ -85,11 +85,26 @@ public class PlayerInputManager : MonoBehaviour {
         findGameController();
         Gamestatemanager.RumbleEventHandler += startRumbleForTime;
         Gamestatemanager.RumbleEventStopHandler += stopRumbleEvent;
+        Gamestatemanager.ChangeInGameMenuHandler += Gamestatemanager_ChangeInGameMenuHandler;
         jumpScript = gameObject.GetComponent<JumpwithGaze>();
         capCollider = gameObject.GetComponent<CapsuleCollider>();
         shotManager = gameObject.GetComponent<ShotManager_Player>();
 
 	}
+
+    void Gamestatemanager_ChangeInGameMenuHandler(int ID_Menu, bool status)
+    {
+        if(ID_Menu == Constants.INGAMEMENU_INVENTORY && status == false)
+        {
+            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(false);
+            isMenuOpen = false;
+        }
+        else if(ID_Menu == Constants.INGAMEMENU_INVENTORY && status == true)
+        {
+            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
+            isMenuOpen = true;
+        }
+    }
 
     void Update() 
     {
@@ -334,9 +349,7 @@ public class PlayerInputManager : MonoBehaviour {
         if (Input.GetAxis("ButtonY") > 0)
         {
             Debug.Log("ButtonY");
-            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
             Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_INVENTORY, true);
-            isMenuOpen = true;
         }
 
         else if (Input.GetAxis("ButtonX") > 0)
@@ -347,7 +360,6 @@ public class PlayerInputManager : MonoBehaviour {
         else if (Input.GetAxis("ButtonA") > 0)
         {
             Debug.Log("ButtonA");
-
             jump();
         }
 
@@ -363,7 +375,6 @@ public class PlayerInputManager : MonoBehaviour {
 
         if (Input.GetAxis("ButtonLB") > 0)
         {
-
             Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
             Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU,true);
             circleMenuIsOpen = true;

@@ -200,6 +200,10 @@ public class RotateWithGazeInput : MonoBehaviour {
                     }
                 }
             }
+            else if(isInGameMenu)
+            {
+                camScript.gazeInput = 0;
+            }
 
         }
         else

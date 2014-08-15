@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using Controller;
 public class AlchemyGUIManager : MonoBehaviour {
 
-	// Use this for initialization
+    private bool isPopUpWindowOpen = false;
+    [SerializeField]
+    private GameObject[] popupWindow;
+    private bool isSelectable = true; 
+
 	void Start () {
 	
 	}
@@ -11,9 +15,54 @@ public class AlchemyGUIManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetAxis("ButtonB") > 0)
+        if (Input.GetAxis("ButtonB") > 0.75f)
         {
-            Debug.Log("Close/Backbutton Pressed");
+            if(isSelectable)
+            {
+                Debug.Log("ButtonB pressed");
+                StartCoroutine(waitForInput());
+
+            }
         }
 	}
+
+    public void createPopUp(int MessageID)
+    {
+        popupWindow[MessageID].SetActive(true);
+        isPopUpWindowOpen = true;
+    }
+
+    IEnumerator waitForInput()
+    {
+        isSelectable = false;
+        Debug.Log("Close/Backbutton Pressed");
+
+        if (isPopUpWindowOpen)
+        {
+            isPopUpWindowOpen = false;
+            changeGlobalStatusOfPopup(false);
+        }
+        else
+        {
+            Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_INVENTORY, false);
+            isPopUpWindowOpen = false;
+        }
+        
+        yield return new WaitForSeconds(0.5f);
+
+        isSelectable = true;
+    }
+    void OnEnable()
+    {
+        isSelectable = true;
+        changeGlobalStatusOfPopup(false);
+    }
+    
+    private void changeGlobalStatusOfPopup(bool change)
+    {
+        foreach (GameObject e in popupWindow)
+            {
+                e.SetActive(change);
+            }
+    }
 }

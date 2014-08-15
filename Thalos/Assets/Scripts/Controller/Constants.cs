@@ -45,6 +45,13 @@ namespace Controller
         public const float COOLDOWN_BOLT = 0.5f;
         public const float COOLDOWN_POISON = 0.1f;
 
+        //Popups
+
+        public const int POPUP_ID_FIREHELP = 0;
+        public const int POPUP_ID_HEALHELD = 1;
+        public const int POPUP_ID_ICE = 2;
+        public const int POPUP_ID_NORESOURCES = 3; 
+
 
         public enum selectableItemsCircleMenu
         {
