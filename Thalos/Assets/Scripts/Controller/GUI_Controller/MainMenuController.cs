@@ -21,12 +21,10 @@ public class MainMenuController : MonoBehaviour {
 
     private bool isMainMenuActive = true;
     private bool isOptionsActive = false;
+    
     void Start()
     {
         buttonsMainmenu = GetComponentsInChildren<BaseMainMenuButton>();
-
-
-        Debug.Log("Count: " + buttonsMainmenu.Length);
         buttonsMainmenu[IDSelection].SelectItem(); 
     }
 
@@ -47,6 +45,7 @@ public class MainMenuController : MonoBehaviour {
     {
 
     }
+
     private void manageInputForMainMenu()
     {
         float input = Input.GetAxis("Vertical");
@@ -64,6 +63,16 @@ public class MainMenuController : MonoBehaviour {
             Debug.Log("ButtonA");
             buttonsMainmenu[IDSelection].DoActionItem();
         }
+    }
+
+    private void FadeSpritesIn()
+    {
+
+    }
+
+    private void FadeSpritesout()
+    {
+
     }
 
 

@@ -17,7 +17,7 @@ public class BackgroundMusicManager : MonoBehaviour {
 
     private List<AudioSource> channelList;
 
-    private float maxVolume = 100f;
+    private float maxVolume = 85f;
     private float volumeSteps = 0.01f;
     private int mainChannel = Constants.NORMALMUSIC_CHANNEL;
     
@@ -31,7 +31,7 @@ public class BackgroundMusicManager : MonoBehaviour {
 
     void Start()
     {
-        Gamestatemanager.PlayerIsDeadHandler += FadeDeteatedMusicIn;
+        Gamestatemanager.PlayerIsDeadHandler += FadeDefeatedMusicIn;
         Gamestatemanager.OpenPlayScreenHandler += FadeNormalMusicIn;
         Gamestatemanager.OpenPlayScreenHandler += UnMuteAllTracks;
         Gamestatemanager.OpenMainMenuHandler += FadeMainMenuSoundTrack;
@@ -65,9 +65,10 @@ public class BackgroundMusicManager : MonoBehaviour {
 
         for (int i = 0; i < trackCount; i++)
         {
-            AudioSource src = this.gameObject.AddComponent<AudioSource>(); 
-
-
+            AudioSource src = this.gameObject.AddComponent<AudioSource>();
+            src.playOnAwake = false;
+            src.volume = 0;
+            src.loop = false;
             switch (i)
             {
                 case Constants.MAINMENUMUSIC_CHANNEL:
@@ -120,7 +121,7 @@ public class BackgroundMusicManager : MonoBehaviour {
         mainChannel = Constants.MAINMENUMUSIC_CHANNEL;
     }
 
-    private void FadeDeteatedMusicIn()
+    private void FadeDefeatedMusicIn()
     {
         mainChannel = Constants.DEADMUSIC_CHANNEL;
     }
@@ -132,6 +133,7 @@ public class BackgroundMusicManager : MonoBehaviour {
 
     private void FadeNormalMusicIn()
     {
+        Debug.Log("FadeNormalMusicIn");
         mainChannel = Constants.NORMALMUSIC_CHANNEL;
     }
 
@@ -146,18 +148,57 @@ public class BackgroundMusicManager : MonoBehaviour {
     }
     void Update()
     {
+        manageVolume();
+    }
+
+    private void changeTrackAfterStoped()
+    {
+
+        if (mainChannel != Constants.MAINMENUMUSIC_CHANNEL && mainChannel != Constants.DEADMUSIC_CHANNEL)
+        {
+            switch (mainChannel)
+            {
+                case  Constants.BATTLEMUSIC_CHANNEL:
+                    if (!channelList[mainChannel].isPlaying)
+                    {
+                        int randomNumber = Random.Range(0, battleMusicTracks.Length - 1);
+                        Debug.Log("RandomNumber:" + randomNumber);
+                        channelList[mainChannel].clip = battleMusicTracks[randomNumber];
+                    }
+                    break;
+
+                case Constants.NORMALMUSIC_CHANNEL:
+                    if (!channelList[mainChannel].isPlaying)
+                    {
+                        int randomNumber = Random.Range(0, normalMusicTracks.Length - 1);
+                        Debug.Log("RandomNumber:" + randomNumber);
+                        channelList[mainChannel].clip = normalMusicTracks[randomNumber];
+                    }
+                    break;
+
+            }
+
+        }
+    }
+
+    private void manageVolume()
+    {
         if (!isMuted)
         {
+            // Start Player if is not Playing
             if (!channelList[mainChannel].isPlaying)
             {
+                changeTrackAfterStoped();
                 channelList[mainChannel].Play();
             }
 
+            // Push Volume of the Mainchannel
             if (channelList[mainChannel].volume < maxVolume)
             {
                 channelList[mainChannel].volume += volumeSteps;
             }
 
+            // Fadeout other Channels
             for (int i = 0; i < channelList.Count; i++)
             {
                 if (i != mainChannel)
@@ -173,20 +214,21 @@ public class BackgroundMusicManager : MonoBehaviour {
                 }
             }
         }
+
+     //Fade All Channels out
         else
         {
             for (int i = 0; i < channelList.Count; i++)
             {
-                    if (channelList[i].volume > 0.01f && channelList[i].isPlaying)
-                    {
-                        channelList[i].volume -= volumeSteps;
-                    }
-                    else
-                    {
-                        channelList[i].Stop();
-                    }
+                if (channelList[i].volume > 0.01f && channelList[i].isPlaying)
+                {
+                    channelList[i].volume -= volumeSteps;
+                }
+                else
+                {
+                    channelList[i].Stop();
+                }
             }
         }
-
     }
 }

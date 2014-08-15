@@ -40,11 +40,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackCount: 4
-  deadMusicTrack: {fileID: 8300000, guid: 6c2908ee1527c6e4f9a93bbf448e05cb, type: 3}
+  deadMusicTrack: {fileID: 8300000, guid: 80fb2d1c1b41b814aacf5c3b7bdb1647, type: 3}
   mainMenuMusicTrack: {fileID: 8300000, guid: d00eb57b507d7df40aecd989bf9c1164, type: 3}
-  epicBattleTracks: {fileID: 0}
+  epicBattleTracks: {fileID: 8300000, guid: 666cd683ddd24304dbdde82039d1e4c6, type: 3}
   normalMusicTracks:
-  - {fileID: 8300000, guid: 9741cfc55bf3dd0489b98282666c3a9a, type: 3}
+  - {fileID: 8300000, guid: 7c7529c7674054142a6260026e3f22ad, type: 3}
+  - {fileID: 8300000, guid: 368659880ab6e0b4c9b23f512b2138db, type: 3}
+  - {fileID: 8300000, guid: 2de9931ec3f3fb94589d0050e2303537, type: 3}
+  - {fileID: 8300000, guid: 7b9aa8f96f0305a4782d5800b6e1efe6, type: 3}
   battleMusicTracks:
   - {fileID: 8300000, guid: 491173c69a99d77489639ec35e284677, type: 3}
 --- !u!1001 &100100000

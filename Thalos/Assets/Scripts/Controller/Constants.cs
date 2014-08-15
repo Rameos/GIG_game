@@ -7,7 +7,7 @@ namespace Controller
 {
     public static class Constants
     {
-        public const int ID_FIRSTLEVEL = 2;
+        public const int ID_FIRSTLEVEL = 1;
         public const int ID_INTRO = 1;
         public const int ID_MAINMENU = 0; 
 

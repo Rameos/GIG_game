@@ -9,7 +9,9 @@ public class BaseReciepeButton : MonoBehaviour {
     [SerializeField]
     PlayerModel.PhialType phial;
 
-    
+    private bool isSelected = false;
+
+
 	// Use this for initialization
 	void Start () {
 	

@@ -9,7 +9,7 @@ namespace Controller
     {
         private static PlayerStateController playerController;
         private PlayerModel playerModel;
-
+        private GameObject audioManager;
 
         #region UNITY_FUNCTIONS
         void Start()
@@ -20,6 +20,20 @@ namespace Controller
             Gamestatemanager.SelectNewItemHandler += Gamestatemanager_SelectItem;
 
             PlayerModel.Instance();
+            
+            
+            
+        }
+
+        private void initAudioManager()
+        {
+            audioManager = GameObject.FindGameObjectWithTag("Audiomanager");
+            
+            if(audioManager != null)
+            {
+                audioManager.transform.parent = this.gameObject.transform;
+                audioManager.transform.localPosition = Vector3.zero;
+            }
         }
 
         void Update()
@@ -29,6 +43,14 @@ namespace Controller
                 Gamestatemanager.OnPlayerIsDead();
             }
         }
+
+       void OnLevelWasLoaded(int level)
+       {
+           StartCoroutine(waitForLoadning());
+       }
+       
+
+       
         #endregion
 
         #region PUBLIC_FIELDS
@@ -143,8 +165,16 @@ namespace Controller
 
         private void setPoisionDamage(PlayerModel.DamageTypes type)
         {
-            //if()
+
         }
         #endregion
+
+
+        IEnumerator waitForLoadning()
+        {
+            yield return new WaitForSeconds(2);
+            initAudioManager();
+            Gamestatemanager.OnOpenPlayView();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using Controller;
 public abstract class BaseMainMenuButton : MonoBehaviour {
 
     private Vector3 destinationScale;
@@ -20,7 +20,9 @@ public abstract class BaseMainMenuButton : MonoBehaviour {
     private Color statusColor;
 
     public abstract void DoActionWhenActivated();
-
+    private Color destinationColor;
+    private Color transparentColor;
+    private Color activeColor = Color.white;
 
     void Start()
     {
@@ -29,10 +31,16 @@ public abstract class BaseMainMenuButton : MonoBehaviour {
         textView = gameObject.GetComponentInChildren<TextMesh>();
         sprites = gameObject.GetComponentsInChildren<SpriteRenderer>();
 
+
+        destinationColor = activeColor;
         // ColorFading
         StartCoroutine(delayFade());
         statusColor = colorAlpha;
         setColor(statusColor);
+
+
+        // FedeOut
+        Gamestatemanager.CloseMainMenuScreenHandler += FadeOut;
     }
 
     void Update()
@@ -41,8 +49,13 @@ public abstract class BaseMainMenuButton : MonoBehaviour {
 
         if (isFadeActive)
         {
-            statusColor = Color32.Lerp(textView.color, Color.white, 0.15f);
+            statusColor = Color32.Lerp(textView.color, destinationColor, 0.15f);
             setColor(statusColor);
+
+            if(statusColor == destinationColor)
+            {
+                isFadeActive = false;
+            }
         }
     }
 
@@ -71,7 +84,10 @@ public abstract class BaseMainMenuButton : MonoBehaviour {
         DoActionWhenActivated();
     }
 
-    
+    public void FadeOut()
+    {
+        destinationColor = new Color(0, 0, 0, 0);
+    }
 
 
     private void setColor(Color color)
