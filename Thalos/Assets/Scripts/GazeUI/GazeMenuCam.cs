@@ -47,6 +47,7 @@ namespace GazeGUI
                 actualSelection.onObjectHit();
 
             }
+
             else
             {
                 if (oldSelection != null)

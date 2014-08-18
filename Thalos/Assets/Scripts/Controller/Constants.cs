@@ -48,7 +48,7 @@ namespace Controller
         //Popups
 
         public const int POPUP_ID_FIREHELP = 0;
-        public const int POPUP_ID_HEALHELD = 1;
+        public const int POPUP_ID_HEALHELP = 1;
         public const int POPUP_ID_ICE = 2;
         public const int POPUP_ID_NORESOURCES = 3; 
 

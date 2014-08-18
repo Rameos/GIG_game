@@ -10,6 +10,7 @@ public class AlchemyGUIManager : MonoBehaviour {
 
 	void Start () {
 	
+        
 	}
 	
 	// Update is called once per frame
@@ -21,13 +22,13 @@ public class AlchemyGUIManager : MonoBehaviour {
             {
                 Debug.Log("ButtonB pressed");
                 StartCoroutine(waitForInput());
-
             }
         }
 	}
 
     public void createPopUp(int MessageID)
     {
+        changeGlobalStatusOfPopup(false); 
         popupWindow[MessageID].SetActive(true);
         isPopUpWindowOpen = true;
     }
@@ -52,6 +53,7 @@ public class AlchemyGUIManager : MonoBehaviour {
 
         isSelectable = true;
     }
+    
     void OnEnable()
     {
         isSelectable = true;
