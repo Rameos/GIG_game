@@ -12,37 +12,66 @@ namespace GazeGUI
         [SerializeField]
         PlayerModel.PhialType phial;
 
-        private AlchemyGUIManager guiManager;
-        private bool isSelectable = false;
-        private bool buttonDown = false;
+        private string name;
 
+        [SerializeField]
+        GameObject lockItem;
+        private AlchemyGUIManager guiManager;
+        private bool isInFocus = false;
+        private bool buttonDown = false;
+        private bool isReciepeFound = false;
         private bool performedAction = false;
+
 
 	    void Start () {
             guiManager = GameObject.FindGameObjectWithTag("AlchemySystemMenu").GetComponent<AlchemyGUIManager>();
+            name = phial.ToString();
+
+            Debug.Log("name:" + name);
 	    }
 
 	    void Update () {
 
-            transform.localScale = Vector3.Slerp(transform.localScale, destinationScale, 0.2f);
-
-            if(Input.GetAxis("ButtonA")>0.75f)
+            if (PlayerModel.Instance().FoundedRecipes.Contains(Recipes.Instance().GetSingleRecipe(name)))
             {
-                if(!buttonDown)
-                {
-                    buttonDown = true;
-                    StartCoroutine(waitForUpdate());
-                }
-                
+                isReciepeFound = true;
+            }
+            else
+            {
+                isReciepeFound = false;
             }
 
-            else if (Input.GetAxis("ButtonX")>0.75f)
+            if (isReciepeFound)
             {
-                if (!buttonDown)
+
+                lockItem.SetActive(false);
+
+                transform.localScale = Vector3.Slerp(transform.localScale, destinationScale, 0.2f);
+
+                if (Input.GetAxis("ButtonA") > 0.75f)
                 {
-                    buttonDown = true;
-                    StartCoroutine(waitForInfo());
+                    if (!buttonDown)
+                    {
+                        buttonDown = true;
+                        StartCoroutine(waitForUpdate());
+                    }
+
                 }
+
+
+
+                else if (Input.GetAxis("ButtonX") > 0.75f)
+                {
+                    if (!buttonDown)
+                    {
+                        buttonDown = true;
+                        StartCoroutine(waitForInfo());
+                    }
+                }
+            }
+            else
+            {
+                lockItem.SetActive(true);
             }
 	    }
     
@@ -64,7 +93,7 @@ namespace GazeGUI
     
         void GetInfo()
         {
-            if(isSelectable)
+            if(isInFocus)
             {
                 Debug.Log("Phial:" + phial);
 
@@ -87,28 +116,28 @@ namespace GazeGUI
     
         void EnterFocus()
         {
-            isSelectable = true;
+            isInFocus = true;
             destinationScale = scaleSelected;
         }
     
         void PerformAction()
         {
-            if (isSelectable)
+            if (isInFocus)
             {
                 bool isDone = true;
 
                 switch (phial)
                 {
                     case PlayerModel.PhialType.Fire:
-                        isDone = GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(Strings.FIREPOTION));
+                        isDone = GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(PlayerModel.PhialType.Fire.ToString()));
                         break;
 
                     case PlayerModel.PhialType.Heal:
-                        isDone = GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(Strings.HEALPOTION));
+                        isDone = GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(PlayerModel.PhialType.Heal.ToString()));
                         break;
 
                     case PlayerModel.PhialType.Ice:
-                        isDone = GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(Strings.ICEPOTION));
+                        isDone = GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(PlayerModel.PhialType.Ice.ToString()));
                         break;
                 }
 
@@ -127,7 +156,7 @@ namespace GazeGUI
 
         void ExitFocus()
         {
-            isSelectable = false;
+            isInFocus = false;
             destinationScale = Vector3.one*0.6f;
         }
         

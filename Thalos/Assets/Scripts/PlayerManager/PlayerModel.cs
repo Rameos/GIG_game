@@ -24,7 +24,7 @@ namespace Backend
         public int MaxHealthPoints { get; set; }
         
         public List<PhialType> PhialInventory { get; set; }
-        public List<Recipes> FoundedRecipes { get; set; }
+        public List<BaseRecipe> FoundedRecipes { get; set; }
         public int phialSizeMax { get; set; }
 
         public List<BaseIngredient> ingredieceInventory;
@@ -82,6 +82,15 @@ namespace Backend
             PhialInventory.Remove(type);
         }
 
+        public bool getIsRecipeFounded(string name)
+        {
+            if (FoundedRecipes.Contains(Recipes.Instance().GetSingleRecipe(name)))
+            {
+                return true; 
+            }
+
+            return false; 
+        }
 
 
         ///INGREDIENCE
@@ -170,7 +179,11 @@ namespace Backend
             this.Damage = 42;
             this.DamageType_Bolt = DamageTypes.Standard;
             this.DamageType_Poision = DamageTypes.None;
-            
+
+            //Recipes
+            FoundedRecipes = new List<BaseRecipe>();
+            FoundedRecipes.Add(Recipes.Instance().GetSingleRecipe(PhialType.Heal.ToString()));
+            FoundedRecipes.Add(Recipes.Instance().GetSingleRecipe(PhialType.Fire.ToString()));
             
             // Inventory Setup
             PhialInventory = new List<PhialType>();
