@@ -10,9 +10,9 @@ public class Debug_Intro : MonoBehaviour {
 
     IEnumerator waitForNextstage()
     {
-        Debug.Log("StartCoroutine");
+        //Debug.Log("StartCoroutine");
         yield return new WaitForSeconds(4);
-        Debug.Log("StartCoroutine");
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<Gamestatemanager>().loadLevel(2);
+        //Debug.Log("StartCoroutine");
+        //GameObject.FindGameObjectWithTag("GameManager").GetComponent<Gamestatemanager>().loadLevel(2);
     }
 }

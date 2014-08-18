@@ -54,7 +54,7 @@ namespace Controller
         /// </summary>
         void Start()
         {
-            DontDestroyOnLoad(this.gameObject);
+            GameObject.DontDestroyOnLoad(this.gameObject);
             startApplication(actualState);
         }
 
@@ -82,18 +82,26 @@ namespace Controller
             //    gameObject.SetActive(false);
             //}
         }
-        
+
+        void Update()
+        {
+            GameObject.DontDestroyOnLoad(this.gameObject);
+        }
+
+
         /// <summary>
         /// Starts the Intro / later maybe the Savegame
         /// </summary>
         public void startGame()
         {
+        
+            GameObject.DontDestroyOnLoad(this.gameObject);
             Debug.Log("StartGame!");
             
 
             int DEBUG_Level = 1;
             StartCoroutine(waitForFadeOutEffect(DEBUG_Level));
-            GameObject.DontDestroyOnLoad(this.gameObject);
+            
            
         }
 
@@ -251,7 +259,7 @@ namespace Controller
             }
             else
             {
-                //Application.LoadLevel(levelID);
+                Application.LoadLevel(levelID);
                 loadScreen.GetComponent<LoadScene>().startLoadingProcess(levelID);
             }
         }

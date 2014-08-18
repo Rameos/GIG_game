@@ -28,10 +28,22 @@ public class HideWhenCloseMenu : MonoBehaviour {
     }
     void Deactivateitems()
     {
-        foreach (GameObject child in children)
+        try
         {
-            child.SetActive(false);
+            foreach (GameObject child in children)
+            {
+                if(child!=null)
+                {
+                    child.SetActive(false);
+                }
+            }
         }
+        catch (System.Exception e)
+        {
+            Debug.Log("Why Children Empty`?");
+            Debug.LogError(e);
+        }
+        
         
     }
 

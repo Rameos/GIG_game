@@ -36,26 +36,20 @@ public class MainMenuController : MonoBehaviour {
         }
         else if(isOptionsActive)
         {
-
+            //TBD
         }
-    }
-
-
-    private void manageInputForOptionsMenu()
-    {
-
     }
 
     private void manageInputForMainMenu()
     {
         float input = Input.GetAxis("Vertical");
+        
         if (Mathf.Abs(input) > threseholdController)
         {
             if(canSwitchBetweenItems)
             {
                 StartCoroutine(changeItemSelection(input));
             }
-            
         }
 
         else if (Input.GetAxis("ButtonA") > 0)
@@ -65,29 +59,13 @@ public class MainMenuController : MonoBehaviour {
         }
     }
 
-    private void FadeSpritesIn()
-    {
-
-    }
-
-    private void FadeSpritesout()
-    {
-
-    }
-
 
     IEnumerator changeItemSelection(float input)
     {
         canSwitchBetweenItems = false;
-        Debug.Log("input :" + input);
-        Debug.Log("ID:" + IDSelection);
-        
-        
         
         buttonsMainmenu[IDSelection].DeselectItem();
         int nextIDStep =0;
-        
-        
         
         if(input>0)
         {
@@ -97,8 +75,7 @@ public class MainMenuController : MonoBehaviour {
         {
             nextIDStep=1;
         }
-        
-        
+
         if(IDSelection+nextIDStep>=buttonsMainmenu.Length)
         {
             Debug.Log("CHANGE BACK!");
@@ -120,10 +97,7 @@ public class MainMenuController : MonoBehaviour {
         {
             buttonsMainmenu[IDSelection+nextIDStep].SelectItem();
             IDSelection += nextIDStep;
-
         }
-
-        
 
         yield return new WaitForSeconds(0.5f);
         canSwitchBetweenItems = true;
