@@ -23,7 +23,8 @@ namespace Controller
 
         public const int INGAMEMENU_PAUSE = 0;
         public const int INGAMEMENU_CIRCLEMENU = 1;
-        public const int INGAMEMENU_INVENTORY = 2; 
+        public const int INGAMEMENU_INVENTORY = 2;
+        public const int INGAMEMENU_INGAME2DVIEW = 3; 
 
         public const int LAYERMASK_GUI = 9;
 

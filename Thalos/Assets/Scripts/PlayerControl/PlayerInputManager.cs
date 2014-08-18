@@ -94,6 +94,7 @@ public class PlayerInputManager : MonoBehaviour {
 
     void Gamestatemanager_ChangeInGameMenuHandler(int ID_Menu, bool status)
     {
+        //IngameMenu
         if(ID_Menu == Constants.INGAMEMENU_INVENTORY && status == false)
         {
             Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(false);
@@ -102,6 +103,17 @@ public class PlayerInputManager : MonoBehaviour {
         else if(ID_Menu == Constants.INGAMEMENU_INVENTORY && status == true)
         {
             Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
+            isMenuOpen = true;
+        }
+        
+        //TutorialView
+        if(ID_Menu == Constants.INGAMEMENU_INGAME2DVIEW && status == false)
+        {
+            isMenuOpen = false;
+        }
+
+        else if(ID_Menu == Constants.INGAMEMENU_INGAME2DVIEW && status == true)
+        {
             isMenuOpen = true;
         }
     }
