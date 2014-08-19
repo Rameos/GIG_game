@@ -92,6 +92,22 @@ namespace Backend
             return false; 
         }
 
+        public bool addRecipe(BaseRecipe recipe)
+        {
+            if (!getIsRecipeFounded(recipe.name))
+            {
+                FoundedRecipes.Add(recipe);
+                return true; 
+            }
+
+            return false; 
+        }
+
+        public static BaseRecipe getRecipe(PhialType type)
+        {
+
+            return Recipes.Instance().GetSingleRecipe(type.ToString());
+        }
 
         ///INGREDIENCE
         public void addIngredience(BaseIngredient newIngredience)
@@ -182,8 +198,8 @@ namespace Backend
 
             //Recipes
             FoundedRecipes = new List<BaseRecipe>();
-            FoundedRecipes.Add(Recipes.Instance().GetSingleRecipe(PhialType.Heal.ToString()));
-            FoundedRecipes.Add(Recipes.Instance().GetSingleRecipe(PhialType.Fire.ToString()));
+
+            addRecipe(getRecipe(PhialType.Heal));
             
             // Inventory Setup
             PhialInventory = new List<PhialType>();
