@@ -13,7 +13,10 @@ public class TriggerAddReciepe : MonoBehaviour {
 
     private bool isActive = false;
 
-
+    void Start()
+    {
+        renderer.enabled = false;
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == Constants.TAG_PLAYER)
@@ -21,7 +24,7 @@ public class TriggerAddReciepe : MonoBehaviour {
             isActive = true;
             Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_INGAME2DVIEW, true);
             PlayerModel.Instance().addRecipe(PlayerModel.getRecipe(type));
-
+            tutorialScreen.SetActive(isActive);
         }
     }
 
@@ -32,7 +35,7 @@ public class TriggerAddReciepe : MonoBehaviour {
         {
             isActive = false;
             Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_INGAME2DVIEW, false);
-            //tutorialScreen.SetActive(isActive);
+            tutorialScreen.SetActive(isActive);
             this.gameObject.SetActive(false);
         }
     }
