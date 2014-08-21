@@ -242,6 +242,7 @@ namespace iViewX
             gazeModel.diamLeftEye = (float)sampleData.leftEye.diam;
             gazeModel.diamRightEye = (float)sampleData.leftEye.diam;
             
+
             gazeModel.posLeftEye = new Vector3((float)sampleData.leftEye.eyePositionX, (float)sampleData.leftEye.eyePositionY, (float)sampleData.leftEye.eyePositionZ);
             gazeModel.posRightEye = new Vector3((float)sampleData.rightEye.eyePositionX, (float)sampleData.rightEye.eyePositionY, (float)sampleData.rightEye.eyePositionZ);
 
@@ -307,8 +308,32 @@ namespace iViewX
 
             else
             {
-                gazeModel.posGazeLeft = new Vector2((float)sampleData.leftEye.gazeX, (float)sampleData.leftEye.gazeY);
-                gazeModel.posGazeRight = new Vector2((float)sampleData.rightEye.gazeX, (float)sampleData.rightEye.gazeY);
+                Vector2 posGazeLeft = new Vector2((float)sampleData.leftEye.gazeX, (float)sampleData.leftEye.gazeY);
+                Vector2 posGazeRight = new Vector2((float)sampleData.rightEye.gazeX, (float)sampleData.rightEye.gazeY);
+
+                if(posGazeLeft == Vector2.zero && posGazeRight == Vector2.zero)
+                {
+                    Debug.Log("NO GAZE!");
+                    gazeModel.isEyeDetected = false; 
+                }
+                else
+                {
+                    gazeModel.isEyeDetected = true;
+                    
+                    if(posGazeLeft == Vector2.zero && posGazeRight!= Vector2.zero)
+                    {
+                        posGazeLeft = posGazeRight;
+                    }
+
+                    else if (posGazeRight == Vector2.zero && posGazeLeft != Vector2.zero)
+                    {
+                        posGazeRight = posGazeLeft;
+                    }
+
+
+                    gazeModel.posGazeLeft = posGazeLeft;
+                    gazeModel.posGazeRight = posGazeRight;
+                }
             }
 
             /*Left Eye

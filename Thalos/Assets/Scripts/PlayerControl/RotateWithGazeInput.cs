@@ -45,10 +45,6 @@ public class RotateWithGazeInput : MonoBehaviour {
             Mathf.Round( rotationFactor * 100 / 100);
 
 
-        if (gazeModel.isEyeDetected)
-        {
-            GUI.DrawTexture(new Rect(Screen.width * 0.5f - 64, 50, 128, 128), noGazeInput);
-        }
         if (isVisualisationActive)
         {
             GUI.DrawTexture(leftAOI.volume, testTexture_Right);
@@ -112,6 +108,7 @@ public class RotateWithGazeInput : MonoBehaviour {
             Vector3 gazePos = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
             float rightX = -Input.GetAxis("RightStickX");
             float rightY = -Input.GetAxis("RightStickY");
+            
             float leftX = Input.GetAxis("Horizontal");
             float leftY = Input.GetAxis("Vertical");
 
@@ -178,6 +175,7 @@ public class RotateWithGazeInput : MonoBehaviour {
                     }
                 }
                 #endregion
+                
                 else
                 {
                     float speed = (leftAOI.volume.width - gazePos.x) / leftAOI.volume.width;
@@ -190,12 +188,10 @@ public class RotateWithGazeInput : MonoBehaviour {
 
                         case gazeActionMenu.onlyPlayer:
                             player.GetComponent<Debug_ThirdPerson>().gazeInput = 0;
-
                             break;
 
                         case gazeActionMenu.camAndPlayer:
                             player.GetComponent<Debug_ThirdPerson>().gazeInput = 0;
-
                             break;
                     }
                 }
@@ -204,7 +200,6 @@ public class RotateWithGazeInput : MonoBehaviour {
             {
                 camScript.gazeInput = 0;
             }
-
         }
         else
         {

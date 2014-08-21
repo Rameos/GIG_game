@@ -19,7 +19,14 @@ namespace iViewX
         private static GazeController gazeController;
         private MonoBehaviourWithGazeComponent oldSelection;
 
+        [SerializeField]
+        private Texture2D noGazeIcon;
 
+        private float dwellTimeNoGazeIcon =2f;
+        private float loadTimeNoGazeIcon = 0; 
+        private bool isGazeDetected = false;
+
+        
         private static GazeControlComponent instance;
 
         public static GazeControlComponent Instance
@@ -134,6 +141,15 @@ namespace iViewX
 
         }
 
+        void OnGUI()
+        {
+            if ( isGazeDetected == false)
+            {
+                GUI.DrawTexture(new Rect(Screen.width * 0.45f, Screen.height * 0.05f, noGazeIcon.width * 0.65f, noGazeIcon.height * 0.65f), noGazeIcon);
+      
+            }
+        }
+
 
         /// <summary>
         /// Mono Behaviour Update Function:
@@ -141,6 +157,9 @@ namespace iViewX
         /// </summary>
         void Update()
         {
+
+
+
 
 #if UNITY_EDITOR || UNITY_STANDALONE_WIN
             if (gazeModel.isEyeTrackerRunning)
@@ -154,6 +173,23 @@ namespace iViewX
             {
                 rayCastGazeRay();
             }
+
+
+
+            if (gazeModel.isEyeDetected == false && isGazeDetected)
+            {
+                loadTimeNoGazeIcon += Time.deltaTime;
+                if(loadTimeNoGazeIcon>= dwellTimeNoGazeIcon)
+                {
+                    isGazeDetected = false;
+                }
+            }
+            else if (gazeModel.isEyeDetected && !isGazeDetected)
+            {
+                isGazeDetected = true;
+                loadTimeNoGazeIcon = 0;
+            }
+
 #else
             
             Debug.LogError("You need Windows as operation system.");
