@@ -99,8 +99,7 @@ namespace Controller
             Debug.Log("StartGame!");
             
 
-            int DEBUG_Level = 1;
-            StartCoroutine(waitForFadeOutEffect(DEBUG_Level));
+            StartCoroutine(waitForFadeOutEffect(Application.loadedLevel+1));
             
            
         }
