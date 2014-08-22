@@ -96,12 +96,7 @@ namespace Controller
         {
         
             GameObject.DontDestroyOnLoad(this.gameObject);
-            Debug.Log("StartGame!");
-            
-
-            StartCoroutine(waitForFadeOutEffect(Application.loadedLevel+1));
-            
-           
+            StartCoroutine(waitForFadeOutEffect(Application.loadedLevel+1));     
         }
 
         /// <summary>
@@ -258,7 +253,8 @@ namespace Controller
             }
             else
             {
-                Application.LoadLevel(levelID);
+                Debug.Log("waitForFadeOut! Start levelLoading");
+                //Application.LoadLevel(levelID);
                 loadScreen.GetComponent<LoadScene>().startLoadingProcess(levelID);
             }
         }

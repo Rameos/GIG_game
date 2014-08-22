@@ -39,8 +39,9 @@ public abstract class BaseMainMenuButton : MonoBehaviour {
         setColor(statusColor);
 
 
-        // FedeOut
+        // Fade Out/In
         Gamestatemanager.CloseMainMenuScreenHandler += FadeOut;
+        Gamestatemanager.OpenMainMenuHandler += FadeIn;
     }
 
     void Update()
@@ -89,6 +90,13 @@ public abstract class BaseMainMenuButton : MonoBehaviour {
         destinationColor = new Color(0, 0, 0, 0);
     }
 
+    public void FadeIn()
+    {
+        destinationColor = new Color(255, 255, 255, 1);
+        isFadeActive = true;
+        Debug.Log("FadeIn!");
+    }
+
 
     private void setColor(Color color)
     {
@@ -105,5 +113,4 @@ public abstract class BaseMainMenuButton : MonoBehaviour {
         yield return new WaitForSeconds(delayTime);
         isFadeActive = true;
     }
-
 }

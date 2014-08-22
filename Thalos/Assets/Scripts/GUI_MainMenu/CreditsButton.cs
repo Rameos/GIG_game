@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using Controller; 
 public class CreditsButton : BaseMainMenuButton {
+
+    [SerializeField]
+    private GameObject creditsScreen;
 
    void OnMouseDown()
    {
@@ -12,6 +15,11 @@ public class CreditsButton : BaseMainMenuButton {
 
    public override void DoActionWhenActivated()
    {
-       throw new System.NotImplementedException();
+       creditsScreen.SetActive(true);
+       Gamestatemanager.OnCloseMainMenu();
+       
    }
+
+
+
 }

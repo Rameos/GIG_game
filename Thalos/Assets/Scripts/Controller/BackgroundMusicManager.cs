@@ -35,6 +35,7 @@ public class BackgroundMusicManager : MonoBehaviour {
         Gamestatemanager.OpenPlayScreenHandler += FadeNormalMusicIn;
         Gamestatemanager.OpenPlayScreenHandler += UnMuteAllTracks;
         Gamestatemanager.OpenMainMenuHandler += FadeMainMenuSoundTrack;
+        Gamestatemanager.OpenMainMenuHandler+= UnMuteAllTracks;
         Gamestatemanager.CloseMainMenuScreenHandler += MuteAllMusic;
 
         InitChannelList();

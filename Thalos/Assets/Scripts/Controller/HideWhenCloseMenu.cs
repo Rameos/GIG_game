@@ -14,7 +14,7 @@ public class HideWhenCloseMenu : MonoBehaviour {
 
         StartCoroutine(renderInputLater());
         Gamestatemanager.CloseMainMenuScreenHandler += Deactivateitems;
-        
+        Gamestatemanager.OpenMainMenuHandler += Activateitems;
 	}
 
 

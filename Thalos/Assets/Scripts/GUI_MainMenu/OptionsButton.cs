@@ -11,6 +11,6 @@ public class OptionsButton : BaseMainMenuButton {
     
     public override void DoActionWhenActivated()
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }

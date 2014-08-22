@@ -313,7 +313,6 @@ namespace iViewX
 
                 if(posGazeLeft == Vector2.zero && posGazeRight == Vector2.zero)
                 {
-                    Debug.Log("NO GAZE!");
                     gazeModel.isEyeDetected = false; 
                 }
                 else

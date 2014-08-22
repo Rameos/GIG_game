@@ -5,7 +5,10 @@ public class LoadScene : MonoBehaviour {
 
     [SerializeField]
     private GameObject loadingscreenItems;
-
+    [SerializeField]
+    private TextMesh textMesh;
+    [SerializeField]
+    private GameObject progressBar;
 
     private bool isRunning = false;
     void Start()
@@ -30,13 +33,18 @@ public class LoadScene : MonoBehaviour {
     IEnumerator DisplayLoadingScreen(int levelID)
     {
 
+
         isRunning = true; 
         loadingscreenItems.SetActive(true);
         AsyncOperation async = Application.LoadLevelAsync(levelID);
         
         while (!async.isDone)
         {
-            Debug.Log("LoadDone: " + async.progress * 100);
+            textMesh.text = (int)(async.progress * 100)+"%";
+            if ((int)(async.progress * 100)>=88)
+            {
+                textMesh.text = "...Start Level...";
+            }
             yield return null;
 
         }

@@ -451,8 +451,6 @@ public class PlayerInputManager : MonoBehaviour {
 
             if (isInAir || isJumping)
             {
-                Debug.LogError("ColStay");
-                Debug.DrawRay(contactPoint, contactPointNormal,Color.green);
                 rigidbody.AddForceAtPosition(contactPointNormal * 10, contactPoint);
             }
         }
