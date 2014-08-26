@@ -145,7 +145,6 @@ public class RotateWithGazeInput : MonoBehaviour {
                 
                 else
                 {
-                    float speed = (leftAOI.volume.width - gazePos.x) / leftAOI.volume.width;
                     camScript.gazeInput = 0;
                 }
             }
