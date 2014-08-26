@@ -212,13 +212,11 @@ public class PlayerInputManager : MonoBehaviour {
         {
             isGrounded = false;
             isInAir = true;
-            //Set JumpDirection
         }
     }
 
     private void jump()
     {
-        Debug.Log("Jump!");
         animator.SetTrigger("Jump");
     }
 
@@ -244,18 +242,13 @@ public class PlayerInputManager : MonoBehaviour {
                 destinationPoint.y = 0;
 
                 Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
-                transform.rotation = lookAtRotation;//Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime);
+                transform.rotation = lookAtRotation;
 
                 rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
                 rigidbody.velocity += transform.forward * jumpForcePower;
 
-                //if (Mathf.Abs(inputX) > thresholdStics || Mathf.Abs(inputY) > thresholdStics)
-
 
             }
-
-            //rigidbody.velocity.y = 20;
-            //rigidbody.AddForce(transform.up * jumpSpeed, ForceMode.Force);
         }
         else
         {
@@ -270,26 +263,11 @@ public class PlayerInputManager : MonoBehaviour {
         float angle = 0f;
         float speedOut = 0f;
         StickInputToWorld(inputX, inputY, ref angle, ref speedOut);
-        
-
-
-        Debug.DrawLine(transform.position, transform.position + transform.forward * 2, Color.green);
-
-
-
-
 
         if (Mathf.Abs(speedOut) > 0.1f)
         {
 
             AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
-
-            
-            if (currentState.IsName("Shoot_Walk"))
-            {
-                Debug.Log("SHOT AND RUN!");
-                //speedOut = 0.5f;
-            }
 
             if (isGrounded)
             {
@@ -301,7 +279,6 @@ public class PlayerInputManager : MonoBehaviour {
             }
             else
             {
-                //BUG!
                 Vector3 destinationPoint = jumpScript.getDestinationpoint();
                 Debug.DrawRay(transform.position, destinationPoint, Color.magenta, 2f);
 
@@ -310,7 +287,7 @@ public class PlayerInputManager : MonoBehaviour {
                 destinationPoint.y = 0;
 
                 Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
-                transform.rotation = lookAtRotation;//Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime);
+                transform.rotation = lookAtRotation;
             }
 
         }
@@ -330,13 +307,6 @@ public class PlayerInputManager : MonoBehaviour {
 
         else if (Input.GetAxis("Triggers") > thresholdTriggers)
         {
-            //shotManager.Shot(); 
-            if(isInAir||isJumping)
-            {
-                Debug.Log("OH MY GAWD IM  A FUCKING BIRD!!! LETS SHOOT SOME STUPID STUFF");
-                //this.rigidbody.isKinematic = true;
-                //this.rigidbody.useGravity = false;
-            }
             
             animator.SetBool("Shoot",true);
             Debug.Log("Shoot");
