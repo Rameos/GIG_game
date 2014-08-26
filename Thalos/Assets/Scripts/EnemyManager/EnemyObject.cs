@@ -224,7 +224,6 @@ public class EnemyObject : MonoBehaviour {
     {
         if(!isAlive)
         {
-            GameObject.FindGameObjectWithTag("PlayerComplete").GetComponent<Winning>().RemoveHead();
             Gamestatemanager.OnRumbleEvent(2, 1, 1);
             Instantiate(explosion, transform.position, explosion.transform.rotation);
             Destroy(this.gameObject);

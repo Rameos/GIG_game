@@ -142,12 +142,14 @@ namespace iViewX
 
         void OnGUI()
         {
-            if ( isGazeDetected == false)
+
+            if (!gazeModel.isEyeDetected)
             {
-                GUI.DrawTexture(new Rect(Screen.width * 0.45f, Screen.height * 0.05f, noGazeIcon.width * 0.65f, noGazeIcon.height * 0.65f), noGazeIcon);
-      
+                GUI.DrawTexture(new Rect(Screen.width * 0.5f - 64, 50, 128, 128), noGazeInput);
             }
+
         }
+        
 
 
         /// <summary>
@@ -192,16 +194,7 @@ namespace iViewX
 #endif
         }
 
-        void OnGUI()
-        {
 
-            if (!gazeModel.isEyeDetected)
-            {
-                GUI.DrawTexture(new Rect(Screen.width * 0.5f - 64, 50, 128, 128), noGazeInput);
-            }
-
-        }
-        
         
         /// <summary>
         /// Mono Behaviour OnApplicationQuit Function:
