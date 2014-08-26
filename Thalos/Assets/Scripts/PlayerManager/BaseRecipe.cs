@@ -8,10 +8,10 @@ public class BaseRecipe {
     public string name { get; set; }
     private Hashtable NeededIngredients = new Hashtable();
 
-    public BaseRecipe(PlayerModel.PhialType phialType,string name) 
+    public BaseRecipe(PlayerModel.PhialType phialType) 
     {
         this.phialType = phialType;
-        this.name = name;
+        this.name = phialType.ToString();
     }
 
     public void addNeededIngredient(string ingredient, int num) 

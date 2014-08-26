@@ -34,21 +34,21 @@ public class Debug_Playerstats : MonoBehaviour {
 
        if(GUI.Button(new Rect (20,330, 150,20),"Create HealPoison"))
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(Strings.HEALPOTION));
+            GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(PlayerModel.PhialType.Heal.ToString()));
         }
 
 
        if (GUI.Button(new Rect(20, 360, 150, 20), "Create FirePoison"))
        {
 
-           GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(Strings.FIREPOTION));
+           GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(PlayerModel.PhialType.Fire.ToString()));
        }
 
 
        if (GUI.Button(new Rect(20, 390, 150, 20), "Create IcePoison"))
        {
 
-           GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(Strings.ICEPOTION));
+           GameObject.FindGameObjectWithTag("Player").GetComponent<AlchemySystem>().createPhiole(Recipes.Instance().GetSingleRecipe(PlayerModel.PhialType.Ice.ToString()));
        }
     }
 }

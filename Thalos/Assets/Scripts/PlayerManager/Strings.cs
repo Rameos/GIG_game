@@ -3,9 +3,9 @@ using System.Collections;
 
 public static class Strings {
 
-    public const string HEALPOTION = "Healpotion";
-    public const string FIREPOTION = "Firepotion";
-    public const string ICEPOTION = "Icepotion";
+    //public const string HEALPOTION = "fire";
+    //public const string FIREPOTION = "Firepotion";
+    //public const string ICEPOTION = "Icepotion";
 
     public const string WATER = "Water";
     public const string HERB = "Herb";

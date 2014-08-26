@@ -41,13 +41,6 @@ public class RotateWithGazeInput : MonoBehaviour {
     void OnGUI()
     {
 
-        if (gameObject.GetComponentInParent <DemoManagement>().isRotationSpeedVisible)
-        {
-            GUI.Label(new Rect(25, 5, 250, 60), "Rotationspeed: " + rotationFactor);
-            rotationFactor = GUI.HorizontalSlider(new Rect(25, 25, 100, 30), rotationFactor, 0.0f, 1.0f);
-            Mathf.Round(rotationFactor * 100 / 100);
-        }
-
         if (isVisualisationActive)
         {
             GUI.DrawTexture(leftAOI.volume, testTexture_Right);
@@ -97,6 +90,7 @@ public class RotateWithGazeInput : MonoBehaviour {
             Vector3 gazePos = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
             float rightX = -Input.GetAxis("RightStickX");
             float rightY = -Input.GetAxis("RightStickY");
+            
             float leftX = Input.GetAxis("Horizontal");
             float leftY = Input.GetAxis("Vertical");
 
@@ -113,27 +107,7 @@ public class RotateWithGazeInput : MonoBehaviour {
 
                         float speed = Mathf.Abs((leftAOI.volume.width - gazePos.x) / leftAOI.volume.width) * rotationFactor;
 
-                        if (speed > 1)
-                            speed = 0.45f;
-                        switch (actualStateGazeAction)
-                        {
-                            case gazeActionMenu.onlyCam:
-                                camScript.gazeInput = speed * speedUp;
-                                break;
-
-                            case gazeActionMenu.onlyPlayer:
-                                player.GetComponent<Debug_ThirdPerson>().gazeInput = speed * 10f;
-
-                                break;
-
-                            case gazeActionMenu.camAndPlayer:
-                                player.GetComponent<Debug_ThirdPerson>().gazeInput = speed * 10f;
-
-                                break;
-
-                            case gazeActionMenu.NONE:
-                                break;
-                        }
+                        camScript.gazeInput = speed * speedUp;
                     }
                 }
                 #endregion
@@ -143,49 +117,20 @@ public class RotateWithGazeInput : MonoBehaviour {
                 else if (rightAOI.volume.Contains(gazePos))
                 {
                     float speed = Mathf.Abs(((rightAOI.volume.width - gazePos.x) + offSetRightAOI) / rightAOI.volume.width) * rotationFactor;
-                    
-                    switch (actualStateGazeAction)
-                    {
-                        case gazeActionMenu.onlyCam:
-                            camScript.gazeInput = -speed * speedUp;
-                            break;
 
-                        case gazeActionMenu.onlyPlayer:
-                            player.GetComponent<Debug_ThirdPerson>().gazeInput = -speed;
-                            break;
-
-                        case gazeActionMenu.camAndPlayer:
-                            player.GetComponent<Debug_ThirdPerson>().gazeInput = -speed;
-                            break;
-
-                        case gazeActionMenu.NONE:
-                            break;
-                    }
+                    camScript.gazeInput = -speed * speedUp;
                 }
                 #endregion
+                
                 else
                 {
-                    float speed = (leftAOI.volume.width - gazePos.x) / leftAOI.volume.width;
-
-                    switch (actualStateGazeAction)
-                    {
-                        case gazeActionMenu.onlyCam:
-                            camScript.gazeInput = 0;
-                            break;
-
-                        case gazeActionMenu.onlyPlayer:
-                            player.GetComponent<Debug_ThirdPerson>().gazeInput = 0;
-
-                            break;
-
-                        case gazeActionMenu.camAndPlayer:
-                            player.GetComponent<Debug_ThirdPerson>().gazeInput = 0;
-
-                            break;
-                    }
+                    camScript.gazeInput = 0;
                 }
             }
-
+            else if(isInGameMenu)
+            {
+                camScript.gazeInput = 0;
+            }
         }
         else
         {

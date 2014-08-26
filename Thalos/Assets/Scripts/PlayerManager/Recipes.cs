@@ -30,20 +30,20 @@ public class Recipes
 
     private void InitRecipes()
     {
-        BaseRecipe Healpotion = new BaseRecipe(PlayerModel.PhialType.Heal,Strings.HEALPOTION);
+        BaseRecipe Healpotion = new BaseRecipe(PlayerModel.PhialType.Heal);
         Healpotion.addNeededIngredient(Strings.WATER, 1);
         Healpotion.addNeededIngredient(Strings.HERB, 1);
-        ListOfRecipes.Add(Strings.HEALPOTION, Healpotion);
+        ListOfRecipes.Add(PlayerModel.PhialType.Heal.ToString(), Healpotion);
 
-        BaseRecipe Firepotion = new BaseRecipe(PlayerModel.PhialType.Fire,Strings.FIREPOTION);
+        BaseRecipe Firepotion = new BaseRecipe(PlayerModel.PhialType.Fire);
         Firepotion.addNeededIngredient(Strings.OIL, 1);
         Firepotion.addNeededIngredient(Strings.PHOENIXASH, 1);
-        ListOfRecipes.Add(Strings.FIREPOTION, Firepotion);
+        ListOfRecipes.Add(PlayerModel.PhialType.Fire.ToString(), Firepotion);
 
-        BaseRecipe Icepotion = new BaseRecipe(PlayerModel.PhialType.Ice,Strings.ICEPOTION);
+        BaseRecipe Icepotion = new BaseRecipe(PlayerModel.PhialType.Ice);
         Icepotion.addNeededIngredient(Strings.WATER, 1);
         Icepotion.addNeededIngredient(Strings.CRISTALFLOWER, 1);
-        ListOfRecipes.Add(Strings.ICEPOTION, Icepotion);
+        ListOfRecipes.Add(PlayerModel.PhialType.Ice.ToString(), Icepotion);
     }
 
     public string[] GetRecipeList()

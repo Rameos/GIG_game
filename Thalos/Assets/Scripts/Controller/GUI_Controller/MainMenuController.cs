@@ -5,51 +5,103 @@ using Controller;
 
 public class MainMenuController : MonoBehaviour {
 
-	void OnGUI() {
+    private BaseMainMenuButton[] buttonsMainmenu;
+    public Color32 colorText { get; set; }
+    public Color32 colorSprites { get; set; }
 
-		GUI.BeginGroup (new Rect(Screen.width / 2 - 50, Screen.height / 2 - 50,  Screen.width, Screen.height)); 
+    [SerializeField]
+    private float delay;
 
-		GUI.Box (new Rect (0, 0, Screen.width / 2, Screen.height / 2), "Loader Menu");
 
-		if (GUI.Button (new Rect (20, 50, 100, 30), "Main Menu")) 
-		{
-			Application.LoadLevel(1); 
-			GameObject.FindGameObjectWithTag("UISoundManager").GetComponent<UISoundManager>().playClickSound();
-		}
+    [SerializeField]
+    private float threseholdController = 0.1f;
+    private bool isFadeActive = false;
+    private bool canSwitchBetweenItems = true;
+    private int IDSelection = 0;
 
-		else if(GUI.Button(new Rect(20,100,100,30), "Start Game"))
-		{
-			Application.LoadLevel(2);
-			GameObject.FindGameObjectWithTag("UISoundManager").GetComponent<UISoundManager>().playClickSound();
-		}
+    private bool isMainMenuActive = true;
+    private bool isOptionsActive = false;
+    
+    void Start()
+    {
+        buttonsMainmenu = GetComponentsInChildren<BaseMainMenuButton>();
+        buttonsMainmenu[IDSelection].SelectItem(); 
+    }
 
-		else if(GUI.Button(new Rect(20,150,100,30), "MenuOverview")) 
-		{
-			//Application.LoadLevel(3);
-			print ("Mixing clicked");
-			GameObject.FindGameObjectWithTag("UISoundManager").GetComponent<UISoundManager>().playClickSound();
-		}
+    void Update()
+    {
+        if(isMainMenuActive)
+        {
+            manageInputForMainMenu();
+        }
+        else if(isOptionsActive)
+        {
+            //TBD
+        }
+    }
 
-		else if(GUI.Button(new Rect(20,200,100,30), "Mixing")) 
-		{
-			//Application.LoadLevel(4);
-			print ("Mixing clicked");
-			GameObject.FindGameObjectWithTag("UISoundManager").GetComponent<UISoundManager>().playClickSound();
-		}
+    private void manageInputForMainMenu()
+    {
+        float input = Input.GetAxis("Vertical");
+        
+        if (Mathf.Abs(input) > threseholdController)
+        {
+            if(canSwitchBetweenItems)
+            {
+                StartCoroutine(changeItemSelection(input));
+            }
+        }
 
-		else if(GUI.Button(new Rect(20,250,100,30), "Inventory")) 
-		{
-			//Application.LoadLevel(5);
-			print("Inventory clicked"); 
-			GameObject.FindGameObjectWithTag("UISoundManager").GetComponent<UISoundManager>().playClickSound();
-		}
+        else if (Input.GetAxis("ButtonA") > 0)
+        {
+            Debug.Log("ButtonA");
+            buttonsMainmenu[IDSelection].DoActionItem();
+        }
+    }
 
-		else if (GUI.Button(new Rect(20, 350, 150, 150), "End Game"))
-		{
-			GameObject.FindGameObjectWithTag("UISoundManager").GetComponent<UISoundManager>().playClickSound();
-			GameObject.FindGameObjectWithTag("GameManager").GetComponent<Gamestatemanager>().endGame();
-		}
-		
-		GUI.EndGroup (); 
-	}
+
+    IEnumerator changeItemSelection(float input)
+    {
+        canSwitchBetweenItems = false;
+        
+        buttonsMainmenu[IDSelection].DeselectItem();
+        int nextIDStep =0;
+        
+        if(input>0)
+        {
+            nextIDStep=-1;
+        }
+        else
+        {
+            nextIDStep=1;
+        }
+
+        if(IDSelection+nextIDStep>=buttonsMainmenu.Length)
+        {
+            Debug.Log("CHANGE BACK!");
+            nextIDStep = 0;
+            IDSelection = nextIDStep;
+       
+            buttonsMainmenu[nextIDStep].SelectItem();
+
+        }
+        else if(IDSelection+nextIDStep<0)
+        {
+            Debug.Log("Smaller than Zero!");
+            nextIDStep = buttonsMainmenu.Length-1;
+            IDSelection = nextIDStep;
+
+            buttonsMainmenu[nextIDStep].SelectItem();
+        }
+        else
+        {
+            buttonsMainmenu[IDSelection+nextIDStep].SelectItem();
+            IDSelection += nextIDStep;
+        }
+
+        yield return new WaitForSeconds(0.5f);
+        canSwitchBetweenItems = true;
+        
+    }
+
 }

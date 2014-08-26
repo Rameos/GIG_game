@@ -10,14 +10,21 @@ namespace Backend
 
         public enum DamageTypes {Standard, Fire, Ice, None};
         public enum PhialType { Empty, Fire, Ice, Heal };
-
+        public enum IngredienceType
+        {
+            Water,
+            Oil,
+            Herb,
+            Phoenixash,
+            Cristalflower
+        }
         private static PlayerModel playerModel;
 
         public int HealthPoints { get; set; }
         public int MaxHealthPoints { get; set; }
         
         public List<PhialType> PhialInventory { get; set; }
-        public List<Recipes> FoundedRecipes { get; set; }
+        public List<BaseRecipe> FoundedRecipes { get; set; }
         public int phialSizeMax { get; set; }
 
         public List<BaseIngredient> ingredieceInventory;
@@ -75,7 +82,32 @@ namespace Backend
             PhialInventory.Remove(type);
         }
 
+        public bool getIsRecipeFounded(string name)
+        {
+            if (FoundedRecipes.Contains(Recipes.Instance().GetSingleRecipe(name)))
+            {
+                return true; 
+            }
 
+            return false; 
+        }
+
+        public bool addRecipe(BaseRecipe recipe)
+        {
+            if (!getIsRecipeFounded(recipe.name))
+            {
+                FoundedRecipes.Add(recipe);
+                return true; 
+            }
+
+            return false; 
+        }
+
+        public static BaseRecipe getRecipe(PhialType type)
+        {
+
+            return Recipes.Instance().GetSingleRecipe(type.ToString());
+        }
 
         ///INGREDIENCE
         public void addIngredience(BaseIngredient newIngredience)
@@ -156,16 +188,19 @@ namespace Backend
         private PlayerModel()
         {
             this.MaxHealthPoints = 100;
-            this.phialSizeMax = 5;
+            this.HealthPoints = 100;
+            this.phialSizeMax = 9999;
 
             //Damage
             this.Damage = 42;
             this.DamageType_Bolt = DamageTypes.Standard;
-            this.DamageType_Poision = DamageTypes.Fire;
-            
-            //Debug
-            this.HealthPoints = 25;
+            this.DamageType_Poision = DamageTypes.None;
 
+            //Recipes
+            FoundedRecipes = new List<BaseRecipe>();
+
+            addRecipe(getRecipe(PhialType.Heal));
+            
             // Inventory Setup
             PhialInventory = new List<PhialType>();
             addPhialToinventory(PhialType.Heal);
@@ -174,8 +209,6 @@ namespace Backend
             addPhialToinventory(PhialType.Ice);
             addPhialToinventory(PhialType.Fire);
 
-
-            Debug.Log("PhialCountHeal:" + getCountOfPhialsOfSortInInventory(PhialType.Heal));
 
             ingredieceInventory = new List<BaseIngredient>();
         }

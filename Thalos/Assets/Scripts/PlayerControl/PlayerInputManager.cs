@@ -39,6 +39,7 @@ public class PlayerInputManager : MonoBehaviour {
     [SerializeField]
     private bool isGrounded = false;
 
+    private bool isMenuOpen = false;
     //private bool jumpClimax = false;
     [SerializeField]
     private Transform centerOfMass;
@@ -81,31 +82,58 @@ public class PlayerInputManager : MonoBehaviour {
         findGameController();
         Gamestatemanager.RumbleEventHandler += startRumbleForTime;
         Gamestatemanager.RumbleEventStopHandler += stopRumbleEvent;
+        Gamestatemanager.ChangeInGameMenuHandler += Gamestatemanager_ChangeInGameMenuHandler;
         jumpScript = gameObject.GetComponent<JumpwithGaze>();
         capCollider = gameObject.GetComponent<CapsuleCollider>();
         shotManager = gameObject.GetComponent<ShotManager_Player>();
 
 	}
 
+    void Gamestatemanager_ChangeInGameMenuHandler(int ID_Menu, bool status)
+    {
+        //IngameMenu
+        if(ID_Menu == Constants.INGAMEMENU_INVENTORY && status == false)
+        {
+            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(false);
+            isMenuOpen = false;
+        }
+        else if(ID_Menu == Constants.INGAMEMENU_INVENTORY && status == true)
+        {
+            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
+            isMenuOpen = true;
+        }
+        
+        //TutorialView
+        if(ID_Menu == Constants.INGAMEMENU_INGAME2DVIEW && status == false)
+        {
+            isMenuOpen = false;
+        }
+
+        else if(ID_Menu == Constants.INGAMEMENU_INGAME2DVIEW && status == true)
+        {
+            isMenuOpen = true;
+        }
+    }
+
     void Update() 
     {
-
-        inputX = Input.GetAxis("Horizontal");
-        inputY = Input.GetAxis("Vertical");
-
-
-        checkIsGrounded();
-        ManageRumbleEvents();
-
-        move(inputX, inputY);
-
-        if(gazeModel.isEyeDetected)
+        if (!isMenuOpen)
         {
-            checkshootInput();        
+            inputX = Input.GetAxis("Horizontal");
+            inputY = Input.GetAxis("Vertical");
+
+
+            checkIsGrounded();
+
+            move(inputX, inputY);
+
+
+            checkshootInput();
+            ManageRumbleEvents();
+
             checkButtonInput();
             checkGazeMenuStatus();
         }
-        
     }
 
     public void stopRumbleEvent() 
@@ -181,13 +209,11 @@ public class PlayerInputManager : MonoBehaviour {
         {
             isGrounded = false;
             isInAir = true;
-            //Set JumpDirection
         }
     }
 
     private void jump()
     {
-        Debug.Log("Jump!");
         animator.SetTrigger("Jump");
     }
 
@@ -216,13 +242,11 @@ public class PlayerInputManager : MonoBehaviour {
 
                 destinationPoint = destinationPoint - transform.position;
                 destinationPoint.y = 0;
-
                 turnToPosition(destinationPoint);
 
                 rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
                 rigidbody.velocity += transform.forward * jumpForcePower;
             }
-
         }
         else
         {
@@ -241,6 +265,7 @@ public class PlayerInputManager : MonoBehaviour {
         if (Mathf.Abs(speedOut) > 0.1f)
         {
             AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
+
             if (isGrounded)
             {
                 moveDirection = (transform.forward * speedFactor * speedOut) * Time.deltaTime;
@@ -251,7 +276,6 @@ public class PlayerInputManager : MonoBehaviour {
             }
             else
             {
-                //BUG!
                 Vector3 destinationPoint = jumpScript.getDestinationpoint();
                 Debug.DrawRay(transform.position, destinationPoint, Color.magenta, 2f);
 
@@ -260,7 +284,7 @@ public class PlayerInputManager : MonoBehaviour {
                 destinationPoint.y = 0;
 
                 Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
-                transform.rotation = lookAtRotation;//Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime);
+                transform.rotation = lookAtRotation;
             }
 
         }
@@ -280,13 +304,6 @@ public class PlayerInputManager : MonoBehaviour {
 
         else if (Input.GetAxis("Triggers") > thresholdTriggers)
         {
-            //shotManager.Shot(); 
-            if(isInAir||isJumping)
-            {
-                Debug.Log("OH MY GAWD IM  A FUCKING BIRD!!! LETS SHOOT SOME STUPID STUFF");
-                //this.rigidbody.isKinematic = true;
-                //this.rigidbody.useGravity = false;
-            }
             
 
             
@@ -313,6 +330,7 @@ public class PlayerInputManager : MonoBehaviour {
         if (Input.GetAxis("ButtonY") > 0)
         {
             Debug.Log("ButtonY");
+            Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_INVENTORY, true);
         }
 
         else if (Input.GetAxis("ButtonX") > 0)
@@ -325,7 +343,6 @@ public class PlayerInputManager : MonoBehaviour {
         else if (Input.GetAxis("ButtonA") > 0)
         {
             Debug.Log("ButtonA");
-
             jump();
         }
 
@@ -341,7 +358,6 @@ public class PlayerInputManager : MonoBehaviour {
 
         if (Input.GetAxis("ButtonLB") > 0 || Input.GetAxis("ButtonX") > 0)
         {
-
             Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
             Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU, true);
             circleMenuIsOpen = true;
@@ -406,8 +422,6 @@ public class PlayerInputManager : MonoBehaviour {
 
             if (isInAir || isJumping)
             {
-                Debug.LogError("ColStay");
-                Debug.DrawRay(contactPoint, contactPointNormal,Color.green);
                 rigidbody.AddForceAtPosition(contactPointNormal * 10, contactPoint);
             }
         }

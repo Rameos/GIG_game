@@ -23,6 +23,9 @@ namespace Controller
 
     public class Gamestatemanager:MonoBehaviour
     {
+        [SerializeField]
+        private GameObject loadScreen;
+        
         public static event OpenMainMenu OpenMainMenuHandler;
         public static event OpenPlayScreen OpenPlayScreenHandler;
         public static event ClosePlayScreen ClosePlayScreenHandler;
@@ -36,6 +39,7 @@ namespace Controller
 
         public static event RumbleEvent RumbleEventHandler;
         public static event RumbleEventStop RumbleEventStopHandler;
+        
         public enum Gamestate
         {
             Mainmenu,
@@ -50,7 +54,7 @@ namespace Controller
         /// </summary>
         void Start()
         {
-            initComponents();
+            GameObject.DontDestroyOnLoad(this.gameObject);
             startApplication(actualState);
         }
 
@@ -61,30 +65,38 @@ namespace Controller
             if (levelID >= Constants.ID_FIRSTLEVEL)
             {
                 OnCloseMainMenu();
-                OnOpenPlayView();
+               
             }
-            else if (levelID == Constants.ID_INTRO)
-            {
-                OnCloseMainMenu();
-            }
-            else if (levelID == Constants.ID_MAINMENU)
-            {
-                OnOpenMainMenu();
-                OnClosePlayView();
-            }
+            //else if (levelID == Constants.ID_INTRO)
+            //{
+            //    OnCloseMainMenu();
+            //}
+            //else if (levelID == Constants.ID_MAINMENU)
+            //{
+            //    OnOpenMainMenu();
+            //    OnClosePlayView();
+            //}
+
+            //if(GameObject.FindGameObjectWithTag("Player"))
+            //{
+            //    gameObject.SetActive(false);
+            //}
         }
-        
+
+        void Update()
+        {
+            GameObject.DontDestroyOnLoad(this.gameObject);
+        }
+
+
         /// <summary>
         /// Starts the Intro / later maybe the Savegame
         /// </summary>
         public void startGame()
         {
-            Debug.Log("StartGame!");
-            OnCloseMainMenu();
-
-            int DEBUG_Level = 1;
-            StartCoroutine(waitForFadeOutEffect(DEBUG_Level));
-           
+        
+            GameObject.DontDestroyOnLoad(this.gameObject);
+            StartCoroutine(waitForFadeOutEffect(Application.loadedLevel+1));     
         }
 
         /// <summary>
@@ -102,15 +114,6 @@ namespace Controller
         public void loadLevel(int levelID)
         {
             StartCoroutine(waitForFadeOutEffect(levelID));
-        }
-
-        /// <summary>
-        /// Load the Level
-        /// </summary>
-        /// <param name="levelName"></param>
-        public void loadLevel(string levelName)
-        {
-            StartCoroutine(waitForFadeOutEffect(levelName));
         }
 
         /// <summary>
@@ -139,24 +142,6 @@ namespace Controller
             //TODO:  init InputManager
         }
 
-        /// <summary>
-        /// init all Components of the Game
-        /// </summary>
-        private void initComponents()
-        {
-            GameObject.DontDestroyOnLoad(this.gameObject);
-            GazeControlComponent control = gameObject.AddComponent<GazeControlComponent>();
-
-            if (gameObject.GetComponent<InputManagerMainMenu>() == null)
-            {
-                InputManagerMainMenu inputMainMenu = gameObject.AddComponent<InputManagerMainMenu>();
-            }
-
-            else if (gameObject.GetComponent<InputManagerMainMenu>() == null)
-            {
-                //TODO
-            }
-        }
         
         /// <summary>
         /// OptionEvent
@@ -184,6 +169,8 @@ namespace Controller
 
         public static void OnOpenPlayView()
         {
+
+            Debug.Log("OpenPlayView");
             if (OpenPlayScreenHandler != null)
             {
                 OpenPlayScreenHandler();
@@ -201,7 +188,7 @@ namespace Controller
         public static void OnPlayerIsDead()
         {
 
-            Debug.Log("OpenPlayer");
+            Debug.Log("DiePlayer");
             if (PlayerIsDeadHandler != null)
             {
                 PlayerIsDeadHandler();
@@ -254,9 +241,11 @@ namespace Controller
 
         IEnumerator waitForFadeOutEffect(int levelID)
         {
+            OnCloseMainMenu();
             FadeSceneEffect.FadeOut();
             yield return new WaitForSeconds(FadeSceneEffect.fadeSpeed);
             Debug.Log("LoadLevelWith ID: " + levelID);
+            
             
             if (levelID < 0)
             {
@@ -264,15 +253,10 @@ namespace Controller
             }
             else
             {
-                Application.LoadLevel(levelID);
+                Debug.Log("waitForFadeOut! Start levelLoading");
+                //Application.LoadLevel(levelID);
+                loadScreen.GetComponent<LoadScene>().startLoadingProcess(levelID);
             }
-        }
-
-        IEnumerator waitForFadeOutEffect(string levelName)
-        {
-            FadeSceneEffect.FadeOut();
-            yield return new WaitForSeconds(FadeSceneEffect.fadeSpeed);
-            Application.LoadLevel(levelName);
         }
     }
 }

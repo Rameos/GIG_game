@@ -14,10 +14,17 @@ TagManager:
   - GazeGui_Icon
   - GazeGui_Text
   - Enemy
+<<<<<<< HEAD
   - Bullet
   - PlayerComplete
   - EnemyComplete
   - FadeManager
+=======
+  - MainMenu
+  - AlchemySystemMenu
+  - Audiomanager
+  - PopUpWindow
+>>>>>>> origin/LevelDesignBranch
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

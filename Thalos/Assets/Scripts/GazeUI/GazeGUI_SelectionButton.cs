@@ -46,19 +46,30 @@ namespace GazeGUI
         }
         void Update()
         {
+            //setSelectable only Endless Items
             if (!isEndless)
+            {
+                isSelectable = getIsSelectable();
+            }
+                //Only the Normal Bolt is real endless
+            else if (isEndless && actionItem != Constants.selectableItemsCircleMenu.NormalBolt)
             {
                 isSelectable = getIsSelectable();
             }
             else
             {
                 if (CountText!= null)
-                CountText.SetActive(false); 
+                {
+                    CountText.SetActive(false); 
+                }
             }
 
-            //renderer.material.color = Color32.Lerp(renderer.material.color,destinationColor,1f);
+
+            // change Material Color 
+            renderer.material.color = Color32.Lerp(renderer.material.color, destinationColor, 1f);
             Icon.renderer.material.color = Color.white;
 
+            
             if(CountText!= null)
             {
                 CountText.GetComponent<TextMesh>().text = PlayerModel.Instance().getCountOfPhialsOfSortInInventory(phialType)+"x";
@@ -67,7 +78,11 @@ namespace GazeGUI
             if(!isSelectable)
             {
 
-                CountText.SetActive(false);
+                if (CountText != null)
+                {
+                    CountText.SetActive(false); 
+                }
+
                 destinationColor = notSelectableColor;
                 Icon.renderer.material.color = notSelectableColor;
             }
@@ -78,18 +93,22 @@ namespace GazeGUI
                     CountText.SetActive(true);
                 }
             }
-
-
-            
         }
 
         private bool getIsSelectable()
         {
-
-            if(PlayerModel.Instance().checkIfPhialIsInInventory(phialType))
+            Debug.Log("ITEM:" + phialType.ToString());
+            if (PlayerModel.Instance().checkIfPhialIsInInventory(phialType)&& !isEndless)
             {
-                return true; 
+                return true;
             }
+
+            else if (PlayerModel.Instance().getIsRecipeFounded(phialType.ToString()) && isEndless)
+            {
+                return true;
+            }
+
+
             
             return false;
         }
@@ -103,9 +122,11 @@ namespace GazeGUI
                     return PlayerModel.PhialType.Heal;
 
                 case Constants.selectableItemsCircleMenu.FirePoison:
+                case Constants.selectableItemsCircleMenu.FireBolt:
                     return PlayerModel.PhialType.Fire;
 
                 case Constants.selectableItemsCircleMenu.IcePoison:
+                case Constants.selectableItemsCircleMenu.IceBolt:
                     return PlayerModel.PhialType.Ice;
 
             }
