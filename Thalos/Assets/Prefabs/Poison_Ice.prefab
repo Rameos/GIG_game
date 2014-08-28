@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 100004, guid: 36ace7209db17464fb409e4186a779b2, type: 2}
+  isDebug: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

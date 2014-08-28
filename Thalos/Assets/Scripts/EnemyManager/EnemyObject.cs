@@ -73,17 +73,17 @@ public class EnemyObject : MonoBehaviour {
                 break;
 
             case enemyType.policeman_LVL02:
-                enemyManager = new Policeman(10, 5, 5);
+                enemyManager = new Policeman(10, 5, 8);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Fire);
                 break;
 
             case enemyType.policeman_LVL03:
-                enemyManager = new Policeman(20, 5, 5);
+                enemyManager = new Policeman(20, 5, 12);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Ice);
                 break;
 
             case enemyType.roboter_LVL01:
-                enemyManager = new Robot(30, 1, 5);
+                enemyManager = new Robot(30, 1, 14);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Standard);
                 break;
         }

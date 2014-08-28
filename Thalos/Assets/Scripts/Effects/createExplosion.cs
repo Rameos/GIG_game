@@ -33,7 +33,9 @@ public class createExplosion : MonoBehaviour {
             }
             colliderItem.rigidbody.AddExplosionForce(force, transform.position, radius, 1, ForceMode.Impulse);
         }
-
-        fieldDamagemanager.doDamageAtEnemies(colliders);
+        if(fieldDamagemanager != null)
+        {
+            fieldDamagemanager.doDamageAtEnemies(colliders);
+        }
     }
 }

@@ -78,6 +78,7 @@ public class Bullet : MonoBehaviour {
 
                 if (col.gameObject.tag == Constants.TAG_PLAYER)
                 {
+                    Debug.Log("Player Gets Damage!");
                     Gamestatemanager.OnPlayerGetsDamage(damageInformation.damage);
                 }
                 break;
