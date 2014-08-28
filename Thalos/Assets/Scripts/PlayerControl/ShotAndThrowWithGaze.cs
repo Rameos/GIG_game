@@ -36,7 +36,7 @@ public class ShotAndThrowWithGaze : MonoBehaviour {
 
             Debug.DrawRay(ray.origin, ray.direction, Color.cyan);
 
-            if (hitInformation.Equals(null) == false)
+            if (hitInformation.Equals(null) == false && hitInformation.collider!= null)
             {
                 if (hitInformation.collider.tag != "Bullet")
                 {

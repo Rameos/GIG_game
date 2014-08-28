@@ -5,7 +5,7 @@ PhysicsManager:
   m_ObjectHideFlags: 0
   m_Gravity: {x: 0, y: -25, z: 0}
   m_DefaultMaterial: {fileID: 0}
-  m_BounceThreshold: 2
+  m_BounceThreshold: 1.90999997
   m_SleepVelocity: .150000006
   m_SleepAngularVelocity: .140000001
   m_MaxAngularVelocity: 7

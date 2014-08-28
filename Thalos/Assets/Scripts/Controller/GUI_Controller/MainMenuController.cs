@@ -3,105 +3,106 @@ using System.Collections;
 using iViewX;
 using Controller;
 
-public class MainMenuController : MonoBehaviour {
-
-    private BaseMainMenuButton[] buttonsMainmenu;
-    public Color32 colorText { get; set; }
-    public Color32 colorSprites { get; set; }
-
-    [SerializeField]
-    private float delay;
-
-
-    [SerializeField]
-    private float threseholdController = 0.1f;
-    private bool isFadeActive = false;
-    private bool canSwitchBetweenItems = true;
-    private int IDSelection = 0;
-
-    private bool isMainMenuActive = true;
-    private bool isOptionsActive = false;
-    
-    void Start()
+namespace Controller
+{
+    public class MainMenuController : MonoBehaviour
     {
-        buttonsMainmenu = GetComponentsInChildren<BaseMainMenuButton>();
-        buttonsMainmenu[IDSelection].SelectItem(); 
-    }
 
-    void Update()
-    {
-        if(isMainMenuActive)
+        private BaseMainMenuButton[] buttonsMainmenu;
+        public Color32 colorText { get; set; }
+        public Color32 colorSprites { get; set; }
+
+        [SerializeField]
+        private float delay;
+
+
+        [SerializeField]
+        private float threseholdController = 0.1f;
+        private bool isFadeActive = false;
+        private bool canSwitchBetweenItems = true;
+        private int IDSelection = 0;
+
+        private bool isMainMenuActive = true;
+        private bool isOptionsActive = false;
+
+        void Start()
         {
-            manageInputForMainMenu();
+            buttonsMainmenu = GetComponentsInChildren<BaseMainMenuButton>();
+            buttonsMainmenu[IDSelection].SelectItem();
         }
-        else if(isOptionsActive)
-        {
-            //TBD
-        }
-    }
 
-    private void manageInputForMainMenu()
-    {
-        float input = Input.GetAxis("Vertical");
-        
-        if (Mathf.Abs(input) > threseholdController)
+        void Update()
         {
-            if(canSwitchBetweenItems)
+            if (isMainMenuActive)
             {
-                StartCoroutine(changeItemSelection(input));
+                manageInputForMainMenu();
             }
         }
 
-        else if (Input.GetAxis("ButtonA") > 0)
+        private void manageInputForMainMenu()
         {
-            Debug.Log("ButtonA");
-            buttonsMainmenu[IDSelection].DoActionItem();
-        }
-    }
+            float input = Input.GetAxis("Vertical");
 
+            if (Mathf.Abs(input) > threseholdController)
+            {
+                if (canSwitchBetweenItems)
+                {
+                    StartCoroutine(changeItemSelection(input));
+                }
+            }
 
-    IEnumerator changeItemSelection(float input)
-    {
-        canSwitchBetweenItems = false;
-        
-        buttonsMainmenu[IDSelection].DeselectItem();
-        int nextIDStep =0;
-        
-        if(input>0)
-        {
-            nextIDStep=-1;
-        }
-        else
-        {
-            nextIDStep=1;
+            else if (Input.GetAxis("ButtonA") > 0)
+            {
+                Debug.Log("ButtonA");
+                buttonsMainmenu[IDSelection].DoActionItem();
+            }
         }
 
-        if(IDSelection+nextIDStep>=buttonsMainmenu.Length)
+
+        IEnumerator changeItemSelection(float input)
         {
-            Debug.Log("CHANGE BACK!");
-            nextIDStep = 0;
-            IDSelection = nextIDStep;
-       
-            buttonsMainmenu[nextIDStep].SelectItem();
+            canSwitchBetweenItems = false;
+
+            buttonsMainmenu[IDSelection].DeselectItem();
+            int nextIDStep = 0;
+
+            if (input > 0)
+            {
+                nextIDStep = -1;
+            }
+            else
+            {
+                nextIDStep = 1;
+            }
+
+            if (IDSelection + nextIDStep >= buttonsMainmenu.Length)
+            {
+                Debug.Log("CHANGE BACK!");
+                nextIDStep = 0;
+                IDSelection = nextIDStep;
+
+                buttonsMainmenu[nextIDStep].SelectItem();
+
+            }
+            else if (IDSelection + nextIDStep < 0)
+            {
+                Debug.Log("Smaller than Zero!");
+                nextIDStep = buttonsMainmenu.Length - 1;
+                IDSelection = nextIDStep;
+
+                buttonsMainmenu[nextIDStep].SelectItem();
+            }
+            else
+            {
+                buttonsMainmenu[IDSelection + nextIDStep].SelectItem();
+                IDSelection += nextIDStep;
+            }
+
+            yield return new WaitForSeconds(0.5f);
+            canSwitchBetweenItems = true;
 
         }
-        else if(IDSelection+nextIDStep<0)
-        {
-            Debug.Log("Smaller than Zero!");
-            nextIDStep = buttonsMainmenu.Length-1;
-            IDSelection = nextIDStep;
 
-            buttonsMainmenu[nextIDStep].SelectItem();
-        }
-        else
-        {
-            buttonsMainmenu[IDSelection+nextIDStep].SelectItem();
-            IDSelection += nextIDStep;
-        }
-
-        yield return new WaitForSeconds(0.5f);
-        canSwitchBetweenItems = true;
-        
     }
 
 }

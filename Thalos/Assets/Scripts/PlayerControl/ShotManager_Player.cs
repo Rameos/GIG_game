@@ -31,6 +31,7 @@ namespace Controller
         
         public void ShootBullet()
         {
+           // GameObject.FindGameObjectWithTag(Constants.TAG_PLAYER).GetComponent<LogInputsFromController>().logShoot();
 
             PlayerModel.DamageTypes damage = PlayerModel.Instance().DamageType_Bolt;
             GameObject instance;
@@ -69,6 +70,8 @@ namespace Controller
 
         public void ThrowPoison()
         {
+            //GameObject.FindGameObjectWithTag(Constants.TAG_PLAYER).GetComponent<LogInputsFromController>().logThrow();
+
                 PlayerModel.DamageTypes damage = PlayerModel.Instance().DamageType_Poision;
                 GameObject instance;
                 PlayerModel.PhialType type = PlayerModel.Instance().convertDamageTypeToPhialType();

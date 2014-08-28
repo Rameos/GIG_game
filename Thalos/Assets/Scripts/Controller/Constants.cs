@@ -31,9 +31,9 @@ namespace Controller
         public const int ID_PLAYER = 0;
         public const int ID_ENEMY = 1;
 
-        public static float BULLETSPEED_STANDARD = 0.25f;
-        public static float BULLETSPEED_FIRE = 0.25f;
-        public static float BULLETSPEED_ICE = 0.25f;
+        public static float BULLETSPEED_STANDARD = 1;
+        public static float BULLETSPEED_FIRE = 1;
+        public static float BULLETSPEED_ICE = 1;
 
         public const int healPower = 25;
         
@@ -66,5 +66,7 @@ namespace Controller
             IcePoison
         }
 
+        // UsabilityLogs
+        public const string USABILITY_FOLDERNAME = "UsabilityReports";
     }
 }

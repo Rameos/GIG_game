@@ -299,16 +299,11 @@ public class PlayerInputManager : MonoBehaviour {
         if (Input.GetAxis("Triggers") < 0-thresholdTriggers)
         {
             animator.SetBool("Throw",true);
-            Debug.Log("Throw");
         }
 
         else if (Input.GetAxis("Triggers") > thresholdTriggers)
-        {
-            
-
-            
+        {      
             animator.SetBool("Shoot",true);
-            Debug.Log("Shoot");
         }
 
         else
@@ -363,11 +358,6 @@ public class PlayerInputManager : MonoBehaviour {
             circleMenuIsOpen = true;
         }
 
-        //else if (Input.GetAxis("ButtonRB") > 0)
-        //{
-        //    GamePad.SetVibration(playerIndex, 0, 1);
-        //}
-
         else if (circleMenuIsOpen == true && Input.GetAxis("ButtonLB") <= 0 || Input.GetAxis("ButtonX") <= 0)
         {
 
@@ -393,10 +383,6 @@ public class PlayerInputManager : MonoBehaviour {
         Vector3 axisSign = Vector3.Cross(moveDirection, rootDirection);
 
         angleOut = Vector3.Angle(rootDirection, moveDirection) * (axisSign.y >= 0 ? -1 : 1);
-
-
-        //transform.Rotate(0, angleOut, 0);
-
     }
 
     private void ManageRumbleEvents()
@@ -434,10 +420,7 @@ public class PlayerInputManager : MonoBehaviour {
 
     IEnumerator rumbleOverTime(float time)
     {
-        Debug.Log("Rumble!!!");
-        yield return new WaitForSeconds(2);
-        Debug.Log("Rumble OVER!!!");
-        
+        yield return new WaitForSeconds(2);   
         isRumbleActive = false; 
     }
 

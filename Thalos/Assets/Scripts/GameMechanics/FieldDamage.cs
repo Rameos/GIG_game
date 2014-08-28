@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using Controller;
 public class FieldDamage : MonoBehaviour {
-
 
     [SerializeField]
     private int damagePoints;
@@ -15,26 +14,22 @@ public class FieldDamage : MonoBehaviour {
 
     private Backend.Damage damage;
 
-    public void doDamageAtEnemies()
+    public void doDamageAtEnemies(Collider[] enemies)
     {
-        Collider[] enemies = Physics.OverlapSphere(transform.position, damageRadius);
-
         foreach(Collider enemyCollider in enemies)
         {
-            EnemyObject enemyScript = enemyCollider.gameObject.GetComponent<EnemyObject>();
-            if (enemyScript != null)
+            if(enemyCollider.collider.tag == Constants.TAG_ENEMY)
             {
-                enemyScript.ApplyDamage(damage);
+                Debug.Log("EnemyColliderName: " + enemyCollider);
+                EnemyObject enemyScript = enemyCollider.gameObject.GetComponent<EnemyObject>();
+                damage = new Backend.Damage(damagePoints, damageType);
+                if(enemyScript!= null)
+                {
+                    enemyScript.ApplyDamage(damage);
+                }
             }
         }
     }
-	// Use this for initialization
-	void Start () {
-        damage = new Backend.Damage(damagePoints,damageType);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+
 }

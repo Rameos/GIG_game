@@ -12,8 +12,11 @@ public class createExplosion : MonoBehaviour {
     [SerializeField]
     private float delaySec;
 
+    private FieldDamage fieldDamagemanager;
+
 	// Use this for initialization
 	void Start () {
+        fieldDamagemanager = GetComponent<FieldDamage>();
         StartCoroutine(delayExplosion());
 	}
 	
@@ -28,8 +31,9 @@ public class createExplosion : MonoBehaviour {
             {
                 continue; 
             }
-
             colliderItem.rigidbody.AddExplosionForce(force, transform.position, radius, 1, ForceMode.Impulse);
         }
+
+        fieldDamagemanager.doDamageAtEnemies(colliders);
     }
 }

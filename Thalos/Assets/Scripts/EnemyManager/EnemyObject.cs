@@ -27,7 +27,7 @@ public class EnemyObject : MonoBehaviour {
     private SphereCollider col;
     private Animator anim;
     
-    private Vector3 globalLastSightingPlayer;   //WARNING: INTO Model
+    private Vector3 globalLastSightingPlayer;
     private Animator playerAnim;
     private Vector3 previousSighting;
 
@@ -68,17 +68,17 @@ public class EnemyObject : MonoBehaviour {
         switch (actualEnemy)
         {
             case enemyType.policeman_LVL01:
-                enemyManager = new Policeman(100,5,5);
+                enemyManager = new Policeman(5,5,5);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Standard);
                 break;
 
             case enemyType.policeman_LVL02:
-                enemyManager = new Policeman(150, 5, 5);
+                enemyManager = new Policeman(10, 5, 5);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Fire);
                 break;
 
             case enemyType.policeman_LVL03:
-                enemyManager = new Policeman(200, 5, 5);
+                enemyManager = new Policeman(20, 5, 5);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Ice);
                 break;
 
@@ -98,14 +98,10 @@ public class EnemyObject : MonoBehaviour {
             {
                 personalLastSightingPlayer = globalLastSightingPlayer;
             }
-        
-        
         }
 
         Destroyitem();
-
-        updateAnimation();
-        
+        updateAnimation(); 
     }
 
     private void updateAnimation()
@@ -122,9 +118,9 @@ public class EnemyObject : MonoBehaviour {
             }
             catch
             {
-
+                Debug.Log("Can't set AnimatorStatus");
             }
-             }
+        }
         else
         {
             animator.SetBool("Walk", false);
@@ -160,20 +156,12 @@ public class EnemyObject : MonoBehaviour {
 
                 //Behaviour 
                 updateBehaviour(angle);
-
-
             }
-
-
-
-
-            //ANIMATIONEN
         }
     }
 
     RaycastHit checkPlayerIsInSight( Vector3 direction)
     {
-        Debug.Log("CheckPlayerisinsight");
         RaycastHit hit;
         Debug.DrawRay(transform.position + transform.up, direction.normalized,Color.cyan);
         if (Physics.Raycast(transform.position + transform.up, direction.normalized, out hit, col.radius))
@@ -199,8 +187,7 @@ public class EnemyObject : MonoBehaviour {
         float distanceNaveMesh = gameObject.GetComponent<NavMeshAgent>().remainingDistance;
          NavMeshPath navPath = new NavMeshPath();
          gameObject.GetComponent<NavMeshAgent>().CalculatePath(player.transform.position, navPath);
-       // Debug.Log("DistanceNaveMesh:" + distanceNaveMesh);
-
+     
 
          gameObject.GetComponent<NavMeshAgent>().destination = transform.position;
 
@@ -209,11 +196,9 @@ public class EnemyObject : MonoBehaviour {
             ShotPlayer(damageInformation);
             animator.SetBool("Shoot", true);
             playerIsInSight = true;
-
         }
         else
         {
-
             gameObject.GetComponent<NavMeshAgent>().destination = player.transform.position;
             playerIsInSight = false;
         }
@@ -247,12 +232,12 @@ public class EnemyObject : MonoBehaviour {
         transform.rotation = Quaternion.Lerp(transform.rotation,lookAtRotation,0.2f);
     }
 
-    void ShotPlayer(Damage debugdamage)
+    void ShotPlayer(Damage DamageInformation)
     {
         if (isShotable&&isAlive)
         {
             animator.SetBool("Shoot", true);
-            StartCoroutine(ShotPlayerCoolDown(debugdamage));
+            StartCoroutine(ShotPlayerCoolDown(DamageInformation));
 
         }
 
@@ -261,7 +246,6 @@ public class EnemyObject : MonoBehaviour {
 
     public void ApplyDamage(Damage damage)
     {
-        Debug.Log("Old Health: " + enemyManager.LivePoints);
         int health = enemyManager.TakeDamage(damage.damage, damage.typeDamage);
 
         if (enemyManager.LivePoints <= 0)
@@ -271,9 +255,9 @@ public class EnemyObject : MonoBehaviour {
 
     }
 
-    IEnumerator ShotPlayerCoolDown(Damage debugdamage)
+    IEnumerator ShotPlayerCoolDown(Damage damageInformation)
     {
-        GetComponent<Debug_BulletCaster>().shoot(debugdamage);
+        GetComponent<Debug_BulletCaster>().shoot(damageInformation);
         isShotable = false;
         yield return new WaitForSeconds(coolDown);
         isShotable = true;

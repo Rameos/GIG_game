@@ -10,9 +10,13 @@ public class Poison : MonoBehaviour {
     private float throwDistance = 5f;
     private Vector3 directionPoison;
 
+
     private Vector3 destinationPoint;
 
     public GameObject explosionEffect;
+
+    public bool isDebug = true; 
+
 
     public void Init(Vector3 forceVector, Damage poisonInformation, int parentType)
     {
@@ -32,7 +36,13 @@ public class Poison : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-
+        if(isDebug)
+        {
+            this.destinationPoint = transform.position;
+            this.damageInformation = new Damage(100,PlayerModel.DamageTypes.Fire);
+            this.parentType = Constants.ID_PLAYER;
+            directionPoison = Vector3.up;
+        }
 
         //Quaternion lookAtRotation = Quaternion.LookRotation();
         //transform.rotation = lookAtRotation;//Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime);
