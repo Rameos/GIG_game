@@ -2560,7 +2560,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1013480676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95be57f75c72e8a4ba54d07b7c3dac30, type: 3}
+  m_Script: {fileID: 11500000, guid: 52a3500d6b5fdce48be69f7a3c8d3b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &1013480679
@@ -4735,7 +4735,7 @@ GameObject:
   - 114: {fileID: 1888931863}
   m_Layer: 0
   m_Name: 2D-Gui
-  m_TagString: Untagged
+  m_TagString: MainMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

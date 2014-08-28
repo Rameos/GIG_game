@@ -9,8 +9,7 @@ namespace Controller
     {
 
         private BaseMainMenuButton[] buttonsMainmenu;
-        public Color32 colorText { get; set; }
-        public Color32 colorSprites { get; set; }
+
 
         [SerializeField]
         private float delay;
@@ -18,12 +17,10 @@ namespace Controller
 
         [SerializeField]
         private float threseholdController = 0.1f;
-        private bool isFadeActive = false;
         private bool canSwitchBetweenItems = true;
         private int IDSelection = 0;
 
         private bool isMainMenuActive = true;
-        private bool isOptionsActive = false;
 
         void Start()
         {

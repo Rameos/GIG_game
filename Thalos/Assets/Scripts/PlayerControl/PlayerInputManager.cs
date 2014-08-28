@@ -113,6 +113,16 @@ public class PlayerInputManager : MonoBehaviour {
         {
             isMenuOpen = true;
         }
+        
+        //PauseMenu
+        if (ID_Menu == Constants.INGAMEMENU_PAUSE && status == true)
+        {
+            isMenuOpen = true;
+        }
+        else if (ID_Menu == Constants.INGAMEMENU_PAUSE && status == false)
+        {
+            isMenuOpen = false;
+        }
     }
 
     void Update() 
@@ -346,6 +356,11 @@ public class PlayerInputManager : MonoBehaviour {
             Debug.Log("ButtonB");
         }
 
+        else if(Input.GetButtonDown("ButtonStart"))
+        {
+            Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_PAUSE, true);
+            GameObject.FindGameObjectWithTag("PauseMenu").SetActive(true);
+        }
     }
 
     private void checkGazeMenuStatus()

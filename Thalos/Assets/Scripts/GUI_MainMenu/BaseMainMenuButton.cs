@@ -14,7 +14,7 @@ public abstract class BaseMainMenuButton : MonoBehaviour {
     private bool isFadeActive = false;
     private TextMesh textView;
     private SpriteRenderer[] sprites;
-    private MainMenuController controlComponent;
+
     private Color32  colorAlpha =  new Color32(0,0,0,0);
 
     private Color statusColor;
@@ -23,11 +23,13 @@ public abstract class BaseMainMenuButton : MonoBehaviour {
     private Color destinationColor;
     private Color transparentColor;
     private Color activeColor = Color.white;
-
+    private Vector3 startScale = Vector3.one; 
+    
     void Start()
     {
-        destinationScale = Vector3.one;
-        controlComponent = GameObject.FindGameObjectWithTag("MainMenu").GetComponent<MainMenuController>();
+        startScale = transform.localScale;
+        destinationScale = startScale;
+        
         textView = gameObject.GetComponentInChildren<TextMesh>();
         sprites = gameObject.GetComponentsInChildren<SpriteRenderer>();
 
@@ -67,7 +69,7 @@ public abstract class BaseMainMenuButton : MonoBehaviour {
 
     void OnMouseExit()
     {
-        destinationScale = Vector3.one;
+        destinationScale = startScale;
     }
 
     public void SelectItem()
