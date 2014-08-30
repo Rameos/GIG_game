@@ -48,7 +48,7 @@ public class BackgroundMusicManager : MonoBehaviour {
     #region Private Functions
     private void CheckGameState()
     {
-        Gamestatemanager.Gamestate state = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Gamestatemanager>().actualState;
+        Gamestatemanager.Gamestate state = GameObject.FindGameObjectWithTag(Constants.TAG_GAMEMANAGER).GetComponent<Gamestatemanager>().actualState;
 
         switch (state)
         {

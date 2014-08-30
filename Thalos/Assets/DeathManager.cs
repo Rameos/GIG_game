@@ -1,15 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using Backend;
 public class DeathManager : MonoBehaviour {
 
-	// Use this for initialization
+    public bool isCleaningAllItems = true;
+
+    public Vector3 newStartPosition; 
 	void Start () {
-	
+
+        //PlayerModel.Instance().revivePosition = transform.position;
 	}
 	
-	// Update is called once per frame
 	void Update () {
-	
+
+        newStartPosition = PlayerModel.Instance().revivePosition;
+
+        if(PlayerModel.Instance().HealthPoints<=0)
+        {
+            this.gameObject.transform.position = newStartPosition;
+            PlayerModel.Instance().HealthPoints = PlayerModel.Instance().MaxHealthPoints-10;
+        }
+
+
 	}
 }

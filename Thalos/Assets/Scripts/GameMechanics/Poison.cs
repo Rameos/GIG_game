@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Controller; 
+using Controller;
 using Backend;
-public class Poison : MonoBehaviour {
+public class Poison : MonoBehaviour
+{
 
     private Damage damageInformation;
     private float forcePower = 5f;
@@ -10,13 +11,7 @@ public class Poison : MonoBehaviour {
     private float throwDistance = 5f;
     private Vector3 directionPoison;
 
-
-    private Vector3 destinationPoint;
-
     public GameObject explosionEffect;
-
-    public bool isDebug = true; 
-
 
     public void Init(Vector3 forceVector, Damage poisonInformation, int parentType)
     {
@@ -24,48 +19,28 @@ public class Poison : MonoBehaviour {
         this.parentType = parentType;
         directionPoison = forceVector;
     }
-
-    public void Init(Vector3 forceVector, Damage poisonInformation, int parentType, Vector3 destinationPoint)
+    // Use this for initialization
+    void Start()
     {
-        this.destinationPoint = destinationPoint;
-        this.damageInformation = poisonInformation;
-        this.parentType = parentType;
-        directionPoison = forceVector;
-    }
-
-	// Use this for initialization
-	void Start () {
-
-        if(isDebug)
-        {
-            this.destinationPoint = transform.position;
-            this.damageInformation = new Damage(100,PlayerModel.DamageTypes.Fire);
-            this.parentType = Constants.ID_PLAYER;
-            directionPoison = Vector3.up;
-        }
-
-        //Quaternion lookAtRotation = Quaternion.LookRotation();
-        //transform.rotation = lookAtRotation;//Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime);
 
         rigidbody.velocity = new Vector3(0, forcePower, 0);
-        rigidbody.velocity += directionPoison*forcePower;
+        rigidbody.velocity += directionPoison * forcePower;
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
 
-        this.transform.position = Vector3.Lerp(transform.position, destinationPoint,0.2f);
-	}
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     void OnCollisionEnter(Collision information)
     {
 
         Gamestatemanager.OnRumbleEvent(1, 1, 1);
-        Debug.Log("Boom");
-        if(information.collider.gameObject.tag != Constants.TAG_PLAYER)
+        if (information.collider.gameObject.tag != Constants.TAG_PLAYER)
         {
-            
+
             StartCoroutine(explosion(information.contacts[0].point));
         }
     }

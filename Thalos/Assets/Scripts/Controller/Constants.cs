@@ -18,6 +18,7 @@ namespace Controller
 
         public const string TAG_PLAYER = "Player";
         public const string TAG_MAINCAMERA = "MainCamera";
+        public const string TAG_GAMEMANAGER = "GameManager";
         public const string TAG_GUI = "GazeGui";
         public const string TAG_ENEMY = "Enemy";
 

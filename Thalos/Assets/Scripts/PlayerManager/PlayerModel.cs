@@ -22,7 +22,10 @@ namespace Backend
 
         public int HealthPoints { get; set; }
         public int MaxHealthPoints { get; set; }
-        
+
+        public bool isPlayerAlive { get; set; }
+        public Vector3 revivePosition { get; set; }
+
         public List<PhialType> PhialInventory { get; set; }
         public List<BaseRecipe> FoundedRecipes { get; set; }
         public int phialSizeMax { get; set; }
@@ -190,6 +193,8 @@ namespace Backend
             this.MaxHealthPoints = 100;
             this.HealthPoints = 100;
             this.phialSizeMax = 9999;
+            this.isPlayerAlive = true;
+            this.revivePosition = Vector3.zero;
 
             //Damage
             this.Damage = 42;

@@ -2,6 +2,7 @@
 using System.Collections;
 using XInputDotNetPure;
 using Controller;
+using Backend;
 
 public class PlayerInputManager : MonoBehaviour {
 
@@ -40,6 +41,8 @@ public class PlayerInputManager : MonoBehaviour {
     private bool isGrounded = false;
 
     private bool isMenuOpen = false;
+
+    private bool isPlayerAlive = true;
     //private bool jumpClimax = false;
     [SerializeField]
     private Transform centerOfMass;
@@ -127,7 +130,8 @@ public class PlayerInputManager : MonoBehaviour {
 
     void Update() 
     {
-        if (!isMenuOpen)
+
+        if (!isMenuOpen && PlayerModel.Instance().isPlayerAlive)
         {
             inputX = Input.GetAxis("Horizontal");
             inputY = Input.GetAxis("Vertical");

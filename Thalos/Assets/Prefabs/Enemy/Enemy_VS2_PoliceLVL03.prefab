@@ -8224,7 +8224,7 @@ GameObject:
   m_Layer: 11
   m_Name: Enemy_VS2_PoliceLVL03
   m_TagString: Enemy
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -12863,7 +12863,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101094}
   m_LocalRotation: {x: 0, y: .763816118, z: 0, w: .645433903}
-  m_LocalPosition: {x: 19.1190205, y: 55.5551338, z: 83.0254974}
+  m_LocalPosition: {x: 116.492615, y: 55.5392799, z: 219.484222}
   m_LocalScale: {x: .800000012, y: .800000072, z: .800000072}
   m_Children:
   - {fileID: 400078}
@@ -15449,7 +15449,7 @@ SkinnedMeshRenderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 86ed1c92518175a45bb1f39a647ffb1f, type: 2}
-  - {fileID: 2100000, guid: 696d3c45e74d93041af15dc9695a4796, type: 2}
+  - {fileID: 2100000, guid: 45aae0ef934338542b9433ec55992ed0, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

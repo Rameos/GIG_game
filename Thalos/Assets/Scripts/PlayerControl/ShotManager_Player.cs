@@ -31,7 +31,7 @@ namespace Controller
         
         public void ShootBullet()
         {
-           // GameObject.FindGameObjectWithTag(Constants.TAG_PLAYER).GetComponent<LogInputsFromController>().logShoot();
+           GameObject.FindGameObjectWithTag(Constants.TAG_PLAYER).GetComponent<LogInputsFromController>().logShoot();
 
             PlayerModel.DamageTypes damage = PlayerModel.Instance().DamageType_Bolt;
             GameObject instance;
@@ -70,7 +70,7 @@ namespace Controller
 
         public void ThrowPoison()
         {
-            //GameObject.FindGameObjectWithTag(Constants.TAG_PLAYER).GetComponent<LogInputsFromController>().logThrow();
+            GameObject.FindGameObjectWithTag(Constants.TAG_PLAYER).GetComponent<LogInputsFromController>().logThrow();
 
                 PlayerModel.DamageTypes damage = PlayerModel.Instance().DamageType_Poision;
                 GameObject instance;
@@ -83,13 +83,13 @@ namespace Controller
                     {
                         case PlayerModel.DamageTypes.Fire:
                             instance = GameObject.Instantiate(PoisonFire, instanciatePointPoison.position, instanciatePointPoison.localRotation) as GameObject;
-                            instance.GetComponent<Poison>().Init(direction, new Damage(Constants.damageIcePoison, PlayerModel.DamageTypes.Fire), Constants.ID_PLAYER, gazeInputManagerShooting.destinationPoint_Poison);
+                            instance.GetComponent<Poison>().Init(direction, new Damage(Constants.damageIcePoison, PlayerModel.DamageTypes.Fire), Constants.ID_PLAYER);
 
                             break;
 
                         case PlayerModel.DamageTypes.Ice:
                             instance = GameObject.Instantiate(PoisonIce, instanciatePointPoison.position, instanciatePointPoison.localRotation) as GameObject;
-                            instance.GetComponent<Poison>().Init(direction, new Damage(Constants.damageIceBolt, PlayerModel.DamageTypes.Ice), Constants.ID_PLAYER, gazeInputManagerShooting.destinationPoint_Poison);
+                            instance.GetComponent<Poison>().Init(direction, new Damage(Constants.damageIceBolt, PlayerModel.DamageTypes.Ice), Constants.ID_PLAYER);
                             break;
 
                         case PlayerModel.DamageTypes.Standard:
