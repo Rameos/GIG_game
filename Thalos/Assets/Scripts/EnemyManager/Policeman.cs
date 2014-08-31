@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using Controller;
+using Backend;
 
 namespace Enemy
 {

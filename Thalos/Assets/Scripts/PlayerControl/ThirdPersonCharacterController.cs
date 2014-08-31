@@ -38,7 +38,6 @@ public class ThirdPersonCharacterController : MonoBehaviour
     private const float SPRINT_SPEED = 2.0f;
     private const float SPRINT_FIC = 75f;
     private const float NORMAL_FOV = 60f;
-    private float capsuleHeight;
 
     // Hashes
     private int m_LocomotionId = 0;
@@ -74,7 +73,6 @@ public class ThirdPersonCharacterController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         capCollider = GetComponent<CapsuleCollider>();
-        capsuleHeight = capCollider.height;
         if (animator.layerCount >= 2)
         {
             animator.SetLayerWeight(1, 1);

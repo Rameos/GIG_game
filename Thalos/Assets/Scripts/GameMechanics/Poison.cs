@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Controller; 
+using Controller;
 using Backend;
-public class Poison : MonoBehaviour {
+public class Poison : MonoBehaviour
+{
 
     private Damage damageInformation;
     private float forcePower = 5f;
@@ -18,32 +19,28 @@ public class Poison : MonoBehaviour {
         this.parentType = parentType;
         directionPoison = forceVector;
     }
-	// Use this for initialization
-	void Start () {
-
-
-
-        //Quaternion lookAtRotation = Quaternion.LookRotation();
-        //transform.rotation = lookAtRotation;//Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime);
+    // Use this for initialization
+    void Start()
+    {
 
         rigidbody.velocity = new Vector3(0, forcePower, 0);
-        rigidbody.velocity += directionPoison*forcePower;
+        rigidbody.velocity += directionPoison * forcePower;
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     void OnCollisionEnter(Collision information)
     {
 
         Gamestatemanager.OnRumbleEvent(1, 1, 1);
-        Debug.Log("Boom");
-        if(information.collider.gameObject.tag != Constants.TAG_PLAYER)
+        if (information.collider.gameObject.tag != Constants.TAG_PLAYER)
         {
-            
+
             StartCoroutine(explosion(information.contacts[0].point));
         }
     }

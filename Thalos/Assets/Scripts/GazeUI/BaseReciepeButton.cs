@@ -12,7 +12,7 @@ namespace GazeGUI
         [SerializeField]
         PlayerModel.PhialType phial;
 
-        private string name;
+        private string nameGUIItem;
 
         [SerializeField]
         GameObject lockItem;
@@ -25,14 +25,14 @@ namespace GazeGUI
 
 	    void Start () {
             guiManager = GameObject.FindGameObjectWithTag("AlchemySystemMenu").GetComponent<AlchemyGUIManager>();
-            name = phial.ToString();
+            nameGUIItem = phial.ToString();
 
-            Debug.Log("name:" + name);
+            Debug.Log("name:" + nameGUIItem);
 	    }
 
 	    void Update () {
 
-            if (PlayerModel.Instance().FoundedRecipes.Contains(Recipes.Instance().GetSingleRecipe(name)))
+            if (PlayerModel.Instance().FoundedRecipes.Contains(Recipes.Instance().GetSingleRecipe(nameGUIItem)))
             {
                 isReciepeFound = true;
             }

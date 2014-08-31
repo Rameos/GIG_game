@@ -12,6 +12,7 @@ namespace Controller
     public delegate void OpenPlayScreen();
     public delegate void ClosePlayScreen();
 
+
     public delegate void PlayerIsDead();
     public delegate void PlayerGetsDamage(int damagepoints);
     
@@ -67,20 +68,6 @@ namespace Controller
                 OnCloseMainMenu();
                
             }
-            //else if (levelID == Constants.ID_INTRO)
-            //{
-            //    OnCloseMainMenu();
-            //}
-            //else if (levelID == Constants.ID_MAINMENU)
-            //{
-            //    OnOpenMainMenu();
-            //    OnClosePlayView();
-            //}
-
-            //if(GameObject.FindGameObjectWithTag("Player"))
-            //{
-            //    gameObject.SetActive(false);
-            //}
         }
 
         void Update()
@@ -244,8 +231,6 @@ namespace Controller
             OnCloseMainMenu();
             FadeSceneEffect.FadeOut();
             yield return new WaitForSeconds(FadeSceneEffect.fadeSpeed);
-            Debug.Log("LoadLevelWith ID: " + levelID);
-            
             
             if (levelID < 0)
             {
@@ -253,8 +238,6 @@ namespace Controller
             }
             else
             {
-                Debug.Log("waitForFadeOut! Start levelLoading");
-                //Application.LoadLevel(levelID);
                 loadScreen.GetComponent<LoadScene>().startLoadingProcess(levelID);
             }
         }

@@ -7,17 +7,27 @@ using Controller;
 public class EnemyObject : MonoBehaviour {
 
     //Sight
+    [SerializeField]
+    private float coolDown = 2f;
+    [SerializeField]
+    private float shootfrequence = 2f;
+    [SerializeField]
+    private float isAlarmed_Distance = 20f;
+    [SerializeField]
+    private GameObject explosion; 
+    [SerializeField]
+    private GameObject player;
+    
 
     private float fieldOfViewAngle = 110f;
-    private bool playerIsInSight;
+    private bool playerIsInSight = false;
     private Vector3 personalLastSightingPlayer;
 
     private NavMeshAgent nav;
     private SphereCollider col;
     private Animator anim;
     
-    private Vector3 globalLastSightingPlayer;   //WARNING: INTO Model
-    private GameObject player;
+    private Vector3 globalLastSightingPlayer;
     private Animator playerAnim;
     private Vector3 previousSighting;
 
@@ -29,14 +39,7 @@ public class EnemyObject : MonoBehaviour {
 
     private bool isShotable = true;
     private bool isAlive = true;
-
-    [SerializeField]
-    private float coolDown = 2f;
-    [SerializeField]
-    private float shootfrequence = 2f;
-    
-    [SerializeField]
-    private float isAlarmed_Distance = 20f;
+    private Animator animator;
     
     public enum enemyType
     {
@@ -53,7 +56,7 @@ public class EnemyObject : MonoBehaviour {
         anim = GetComponent<Animator>();
         globalLastSightingPlayer = Vector3.zero;
         player = GameObject.FindGameObjectWithTag("Player");
-
+        animator = gameObject.GetComponentInChildren<Animator>();
 
         personalLastSightingPlayer = Vector3.zero;
         previousSighting = Vector3.zero; 
@@ -65,22 +68,22 @@ public class EnemyObject : MonoBehaviour {
         switch (actualEnemy)
         {
             case enemyType.policeman_LVL01:
-                enemyManager = new Policeman(100,5,5);
+                enemyManager = new Policeman(10,1,2);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Standard);
                 break;
 
             case enemyType.policeman_LVL02:
-                enemyManager = new Policeman(150, 5, 5);
+                enemyManager = new Policeman(20, 1, 3);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Fire);
                 break;
 
             case enemyType.policeman_LVL03:
-                enemyManager = new Policeman(200, 5, 5);
+                enemyManager = new Policeman(30, 2, 3);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Ice);
                 break;
 
             case enemyType.roboter_LVL01:
-                enemyManager = new Robot(30, 1, 5);
+                enemyManager = new Robot(50, 3, 5);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Standard);
                 break;
         }
@@ -98,13 +101,45 @@ public class EnemyObject : MonoBehaviour {
         }
 
         Destroyitem();
+        updateAnimation(); 
+    }
 
-
+    private void updateAnimation()
+    {
+        float distance = Vector3.Distance(gameObject.GetComponentInChildren<NavMeshAgent>().destination, transform.position);
         
+        if (distance > 0.1f)
+        {
+            try
+            {
+                animator.SetBool("Walk", true);
+                animator.SetBool("Shoot", false);
+       
+            }
+            catch
+            {
+                Debug.Log("Can't set AnimatorStatus");
+            }
+        }
+        else
+        {
+            animator.SetBool("Walk", false);
+
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        reactOnTrigger(other);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        reactOnTrigger(other);
     }
 
 
-    void OnTriggerStay(Collider other)
+    void reactOnTrigger(Collider other)
     {
         //Is In Sphere
         if (other.gameObject == player)
@@ -115,25 +150,20 @@ public class EnemyObject : MonoBehaviour {
 
             float angle = Vector3.Angle(direction, transform.forward);
 
-            if(angle < fieldOfViewAngle * 0.5f)
+            if (angle < fieldOfViewAngle * 0.75f)
             {
                 RaycastHit hit = checkPlayerIsInSight(direction);
-                
+
                 //Behaviour 
                 updateBehaviour(angle);
-
-
             }
-
-
-
-            //ANIMATIONEN
         }
     }
 
     RaycastHit checkPlayerIsInSight( Vector3 direction)
     {
         RaycastHit hit;
+        Debug.DrawRay(transform.position + transform.up, direction.normalized,Color.cyan);
         if (Physics.Raycast(transform.position + transform.up, direction.normalized, out hit, col.radius))
         {
             if (hit.collider.gameObject == player)
@@ -154,19 +184,22 @@ public class EnemyObject : MonoBehaviour {
     void updateBehaviour(float angle)
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        float distanceNaveMesh = gameObject.GetComponent<NavMeshAgent>().remainingDistance;
          NavMeshPath navPath = new NavMeshPath();
          gameObject.GetComponent<NavMeshAgent>().CalculatePath(player.transform.position, navPath);
-       // Debug.Log("DistanceNaveMesh:" + distanceNaveMesh);
-        
-        if (angle < fieldOfViewAngle * 0.4f && distance <= col.radius * 0.45f)
+     
+
+         gameObject.GetComponent<NavMeshAgent>().destination = transform.position;
+
+        if (angle < fieldOfViewAngle * 0.65f && distance <= col.radius * 0.75f)
         {
             ShotPlayer(damageInformation);
-            gameObject.GetComponent<NavMeshAgent>().destination = transform.position;
+            animator.SetBool("Shoot", true);
+            playerIsInSight = true;
         }
         else
         {
             gameObject.GetComponent<NavMeshAgent>().destination = player.transform.position;
+            playerIsInSight = false;
         }
 
     }
@@ -175,6 +208,8 @@ public class EnemyObject : MonoBehaviour {
     {
         if(!isAlive)
         {
+            Gamestatemanager.OnRumbleEvent(2, 1, 1);
+            Instantiate(explosion, transform.position, explosion.transform.rotation);
             Destroy(this.gameObject);
         }
     }
@@ -196,35 +231,33 @@ public class EnemyObject : MonoBehaviour {
         transform.rotation = Quaternion.Lerp(transform.rotation,lookAtRotation,0.2f);
     }
 
-    void ShotPlayer(Damage debugdamage)
+    void ShotPlayer(Damage DamageInformation)
     {
         if (isShotable&&isAlive)
         {
-            StartCoroutine(ShotPlayerCoolDown(debugdamage));
+            animator.SetBool("Shoot", true);
+            StartCoroutine(ShotPlayerCoolDown(DamageInformation));
 
         }
+
     }
 
-    private bool isPlayerVisible()
-    {
-        return false;
-    }
 
     public void ApplyDamage(Damage damage)
     {
-        Debug.Log("Old Health: " + enemyManager.LivePoints);
+        Debug.Log("ApplyDamage!");
         int health = enemyManager.TakeDamage(damage.damage, damage.typeDamage);
 
-        if (enemyManager.LivePoints <= 0)
+        if (health <= 0)
         {
             isAlive = false;
         }
 
     }
 
-    IEnumerator ShotPlayerCoolDown(Damage debugdamage)
+    IEnumerator ShotPlayerCoolDown(Damage damageInformation)
     {
-        GetComponent<Debug_BulletCaster>().shoot(debugdamage);
+        GetComponent<Debug_BulletCaster>().shoot(damageInformation);
         isShotable = false;
         yield return new WaitForSeconds(coolDown);
         isShotable = true;

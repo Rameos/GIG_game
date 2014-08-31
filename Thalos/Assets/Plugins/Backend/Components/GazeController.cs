@@ -60,16 +60,7 @@ namespace iViewX
 
 
 
-        public void getCalibrationStatus()
-        {/*/
-            int errorID = ET_Device.iV_GetCalibrationStatus(ref m_calibrationStatusData);
-            ET_Device.iV_GetTrackingStatus(ref m_TrackingStatusData);
 
-            Debug.Log("Enum:" + m_calibrationStatusData.ToString());
-
-            getLogdata(errorID, errorIDContainer.STATE_CALIBRATE);
-          */
-        }
 
         /// <summary>
         /// Disconnect from the Eye Tracker Server
@@ -109,7 +100,6 @@ namespace iViewX
             int displayDevice = 0;
             int calibrationPoints = gazeModel.calibrationPoints;
             int targetSize = 20;
-
 
             m_CalibrationData.displayDevice = displayDevice;
             m_CalibrationData.autoAccept = 1;
@@ -246,6 +236,7 @@ namespace iViewX
             gazeModel.posLeftEye = new Vector3((float)sampleData.leftEye.eyePositionX, (float)sampleData.leftEye.eyePositionY, (float)sampleData.leftEye.eyePositionZ);
             gazeModel.posRightEye = new Vector3((float)sampleData.rightEye.eyePositionX, (float)sampleData.rightEye.eyePositionY, (float)sampleData.rightEye.eyePositionZ);
 
+            //GazePosition
             if (isFilterEnable)
             {
                 if (actualCount < sampleCount)
@@ -308,6 +299,7 @@ namespace iViewX
 
             else
             {
+
                 Vector2 posGazeLeft = new Vector2((float)sampleData.leftEye.gazeX, (float)sampleData.leftEye.gazeY);
                 Vector2 posGazeRight = new Vector2((float)sampleData.rightEye.gazeX, (float)sampleData.rightEye.gazeY);
 
@@ -319,11 +311,13 @@ namespace iViewX
                 {
                     gazeModel.isEyeDetected = true;
                     
+                    //Left is Zero
                     if(posGazeLeft == Vector2.zero && posGazeRight!= Vector2.zero)
                     {
                         posGazeLeft = posGazeRight;
                     }
 
+                    //Right is Zero
                     else if (posGazeRight == Vector2.zero && posGazeLeft != Vector2.zero)
                     {
                         posGazeRight = posGazeLeft;
@@ -334,16 +328,6 @@ namespace iViewX
                     gazeModel.posGazeRight = posGazeRight;
                 }
             }
-
-            /*Left Eye
-            gazeModel.posGazeLeft = new Vector2((float)sampleData.leftEye.gazeX, (float)sampleData.leftEye.gazeY);
-            
-            //Right Eye
-            gazeModel.posGazeRight = new Vector2((float)sampleData.rightEye.gazeX, (float)sampleData.rightEye.gazeY);
-
-            //PupilData
-
-            */
 
             gazeModel.gameScreenPosition = Win32HelperClass.GetGameViewPosition();
 

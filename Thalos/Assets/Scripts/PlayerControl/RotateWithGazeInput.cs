@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Controller;
 
 public class RotateWithGazeInput : MonoBehaviour {
 
@@ -12,19 +13,18 @@ public class RotateWithGazeInput : MonoBehaviour {
     public float rotationFactor;
     public Texture2D testTexture_Right;
     public Texture2D testTexture_Left;
-    public Texture2D noGazeInput;
+   
     public float sizeWidthAOI;
    
     public GameObject player;
     public ThirdPersonCamera camScript;
     public gazeActionMenu actualStateGazeAction;
 
-    private bool isInGameMenu = false;
+    public bool isInGameMenu = false;
     public bool IsEyeDetected = true;
     public float offSetRightAOI;
 
-    public bool isActive = false;
-    
+
     [SerializeField]
     private bool isVisualisationActive = false;
 
@@ -40,10 +40,6 @@ public class RotateWithGazeInput : MonoBehaviour {
 
     void OnGUI()
     {
-         GUI.Label(new Rect(25, 5, 250, 60), "Rotationspeed: " + rotationFactor);
-            rotationFactor = GUI.HorizontalSlider(new Rect(25, 25, 100, 30), rotationFactor, 0.0f, 1.0f);
-            Mathf.Round( rotationFactor * 100 / 100);
-
 
         if (isVisualisationActive)
         {
@@ -55,62 +51,38 @@ public class RotateWithGazeInput : MonoBehaviour {
 
     void Start()
     {
-
+        Gamestatemanager.ChangeInGameMenuHandler +=Gamestatemanager_ChangeInGameMenuHandler;
         camScript = gameObject.GetComponent<ThirdPersonCamera>();
+        
         calculateAOI();
+    }
+
+    private void Gamestatemanager_ChangeInGameMenuHandler(int ID_Menu, bool status)
+    {
+        isInGameMenu = status;
     }
 
 
     void Update () 
     {
-        calculateAOI();
-        isActive = checkInput();
-        checkGazeIsInAOI();
-
-	}
-
-    private bool checkInput()
-    {
-        if(!gazeModel.isEyeTrackerRunning)
+        if(!isInGameMenu)
         {
-
-            IsEyeDetected = false; 
+            calculateAOI();
+            checkGazeIsInAOI();
         }
         else
         {
-            Vector3 gazeInput = gazeModel.posGazeLeft;
-            if (gazeInput == Vector3.zero)
-            {
-                IsEyeDetected = false; 
-            }
-            else
-            {
-                IsEyeDetected = true; 
-            }
+            camScript.gazeInput = 0;
         }
-
-        if (Input.GetAxis("Horizontal") > threshold || Input.GetAxis("Vertical") > threshold || isAlwaysEnable)
-        {
-            return true;
-        }
-        return false; 
-    }
-
-    public void OpenGazeMenu (bool status)
-    {
-        isInGameMenu = status;
-    }
+	}
     
     private void checkGazeIsInAOI()
     {
-        if (isActive)
-        {
+
             Vector3 gazePos = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
             float rightX = -Input.GetAxis("RightStickX");
             float rightY = -Input.GetAxis("RightStickY");
             
-            float leftX = Input.GetAxis("Horizontal");
-            float leftY = Input.GetAxis("Vertical");
 
             if (gazePos != Vector3.zero && !isInGameMenu)
             {
@@ -124,9 +96,6 @@ public class RotateWithGazeInput : MonoBehaviour {
                     {
 
                         float speed = Mathf.Abs((leftAOI.volume.width - gazePos.x) / leftAOI.volume.width) * rotationFactor;
-
-                        if (speed > 1)
-                            speed = 0.45f;
 
                         camScript.gazeInput = speed * speedUp;
                     }
@@ -152,11 +121,6 @@ public class RotateWithGazeInput : MonoBehaviour {
             {
                 camScript.gazeInput = 0;
             }
-        }
-        else
-        {
-            camScript.gazeInput = 0;
-        }
     }
     
   

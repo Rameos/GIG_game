@@ -5,16 +5,6 @@ using System.Collections;
 [RequireComponent(typeof(Animator))]
 public class RootMotionScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
     void OnAnimatorMove()
     {
         Animator animator = GetComponent<Animator>();

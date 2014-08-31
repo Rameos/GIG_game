@@ -18,6 +18,7 @@ namespace Controller
 
         public const string TAG_PLAYER = "Player";
         public const string TAG_MAINCAMERA = "MainCamera";
+        public const string TAG_GAMEMANAGER = "GameManager";
         public const string TAG_GUI = "GazeGui";
         public const string TAG_ENEMY = "Enemy";
 
@@ -31,17 +32,19 @@ namespace Controller
         public const int ID_PLAYER = 0;
         public const int ID_ENEMY = 1;
 
-        public const float BULLETSPEED = 0.35f;
+        public static float BULLETSPEED_STANDARD = 1;
+        public static float BULLETSPEED_FIRE = 1f;
+        public static float BULLETSPEED_ICE = 0.9f;
 
         public const int healPower = 25;
         
         //Damage
-        public const int damageStandardBolt = 15;
-        public const int damageFireBolt = 15;
-        public const int damageIceBolt = 15;
+        public const int damageStandardBolt = 10;
+        public const int damageFireBolt = 8;
+        public const int damageIceBolt = 12;
 
-        public const int damageFirePoison = 15;
-        public const int damageIcePoison = 15;
+        public const int damageFirePoison = 20;
+        public const int damageIcePoison = 30;
 
         public const float COOLDOWN_BOLT = 0.5f;
         public const float COOLDOWN_POISON = 0.1f;
@@ -64,5 +67,7 @@ namespace Controller
             IcePoison
         }
 
+        // UsabilityLogs
+        public const string USABILITY_FOLDERNAME = "UsabilityReports";
     }
 }

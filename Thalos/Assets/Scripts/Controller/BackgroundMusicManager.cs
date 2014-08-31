@@ -20,17 +20,12 @@ public class BackgroundMusicManager : MonoBehaviour {
     private float maxVolume = 85f;
     private float volumeSteps = 0.01f;
     private int mainChannel = Constants.NORMALMUSIC_CHANNEL;
-    
-    void Awake()
-    {
-        
-        //SetStopAllMusic();
-        //SetMusicVolume(0);
-        //SetMuteMusic(true);
-    }
 
+
+    #region UnityFunctions
     void Start()
     {
+        // Eventslistener
         Gamestatemanager.PlayerIsDeadHandler += FadeDefeatedMusicIn;
         Gamestatemanager.OpenPlayScreenHandler += FadeNormalMusicIn;
         Gamestatemanager.OpenPlayScreenHandler += UnMuteAllTracks;
@@ -43,9 +38,17 @@ public class BackgroundMusicManager : MonoBehaviour {
 
     }
 
+    void Update()
+    {
+        manageVolume();
+    }
+
+    #endregion
+
+    #region Private Functions
     private void CheckGameState()
     {
-        Gamestatemanager.Gamestate state = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Gamestatemanager>().actualState;
+        Gamestatemanager.Gamestate state = GameObject.FindGameObjectWithTag(Constants.TAG_GAMEMANAGER).GetComponent<Gamestatemanager>().actualState;
 
         switch (state)
         {
@@ -61,7 +64,6 @@ public class BackgroundMusicManager : MonoBehaviour {
 
     private void InitChannelList()
     {
-        Debug.Log("InitChannelList");
         channelList = new List<AudioSource>();
 
         for (int i = 0; i < trackCount; i++)
@@ -70,6 +72,7 @@ public class BackgroundMusicManager : MonoBehaviour {
             src.playOnAwake = false;
             src.volume = 0;
             src.loop = false;
+            
             switch (i)
             {
                 case Constants.MAINMENUMUSIC_CHANNEL:
@@ -134,7 +137,6 @@ public class BackgroundMusicManager : MonoBehaviour {
 
     private void FadeNormalMusicIn()
     {
-        Debug.Log("FadeNormalMusicIn");
         mainChannel = Constants.NORMALMUSIC_CHANNEL;
     }
 
@@ -146,10 +148,6 @@ public class BackgroundMusicManager : MonoBehaviour {
     private void UnMuteAllTracks()
     {
         this.isMuted = false;
-    }
-    void Update()
-    {
-        manageVolume();
     }
 
     private void changeTrackAfterStoped()
@@ -163,7 +161,6 @@ public class BackgroundMusicManager : MonoBehaviour {
                     if (!channelList[mainChannel].isPlaying)
                     {
                         int randomNumber = Random.Range(0, battleMusicTracks.Length - 1);
-                        Debug.Log("RandomNumber:" + randomNumber);
                         channelList[mainChannel].clip = battleMusicTracks[randomNumber];
                     }
                     break;
@@ -172,7 +169,6 @@ public class BackgroundMusicManager : MonoBehaviour {
                     if (!channelList[mainChannel].isPlaying)
                     {
                         int randomNumber = Random.Range(0, normalMusicTracks.Length - 1);
-                        Debug.Log("RandomNumber:" + randomNumber);
                         channelList[mainChannel].clip = normalMusicTracks[randomNumber];
                     }
                     break;
@@ -232,4 +228,5 @@ public class BackgroundMusicManager : MonoBehaviour {
             }
         }
     }
+    #endregion
 }

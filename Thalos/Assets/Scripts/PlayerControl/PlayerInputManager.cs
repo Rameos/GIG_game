@@ -2,6 +2,7 @@
 using System.Collections;
 using XInputDotNetPure;
 using Controller;
+using Backend;
 
 public class PlayerInputManager : MonoBehaviour {
 
@@ -10,9 +11,7 @@ public class PlayerInputManager : MonoBehaviour {
     private float rotationDegreePerSecon = 120f;
     private float directionSpeed = 1.5f;
     private float directionDampTime = 0.25f;
-    private float speedDampTime = 0.05f;
     private float focDampTime = 3f;
-    private float jumpMultiplier = 1f;
     private CapsuleCollider capCollider;
 
     private Vector3 moveDirection;
@@ -42,6 +41,8 @@ public class PlayerInputManager : MonoBehaviour {
     private bool isGrounded = false;
 
     private bool isMenuOpen = false;
+
+    private bool isPlayerAlive = true;
     //private bool jumpClimax = false;
     [SerializeField]
     private Transform centerOfMass;
@@ -51,10 +52,7 @@ public class PlayerInputManager : MonoBehaviour {
     float inputY;
     private int y;
 
-    static int idle = Animator.StringToHash("Idle");
-    static int walk = Animator.StringToHash("Locomotion");
-    static int shoot_Idle = Animator.StringToHash("Shoot_Idle");
-    static int shoot_Walking = Animator.StringToHash("Shoot_Walk"); 
+
     
     //Test: 
     private float jumpVelocity = 2f;
@@ -69,7 +67,6 @@ public class PlayerInputManager : MonoBehaviour {
 
     //ExternalScripts
     private JumpwithGaze jumpScript;
-    private ShotManager_Player shotManager;
 
     //RumbleAttributes
     private float forceHeavy =0f;
@@ -78,7 +75,9 @@ public class PlayerInputManager : MonoBehaviour {
 
     private Vector3 destinationPoint; 
 
+
 	void Start () {
+
         connectController();
         centerOfMass = transform.FindChild("CenterOfMass");
         animator = GetComponent<Animator>();
@@ -88,7 +87,6 @@ public class PlayerInputManager : MonoBehaviour {
         Gamestatemanager.ChangeInGameMenuHandler += Gamestatemanager_ChangeInGameMenuHandler;
         jumpScript = gameObject.GetComponent<JumpwithGaze>();
         capCollider = gameObject.GetComponent<CapsuleCollider>();
-        shotManager = gameObject.GetComponent<ShotManager_Player>();
 
 	}
 
@@ -97,12 +95,10 @@ public class PlayerInputManager : MonoBehaviour {
         //IngameMenu
         if(ID_Menu == Constants.INGAMEMENU_INVENTORY && status == false)
         {
-            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(false);
             isMenuOpen = false;
         }
         else if(ID_Menu == Constants.INGAMEMENU_INVENTORY && status == true)
         {
-            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
             isMenuOpen = true;
         }
         
@@ -116,11 +112,22 @@ public class PlayerInputManager : MonoBehaviour {
         {
             isMenuOpen = true;
         }
+        
+        //PauseMenu
+        if (ID_Menu == Constants.INGAMEMENU_PAUSE && status == true)
+        {
+            isMenuOpen = true;
+        }
+        else if (ID_Menu == Constants.INGAMEMENU_PAUSE && status == false)
+        {
+            isMenuOpen = false;
+        }
     }
 
     void Update() 
     {
-        if (!isMenuOpen)
+
+        if (!isMenuOpen && PlayerModel.Instance().isPlayerAlive)
         {
             inputX = Input.GetAxis("Horizontal");
             inputY = Input.GetAxis("Vertical");
@@ -220,6 +227,12 @@ public class PlayerInputManager : MonoBehaviour {
         animator.SetTrigger("Jump");
     }
 
+    public void turnToPosition(Vector3 destinationPosition)
+    {
+        Quaternion lookAtRotation = Quaternion.LookRotation(destinationPosition);
+        transform.rotation = lookAtRotation;
+    }
+
     private void createJumpCurve()
     {
         if (isGrounded)
@@ -238,23 +251,18 @@ public class PlayerInputManager : MonoBehaviour {
                 Debug.DrawRay(transform.position, destinationPoint, Color.magenta, 2f);
 
                 destinationPoint = destinationPoint - transform.position;
-
                 destinationPoint.y = 0;
-
-                Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
-                transform.rotation = lookAtRotation;
+                turnToPosition(destinationPoint);
 
                 rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
                 rigidbody.velocity += transform.forward * jumpForcePower;
-
-
             }
         }
         else
         {
-            Quaternion lookAtRotation = Quaternion.LookRotation(destinationPoint);
-            transform.rotation = lookAtRotation;
+            turnToPosition(destinationPoint);
         }
+        
     }
 
     private void move(float inputX, float inputY)
@@ -266,8 +274,6 @@ public class PlayerInputManager : MonoBehaviour {
 
         if (Mathf.Abs(speedOut) > 0.1f)
         {
-
-            AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
 
             if (isGrounded)
             {
@@ -302,14 +308,11 @@ public class PlayerInputManager : MonoBehaviour {
         if (Input.GetAxis("Triggers") < 0-thresholdTriggers)
         {
             animator.SetBool("Throw",true);
-            Debug.Log("Throw");
         }
 
         else if (Input.GetAxis("Triggers") > thresholdTriggers)
-        {
-            
+        {      
             animator.SetBool("Shoot",true);
-            Debug.Log("Shoot");
         }
 
         else
@@ -328,7 +331,7 @@ public class PlayerInputManager : MonoBehaviour {
             Application.Quit();
         }
 
-        if (Input.GetAxis("ButtonY") > 0)
+        if (Input.GetButtonDown("ButtonY"))
         {
             Debug.Log("ButtonY");
             Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_INVENTORY, true);
@@ -336,6 +339,8 @@ public class PlayerInputManager : MonoBehaviour {
 
         else if (Input.GetAxis("ButtonX") > 0)
         {
+
+
             Debug.Log("ButtonX");
         }
 
@@ -350,30 +355,30 @@ public class PlayerInputManager : MonoBehaviour {
             Debug.Log("ButtonB");
         }
 
+        else if(Input.GetButtonDown("ButtonStart"))
+        {
+            Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_PAUSE, true);
+            GameObject.FindGameObjectWithTag("PauseMenu").SetActive(true);
+        }
     }
 
     private void checkGazeMenuStatus()
     {
 
-        if (Input.GetAxis("ButtonLB") > 0)
+        if (Input.GetAxis("ButtonLB") > 0 || Input.GetAxis("ButtonX") > 0)
         {
-            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
-            Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU,true);
+            Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU, true);
             circleMenuIsOpen = true;
         }
 
-        //else if (Input.GetAxis("ButtonRB") > 0)
-        //{
-        //    GamePad.SetVibration(playerIndex, 0, 1);
-        //}
-
-        else if(circleMenuIsOpen== true && Input.GetAxis("ButtonLB")<=0)
+        else if (circleMenuIsOpen == true && Input.GetAxis("ButtonLB") <= 0 || Input.GetAxis("ButtonX") <= 0)
         {
 
-            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(false);
-            circleMenuIsOpen = false;
-            Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU, false);
-
+            if(circleMenuIsOpen)
+            {
+                Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU, false);
+                circleMenuIsOpen = false;
+            }
         }
     }
 
@@ -392,10 +397,6 @@ public class PlayerInputManager : MonoBehaviour {
         Vector3 axisSign = Vector3.Cross(moveDirection, rootDirection);
 
         angleOut = Vector3.Angle(rootDirection, moveDirection) * (axisSign.y >= 0 ? -1 : 1);
-
-
-        //transform.Rotate(0, angleOut, 0);
-
     }
 
     private void ManageRumbleEvents()
@@ -433,10 +434,7 @@ public class PlayerInputManager : MonoBehaviour {
 
     IEnumerator rumbleOverTime(float time)
     {
-        Debug.Log("Rumble!!!");
-        yield return new WaitForSeconds(2);
-        Debug.Log("Rumble OVER!!!");
-        
+        yield return new WaitForSeconds(2);   
         isRumbleActive = false; 
     }
 

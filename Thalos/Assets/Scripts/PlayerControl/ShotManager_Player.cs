@@ -6,6 +6,7 @@ namespace Controller
 {
     public class ShotManager_Player : MonoBehaviour
     {
+
         [SerializeField]
         private GameObject BoltNormal;
         [SerializeField]
@@ -31,10 +32,14 @@ namespace Controller
         
         public void ShootBullet()
         {
+           
+            transform.parent.gameObject.GetComponent<LogInputsFromController>().logShoot();
 
             PlayerModel.DamageTypes damage = PlayerModel.Instance().DamageType_Bolt;
             GameObject instance;
             Vector3 direction = gazeInputManagerShooting.directionShoot;
+
+            //Standard Way
             switch (damage)
             {
                 case PlayerModel.DamageTypes.Fire:
@@ -54,12 +59,20 @@ namespace Controller
                     break;
             }
 
+
+            Vector3 gazeDirection = gazeInputManagerShooting.destinationPoint_Shoot-transform.position;
+            gazeDirection.y = 0f;
+            float step = 0.4f * Time.deltaTime;
+            Vector3 newDir = Vector3.RotateTowards(transform.forward, gazeDirection, 1,0.0f);
+            this.gameObject.transform.rotation = Quaternion.LookRotation(newDir);
+
             gameObject.GetComponent<PlayerInputManager>().startRumbleForTime(0.1f, 0, 0.1f);
-        
+           
         }
 
         public void ThrowPoison()
         {
+            transform.parent.gameObject.GetComponent<LogInputsFromController>().logThrow();
 
                 PlayerModel.DamageTypes damage = PlayerModel.Instance().DamageType_Poision;
                 GameObject instance;

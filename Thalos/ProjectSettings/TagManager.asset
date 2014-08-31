@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   tags:
-  - 
+  - Respawn
+  - Finish
+  - EditorOnly
+  - MainCamera
+  - Player
+  - GameController
   - GazeController
   - concrete
   - GameManager
@@ -14,10 +19,17 @@ TagManager:
   - GazeGui_Icon
   - GazeGui_Text
   - Enemy
-  - MainMenu
-  - AlchemySystemMenu
-  - Audiomanager
+  - Bullet
+  - PlayerComplete
+  - EnemyComplete
+  - FadeManager
+  - 
   - PopUpWindow
+  - AlchemySystemMenu
+  - 
+  - Audiomanager
+  - MainMenu
+  - PauseMenu
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -34,7 +46,7 @@ TagManager:
   User Layer 12: Items
   User Layer 13: HealthBar
   User Layer 14: Bullets
-  User Layer 15: 
+  User Layer 15: Enemy
   User Layer 16: 
   User Layer 17: 
   User Layer 18: 

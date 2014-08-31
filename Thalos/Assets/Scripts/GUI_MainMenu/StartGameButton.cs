@@ -10,8 +10,8 @@ public class StartGameButton : BaseMainMenuButton {
 
     public override void DoActionWhenActivated()
     {
-        
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<Gamestatemanager>().startGame();
+
+        GameObject.FindGameObjectWithTag(Constants.TAG_GAMEMANAGER).GetComponent<Gamestatemanager>().startGame();
         GameObject.FindGameObjectWithTag("UISoundManager").GetComponent<UISoundManager>().playClickSound();
     }
 }

@@ -20,18 +20,37 @@ public class Bullet : MonoBehaviour {
         this.damageInformation = damageInformation;
         this.forwardVector = forwardVector.normalized;
         this.parentType = parentType;
-        this.bulletSpeed = Constants.BULLETSPEED;
+
+        initSpeed();
+
         transform.rotation = Quaternion.LookRotation(this.forwardVector);
         StartCoroutine(removeAfterLiveTime());
-
-        Debug.Log("DamageInfo:" + damageInformation.typeDamage);
-        Debug.Log("DamageInfo: damage" + damageInformation.damage);
-
     }
 
-    void FixedUpdate()
+    private void initSpeed()
     {
-        this.transform.position += forwardVector.normalized * bulletSpeed;
+        switch (damageInformation.typeDamage)
+        {
+            case PlayerModel.DamageTypes.Standard:
+                this.bulletSpeed = Constants.BULLETSPEED_STANDARD;
+                break;
+
+            case PlayerModel.DamageTypes.Fire:
+
+                this.bulletSpeed = Constants.BULLETSPEED_FIRE;
+                break;
+            
+            case PlayerModel.DamageTypes.Ice:
+
+                this.bulletSpeed = Constants.BULLETSPEED_ICE;
+                break;
+
+        }
+    }
+
+    void Update()
+    {
+        this.transform.Translate(0, 0, bulletSpeed, Space.Self);
     }
 
 
@@ -44,7 +63,6 @@ public class Bullet : MonoBehaviour {
 
         GameObject.Instantiate(explosion,col.contacts[0].point,explosion.transform.rotation);
 
-        Debug.Log("Parent:" + parentType);
         switch (parentType)
         {
             case Constants.ID_PLAYER:
@@ -52,7 +70,6 @@ public class Bullet : MonoBehaviour {
                 if (col.gameObject.tag == Constants.TAG_ENEMY)
                 {
                     col.gameObject.transform.parent.gameObject.GetComponent<EnemyObject>().ApplyDamage(damageInformation);
-                    Debug.Log("Enemy gets Damage!");
                 }
 
                 break; 
@@ -61,16 +78,14 @@ public class Bullet : MonoBehaviour {
 
                 if (col.gameObject.tag == Constants.TAG_PLAYER)
                 {
-                    Gamestatemanager.OnPlayerGetsDamage(damageInformation.damage);
                     Debug.Log("Player Gets Damage!");
+                    Gamestatemanager.OnPlayerGetsDamage(damageInformation.damage);
                 }
                 break;
         }
-
-        //ToDO: Explosion
-
         Destroy(gameObject);
     }
+
 
     IEnumerator removeAfterLiveTime()
     {
@@ -80,78 +95,3 @@ public class Bullet : MonoBehaviour {
     }
 
 }
-
-
-
-
-/*using UnityEngine;
-using System.Collections;
-
-public class BulletBehaviour : MonoBehaviour {
-
-    private Vector3 startPos;
-    
-    private Vector3 endPos;
-    private Rigidbody selectedElement;
-
-    private bool done = false; 
-    public float speed=2f;
-
-
-    [SerializeField]
-    private GameObject explosion;
-
-    public void InitElement(Vector3 startPos, Vector3 endPos, Rigidbody element)
-    {
-        this.startPos = startPos;
-        this.endPos = endPos;
-        this.selectedElement = element;
-    }
-
-    public void InitElement(Vector3 startPos, Vector3 endPos)
-    {
-        this.startPos = startPos;
-        this.endPos = endPos;
-        this.selectedElement = null;
-    }
-
-	// Use this for initialization
-	void Start () {
-        //transform.position = startPos;
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () 
-    {
-        float steps =speed*Time.time;
-
-        transform.position = Vector3.MoveTowards(transform.position, endPos,steps);
-        
-        float distance = Vector3.Distance(endPos, transform.position);
-       
-
-            if (distance <= 0.1f)
-            {
-                if (!done)
-                {
-                    Camera.main.GetComponent<ExplosionManager>().CreateExplosion(endPos);
-                    done = true;
-                    StartCoroutine(explodeAnimation());
-                }
-            }
-    }
-
-
-    IEnumerator explodeAnimation()
-    {
-        this.particleSystem.enableEmission=false;
-        GameObject.FindGameObjectWithTag("Audio").audio.Play();
-        explosion.particleEmitter.emit = true;
-        yield return new WaitForSeconds(0.1f);
-        explosion.particleEmitter.emit = false;
-        yield return new WaitForSeconds(2f);
-        //BAD
-        Destroy(this.gameObject);
-    }
-}
-*/
