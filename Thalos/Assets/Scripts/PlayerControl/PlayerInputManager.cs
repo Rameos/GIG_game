@@ -67,7 +67,6 @@ public class PlayerInputManager : MonoBehaviour {
 
     //ExternalScripts
     private JumpwithGaze jumpScript;
-    private ShotManager_Player shotManager;
 
     //RumbleAttributes
     private float forceHeavy =0f;
@@ -88,7 +87,6 @@ public class PlayerInputManager : MonoBehaviour {
         Gamestatemanager.ChangeInGameMenuHandler += Gamestatemanager_ChangeInGameMenuHandler;
         jumpScript = gameObject.GetComponent<JumpwithGaze>();
         capCollider = gameObject.GetComponent<CapsuleCollider>();
-        shotManager = gameObject.GetComponent<ShotManager_Player>();
 
 	}
 
@@ -97,12 +95,10 @@ public class PlayerInputManager : MonoBehaviour {
         //IngameMenu
         if(ID_Menu == Constants.INGAMEMENU_INVENTORY && status == false)
         {
-            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(false);
             isMenuOpen = false;
         }
         else if(ID_Menu == Constants.INGAMEMENU_INVENTORY && status == true)
         {
-            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
             isMenuOpen = true;
         }
         
@@ -278,7 +274,6 @@ public class PlayerInputManager : MonoBehaviour {
 
         if (Mathf.Abs(speedOut) > 0.1f)
         {
-            AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
 
             if (isGrounded)
             {
@@ -336,7 +331,7 @@ public class PlayerInputManager : MonoBehaviour {
             Application.Quit();
         }
 
-        if (Input.GetAxis("ButtonY") > 0)
+        if (Input.GetButtonDown("ButtonY"))
         {
             Debug.Log("ButtonY");
             Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_INVENTORY, true);
@@ -372,7 +367,6 @@ public class PlayerInputManager : MonoBehaviour {
 
         if (Input.GetAxis("ButtonLB") > 0 || Input.GetAxis("ButtonX") > 0)
         {
-            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(true);
             Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU, true);
             circleMenuIsOpen = true;
         }
@@ -380,10 +374,11 @@ public class PlayerInputManager : MonoBehaviour {
         else if (circleMenuIsOpen == true && Input.GetAxis("ButtonLB") <= 0 || Input.GetAxis("ButtonX") <= 0)
         {
 
-            Camera.main.GetComponent<RotateWithGazeInput>().OpenGazeMenu(false);
-            circleMenuIsOpen = false;
-            Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU, false);
-
+            if(circleMenuIsOpen)
+            {
+                Gamestatemanager.OnChangeInGameMenu(Constants.INGAMEMENU_CIRCLEMENU, false);
+                circleMenuIsOpen = false;
+            }
         }
     }
 

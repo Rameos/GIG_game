@@ -7,25 +7,11 @@ public class DelayPlay : MonoBehaviour {
     private float secsToWait = 3;
 	// Use this for initialization
 	void Start () {
+        StartCoroutine(playDelay());
         StartCoroutine(changeToNextlvl());
-        //StartCoroutine(playDelay());
 
 
-        try
-        {
-            Gamestatemanager manager = GameObject.FindGameObjectWithTag(Constants.TAG_GAMEMANAGER).GetComponent<Gamestatemanager>();
-            manager.loadLevel(Application.loadedLevel + 1);
-        }
-        catch
-        {
-            Debug.Log("Error");
-        }
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 
     IEnumerator playDelay()
@@ -37,7 +23,15 @@ public class DelayPlay : MonoBehaviour {
 
     IEnumerator changeToNextlvl()
     {
-        yield return new WaitForSeconds(3);
-
+        yield return new WaitForSeconds(audio.clip.length);
+        try
+        {
+            Gamestatemanager manager = GameObject.FindGameObjectWithTag(Constants.TAG_GAMEMANAGER).GetComponent<Gamestatemanager>();
+            manager.loadLevel(Application.loadedLevel + 1);
+        }
+        catch
+        {
+            Debug.Log("Error");
+        }
     }
 }

@@ -18,7 +18,6 @@ public class LogInputsFromController : MonoBehaviour {
     private bool isLeftSticMoving = false;
     private bool isRightSticMoving = false;
 
-    private float thresholdTriggers = 0.1f;
 	void Update () {
         
         float Left_inputX = Input.GetAxis("Horizontal");
@@ -26,11 +25,21 @@ public class LogInputsFromController : MonoBehaviour {
         float right_inputX = Input.GetAxis("RightStickX");
         float right_inputY = Input.GetAxis("RightStickY");
 
-        LogShootInput(right_inputX, right_inputY, Left_inputX, Left_inputY);
-        CheckButtonInput();
-        WriteInputLeft(Left_inputX,Left_inputY);
-        WriteInputRight(right_inputX, right_inputY);
+        checkDirectoryExists();
+        checkFileExists();
+        try
+        {
+            LogShootInput(right_inputX, right_inputY, Left_inputX, Left_inputY);
+            CheckButtonInput();
+            WriteInputLeft(Left_inputX, Left_inputY);
+            WriteInputRight(right_inputX, right_inputY);
 
+        }
+        catch
+        {
+
+        }
+        
 	}
     
     void Start()
@@ -47,6 +56,7 @@ public class LogInputsFromController : MonoBehaviour {
         completePath_ButtonProtocol = path + "/" + dataName+"_ButtonProtocol.txt";
         completePath_RightSticProtocol = path + "/" + dataName + "_RightSticProtocol.txt";
         completePath_LeftSticProtocol = path + "/" + dataName + "_LeftSticProtocol.txt";
+        checkDirectoryExists();
         checkFileExists();
 
     }

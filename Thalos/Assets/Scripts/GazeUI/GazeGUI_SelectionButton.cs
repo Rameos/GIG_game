@@ -28,24 +28,21 @@ namespace GazeGUI
         public Color32 notSelectableColor;
 
         private Color32 destinationColor;
-        private SpriteRenderer renderer;
+        private SpriteRenderer rendererGUI;
         private PlayerModel.PhialType phialType;
         
         void Start()
         {
-            renderer = GetComponent<SpriteRenderer>();
+            rendererGUI = GetComponent<SpriteRenderer>();
             destinationColor = notSelectedColor;
 
             phialType = convertCircleItemInPhial();
         }
 
-        void FixedUpdate()
-        {
-
-            renderer.material.color = destinationColor;
-        }
         void Update()
         {
+            rendererGUI.material.color = destinationColor;
+        
             //setSelectable only Endless Items
             if (!isEndless)
             {
@@ -66,7 +63,7 @@ namespace GazeGUI
 
 
             // change Material Color 
-            renderer.material.color = Color32.Lerp(renderer.material.color, destinationColor, 1f);
+            rendererGUI.material.color = Color32.Lerp(rendererGUI.material.color, destinationColor, 1f);
             Icon.renderer.material.color = Color.white;
 
             
@@ -151,7 +148,6 @@ namespace GazeGUI
         {
             if (isSelectable)
             {
-                //Gamestatemanager.OnRumbleEventStop();
                 destinationColor = notSelectedColor;
             }
         }
@@ -163,7 +159,6 @@ namespace GazeGUI
             {
                 Debug.Log("GazeEvent!");
                 Gamestatemanager.OnSelectNewItem(actionItem);
-//                UISoundManager.
             }
         }
     }

@@ -30,10 +30,7 @@ namespace Controller
 
         void Update()
         {
-            if (isMainMenuActive)
-            {
-                manageInputForMainMenu();
-            }
+            manageInputForMainMenu();
         }
 
         private void manageInputForMainMenu()

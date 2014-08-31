@@ -33,15 +33,15 @@ namespace Controller
         public const int ID_ENEMY = 1;
 
         public static float BULLETSPEED_STANDARD = 1;
-        public static float BULLETSPEED_FIRE = 1;
-        public static float BULLETSPEED_ICE = 1;
+        public static float BULLETSPEED_FIRE = 1f;
+        public static float BULLETSPEED_ICE = 0.9f;
 
         public const int healPower = 25;
         
         //Damage
-        public const int damageStandardBolt = 5;
-        public const int damageFireBolt = 10;
-        public const int damageIceBolt = 7;
+        public const int damageStandardBolt = 10;
+        public const int damageFireBolt = 8;
+        public const int damageIceBolt = 12;
 
         public const int damageFirePoison = 20;
         public const int damageIcePoison = 30;

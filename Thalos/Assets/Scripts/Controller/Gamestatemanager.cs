@@ -231,8 +231,6 @@ namespace Controller
             OnCloseMainMenu();
             FadeSceneEffect.FadeOut();
             yield return new WaitForSeconds(FadeSceneEffect.fadeSpeed);
-            Debug.Log("LoadLevelWith ID: " + levelID);
-            
             
             if (levelID < 0)
             {
@@ -240,7 +238,6 @@ namespace Controller
             }
             else
             {
-                Debug.Log("waitForFadeOut! Start levelLoading");
                 loadScreen.GetComponent<LoadScene>().startLoadingProcess(levelID);
             }
         }

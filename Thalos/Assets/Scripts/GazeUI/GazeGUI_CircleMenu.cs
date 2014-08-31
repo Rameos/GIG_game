@@ -13,17 +13,11 @@ namespace GazeGUI
             Gamestatemanager.ChangeInGameMenuHandler += CloseMenu;
         }
 
-        void OnEnable()
-        {
-            // NiceTohave: Animation
-        }
-
         void CloseMenu(int ID_Menu, bool status)
         {
             if(ID_Menu == Constants.INGAMEMENU_CIRCLEMENU && status == false)
             {
 
-                //Nice To have: Animation
                 Debug.Log("CloseCircleMenu");
             }
         }

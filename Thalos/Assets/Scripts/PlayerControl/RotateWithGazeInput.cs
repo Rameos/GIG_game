@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Controller;
 
 public class RotateWithGazeInput : MonoBehaviour {
 
@@ -19,12 +20,11 @@ public class RotateWithGazeInput : MonoBehaviour {
     public ThirdPersonCamera camScript;
     public gazeActionMenu actualStateGazeAction;
 
-    private bool isInGameMenu = false;
+    public bool isInGameMenu = false;
     public bool IsEyeDetected = true;
     public float offSetRightAOI;
 
-    public bool isActive = false;
-    
+
     [SerializeField]
     private bool isVisualisationActive = false;
 
@@ -51,48 +51,38 @@ public class RotateWithGazeInput : MonoBehaviour {
 
     void Start()
     {
-
+        Gamestatemanager.ChangeInGameMenuHandler +=Gamestatemanager_ChangeInGameMenuHandler;
         camScript = gameObject.GetComponent<ThirdPersonCamera>();
-        calculateAOI();
-    }
-
-
-    void FixedUpdate () 
-    {
-        calculateAOI();
-        isActive = checkInput();
-        checkGazeIsInAOI();
-
-	}
-
-    private bool checkInput()
-    {
-        if(gazeModel.isEyeDetected)
-        {
-            if (Input.GetAxis("Horizontal") > threshold || Input.GetAxis("Vertical") > threshold || isAlwaysEnable)
-            {
-                return true;
-            }
-        }
         
-        return false; 
+        calculateAOI();
     }
 
-    public void OpenGazeMenu (bool status)
+    private void Gamestatemanager_ChangeInGameMenuHandler(int ID_Menu, bool status)
     {
         isInGameMenu = status;
     }
+
+
+    void Update () 
+    {
+        if(!isInGameMenu)
+        {
+            calculateAOI();
+            checkGazeIsInAOI();
+        }
+        else
+        {
+            camScript.gazeInput = 0;
+        }
+	}
     
     private void checkGazeIsInAOI()
     {
-        if (isActive)
-        {
+
             Vector3 gazePos = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
             float rightX = -Input.GetAxis("RightStickX");
             float rightY = -Input.GetAxis("RightStickY");
             
-            float leftX = Input.GetAxis("Horizontal");
-            float leftY = Input.GetAxis("Vertical");
 
             if (gazePos != Vector3.zero && !isInGameMenu)
             {
@@ -131,11 +121,6 @@ public class RotateWithGazeInput : MonoBehaviour {
             {
                 camScript.gazeInput = 0;
             }
-        }
-        else
-        {
-            camScript.gazeInput = 0;
-        }
     }
     
   

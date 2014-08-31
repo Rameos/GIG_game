@@ -10,7 +10,7 @@ namespace Controller
         private static PlayerStateController playerController;
         private PlayerModel playerModel;
         private GameObject audioManager;
-
+        private bool isHealCoolDown = false; 
         #region UNITY_FUNCTIONS
         void Start()
         {
@@ -138,7 +138,10 @@ namespace Controller
             switch (selectedItem)
             {
                 case Constants.selectableItemsCircleMenu.HealPoison:
-                    Heal(Constants.healPower);
+                    if (!isHealCoolDown)
+                    {
+                        StartCoroutine(waitForCoolDown());
+                    }
                     break;
  
                 case  Constants.selectableItemsCircleMenu.NormalBolt:
@@ -169,6 +172,13 @@ namespace Controller
         }
         #endregion
 
+        IEnumerator waitForCoolDown()
+        {
+            Heal(Constants.healPower);
+            isHealCoolDown = true; 
+            yield return new WaitForSeconds(4);
+            isHealCoolDown = false;
+        }
 
         IEnumerator waitForLoadning()
         {

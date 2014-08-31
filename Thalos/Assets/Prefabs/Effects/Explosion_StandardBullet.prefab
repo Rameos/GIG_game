@@ -43,8 +43,8 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 010fc40e71f762d4d94d2ef40ae8e350, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: .569000006
+  m_Pitch: 1.17999995
   Loop: 0
   Mute: 0
   Priority: 128

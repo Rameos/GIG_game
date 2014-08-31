@@ -102,7 +102,7 @@ namespace iViewX
             int targetSize = 20;
 
             m_CalibrationData.displayDevice = displayDevice;
-            m_CalibrationData.autoAccept = 2;
+            m_CalibrationData.autoAccept = 1;
             m_CalibrationData.method = calibrationPoints;
             m_CalibrationData.visualization = 1;
             m_CalibrationData.speed = 0;

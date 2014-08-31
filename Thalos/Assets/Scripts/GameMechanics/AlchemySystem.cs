@@ -11,16 +11,12 @@ public class AlchemySystem : MonoBehaviour
         {
             if (Recipe.checkIfBrewingPossible(itemsOfPlayer))
             {
-                Debug.Log("BrewPoison! of Type:" + Recipe.phialType);
-
+  
                 PlayerModel.Instance().addPhialToinventory(Recipe.phialType);
                 removeIngrediences(Recipe);
                 return true;
             }
         }
-
-
-        Debug.Log("Not Possible");
         return false;
     }
 

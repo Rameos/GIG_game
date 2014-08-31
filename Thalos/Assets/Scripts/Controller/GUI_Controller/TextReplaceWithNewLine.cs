@@ -3,16 +3,16 @@ using System.Collections;
 
 public class TextReplaceWithNewLine : MonoBehaviour {
 
-    TextMesh renderer;
+    TextMesh Textrenderer;
     string input; 
 
 	void Start () {
 
-        renderer = GetComponent<TextMesh>();
-        input = renderer.text;
+        Textrenderer = GetComponent<TextMesh>();
+        input = Textrenderer.text;
 
         input = input.Replace("||", "\n");
-        renderer.text = input;
+        Textrenderer.text = input;
 	}
 
 }

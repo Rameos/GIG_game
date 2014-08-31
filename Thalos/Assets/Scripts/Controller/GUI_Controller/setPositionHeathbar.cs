@@ -7,7 +7,6 @@ public class setPositionHeathbar : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        int hp = PlayerModel.Instance().HealthPoints;
         float maxHp = PlayerModel.Instance().MaxHealthPoints*0.1f;
         Vector3 position = transform.position;
 

@@ -68,22 +68,22 @@ public class EnemyObject : MonoBehaviour {
         switch (actualEnemy)
         {
             case enemyType.policeman_LVL01:
-                enemyManager = new Policeman(5,5,5);
+                enemyManager = new Policeman(10,1,2);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Standard);
                 break;
 
             case enemyType.policeman_LVL02:
-                enemyManager = new Policeman(10, 5, 8);
+                enemyManager = new Policeman(20, 1, 3);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Fire);
                 break;
 
             case enemyType.policeman_LVL03:
-                enemyManager = new Policeman(20, 5, 12);
+                enemyManager = new Policeman(30, 2, 3);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Ice);
                 break;
 
             case enemyType.roboter_LVL01:
-                enemyManager = new Robot(30, 1, 14);
+                enemyManager = new Robot(50, 3, 5);
                 damageInformation = new Damage(enemyManager.Damage, PlayerModel.DamageTypes.Standard);
                 break;
         }
@@ -184,7 +184,6 @@ public class EnemyObject : MonoBehaviour {
     void updateBehaviour(float angle)
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        float distanceNaveMesh = gameObject.GetComponent<NavMeshAgent>().remainingDistance;
          NavMeshPath navPath = new NavMeshPath();
          gameObject.GetComponent<NavMeshAgent>().CalculatePath(player.transform.position, navPath);
      
@@ -246,9 +245,10 @@ public class EnemyObject : MonoBehaviour {
 
     public void ApplyDamage(Damage damage)
     {
+        Debug.Log("ApplyDamage!");
         int health = enemyManager.TakeDamage(damage.damage, damage.typeDamage);
 
-        if (enemyManager.LivePoints <= 0)
+        if (health <= 0)
         {
             isAlive = false;
         }

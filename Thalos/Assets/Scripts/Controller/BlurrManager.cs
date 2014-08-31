@@ -45,6 +45,7 @@ namespace Controller
         void Gamestatemanager_ChangeInGameMenuHandler(int ID_Menu, bool status)
         {
 
+            Debug.Log("Open any Menu");
             isBlur = true;
 
 

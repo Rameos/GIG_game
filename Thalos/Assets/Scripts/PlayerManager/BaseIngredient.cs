@@ -13,7 +13,7 @@ public class BaseIngredient
         this.Object = Object;
     }
 
-    public string ToString()
+    public override string ToString()
     {
         return Name;
     }

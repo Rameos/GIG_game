@@ -15394,7 +15394,7 @@ MonoBehaviour:
   coolDown: .25
   shootfrequence: .5
   isAlarmed_Distance: 20
-  explosion: {fileID: 100004, guid: 7bf315f9d468c3d4da2258ed52a686e9, type: 2}
+  explosion: {fileID: 100004, guid: cd017d19a4b47b844904aa22237c0820, type: 2}
   player: {fileID: 0}
   actualEnemy: 1
 --- !u!114 &11400002
