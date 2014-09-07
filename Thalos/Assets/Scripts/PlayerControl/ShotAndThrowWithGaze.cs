@@ -21,13 +21,19 @@ public class ShotAndThrowWithGaze : MonoBehaviour {
 
     void Update()
     {
+        int playerLayerMask = LayerMask.NameToLayer("Player");
+        Vector3 gazePosition = Input.mousePosition;
+
         if(gazeModel.isEyeDetected)
         {
-            int playerLayerMask = LayerMask.NameToLayer("Player");
-
-            Vector3 gazePosition = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
+          
+            gazePosition = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
             gazePosition.y = Screen.height - gazePosition.y;
+        }
+        else
+        {
 
+        }
 
             Ray ray = Camera.main.ScreenPointToRay(gazePosition);
             //Raycast
@@ -57,7 +63,9 @@ public class ShotAndThrowWithGaze : MonoBehaviour {
 
             Debug.DrawRay(startPoint_Bullet.position, directionShoot, Color.red);
             Debug.DrawRay(startPoint_Poison.position, directionShoot, Color.red);
-        }
+        
+
+
 
     }
     
