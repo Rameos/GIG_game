@@ -19,7 +19,7 @@ namespace GazeGUI
         private AlchemyGUIManager guiManager;
         private bool isInFocus = false;
         private bool buttonDown = false;
-        private bool isReciepeFound = false;
+        public bool isReciepeFound = false;
         private bool performedAction = false;
 
 
@@ -91,7 +91,7 @@ namespace GazeGUI
             PerformAction();
         }
     
-        void GetInfo()
+        public void GetInfo()
         {
             if(isInFocus)
             {
@@ -120,7 +120,7 @@ namespace GazeGUI
             destinationScale = scaleSelected;
         }
     
-        void PerformAction()
+        public void PerformAction()
         {
             if (isInFocus)
             {
@@ -194,5 +194,15 @@ namespace GazeGUI
             buttonDown = false;
         }
 
+
+        internal void DeselectItem()
+        {
+            ExitFocus();
+        }
+
+        internal void SelectItem()
+        {
+            EnterFocus();
+        }
     }
 }
