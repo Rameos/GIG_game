@@ -239,10 +239,9 @@ public class PlayerInputManager : MonoBehaviour {
         {
             if (!jumpScript.isActive)
             {
-                Debug.Log("JumpScript Not Active");
                 rigidbody.velocity = new Vector3(0, jumpForcePower, 0);
-                if (Mathf.Abs(inputX) > thresholdStics || Mathf.Abs(inputY) > thresholdStics)
-                    rigidbody.velocity += transform.forward * jumpForcePower;
+                rigidbody.velocity += transform.forward * jumpForcePower; 
+
             }
 
             else

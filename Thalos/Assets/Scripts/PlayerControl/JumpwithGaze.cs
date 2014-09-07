@@ -8,7 +8,10 @@ public class JumpwithGaze : MonoBehaviour {
     private GameObject player;
     private Vector3 destinationPoint;
     public bool isActive = true;
-    
+
+    public bool isGazeActive = false;
+
+
 	// Use this for initialization
 	void Start () {
 
@@ -19,9 +22,16 @@ public class JumpwithGaze : MonoBehaviour {
     {
         if (isActive)
         {
-            Debug.Log("JUMP");
-            Vector3 gazePos = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
-            gazePos.y = Screen.height - gazePos.y;
+            Vector3 gazePos = transform.position;
+            //gazePos.y = Screen.height - gazePos.y; 
+
+            if(isGazeActive)
+            {
+                Debug.Log("JUMP");
+                gazePos = (gazeModel.posGazeLeft + gazeModel.posGazeRight) * 0.5f;
+                gazePos.y = Screen.height - gazePos.y;
+
+            }
 
             Ray screenCast = Camera.main.ScreenPointToRay(gazePos);
             LayerMask player = LayerMask.NameToLayer("Player");
