@@ -94,7 +94,6 @@ namespace GazeGUI
 
         private bool getIsSelectable()
         {
-            Debug.Log("ITEM:" + phialType.ToString());
             if (PlayerModel.Instance().checkIfPhialIsInInventory(phialType)&& !isEndless)
             {
                 return true;

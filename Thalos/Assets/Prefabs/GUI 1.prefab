@@ -97,7 +97,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100012
 GameObject:
   m_ObjectHideFlags: 1
@@ -489,7 +489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100060
 GameObject:
   m_ObjectHideFlags: 1
@@ -1389,7 +1389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100170
 GameObject:
   m_ObjectHideFlags: 1
@@ -3042,7 +3042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100372
 GameObject:
   m_ObjectHideFlags: 1
@@ -3303,7 +3303,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.01252842, y: 66.7694931, z: 95.0073318}
+  m_LocalPosition: {x: -6.63828468, y: 68.2541046, z: 94.6027069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400288}
@@ -9382,6 +9382,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64c92ff2c32e3e47bd34de2ea9a495f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healMax: {x: .800000012, y: .899999976}
+  healMin: {x: .100000001, y: .600000024}
+  firePoisonMax: {x: 1, y: .699999988}
+  firePoisonMin: {x: .75, y: -.400000006}
+  icePoisonMax: {x: .74000001, y: -.5}
+  icePoisonMin: {x: 0, y: -.930000007}
+  standardBoltMax: {x: -.0299999993, y: 1}
+  standardBoltMin: {x: -.600000024, y: .5}
+  fireBoltMax: {x: -.800000012, y: .779999971}
+  fireBoltMin: {x: -1, y: -.5}
+  iceBoltMax: {x: -.430000007, y: -.550000012}
+  iceBoltMin: {x: -.629999995, y: -.99000001}
+  buttons:
+  - {fileID: 100228}
+  - {fileID: 100318}
+  - {fileID: 100306}
+  - {fileID: 100216}
+  - {fileID: 100076}
+  - {fileID: 100354}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9550,7 +9569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb37835c9d54f2469cf1e3d1ac99405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionItem: 1
+  actionItem: 0
   isEndless: 1
   Icon: {fileID: 100116}
   CountText: {fileID: 0}
@@ -9665,7 +9684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb37835c9d54f2469cf1e3d1ac99405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionItem: 2
+  actionItem: 0
   isEndless: 1
   Icon: {fileID: 100004}
   CountText: {fileID: 0}

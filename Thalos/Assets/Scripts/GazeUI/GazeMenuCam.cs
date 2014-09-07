@@ -16,7 +16,7 @@ namespace GazeGUI
         private GameObject pauseMenu;
 
         private BaseGazeUI oldSelection;
-        private BaseGazeUI actualSelection;
+        public BaseGazeUI actualSelection { get; set; }
 
         void Start()
         {
@@ -45,7 +45,6 @@ namespace GazeGUI
                 }
 
                 actualSelection.onObjectHit();
-
             }
 
             else
@@ -57,6 +56,8 @@ namespace GazeGUI
 
         void SetMenuState(int ID_Menu,bool status)
         {
+            
+            
             if(status == true)
             {
                 switch (ID_Menu)
@@ -76,11 +77,16 @@ namespace GazeGUI
             }
             else
             {
+                Debug.Log("CloseCircleMenu");
                 switch (ID_Menu)
                 {
                     case Constants.INGAMEMENU_CIRCLEMENU:
+
+                        Debug.Log("ActualSelection: " + actualSelection);
+
                         if(actualSelection!=null)
                         {
+                            Debug.Log("ActualSelection start!");
                             actualSelection.OnEventStart();
                         }
                         circleMenu.SetActive(status);
