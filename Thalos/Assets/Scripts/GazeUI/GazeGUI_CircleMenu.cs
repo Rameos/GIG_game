@@ -79,9 +79,9 @@ namespace GazeGUI
                     Debug.Log("HEAL POISON");
 
                     refreshSelection();
-
-
                     selectionGUI = buttons[3].GetComponent<GazeGUI.GazeGUI_SelectionButton>();
+                    camScript.actualSelection = selectionGUI;
+
                     buttons[3].GetComponent<GazeGUI.GazeGUI_SelectionButton>().OnGazeEnter();
                 }
 
@@ -91,7 +91,8 @@ namespace GazeGUI
                     Debug.Log("FIRE POISON");
                     refreshSelection();
                     selectionGUI = buttons[4].GetComponent<GazeGUI.GazeGUI_SelectionButton>();
-                
+                    camScript.actualSelection = selectionGUI;
+
                     buttons[4].GetComponent<GazeGUI.GazeGUI_SelectionButton>().OnGazeEnter();
                 }
 
@@ -101,6 +102,7 @@ namespace GazeGUI
                     Debug.Log("ICE POISON");
                     refreshSelection();
                     selectionGUI = buttons[5].GetComponent<GazeGUI.GazeGUI_SelectionButton>();
+                    camScript.actualSelection = selectionGUI;
                 
                     buttons[5].GetComponent<GazeGUI.GazeGUI_SelectionButton>().OnGazeEnter();
                 }
@@ -113,6 +115,7 @@ namespace GazeGUI
                     Debug.Log("StandardBolt");
                     refreshSelection();
                     selectionGUI = buttons[2].GetComponent<GazeGUI.GazeGUI_SelectionButton>();
+                    camScript.actualSelection = selectionGUI;
                 
                     buttons[2].GetComponent<GazeGUI.GazeGUI_SelectionButton>().OnGazeEnter();
                 }
@@ -124,6 +127,7 @@ namespace GazeGUI
                     refreshSelection();
 
                     selectionGUI = buttons[0].GetComponent<GazeGUI.GazeGUI_SelectionButton>();
+                    camScript.actualSelection = selectionGUI;
                 
                     buttons[0].GetComponent<GazeGUI.GazeGUI_SelectionButton>().OnGazeEnter();
                 }
@@ -135,11 +139,18 @@ namespace GazeGUI
                     refreshSelection();
 
                     selectionGUI = buttons[1].GetComponent<GazeGUI.GazeGUI_SelectionButton>();
-                
+                    camScript.actualSelection = selectionGUI;
+
                     buttons[1].GetComponent<GazeGUI.GazeGUI_SelectionButton>().OnGazeEnter();
                 }
+                if (selectionGUI == null)
+                {
+                    Debug.Log("SelectionGUI is null");
+                }
+                //camScript.actualSelection = selectionGUI;
 
-                camScript.actualSelection = selectionGUI;
+                Debug.Log("Selection: " + camScript.actualSelection);
+                Debug.Log("CamScriptSelection: " + camScript.actualSelection);
                 
             }
  

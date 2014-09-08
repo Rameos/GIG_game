@@ -2509,10 +2509,10 @@ MonoBehaviour:
   mainMenuMusicTrack: {fileID: 8300000, guid: d00eb57b507d7df40aecd989bf9c1164, type: 3}
   epicBattleTracks: {fileID: 8300000, guid: 666cd683ddd24304dbdde82039d1e4c6, type: 3}
   normalMusicTracks:
-  - {fileID: 8300000, guid: 7c7529c7674054142a6260026e3f22ad, type: 3}
-  - {fileID: 8300000, guid: 368659880ab6e0b4c9b23f512b2138db, type: 3}
-  - {fileID: 8300000, guid: 2de9931ec3f3fb94589d0050e2303537, type: 3}
-  - {fileID: 8300000, guid: 7b9aa8f96f0305a4782d5800b6e1efe6, type: 3}
+  - {fileID: 8300000, guid: 09cd159c9557e3a46ab59c27693a2874, type: 3}
+  - {fileID: 8300000, guid: 09cd159c9557e3a46ab59c27693a2874, type: 3}
+  - {fileID: 8300000, guid: 09cd159c9557e3a46ab59c27693a2874, type: 3}
+  - {fileID: 8300000, guid: 09cd159c9557e3a46ab59c27693a2874, type: 3}
   battleMusicTracks:
   - {fileID: 8300000, guid: 491173c69a99d77489639ec35e284677, type: 3}
 --- !u!1 &1011826111
@@ -2710,6 +2710,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0b565144504d23f4aa8fa2ce9e585df1, type: 2}
+      propertyPath: normalMusicTracks.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 09cd159c9557e3a46ab59c27693a2874, type: 3}
+    - target: {fileID: 11400000, guid: 0b565144504d23f4aa8fa2ce9e585df1, type: 2}
+      propertyPath: normalMusicTracks.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 09cd159c9557e3a46ab59c27693a2874, type: 3}
+    - target: {fileID: 11400000, guid: 0b565144504d23f4aa8fa2ce9e585df1, type: 2}
+      propertyPath: normalMusicTracks.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 09cd159c9557e3a46ab59c27693a2874, type: 3}
+    - target: {fileID: 11400000, guid: 0b565144504d23f4aa8fa2ce9e585df1, type: 2}
+      propertyPath: normalMusicTracks.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 09cd159c9557e3a46ab59c27693a2874, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b565144504d23f4aa8fa2ce9e585df1, type: 2}
   m_RootGameObject: {fileID: 990027881}

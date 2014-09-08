@@ -25,7 +25,7 @@ namespace iViewX
         private float dwellTimeNoGazeIcon =2f;
         private float loadTimeNoGazeIcon = 0; 
         private bool isGazeDetected = false;
-
+        private bool isDrawingActive = false;
         private static GazeControlComponent instance;
 
         public static GazeControlComponent Instance
@@ -143,7 +143,7 @@ namespace iViewX
         void OnGUI()
         {
 
-            if (!gazeModel.isEyeDetected)
+            if (!gazeModel.isEyeDetected && isDrawingActive)
             {
                 GUI.DrawTexture(new Rect(Screen.width * 0.5f - 64, 50, 128, 128), noGazeInput);
             }
